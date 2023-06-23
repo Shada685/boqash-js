@@ -69,35 +69,35 @@ export default function Home() {
         </div>
 
         {/* <!-- Navbar Area --> */}
-        <div class="vizew-main-menu" id="sticker">
-            <div class="classy-nav-container breakpoint-off">
-                <div class="container">
+        <div className="vizew-main-menu" id="sticker">
+            <div className="classy-nav-container breakpoint-off">
+                <div className="container">
 
                     {/* <!-- Menu --> */}
-                    <nav class="classy-navbar justify-content-between" id="vizewNav">
+                    <nav className="classy-navbar justify-content-between" id="vizewNav">
 
                         {/* <!-- Nav brand --> */}
-                        <a href="index.html" class="nav-brand"><img src="/img/core-img/logo2.png" alt="" /></a>
+                        <a href="index.html" className="nav-brand"><img src="/img/core-img/logo2.png" alt="" /></a>
 
                         {/* <!-- Navbar Toggler --> */}
-                        <div class="classy-navbar-toggler">
-                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        <div className="classy-navbar-toggler">
+                            <span className="navbarToggler"><span></span><span></span><span></span></span>
                         </div>
 
-                        <div class="classy-menu">
+                        <div className="classy-menu">
 
                             {/* <!-- Close Button --> */}
-                            <div class="classycloseIcon">
-                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            <div className="classycloseIcon">
+                                <div className="cross-wrap"><span className="top"></span><span className="bottom"></span></div>
                             </div>
 
                             {/* <!-- Nav Start --> */}
-                            <div class="classynav">
+                            <div className="classynav">
                                 <ul>
-                                    <li class="active"><a href="index.html">الرئيسية</a></li>
+                                    <li className="active"><a href="index.html">الرئيسية</a></li>
                                     <li><a href="archive-list.html">Archives</a></li>
                                     <li><a href="#">Pages</a>
-                                        <ul class="dropdown">
+                                        <ul className="dropdown">
                                             <li><a href="index.html">- الرئيسية</a></li>
                                             <li><a href="archive-list.html">- Archive List</a></li>
                                             <li><a href="archive-grid.html">- Archive Grid</a></li>
@@ -109,8 +109,8 @@ export default function Home() {
                                         </ul>
                                     </li>
                                     <li><a href="#">Features</a>
-                                        <div class="megamenu">
-                                            <ul class="single-mega cn-col-4">
+                                        <div className="megamenu">
+                                            <ul className="single-mega cn-col-4">
                                                 <li><a href="index.html">- الرئيسية</a></li>
                                                 <li><a href="archive-list.html">- Archive List</a></li>
                                                 <li><a href="archive-grid.html">- Archive Grid</a></li>
@@ -120,7 +120,7 @@ export default function Home() {
                                                 <li><a href="typography.html">- Typography</a></li>
                                                 <li><a href="login.html">- Login</a></li>
                                             </ul>
-                                            <ul class="single-mega cn-col-4">
+                                            <ul className="single-mega cn-col-4">
                                                 <li><a href="index.html">- الرئيسية</a></li>
                                                 <li><a href="archive-list.html">- Archive List</a></li>
                                                 <li><a href="archive-grid.html">- Archive Grid</a></li>
@@ -130,7 +130,7 @@ export default function Home() {
                                                 <li><a href="typography.html">- Typography</a></li>
                                                 <li><a href="login.html">- Login</a></li>
                                             </ul>
-                                            <ul class="single-mega cn-col-4">
+                                            <ul className="single-mega cn-col-4">
                                                 <li><a href="index.html">- الرئيسية</a></li>
                                                 <li><a href="archive-list.html">- Archive List</a></li>
                                                 <li><a href="archive-grid.html">- Archive Grid</a></li>
@@ -140,7 +140,7 @@ export default function Home() {
                                                 <li><a href="typography.html">- Typography</a></li>
                                                 <li><a href="login.html">- Login</a></li>
                                             </ul>
-                                            <ul class="single-mega cn-col-4">
+                                            <ul className="single-mega cn-col-4">
                                                 <li><a href="index.html">- الرئيسية</a></li>
                                                 <li><a href="archive-list.html">- Archive List</a></li>
                                                 <li><a href="archive-grid.html">- Archive Grid</a></li>
