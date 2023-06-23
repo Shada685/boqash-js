@@ -175,9 +175,8 @@ export default function Home() {
                             <div className="single-feature-post video-post bg-img"
                             style={{ backgroundImage: "url(/img/bg-img/7.jpg)" }}
                                >
-                                {/* <!-- Play Button --> */}
-                                <a href="video-post.html" className="btn play-btn"><i className="fa fa-play"
-                                        aria-hidden="true"></i></a>
+                               
+                                
 
                                 {/* <!-- Post Content --> */}
                                 <div className="post-content">
@@ -191,17 +190,14 @@ export default function Home() {
                                     </div>
                                 </div>
 
-                                {/* <!-- Video Duration --> */}
-                                <span className="video-duration">05.03</span>
+                                
                             </div>
                         </div>
                         <div className="tab-pane fade" id="post-2" role="tabpanel" aria-labelledby="post-2-tab">
                             {/* <!-- Single Feature Post --> */}
                             <div className="single-feature-post video-post bg-img"
                                >
-                                {/* <!-- Play Button --> */}
-                                <a href="video-post.html" className="btn play-btn"><i className="fa fa-play"
-                                        aria-hidden="true"></i></a>
+                               
 
                                 {/* <!-- Post Content --> */}
                                 <div className="post-content">
@@ -215,17 +211,14 @@ export default function Home() {
                                     </div>
                                 </div>
 
-                                {/* <!-- Video Duration --> */}
-                                <span className="video-duration">05.03</span>
+                                
                             </div>
                         </div>
                         <div className="tab-pane fade" id="post-3" role="tabpanel" aria-labelledby="post-3-tab">
                             {/* <!-- Single Feature Post --> */}
                             <div className="single-feature-post video-post bg-img"
                               >
-                                {/* <!-- Play Button --> */}
-                                <a href="video-post.html" className="btn play-btn"><i className="fa fa-play"
-                                        aria-hidden="true"></i></a>
+                               
 
                                 {/* <!-- Post Content --> */}
                                 <div className="post-content">
@@ -239,8 +232,7 @@ export default function Home() {
                                     </div>
                                 </div>
 
-                                {/* <!-- Video Duration --> */}
-                                <span className="video-duration">05.03</span>
+                                
                             </div>
                         </div>
 
@@ -248,9 +240,7 @@ export default function Home() {
                             {/* <!-- Single Feature Post --> */}
                             <div className="single-feature-post video-post bg-img"
                               >
-                                {/* <!-- Play Button --> */}
-                                <a href="video-post.html" className="btn play-btn"><i className="fa fa-play"
-                                        aria-hidden="true"></i></a>
+                               
 
                                 {/* <!-- Post Content --> */}
                                 <div className="post-content">
@@ -264,8 +254,7 @@ export default function Home() {
                                     </div>
                                 </div>
 
-                                {/* <!-- Video Duration --> */}
-                                <span className="video-duration">05.03</span>
+                                
                             </div>
                         </div>
 
@@ -273,9 +262,7 @@ export default function Home() {
                             {/* <!-- Single Feature Post --> */}
                             <div className="single-feature-post video-post bg-img"
                                >
-                                {/* <!-- Play Button --> */}
-                                <a href="video-post.html" className="btn play-btn"><i className="fa fa-play"
-                                        aria-hidden="true"></i></a>
+                                
 
                                 {/* <!-- Post Content --> */}
                                 <div className="post-content">
@@ -289,8 +276,7 @@ export default function Home() {
                                     </div>
                                 </div>
 
-                                {/* <!-- Video Duration --> */}
-                                <span className="video-duration">05.03</span>
+                                
                             </div>
                         </div>
 
@@ -298,9 +284,7 @@ export default function Home() {
                             {/* <!-- Single Feature Post --> */}
                             <div className="single-feature-post video-post bg-img"
                               >
-                                {/* <!-- Play Button --> */}
-                                <a href="video-post.html" className="btn play-btn"><i className="fa fa-play"
-                                        aria-hidden="true"></i></a>
+                                
 
                                 {/* <!-- Post Content --> */}
                                 <div className="post-content">
@@ -314,8 +298,7 @@ export default function Home() {
                                     </div>
                                 </div>
 
-                                {/* <!-- Video Duration --> */}
-                                <span className="video-duration">05.03</span>
+                                
                             </div>
                         </div>
 
@@ -323,9 +306,7 @@ export default function Home() {
                             {/* <!-- Single Feature Post --> */}
                             <div className="single-feature-post video-post bg-img"
                               >
-                                {/* <!-- Play Button --> */}
-                                <a href="video-post.html" className="btn play-btn"><i className="fa fa-play"
-                                        aria-hidden="true"></i></a>
+                              
 
                                 {/* <!-- Post Content --> */}
                                 <div className="post-content">
@@ -339,8 +320,7 @@ export default function Home() {
                                     </div>
                                 </div>
 
-                                {/* <!-- Video Duration --> */}
-                                <span className="video-duration">05.03</span>
+                                
                             </div>
                         </div>
                     </div>
@@ -527,7 +507,7 @@ export default function Home() {
                              <img src="/img/bg-img/11.jpg" alt="" />
 
                             {/* <!-- Video Duration --> */}
-                            <span className="video-duration">05.03</span>
+                            
                         </div>
 
                         {/* <!-- Post Content --> */}
@@ -552,7 +532,7 @@ export default function Home() {
                           
  <img src="/img/bg-img/12.jpg" alt=""/>
                             {/* <!-- Video Duration --> */}
-                            <span className="video-duration">05.03</span>
+                            
                         </div>
 
                         {/* <!-- Post Content --> */}
@@ -576,7 +556,7 @@ export default function Home() {
                            
  <img src="/img/bg-img/13.jpg" alt=""/>
                             {/* <!-- Video Duration --> */}
-                            <span className="video-duration">05.03</span>
+                            
                         </div>
 
                         {/* <!-- Post Content --> */}
@@ -616,9 +596,7 @@ export default function Home() {
                             {/* <!-- Single Feature Post --> */}
                             <div className="single-feature-post video-post bg-img"
                                style={{ backgroundImage: "url(/img/bg-img/7.jpg)" }}>
-                                {/* <!-- Play Button --> */}
-                                <a href="video-post.html" className="btn play-btn"><i className="fa fa-play"
-                                        aria-hidden="true"></i></a>
+                               
 
                                 {/* <!-- Post Content --> */}
                                 <div className="post-content">
@@ -632,8 +610,7 @@ export default function Home() {
                                     </div>
                                 </div>
 
-                                {/* <!-- Video Duration --> */}
-                                <span className="video-duration">05.03</span>
+                                
                             </div>
                         </div>
 
@@ -645,8 +622,7 @@ export default function Home() {
                                     <div className="post-thumbnail">
                                         <img src="img/bg-img/12.jpg" alt="" />
 
-                                        {/* <!-- Video Duration --> */}
-                                        <span className="video-duration">05.03</span>
+                                                
                                     </div>
 
                                     {/* <!-- Post Content --> */}
@@ -671,8 +647,7 @@ export default function Home() {
                                     <div className="post-thumbnail">
                                         <img src="img/bg-img/13.jpg" alt="" />
 
-                                        {/* <!-- Video Duration --> */}
-                                        <span className="video-duration">05.03</span>
+                                                
                                     </div>
 
                                     {/* <!-- Post Content --> */}
@@ -698,8 +673,7 @@ export default function Home() {
                                     <div className="post-thumbnail">
                                         <img src="img/bg-img/12.jpg" alt="" />
 
-                                        {/* <!-- Video Duration --> */}
-                                        <span className="video-duration">05.03</span>
+                                                
                                     </div>
 
                                     {/* <!-- Post Content --> */}
@@ -723,8 +697,7 @@ export default function Home() {
                                     <div className="post-thumbnail">
                                         <img src="img/bg-img/13.jpg" alt="" />
 
-                                        {/* <!-- Video Duration --> */}
-                                        <span className="video-duration">05.03</span>
+                                                
                                     </div>
 
                                     {/* <!-- Post Content --> */}
@@ -746,8 +719,7 @@ export default function Home() {
                                     <div className="post-thumbnail">
                                         <img src="img/bg-img/13.jpg" alt="" />
 
-                                        {/* <!-- Video Duration --> */}
-                                        <span className="video-duration">05.03</span>
+                                                
                                     </div>
 
                                     {/* <!-- Post Content --> */}
@@ -781,8 +753,7 @@ export default function Home() {
                                         <div className="post-thumbnail">
                                             <img src="img/bg-img/15.jpg" alt="" />
 
-                                            {/* <!-- Video Duration --> */}
-                                            <span className="video-duration">05.03</span>
+                                                        
                                         </div>
 
                                         {/* <!-- Post Content --> */}
@@ -804,8 +775,7 @@ export default function Home() {
                                         <div className="post-thumbnail">
                                             <img src="img/bg-img/13.jpg" alt="" />
 
-                                            {/* <!-- Video Duration --> */}
-                                            <span className="video-duration">05.03</span>
+                                                        
                                         </div>
 
                                         {/* <!-- Post Content --> */}
@@ -838,8 +808,7 @@ export default function Home() {
                                         <div className="post-thumbnail">
                                             <img src="img/bg-img/17.jpg" alt="" />
 
-                                            {/* <!-- Video Duration --> */}
-                                            <span className="video-duration">05.03</span>
+                                                        
                                         </div>
 
                                         {/* <!-- Post Content --> */}
@@ -861,8 +830,7 @@ export default function Home() {
                                         <div className="post-thumbnail">
                                             <img src="img/bg-img/13.jpg" alt="" />
 
-                                            {/* <!-- Video Duration --> */}
-                                            <span className="video-duration">05.03</span>
+                                                        
                                         </div>
 
                                         {/* <!-- Post Content --> */}
@@ -966,9 +934,7 @@ export default function Home() {
                             {/* <!-- Single Feature Post --> */}
                             <div className="single-feature-post video-post bg-img"
                                style={{ backgroundImage: "url(/img/bg-img/14.jpg)" }}>
-                                {/* <!-- Play Button --> */}
-                                <a href="video-post.html" className="btn play-btn"><i className="fa fa-play"
-                                        aria-hidden="true"></i></a>
+                               
 
                                 {/* <!-- Post Content --> */}
                                 <div className="post-content">
@@ -982,8 +948,7 @@ export default function Home() {
                                     </div>
                                 </div>
 
-                                {/* <!-- Video Duration --> */}
-                                <span className="video-duration">05.03</span>
+                                
                             </div>
 
                             {/* <!-- Single Feature Post --> */}
@@ -998,8 +963,7 @@ export default function Home() {
                                     <div className="post-thumbnail">
                                         <img src="img/bg-img/21.jpg" alt="" />
 
-                                        {/* <!-- Video Duration --> */}
-                                        <span className="video-duration">05.03</span>
+                                                
                                     </div>
                                 </div>
                                 <div className="col-12 col-lg-6">
@@ -1033,8 +997,7 @@ export default function Home() {
                                     <div className="post-thumbnail">
                                         <img src="img/bg-img/22.jpg" alt="" />
 
-                                        {/* <!-- Video Duration --> */}
-                                        <span className="video-duration">05.03</span>
+                                                
                                     </div>
                                 </div>
                                 <div className="col-12 col-lg-6">
@@ -1068,8 +1031,7 @@ export default function Home() {
                                     <div className="post-thumbnail">
                                         <img src="img/bg-img/23.jpg" alt="" />
 
-                                        {/* <!-- Video Duration --> */}
-                                        <span className="video-duration">05.03</span>
+                                                
                                     </div>
                                 </div>
                                 <div className="col-12 col-lg-6">
@@ -1103,8 +1065,7 @@ export default function Home() {
                                     <div className="post-thumbnail">
                                         <img src="img/bg-img/24.jpg" alt="" />
 
-                                        {/* <!-- Video Duration --> */}
-                                        <span className="video-duration">05.03</span>
+                                                
                                     </div>
                                 </div>
                                 <div className="col-12 col-lg-6">
@@ -1160,8 +1121,7 @@ export default function Home() {
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/13.jpg" alt="" />
 
-                                    {/* <!-- Video Duration --> */}
-                                    <span className="video-duration">05.03</span>
+                                        
                                 </div>
 
                                 {/* <!-- Post Content --> */}
@@ -1522,7 +1482,7 @@ export default function Home() {
                         {/* <!-- Footer Social Area --> */}
                         <div className="footer-social-area">
                             <a href="#" className="facebook"><i className="fa fa-facebook"></i></a>
-                            <a href="#" className="google-plus"><i className="fa fa-google-plus"></i></a>
+                           
                             <a href="#" className="instagram"><i className="fa fa-instagram"></i></a>
                             <a href="#" className="twitter"><i className="fa fa-twitter"></i></a>
                             <a href="#" className="linkedin"><i className="fa fa-linkedin"></i></a>
@@ -1541,9 +1501,8 @@ export default function Home() {
                         <p className="copywrite-text">
                            
                             Copyright &copy;
-                            <script>document.write(new Date().getFullYear());</script> All rights reserved | This
-                            template is made with <i className="fa fa-heart-o" aria-hidden="true"></i> by <a
-                                href="" target="_blank">dracware</a>
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i className="fa fa-heart-o" aria-hidden="true"></i> by <a
+                                href="" target="_blank">DracoWare</a>
                             
                         </p>
                     </div>
