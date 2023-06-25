@@ -167,6 +167,15 @@ export default function Home() {
     {/* <!-- ##### Hero Area Start ##### --> */}
     <section className="hero--area section-padding-80">
         <div className="container">
+            <div className="row">
+                <div className="col-12">
+                    {/* <!-- Section Heading --> */}
+                    <div className="section-heading">
+                        <h4>ابرز الاخبار</h4>
+                        <div className="line"></div>
+                    </div>
+                </div>
+            </div>
             <div className="row no-gutters">
                 <div className="col-12 col-md-7 col-lg-8">
                     <div className="tab-content">
@@ -484,99 +493,9 @@ export default function Home() {
     {/* <!-- ##### Header Area End ##### --> */}
     
 
-    {/* <!-- ##### Trending Posts Area Start ##### --> */}
-    <section className="trending-posts-area">
-        <div className="container">
-            <div className="row">
-                <div className="col-12">
-                    {/* <!-- Section Heading --> */}
-                    <div className="section-heading">
-                        <h4>Trending Videos</h4>
-                        <div className="line"></div>
-                    </div>
-                </div>
-            </div>
+    
 
-            <div className="row">
-                {/* <!-- Single Blog Post --> */}
-                <div className="col-12 col-md-4 ">
-                    <div className="single-post-area mb-80 bg-white">
-                        {/* <!-- Post Thumbnail --> */}
-                        <div className="post-thumbnail">
-                           
-                             <img src="/img/bg-img/11.jpg" alt="" />
 
-                            {/* <!-- Video Duration --> */}
-                            
-                        </div>
-
-                        {/* <!-- Post Content --> */}
-                        <div className="post-content ">
-                            <a href="#" className="post-cata cata-sm cata-success">Sports</a>
-                            <a href="single-post.html" className="post-title">Warner Bros. Developing ‘The accountant’
-                                Sequel</a>
-                            <div className="post-meta d-flex">
-                                <a href="#"><i className="fa fa-comments-o" aria-hidden="true"></i> 22</a>
-                                <a href="#"><i className="fa fa-eye" aria-hidden="true"></i> 16</a>
-                                <a href="#"><i className="fa fa-thumbs-o-up" aria-hidden="true"></i> 15</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* <!-- Single Blog Post --> */}
-                <div className="col-12 col-md-4">
-                    <div className="single-post-area mb-80 bg-white">
-                        {/* <!-- Post Thumbnail --> */}
-                        <div className="post-thumbnail">
-                          
- <img src="/img/bg-img/12.jpg" alt=""/>
-                            {/* <!-- Video Duration --> */}
-                            
-                        </div>
-
-                        {/* <!-- Post Content --> */}
-                        <div className="post-content">
-                            <a href="#" className="post-cata cata-sm cata-danger">Game</a>
-                            <a href="single-post.html" className="post-title">انباء عن اصدار لعبة GTA6</a>
-                            <div className="post-meta d-flex">
-                                <a href="#"><i className="fa fa-comments-o" aria-hidden="true"></i> 28</a>
-                                <a href="#"><i className="fa fa-eye" aria-hidden="true"></i> 17</a>
-                                <a href="#"><i className="fa fa-thumbs-o-up" aria-hidden="true"></i> 22</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* <!-- Single Blog Post --> */}
-                <div className="col-12 col-md-4">
-                    <div className="single-post-area mb-80 bg-white">
-                        {/* <!-- Post Thumbnail --> */}
-                        <div className="post-thumbnail">
-                           
- <img src="/img/bg-img/13.jpg" alt=""/>
-                            {/* <!-- Video Duration --> */}
-                            
-                        </div>
-
-                        {/* <!-- Post Content --> */}
-                        <div className="post-content">
-                            <a href="#" className="post-cata cata-sm cata-primary">Business</a>
-                            <a href="single-post.html" className="post-title">Love Island star's boyfriend found dead after
-                                her funeral</a>
-                            <div className="post-meta d-flex">
-                                <a href="#"><i className="fa fa-comments-o" aria-hidden="true"></i> 14</a>
-                                <a href="#"><i className="fa fa-eye" aria-hidden="true"></i> 38</a>
-                                <a href="#"><i className="fa fa-thumbs-o-up" aria-hidden="true"></i> 22</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    {/* <!-- ##### Trending Posts Area End ##### --> */}
 {/* <!-- ##### Vizew Post Area Start ##### --> */}
     <section className="vizew-post-area mb-50 ">
         <div className="container">
@@ -585,7 +504,7 @@ export default function Home() {
                     <div className="all-posts-area">
                         {/* <!-- Section Heading --> */}
                         <div className="section-heading style-2">
-                            <h4>Featured Videos</h4>
+                            <h4>الاخبار المحلية</h4>
                             <div className="line"></div>
                         </div>
 
@@ -738,12 +657,18 @@ export default function Home() {
                         </div>
 
                         <div className="row">
+                            
+                <div className="col-12">
+                    {/* <!-- Section Heading --> */}
+                    <div className="section-heading">
+                        <h4>الاخبار العالمية</h4>
+                        <div className="line"></div>
+                    </div>
+                </div>
+         
                             <div className="col-12 col-lg-6">
                                 {/* <!-- Section Heading --> */}
-                                <div className="section-heading style-2">
-                                    <h4>Sport Videos</h4>
-                                    <div className="line"></div>
-                                </div>
+                                
 
                                 {/* <!-- Sports Video Slides --> */}
                                 <div className="sport-video-slides owl-carousel mb-50 bg-white">
@@ -794,11 +719,7 @@ export default function Home() {
                             </div>
 
                             <div className="col-12 col-lg-6">
-                                {/* <!-- Section Heading --> */}
-                                <div className="section-heading style-2">
-                                    <h4>Business Videos</h4>
-                                    <div className="line"></div>
-                                </div>
+                                
 
                                 {/* <!-- Business Video Slides --> */}
                                 <div className="business-video-slides owl-carousel mb-50 bg-white">
@@ -925,7 +846,7 @@ export default function Home() {
 
                         {/* <!-- Section Heading --> */}
                         <div className="section-heading style-2">
-                            <h4>Latest News</h4>
+                            <h4>الاخبار العربية</h4>
                             <div className="line"></div>
                         </div>
 
@@ -951,7 +872,7 @@ export default function Home() {
                                 
                             </div>
 
-                            {/* <!-- Single Feature Post --> */}
+                            
                             
                         </div>
 
@@ -1369,6 +1290,49 @@ export default function Home() {
         </div>
     </section>
     {/* <!-- ##### Vizew Psot Area End ##### --> */}
+
+
+{/* ########## بداية الاخبار الروسية ##########*/}
+<section class="section-m">
+        <div class="container">
+            <div class=" row">
+                <div class="col-sm-12 col-md-8 col-lg-9 p-4 mt-5">
+                    <h2 class="text-right text-white pb-3">الحرب الروسية</h2>
+                    {/* <img class="image-m img-fluid" src="img/bg-img/ru.jpg" alt="" /> */}
+                    <div className="featured-post-slides owl-carousel mb-30 bg-white">
+                            {/* <!-- Single Feature Post --> */}
+                            <div className="single-feature-post video-post bg-img"
+                               style={{ backgroundImage: "url(/img/bg-img/14.jpg)" }}>
+                               
+
+                                {/* <!-- Post Content --> */}
+                                <div className="post-content">
+                                    
+                                    <a href="single-post.html" className="post-title">Reunification of migrant toddlers,
+                                        parents should be completed Thursday</a>
+                                    
+                                </div>
+
+                                
+                            </div>
+
+                            
+                            
+                        </div>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-3 p-4 pt-lg-5 mt-lg-5">
+
+                    <ul class="list-m mb-5">
+                        <li class=" mb-3">List item 1 List item 1 List item 1</li>
+                        <li class=" mb-3">List item 2</li>
+                        <li class=" mb-3">List item 3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </section>
+{/* ########## نهاية الاخبار الروسية ##########*/}
 
     {/* <!-- ##### Footer Area Start ##### --> */}
     <footer className="footer-area">

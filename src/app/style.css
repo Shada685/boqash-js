@@ -1952,3 +1952,28 @@ textarea.form-control {
   height: 140px; }
 
 /*# sourceMappingURL=style.css.map */
+/* الاخبار الروسية */
+.section-m {
+  background: url('../../public/img/bg-img/IMG_7146.png') center center no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  /* Set the section to full screen height */
+  display: flex;
+  flex-direction: row;
+}
+
+.image-m {
+  height: 400px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.list-m {
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: 20px;
+}
+
+.padding-top-m {
+  padding-top: 50px;
+}
