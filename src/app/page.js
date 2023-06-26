@@ -505,43 +505,43 @@ export default function Home() {
             <div className="row no-gutters">
                 {/* currency price */}
                 <div className="col-12 col-md-6 col-lg-6">
-                    <div class="body-n">
-                    <div class="container-n">
-  <div class="weather-side">
-    <div class="weather-gradient"></div>
-    <div class="date-container">
-      <h2 class="date-dayname">Tuesday</h2><span class="date-day">15 Jan 2019</span><i class="location-icon" data-feather="map-pin"></i><span class="location">Paris, FR</span>
+                    <div className="body-n">
+                    <div className="container-n">
+  <div className="weather-side">
+    <div className="weather-gradient"></div>
+    <div className="date-container">
+      <h2 className="date-dayname">Tuesday</h2><span className="date-day">15 Jan 2019</span><i className="location-icon" data-feather="map-pin"></i><span className="location">Paris, FR</span>
     </div>
-    <div class="weather-container"><i class="weather-icon" data-feather="sun"></i>
-      <h1 class="weather-temp">29°C</h1>
-      <h3 class="weather-desc">Sunny</h3>
+    <div className="weather-container"><i className="weather-icon" data-feather="sun"></i>
+      <h1 className="weather-temp">29°C</h1>
+      <h3 className="weather-desc">Sunny</h3>
     </div>
   </div>
-  <div class="info-side">
-    <div class="today-info-container">
-      <div class="today-info">
-        <div class="precipitation"> <span class="title">PRECIPITATION</span><span class="value">0 %</span>
-          <div class="clear"></div>
+  <div className="info-side">
+    <div className="today-info-container">
+      <div className="today-info">
+        <div className="precipitation"> <span className="title">PRECIPITATION</span><span className="value">0 %</span>
+          <div className="clear"></div>
         </div>
-        <div class="humidity"> <span class="title">HUMIDITY</span><span class="value">34 %</span>
-          <div class="clear"></div>
+        <div className="humidity"> <span className="title">HUMIDITY</span><span className="value">34 %</span>
+          <div className="clear"></div>
         </div>
-        <div class="wind"> <span class="title">WIND</span><span class="value">0 km/h</span>
-          <div class="clear"></div>
+        <div className="wind"> <span className="title">WIND</span><span className="value">0 km/h</span>
+          <div className="clear"></div>
         </div>
       </div>
     </div>
-    <div class="week-container">
-      <ul class="week-list">
-        <li class="active"><i class="day-icon" data-feather="sun"></i><span class="day-name">Tue</span><span class="day-temp">29°C</span></li>
-        <li><i class="day-icon" data-feather="cloud"></i><span class="day-name">Wed</span><span class="day-temp">21°C</span></li>
-        <li><i class="day-icon" data-feather="cloud-snow"></i><span class="day-name">Thu</span><span class="day-temp">08°C</span></li>
-        <li><i class="day-icon" data-feather="cloud-rain"></i><span class="day-name">Fry</span><span class="day-temp">19°C</span></li>
-        <div class="clear"></div>
+    <div className="week-container">
+      <ul className="week-list">
+        <li className="active"><i className="day-icon" data-feather="sun"></i><span className="day-name">Tue</span><span className="day-temp">29°C</span></li>
+        <li><i className="day-icon" data-feather="cloud"></i><span className="day-name">Wed</span><span className="day-temp">21°C</span></li>
+        <li><i className="day-icon" data-feather="cloud-snow"></i><span className="day-name">Thu</span><span className="day-temp">08°C</span></li>
+        <li><i className="day-icon" data-feather="cloud-rain"></i><span className="day-name">Fry</span><span className="day-temp">19°C</span></li>
+        <div className="clear"></div>
       </ul>
     </div>
-    <div class="location-container">
-      <button class="location-button"> <i data-feather="map-pin"></i><span>Change location</span></button>
+    <div className="location-container">
+      <button className="location-button"> <i data-feather="map-pin"></i><span>Change location</span></button>
     </div>
   </div>
 </div>
@@ -549,43 +549,43 @@ export default function Home() {
 
                 </div>
                 <div className="col-12 col-md-6 col-lg-6">
-                    <div class="body-n">
-                    <div class="container-n">
-  <div class="weather-side">
-    <div class="weather-gradient"></div>
-    <div class="date-container">
-      <h2 class="date-dayname">Tuesday</h2><span class="date-day">15 Jan 2019</span><i class="location-icon" data-feather="map-pin"></i><span class="location">Paris, FR</span>
+                    <div className="body-n">
+                    <div className="container-n">
+  <div className="weather-side">
+    <div className="weather-gradient"></div>
+    <div className="date-container">
+      <h2 className="date-dayname">Tuesday</h2><span className="date-day">15 Jan 2019</span><i className="location-icon" data-feather="map-pin"></i><span className="location">Paris, FR</span>
     </div>
-    <div class="weather-container"><i class="weather-icon" data-feather="sun"></i>
-      <h1 class="weather-temp">29°C</h1>
-      <h3 class="weather-desc">Sunny</h3>
+    <div className="weather-container"><i className="weather-icon" data-feather="sun"></i>
+      <h1 className="weather-temp">29°C</h1>
+      <h3 className="weather-desc">Sunny</h3>
     </div>
   </div>
-  <div class="info-side">
-    <div class="today-info-container">
-      <div class="today-info">
-        <div class="precipitation"> <span class="title">PRECIPITATION</span><span class="value">0 %</span>
-          <div class="clear"></div>
+  <div className="info-side">
+    <div className="today-info-container">
+      <div className="today-info">
+        <div className="precipitation"> <span className="title">PRECIPITATION</span><span className="value">0 %</span>
+          <div className="clear"></div>
         </div>
-        <div class="humidity"> <span class="title">HUMIDITY</span><span class="value">34 %</span>
-          <div class="clear"></div>
+        <div className="humidity"> <span className="title">HUMIDITY</span><span className="value">34 %</span>
+          <div className="clear"></div>
         </div>
-        <div class="wind"> <span class="title">WIND</span><span class="value">0 km/h</span>
-          <div class="clear"></div>
+        <div className="wind"> <span className="title">WIND</span><span className="value">0 km/h</span>
+          <div className="clear"></div>
         </div>
       </div>
     </div>
-    <div class="week-container">
-      <ul class="week-list">
-        <li class="active"><i class="day-icon" data-feather="sun"></i><span class="day-name">Tue</span><span class="day-temp">29°C</span></li>
-        <li><i class="day-icon" data-feather="cloud"></i><span class="day-name">Wed</span><span class="day-temp">21°C</span></li>
-        <li><i class="day-icon" data-feather="cloud-snow"></i><span class="day-name">Thu</span><span class="day-temp">08°C</span></li>
-        <li><i class="day-icon" data-feather="cloud-rain"></i><span class="day-name">Fry</span><span class="day-temp">19°C</span></li>
-        <div class="clear"></div>
+    <div className="week-container">
+      <ul className="week-list">
+        <li className="active"><i className="day-icon" data-feather="sun"></i><span className="day-name">Tue</span><span className="day-temp">29°C</span></li>
+        <li><i className="day-icon" data-feather="cloud"></i><span className="day-name">Wed</span><span className="day-temp">21°C</span></li>
+        <li><i className="day-icon" data-feather="cloud-snow"></i><span className="day-name">Thu</span><span className="day-temp">08°C</span></li>
+        <li><i className="day-icon" data-feather="cloud-rain"></i><span className="day-name">Fry</span><span className="day-temp">19°C</span></li>
+        <div className="clear"></div>
       </ul>
     </div>
-    <div class="location-container">
-      <button class="location-button"> <i data-feather="map-pin"></i><span>Change location</span></button>
+    <div className="location-container">
+      <button className="location-button"> <i data-feather="map-pin"></i><span>Change location</span></button>
     </div>
   </div>
 </div>
@@ -597,38 +597,38 @@ export default function Home() {
                 {/* اسعار المود الغذائية */}
 
                 <div className="col-12 col-md-7 col-lg-8">
-                   <div class="body-m">
-                   <div class="CartContainer">
-		<div class="Header">
-			<h3 class="Heading">Shopping Cart</h3>
+                   <div className="body-m">
+                   <div className="CartContainer">
+		<div className="Header">
+			<h3 className="Heading">Shopping Cart</h3>
 		</div>
 
-		<div class="Cart-Items">
-			<div class="image-box">
+		<div className="Cart-Items">
+			<div className="image-box">
 				<img src="/img/bg-img/apple.png" style={{ height:"100px" }} />
 			</div>
-			<div class="about">
-				<h1 class="title">Apple Juice</h1>
+			<div className="about">
+				<h1 className="title">Apple Juice</h1>
 
 			</div>
 
-			<div class="prices">
-				<div class="amount">$2.99</div>
+			<div className="prices">
+				<div className="amount">$2.99</div>
 
 			</div>
 		</div>
 		<hr />
-		<div class="Cart-Items pad">
-			<div class="image-box">
+		<div className="Cart-Items pad">
+			<div className="image-box">
 				<img src="/img/bg-img/grapes.png" style={{ height:"100px" }} />
 			</div>
-			<div class="about">
-				<h2 class="title">Grapes Juice</h2>
+			<div className="about">
+				<h2 className="title">Grapes Juice</h2>
 
 			</div>
 
-			<div class="prices">
-				<div class="amount">$3.19</div>
+			<div className="prices">
+				<div className="amount">$3.19</div>
 
 			</div>
 		</div>
@@ -1448,53 +1448,53 @@ export default function Home() {
 
 
     {/* <!-- ##### Footer Area Start ##### --> */}
-    <footer class="footer-area">
-        <div class="container">
-            <div class="row">
+    <footer className="footer-area">
+        <div className="container">
+            <div className="row">
                 {/* <!-- Footer Widget Area --> */}
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="footer-widget mb-70">
+                <div className="col-12 col-sm-6 col-xl-3">
+                    <div className="footer-widget mb-70">
                         {/* <!-- Logo --> */}
-                        <a href="index.html" class="foo-logo d-block mb-4"><img src="img/core-img/logo2.png" alt="" /></a>
+                        <a href="index.html" className="foo-logo d-block mb-4"><img src="img/core-img/logo2.png" alt="" /></a>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
                         {/* <!-- Footer Newsletter Area --> */}
-                        <div class="footer-nl-area">
+                        <div className="footer-nl-area">
                             <form action="#" method="post">
-                                <input type="email" name="nl-email" class="form-control" id="nlEmail" placeholder="Your email"/>
-                                <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                                <input type="email" name="nl-email" className="form-control" id="nlEmail" placeholder="Your email"/>
+                                <button type="submit"><i className="fa fa-paper-plane" aria-hidden="true"></i></button>
                             </form>
                         </div>
                     </div>
                 </div>
 
                 {/* <!-- Footer Widget Area --> */}
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="footer-widget mb-70">
-                        <h6 class="widget-title">Latest Twister</h6>
+                <div className="col-12 col-sm-6 col-xl-3">
+                    <div className="footer-widget mb-70">
+                        <h6 className="widget-title">Latest Twister</h6>
                         {/* <!-- Twitter Slides --> */}
-                        <div class="twitter-slides owl-carousel">
+                        <div className="twitter-slides owl-carousel">
 
                             {/* <!-- Single Twitter Slide --> */}
-                            <div class="single--twitter-slide">
+                            <div className="single--twitter-slide">
                                 {/* <!-- Single Twit --> */}
-                                <div class="single-twit">
-                                    <p><i class="fa fa-twitter"></i> <span>@Leonard</span> I am so happy because I found this magazine, and it just made Vizeweasier. Thanks for sharing</p>
+                                <div className="single-twit">
+                                    <p><i className="fa fa-twitter"></i> <span>@Leonard</span> I am so happy because I found this magazine, and it just made Vizeweasier. Thanks for sharing</p>
                                 </div>
                                 {/* <!-- Single Twit --> */}
-                                <div class="single-twit">
-                                    <p><i class="fa fa-twitter"></i> <span>@Leonard</span> I am so happy because I found this magazine, and it just made Vizeweasier. Thanks for sharing</p>
+                                <div className="single-twit">
+                                    <p><i className="fa fa-twitter"></i> <span>@Leonard</span> I am so happy because I found this magazine, and it just made Vizeweasier. Thanks for sharing</p>
                                 </div>
                             </div>
 
                             {/* <!-- Single Twitter Slide --> */}
-                            <div class="single--twitter-slide">
+                            <div className="single--twitter-slide">
                                 {/* <!-- Single Twit --> */}
-                                <div class="single-twit">
-                                    <p><i class="fa fa-twitter"></i> <span>@DracoWare</span> I am so happy because I found this magazine, and it just made Vizeweasier. Thanks for sharing</p>
+                                <div className="single-twit">
+                                    <p><i className="fa fa-twitter"></i> <span>@DracoWare</span> I am so happy because I found this magazine, and it just made Vizeweasier. Thanks for sharing</p>
                                 </div>
                                 {/* <!-- Single Twit --> */}
-                                <div class="single-twit">
-                                    <p><i class="fa fa-twitter"></i> <span>@DracoWare</span> I am so happy because I found this magazine, and it just made Vizeweasier. Thanks for sharing</p>
+                                <div className="single-twit">
+                                    <p><i className="fa fa-twitter"></i> <span>@DracoWare</span> I am so happy because I found this magazine, and it just made Vizeweasier. Thanks for sharing</p>
                                 </div>
                             </div>
 
@@ -1503,36 +1503,36 @@ export default function Home() {
                 </div>
 
                 {/* <!-- Footer Widget Area --> */}
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="footer-widget mb-70">
-                        <h6 class="widget-title">Sport Videos</h6>
+                <div className="col-12 col-sm-6 col-xl-3">
+                    <div className="footer-widget mb-70">
+                        <h6 className="widget-title">Sport Videos</h6>
 
                         {/* <!-- Single Blog Post --> */}
-                        <div class="single-blog-post d-flex">
-                            <div class="post-thumbnail">
+                        <div className="single-blog-post d-flex">
+                            <div className="post-thumbnail">
                                 <img src="img/bg-img/1.jpg" alt="" />
                             </div>
-                            <div class="post-content">
-                                <a href="single-post.html" class="post-title">DC Shoes: gymkhana the</a>
-                                <div class="post-meta d-flex justify-content-between">
-                                    <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
-                                    <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 34</a>
-                                    <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
+                            <div className="post-content">
+                                <a href="single-post.html" className="post-title">DC Shoes: gymkhana the</a>
+                                <div className="post-meta d-flex justify-content-between">
+                                    <a href="#"><i className="fa fa-comments-o" aria-hidden="true"></i> 14</a>
+                                    <a href="#"><i className="fa fa-eye" aria-hidden="true"></i> 34</a>
+                                    <a href="#"><i className="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
                                 </div>
                             </div>
                         </div>
 
                         {/* <!-- Single Blog Post --> */}
-                        <div class="single-blog-post d-flex">
-                            <div class="post-thumbnail">
+                        <div className="single-blog-post d-flex">
+                            <div className="post-thumbnail">
                                 <img src="img/bg-img/2.jpg" alt="" />
                             </div>
-                            <div class="post-content">
-                                <a href="single-post.html" class="post-title">Sweet Yummy Chocolatea Tea</a>
-                                <div class="post-meta d-flex justify-content-between">
-                                    <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
-                                    <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 34</a>
-                                    <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
+                            <div className="post-content">
+                                <a href="single-post.html" className="post-title">Sweet Yummy Chocolatea Tea</a>
+                                <div className="post-meta d-flex justify-content-between">
+                                    <a href="#"><i className="fa fa-comments-o" aria-hidden="true"></i> 14</a>
+                                    <a href="#"><i className="fa fa-eye" aria-hidden="true"></i> 34</a>
+                                    <a href="#"><i className="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
                                 </div>
                             </div>
                         </div>
@@ -1541,22 +1541,22 @@ export default function Home() {
                 </div>
 
                 {/* <!-- Footer Widget Area --> */}
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="footer-widget mb-70">
-                        <h6 class="widget-title">Our Address</h6>
+                <div className="col-12 col-sm-6 col-xl-3">
+                    <div className="footer-widget mb-70">
+                        <h6 className="widget-title">Our Address</h6>
                         {/* <!-- Contact Address --> */}
-                        <div class="contact-address">
+                        <div className="contact-address">
                             <p>101 E 129th St, East Chicago, <br />IN 46312, US</p>
                             <p>Phone: 001-1234-88888</p>
                             <p>Email: info.colorlib@gmail.com</p>
                         </div>
                         {/* <!-- Footer Social Area --> */}
-                        <div class="footer-social-area">
-                            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                            <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-                            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-                            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                        <div className="footer-social-area">
+                            <a href="#" className="facebook"><i className="fa fa-facebook"></i></a>
+                            <a href="#" className="google-plus"><i className="fa fa-google-plus"></i></a>
+                            <a href="#" className="instagram"><i className="fa fa-instagram"></i></a>
+                            <a href="#" className="twitter"><i className="fa fa-twitter"></i></a>
+                            <a href="#" className="linkedin"><i className="fa fa-linkedin"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1564,20 +1564,20 @@ export default function Home() {
         </div>
 
         {/* <!-- Copywrite Area --> */}
-        <div class="copywrite-area">
-            <div class="container">
-                <div class="row align-items-center">
+        <div className="copywrite-area">
+            <div className="container">
+                <div className="row align-items-center">
                     {/* <!-- Copywrite Text --> */}
-                    <div class="col-12 col-sm-6">
-                        <p class="copywrite-text">
+                    <div className="col-12 col-sm-6">
+                        <p className="copywrite-text">
                             {/* <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> */}
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i className="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 
 {/* <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> */}
 </p>
                     </div>
-                    <div class="col-12 col-sm-6">
-                        <nav class="footer-nav">
+                    <div className="col-12 col-sm-6">
+                        <nav className="footer-nav">
                             <ul>
                                 <li><a href="#">Advertise</a></li>
                                 <li><a href="#">About</a></li>
