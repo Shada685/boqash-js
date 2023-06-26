@@ -1,26 +1,23 @@
-import Head from 'next/head'
-import './style.css'
-
+import Head from "next/head";
+import Script from "next/script";
+import '../../public/style.css'
 
 export default function Home() {
   return (
     <>
     <Head>
-   <script src="js/jquery/jquery-2.2.4.min.js"></script>
-    {/* <!-- Popper js --> */}
-    <script src="js/bootstrap/popper.min.js"></script>
-    {/* <!-- Bootstrap js --> */}
-    <script src="js/bootstrap/bootstrap.min.js"></script>
-    {/* <!-- All Plugins js --> */}
-    <script src="js/plugins/plugins.js"></script>
-    {/* <!-- Active js --> */}
-    <script src="js/active.js"></script>
-  
+  <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     </Head>
     <body>
-       
-     {/* <!-- ##### Header Area Start ##### --> */}
-    <header className="header-area">
+{/* <!-- Preloader --> */}
+    
+   
+
+           {/* <!-- ##### Header Area Start ##### --> */}
+     <header className="header-area">
         {/* <!-- Top Header Area --> */}
         <div className="top-header-area">
             <div className="container">
@@ -29,15 +26,13 @@ export default function Home() {
                         {/* <!-- Breaking News Widget --> */}
                         <div className="breaking-news-area d-flex align-items-center">
                             <div className="news-title">
-                                <p>اخر الاخبار</p>
+                                <p>Breaking News:</p>
                             </div>
                             <div id="breakingNewsTicker" className="ticker">
                                 <ul>
-                                    <li><a href="single-post.html">بوتين يعلن مشروعاً لإنشاء منطقة صناعية روسية في
-                                            مصر</a></li>
-                                    <li><a href="single-post.html">تحديات سعر الصرف ومصلحة المواطن</a></li>
-                                    <li><a href="single-post.html">هل تورطت بريطانيا في تزوير أسعار الفائدة خلال الأزمة
-                                            المالية العالمية؟</a></li>
+                                    <li><a href="single-post.html">10 Things Amazon Echo Can Do</a></li>
+                                    <li><a href="single-post.html">Welcome to DracoWare Family.</a></li>
+                                    <li><a href="single-post.html">Boys 'doing well' after Thai</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -55,9 +50,8 @@ export default function Home() {
                             {/* <!-- Top Search Area --> */}
                             <div className="top-search-area">
                                 <form action="index.html" method="post">
-                                    <input type="search" name="top-search" id="topSearch" placeholder="بحث..." />
-                                    <button type="submit" className="btn"><i className="fa fa-search"
-                                            aria-hidden="true"></i></button>
+                                    <input type="search" name="top-search" id="topSearch" placeholder="Search..." />
+                                    <button type="submit" className="btn"><i className="fa fa-search" aria-hidden="true"></i></button>
                                 </form>
                             </div>
                             {/* <!-- Login --> */}
@@ -77,7 +71,7 @@ export default function Home() {
                     <nav className="classy-navbar justify-content-between" id="vizewNav">
 
                         {/* <!-- Nav brand --> */}
-                        <a href="index.html" className="nav-brand"><img src="/img/core-img/logo2.png" alt="" /></a>
+                        <a href="index.html" className="nav-brand"><img src="img/core-img/logo2.png" alt=""/></a>
 
                         {/* <!-- Navbar Toggler --> */}
                         <div className="classy-navbar-toggler">
@@ -94,11 +88,11 @@ export default function Home() {
                             {/* <!-- Nav Start --> */}
                             <div className="classynav">
                                 <ul>
-                                    <li className="active"><a href="index.html">الرئيسية</a></li>
+                                    <li className="active"><a href="index.html">Home</a></li>
                                     <li><a href="archive-list.html">Archives</a></li>
                                     <li><a href="#">Pages</a>
                                         <ul className="dropdown">
-                                            <li><a href="index.html">- الرئيسية</a></li>
+                                            <li><a href="index.html">- Home</a></li>
                                             <li><a href="archive-list.html">- Archive List</a></li>
                                             <li><a href="archive-grid.html">- Archive Grid</a></li>
                                             <li><a href="single-post.html">- Single Post</a></li>
@@ -111,7 +105,7 @@ export default function Home() {
                                     <li><a href="#">Features</a>
                                         <div className="megamenu">
                                             <ul className="single-mega cn-col-4">
-                                                <li><a href="index.html">- الرئيسية</a></li>
+                                                <li><a href="index.html">- Home</a></li>
                                                 <li><a href="archive-list.html">- Archive List</a></li>
                                                 <li><a href="archive-grid.html">- Archive Grid</a></li>
                                                 <li><a href="single-post.html">- Single Post</a></li>
@@ -121,7 +115,7 @@ export default function Home() {
                                                 <li><a href="login.html">- Login</a></li>
                                             </ul>
                                             <ul className="single-mega cn-col-4">
-                                                <li><a href="index.html">- الرئيسية</a></li>
+                                                <li><a href="index.html">- Home</a></li>
                                                 <li><a href="archive-list.html">- Archive List</a></li>
                                                 <li><a href="archive-grid.html">- Archive Grid</a></li>
                                                 <li><a href="single-post.html">- Single Post</a></li>
@@ -131,7 +125,7 @@ export default function Home() {
                                                 <li><a href="login.html">- Login</a></li>
                                             </ul>
                                             <ul className="single-mega cn-col-4">
-                                                <li><a href="index.html">- الرئيسية</a></li>
+                                                <li><a href="index.html">- Home</a></li>
                                                 <li><a href="archive-list.html">- Archive List</a></li>
                                                 <li><a href="archive-grid.html">- Archive Grid</a></li>
                                                 <li><a href="single-post.html">- Single Post</a></li>
@@ -141,7 +135,7 @@ export default function Home() {
                                                 <li><a href="login.html">- Login</a></li>
                                             </ul>
                                             <ul className="single-mega cn-col-4">
-                                                <li><a href="index.html">- الرئيسية</a></li>
+                                                <li><a href="index.html">- Home</a></li>
                                                 <li><a href="archive-list.html">- Archive List</a></li>
                                                 <li><a href="archive-grid.html">- Archive Grid</a></li>
                                                 <li><a href="single-post.html">- Single Post</a></li>
@@ -536,7 +530,7 @@ export default function Home() {
                         <div className="row">
                             {/* <!-- Single Blog Post --> */}
                             <div className="col-12 col-md-6 col-lg-6">
-                                <div className="single-post-area mb-80 bg-white">
+                                <div className="single-post-area mb-80 ">
                                     {/* <!-- Post Thumbnail --> */}
                                     <div className="post-thumbnail">
                                         <img src="img/bg-img/12.jpg" alt="" />
@@ -561,7 +555,7 @@ export default function Home() {
                             {/* <!-- Single Blog Post --> */}
 
                             <div className="col-12 col-md-6 col-lg-6">
-                                <div className="single-post-area mb-80 bg-white">
+                                <div className="single-post-area mb-80 ">
                                     {/* <!-- Post Thumbnail --> */}
                                     <div className="post-thumbnail">
                                         <img src="img/bg-img/13.jpg" alt="" />
@@ -587,7 +581,7 @@ export default function Home() {
                         <div className="row">
                             {/* <!-- Single Blog Post --> */}
                             <div className="col-12 col-md-6 col-lg-4">
-                                <div className="single-post-area mb-80 bg-white">
+                                <div className="single-post-area mb-80 ">
                                     {/* <!-- Post Thumbnail --> */}
                                     <div className="post-thumbnail">
                                         <img src="img/bg-img/12.jpg" alt="" />
@@ -611,7 +605,7 @@ export default function Home() {
 
                             {/* <!-- Single Blog Post --> */}
                             <div className="col-12 col-md-6 col-lg-4">
-                                <div className="single-post-area mb-80 bg-white">
+                                <div className="single-post-area mb-80 ">
                                     {/* <!-- Post Thumbnail --> */}
                                     <div className="post-thumbnail">
                                         <img src="img/bg-img/13.jpg" alt="" />
@@ -633,7 +627,7 @@ export default function Home() {
                                 </div>
                             </div>
                             <div className="col-12 col-md-6 col-lg-4">
-                                <div className="single-post-area mb-80 bg-white">
+                                <div className="single-post-area mb-80 ">
                                     {/* <!-- Post Thumbnail --> */}
                                     <div className="post-thumbnail">
                                         <img src="img/bg-img/13.jpg" alt="" />
@@ -661,7 +655,7 @@ export default function Home() {
                 <div className="col-12">
                     {/* <!-- Section Heading --> */}
                     <div className="section-heading">
-                        <h4>الاخبار العالمية</h4>
+                        <h4>الاخبار العربية</h4>
                         <div className="line"></div>
                     </div>
                 </div>
@@ -671,7 +665,7 @@ export default function Home() {
                                 
 
                                 {/* <!-- Sports Video Slides --> */}
-                                <div className="sport-video-slides owl-carousel mb-50 bg-white">
+                                <div className="sport-video-slides owl-carousel mb-50 ">
                                     {/* <!-- Single Blog Post --> */}
                                     <div className="single-post-area">
                                         {/* <!-- Post Thumbnail --> */}
@@ -722,7 +716,7 @@ export default function Home() {
                                 
 
                                 {/* <!-- Business Video Slides --> */}
-                                <div className="business-video-slides owl-carousel mb-50 bg-white">
+                                <div className="business-video-slides owl-carousel mb-50 ">
                                     {/* <!-- Single Blog Post --> */}
                                     <div className="single-post-area">
                                         {/* <!-- Post Thumbnail --> */}
@@ -773,7 +767,7 @@ export default function Home() {
                         <div className="row mb-30">
                             {/* <!-- Single Blog Post --> */}
                             <div className="col-12 col-lg-6 ">
-                                <div className="single-blog-post style-3 d-flex mb-50 bg-white">
+                                <div className="single-blog-post style-3 d-flex mb-50 ">
                                     <div className="post-thumbnail">
                                         <img src="img/bg-img/16.jpg" alt="" />
                                     </div>
@@ -791,7 +785,7 @@ export default function Home() {
 
                             {/* <!-- Single Blog Post --> */}
                             <div className="col-12 col-lg-6">
-                                <div className="single-blog-post style-3 d-flex mb-50 bg-white">
+                                <div className="single-blog-post style-3 d-flex mb-50 ">
                                     <div className="post-thumbnail">
                                         <img src="img/bg-img/18.jpg" alt="" />
                                     </div>
@@ -809,7 +803,7 @@ export default function Home() {
 
                             {/* <!-- Single Blog Post --> */}
                             <div className="col-12 col-lg-6">
-                                <div className="single-blog-post style-3 d-flex mb-50 bg-white">
+                                <div className="single-blog-post style-3 d-flex mb-50 ">
                                     <div className="post-thumbnail">
                                         <img src="img/bg-img/19.jpg" alt="" />
                                     </div>
@@ -827,7 +821,7 @@ export default function Home() {
 
                             {/* <!-- Single Blog Post --> */}
                             <div className="col-12 col-lg-6">
-                                <div className="single-blog-post style-3 d-flex mb-50 bg-white">
+                                <div className="single-blog-post style-3 d-flex mb-50 ">
                                     <div className="post-thumbnail">
                                         <img src="img/bg-img/20.jpg" alt="" />
                                     </div>
@@ -846,12 +840,12 @@ export default function Home() {
 
                         {/* <!-- Section Heading --> */}
                         <div className="section-heading style-2">
-                            <h4>الاخبار العربية</h4>
+                            <h4>الاخبار العالمية</h4>
                             <div className="line"></div>
                         </div>
 
                         {/* <!-- Featured Post Slides --> */}
-                        <div className="featured-post-slides owl-carousel mb-30 bg-white">
+                        <div className="featured-post-slides owl-carousel mb-30 ">
                             {/* <!-- Single Feature Post --> */}
                             <div className="single-feature-post video-post bg-img"
                                style={{ backgroundImage: "url(/img/bg-img/14.jpg)" }}>
@@ -877,7 +871,7 @@ export default function Home() {
                         </div>
 
                         {/* <!-- Single Post Area --> */}
-                        <div className="single-post-area mb-30 bg-white">
+                        <div className="single-post-area mb-30 ">
                             <div className="row align-items-center ">
                                 <div className="col-12 col-lg-6">
                                     {/* <!-- Post Thumbnail --> */}
@@ -911,7 +905,7 @@ export default function Home() {
                         </div>
 
                         {/* <!-- Single Post Area --> */}
-                        <div className="single-post-area mb-30 bg-white">
+                        <div className="single-post-area mb-30 ">
                             <div className="row align-items-center">
                                 <div className="col-12 col-lg-6">
                                     {/* <!-- Post Thumbnail --> */}
@@ -945,7 +939,7 @@ export default function Home() {
                         </div>
 
                         {/* <!-- Single Post Area --> */}
-                        <div className="single-post-area mb-30 bg-white">
+                        <div className="single-post-area mb-30 ">
                             <div className="row align-items-center">
                                 <div className="col-12 col-lg-6">
                                     {/* <!-- Post Thumbnail --> */}
@@ -979,7 +973,7 @@ export default function Home() {
                         </div>
 
                         {/* <!-- Single Post Area --> */}
-                        <div className="single-post-area mb-30 bg-white">
+                        <div className="single-post-area mb-30 ">
                             <div className="row align-items-center">
                                 <div className="col-12 col-lg-6">
                                     {/* <!-- Post Thumbnail --> */}
@@ -1019,7 +1013,7 @@ export default function Home() {
                     <div className="sidebar-area">
 
                         {/* <!-- ***** Single Widget ***** --> */}
-                        <div className="single-widget followers-widget mb-50 bg-white">
+                        <div className="single-widget followers-widget mb-50 ">
                             <a href="#" className="facebook"><i className="fa fa-facebook" aria-hidden="true"></i><span
                                     className="counter">198</span><span>Fan</span></a>
                             <a href="#" className="twitter"><i className="fa fa-twitter" aria-hidden="true"></i><span
@@ -1032,12 +1026,12 @@ export default function Home() {
                         <div className="single-widget latest-video-widget mb-50 ">
                             {/* <!-- Section Heading --> */}
                             <div className="section-heading style-2 mb-30">
-                                <h4>Latest Video</h4>
+                                <h4>مقتطفات</h4>
                                 <div className="line"></div>
                             </div>
 
                             {/* <!-- Single Blog Post --> */}
-                            <div className="single-post-area mb-30 bg-white">
+                            <div className="single-post-area mb-30 ">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/13.jpg" alt="" />
@@ -1114,7 +1108,7 @@ export default function Home() {
                         <div className="single-widget youtube-channel-widget mb-50">
                             {/* <!-- Section Heading --> */}
                             <div className="section-heading style-2 mb-30">
-                                <h4>Hot Channels</h4>
+                                <h4>مقالات</h4>
                                 <div className="line"></div>
                             </div>
 
@@ -1183,7 +1177,7 @@ export default function Home() {
                         <div className="single-widget newsletter-widget mb-50">
                             {/* <!-- Section Heading --> */}
                             <div className="section-heading style-2 mb-30">
-                                <h4>Newsletter</h4>
+                                <h4>النشرة البريدية</h4>
                                 <div className="line"></div>
                             </div>
                             <p>Subscribe our newsletter gor get notification about new updates, information discount,
@@ -1202,7 +1196,7 @@ export default function Home() {
                         <div className="single-widget mb-50">
                             {/* <!-- Section Heading --> */}
                             <div className="section-heading style-2 mb-30">
-                                <h4>Most Viewed Playlist</h4>
+                                <h4>الحرب الروسية</h4>
                                 <div className="line"></div>
                             </div>
 
@@ -1292,102 +1286,56 @@ export default function Home() {
     {/* <!-- ##### Vizew Psot Area End ##### --> */}
 
 
-{/* ########## بداية الاخبار الروسية ##########*/}
-<section class="section-m">
-        <div class="container">
-            <div class=" row">
-                <div class="col-sm-12 col-md-8 col-lg-9 p-4 mt-5">
-                    <h2 class="text-right text-white pb-3">الحرب الروسية</h2>
-                    {/* <img class="image-m img-fluid" src="img/bg-img/ru.jpg" alt="" /> */}
-                    <div className="featured-post-slides owl-carousel mb-30 bg-white">
-                            {/* <!-- Single Feature Post --> */}
-                            <div className="single-feature-post video-post bg-img"
-                               style={{ backgroundImage: "url(/img/bg-img/14.jpg)" }}>
-                               
 
-                                {/* <!-- Post Content --> */}
-                                <div className="post-content">
-                                    
-                                    <a href="single-post.html" className="post-title">Reunification of migrant toddlers,
-                                        parents should be completed Thursday</a>
-                                    
-                                </div>
-
-                                
-                            </div>
-
-                            
-                            
-                        </div>
-                </div>
-                <div class="col-sm-12 col-md-4 col-lg-3 p-4 pt-lg-5 mt-lg-5">
-
-                    <ul class="list-m mb-5">
-                        <li class=" mb-3">List item 1 List item 1 List item 1</li>
-                        <li class=" mb-3">List item 2</li>
-                        <li class=" mb-3">List item 3</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-    </section>
-{/* ########## نهاية الاخبار الروسية ##########*/}
 
     {/* <!-- ##### Footer Area Start ##### --> */}
-    <footer className="footer-area">
-        <div className="container">
-            <div className="row">
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
                 {/* <!-- Footer Widget Area --> */}
-                <div className="col-12 col-sm-6 col-xl-3">
-                    <div className="footer-widget mb-70">
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="footer-widget mb-70">
                         {/* <!-- Logo --> */}
-                        <a href="index.html" className="foo-logo d-block mb-4"><img src="img/core-img/logo2.png" alt="" /></a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna</p>
+                        <a href="index.html" class="foo-logo d-block mb-4"><img src="img/core-img/logo2.png" alt="" /></a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
                         {/* <!-- Footer Newsletter Area --> */}
-                        <div className="footer-nl-area">
+                        <div class="footer-nl-area">
                             <form action="#" method="post">
-                                <input type="email" name="nl-email" className="form-control" id="nlEmail"
-                                    placeholder="Your email"/>
-                                <button type="submit"><i className="fa fa-paper-plane" aria-hidden="true"></i></button>
+                                <input type="email" name="nl-email" class="form-control" id="nlEmail" placeholder="Your email"/>
+                                <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
                             </form>
                         </div>
                     </div>
                 </div>
 
                 {/* <!-- Footer Widget Area --> */}
-                <div className="col-12 col-sm-6 col-xl-3">
-                    <div className="footer-widget mb-70">
-                        <h6 className="widget-title">Latest Twister</h6>
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="footer-widget mb-70">
+                        <h6 class="widget-title">Latest Twister</h6>
                         {/* <!-- Twitter Slides --> */}
-                        <div className="twitter-slides owl-carousel">
+                        <div class="twitter-slides owl-carousel">
 
                             {/* <!-- Single Twitter Slide --> */}
-                            <div className="single--twitter-slide">
+                            <div class="single--twitter-slide">
                                 {/* <!-- Single Twit --> */}
-                                <div className="single-twit">
-                                    <p><i className="fa fa-twitter"></i> <span>@Leonard</span> I am so happy because I found
-                                        this magazine, and it just made Vizeweasier. Thanks for sharing</p>
+                                <div class="single-twit">
+                                    <p><i class="fa fa-twitter"></i> <span>@Leonard</span> I am so happy because I found this magazine, and it just made Vizeweasier. Thanks for sharing</p>
                                 </div>
                                 {/* <!-- Single Twit --> */}
-                                <div className="single-twit">
-                                    <p><i className="fa fa-twitter"></i> <span>@Leonard</span> I am so happy because I found
-                                        this magazine, and it just made Vizeweasier. Thanks for sharing</p>
+                                <div class="single-twit">
+                                    <p><i class="fa fa-twitter"></i> <span>@Leonard</span> I am so happy because I found this magazine, and it just made Vizeweasier. Thanks for sharing</p>
                                 </div>
                             </div>
 
                             {/* <!-- Single Twitter Slide --> */}
-                            <div className="single--twitter-slide">
+                            <div class="single--twitter-slide">
                                 {/* <!-- Single Twit --> */}
-                                <div className="single-twit">
-                                    <p><i className="fa fa-twitter"></i> <span>@dracware</span> I am so happy because I
-                                        found this magazine, and it just made Vizeweasier. Thanks for sharing</p>
+                                <div class="single-twit">
+                                    <p><i class="fa fa-twitter"></i> <span>@DracoWare</span> I am so happy because I found this magazine, and it just made Vizeweasier. Thanks for sharing</p>
                                 </div>
                                 {/* <!-- Single Twit --> */}
-                                <div className="single-twit">
-                                    <p><i className="fa fa-twitter"></i> <span>@dracware</span> I am so happy because I
-                                        found this magazine, and it just made Vizeweasier. Thanks for sharing</p>
+                                <div class="single-twit">
+                                    <p><i class="fa fa-twitter"></i> <span>@DracoWare</span> I am so happy because I found this magazine, and it just made Vizeweasier. Thanks for sharing</p>
                                 </div>
                             </div>
 
@@ -1396,36 +1344,36 @@ export default function Home() {
                 </div>
 
                 {/* <!-- Footer Widget Area --> */}
-                <div className="col-12 col-sm-6 col-xl-3">
-                    <div className="footer-widget mb-70">
-                        <h6 className="widget-title">Sport Videos</h6>
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="footer-widget mb-70">
+                        <h6 class="widget-title">Sport Videos</h6>
 
                         {/* <!-- Single Blog Post --> */}
-                        <div className="single-blog-post d-flex">
-                            <div className="post-thumbnail">
+                        <div class="single-blog-post d-flex">
+                            <div class="post-thumbnail">
                                 <img src="img/bg-img/1.jpg" alt="" />
                             </div>
-                            <div className="post-content">
-                                <a href="single-post.html" className="post-title">DC Shoes: gymkhana the</a>
-                                <div className="post-meta d-flex justify-content-between">
-                                    <a href="#"><i className="fa fa-comments-o" aria-hidden="true"></i> 14</a>
-                                    <a href="#"><i className="fa fa-eye" aria-hidden="true"></i> 34</a>
-                                    <a href="#"><i className="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
+                            <div class="post-content">
+                                <a href="single-post.html" class="post-title">DC Shoes: gymkhana the</a>
+                                <div class="post-meta d-flex justify-content-between">
+                                    <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
+                                    <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 34</a>
+                                    <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
                                 </div>
                             </div>
                         </div>
 
                         {/* <!-- Single Blog Post --> */}
-                        <div className="single-blog-post d-flex">
-                            <div className="post-thumbnail">
-                                <img src="img/bg-img/2.jpg" alt=""/>
+                        <div class="single-blog-post d-flex">
+                            <div class="post-thumbnail">
+                                <img src="img/bg-img/2.jpg" alt="" />
                             </div>
-                            <div className="post-content">
-                                <a href="single-post.html" className="post-title">Sweet Yummy Chocolatea Tea</a>
-                                <div className="post-meta d-flex justify-content-between">
-                                    <a href="#"><i className="fa fa-comments-o" aria-hidden="true"></i> 14</a>
-                                    <a href="#"><i className="fa fa-eye" aria-hidden="true"></i> 34</a>
-                                    <a href="#"><i className="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
+                            <div class="post-content">
+                                <a href="single-post.html" class="post-title">Sweet Yummy Chocolatea Tea</a>
+                                <div class="post-meta d-flex justify-content-between">
+                                    <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
+                                    <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 34</a>
+                                    <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
                                 </div>
                             </div>
                         </div>
@@ -1434,22 +1382,22 @@ export default function Home() {
                 </div>
 
                 {/* <!-- Footer Widget Area --> */}
-                <div className="col-12 col-sm-6 col-xl-3">
-                    <div className="footer-widget mb-70">
-                        <h6 className="widget-title">Our Address</h6>
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="footer-widget mb-70">
+                        <h6 class="widget-title">Our Address</h6>
                         {/* <!-- Contact Address --> */}
-                        <div className="contact-address">
-                            <p>101 E 129th St, East Chicago, <br/>IN 46312, US</p>
+                        <div class="contact-address">
+                            <p>101 E 129th St, East Chicago, <br />IN 46312, US</p>
                             <p>Phone: 001-1234-88888</p>
-                            <p>Email: info.dracware@gmail.com</p>
+                            <p>Email: info.colorlib@gmail.com</p>
                         </div>
                         {/* <!-- Footer Social Area --> */}
-                        <div className="footer-social-area">
-                            <a href="#" className="facebook"><i className="fa fa-facebook"></i></a>
-                           
-                            <a href="#" className="instagram"><i className="fa fa-instagram"></i></a>
-                            <a href="#" className="twitter"><i className="fa fa-twitter"></i></a>
-                            <a href="#" className="linkedin"><i className="fa fa-linkedin"></i></a>
+                        <div class="footer-social-area">
+                            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+                            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1457,21 +1405,20 @@ export default function Home() {
         </div>
 
         {/* <!-- Copywrite Area --> */}
-        <div className="copywrite-area">
-            <div className="container">
-                <div className="row align-items-center">
+        <div class="copywrite-area">
+            <div class="container">
+                <div class="row align-items-center">
                     {/* <!-- Copywrite Text --> */}
-                    <div className="col-12 col-sm-6">
-                        <p className="copywrite-text">
-                           
-                            Copyright &copy;
-                            <script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i className="fa fa-heart-o" aria-hidden="true"></i> by <a
-                                href="" target="_blank">DracoWare</a>
-                            
-                        </p>
+                    <div class="col-12 col-sm-6">
+                        <p class="copywrite-text">
+                            {/* <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> */}
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+
+{/* <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> */}
+</p>
                     </div>
-                    <div className="col-12 col-sm-6">
-                        <nav className="footer-nav">
+                    <div class="col-12 col-sm-6">
+                        <nav class="footer-nav">
                             <ul>
                                 <li><a href="#">Advertise</a></li>
                                 <li><a href="#">About</a></li>
@@ -1486,6 +1433,11 @@ export default function Home() {
         </div>
     </footer>
     {/* <!-- ##### Footer Area End ##### --> */}
+     <Script src="/js/jquery/jquery-2.2.4.min.js" />
+      <Script src="/js/bootstrap/popper.min.js" />
+      <Script src="/js/bootstrap/bootstrap.min.js" />
+      <Script src="/js/plugins/plugins.js" />
+      <Script src="/js/active.js" />
     </body>
     
     </>
