@@ -1,6 +1,9 @@
 import Head from "next/head";
 import Script from "next/script";
 import '../../public/style.css'
+import '../../public/css/style-grocery-price.css'
+import '../../public/css/style-currency.css'
+
 
 export default function Home() {
   return (
@@ -487,7 +490,163 @@ export default function Home() {
     {/* <!-- ##### Header Area End ##### --> */}
     
 
-    
+    {/* <!-- ##### price section Start ##### --> */}
+    <section className="hero--area section-padding-80">
+        <div className="container">
+            <div className="row">
+                <div className="col-12">
+                    {/* <!-- Section Heading --> */}
+                    <div className="section-heading">
+                        <h4>الاسعار</h4>
+                        <div className="line"></div>
+                    </div>
+                </div>
+            </div>
+            <div className="row no-gutters">
+                {/* currency price */}
+                <div className="col-12 col-md-6 col-lg-6">
+                    <div class="body-n">
+                    <div class="container-n">
+  <div class="weather-side">
+    <div class="weather-gradient"></div>
+    <div class="date-container">
+      <h2 class="date-dayname">Tuesday</h2><span class="date-day">15 Jan 2019</span><i class="location-icon" data-feather="map-pin"></i><span class="location">Paris, FR</span>
+    </div>
+    <div class="weather-container"><i class="weather-icon" data-feather="sun"></i>
+      <h1 class="weather-temp">29°C</h1>
+      <h3 class="weather-desc">Sunny</h3>
+    </div>
+  </div>
+  <div class="info-side">
+    <div class="today-info-container">
+      <div class="today-info">
+        <div class="precipitation"> <span class="title">PRECIPITATION</span><span class="value">0 %</span>
+          <div class="clear"></div>
+        </div>
+        <div class="humidity"> <span class="title">HUMIDITY</span><span class="value">34 %</span>
+          <div class="clear"></div>
+        </div>
+        <div class="wind"> <span class="title">WIND</span><span class="value">0 km/h</span>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <div class="week-container">
+      <ul class="week-list">
+        <li class="active"><i class="day-icon" data-feather="sun"></i><span class="day-name">Tue</span><span class="day-temp">29°C</span></li>
+        <li><i class="day-icon" data-feather="cloud"></i><span class="day-name">Wed</span><span class="day-temp">21°C</span></li>
+        <li><i class="day-icon" data-feather="cloud-snow"></i><span class="day-name">Thu</span><span class="day-temp">08°C</span></li>
+        <li><i class="day-icon" data-feather="cloud-rain"></i><span class="day-name">Fry</span><span class="day-temp">19°C</span></li>
+        <div class="clear"></div>
+      </ul>
+    </div>
+    <div class="location-container">
+      <button class="location-button"> <i data-feather="map-pin"></i><span>Change location</span></button>
+    </div>
+  </div>
+</div>
+  </div>
+
+                </div>
+                <div className="col-12 col-md-6 col-lg-6">
+                    <div class="body-n">
+                    <div class="container-n">
+  <div class="weather-side">
+    <div class="weather-gradient"></div>
+    <div class="date-container">
+      <h2 class="date-dayname">Tuesday</h2><span class="date-day">15 Jan 2019</span><i class="location-icon" data-feather="map-pin"></i><span class="location">Paris, FR</span>
+    </div>
+    <div class="weather-container"><i class="weather-icon" data-feather="sun"></i>
+      <h1 class="weather-temp">29°C</h1>
+      <h3 class="weather-desc">Sunny</h3>
+    </div>
+  </div>
+  <div class="info-side">
+    <div class="today-info-container">
+      <div class="today-info">
+        <div class="precipitation"> <span class="title">PRECIPITATION</span><span class="value">0 %</span>
+          <div class="clear"></div>
+        </div>
+        <div class="humidity"> <span class="title">HUMIDITY</span><span class="value">34 %</span>
+          <div class="clear"></div>
+        </div>
+        <div class="wind"> <span class="title">WIND</span><span class="value">0 km/h</span>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <div class="week-container">
+      <ul class="week-list">
+        <li class="active"><i class="day-icon" data-feather="sun"></i><span class="day-name">Tue</span><span class="day-temp">29°C</span></li>
+        <li><i class="day-icon" data-feather="cloud"></i><span class="day-name">Wed</span><span class="day-temp">21°C</span></li>
+        <li><i class="day-icon" data-feather="cloud-snow"></i><span class="day-name">Thu</span><span class="day-temp">08°C</span></li>
+        <li><i class="day-icon" data-feather="cloud-rain"></i><span class="day-name">Fry</span><span class="day-temp">19°C</span></li>
+        <div class="clear"></div>
+      </ul>
+    </div>
+    <div class="location-container">
+      <button class="location-button"> <i data-feather="map-pin"></i><span>Change location</span></button>
+    </div>
+  </div>
+</div>
+  </div>
+
+                </div>
+                {/* currency price end*/}
+
+                {/* اسعار المود الغذائية */}
+
+                <div className="col-12 col-md-7 col-lg-8">
+                   <div class="body-m">
+                   <div class="CartContainer">
+		<div class="Header">
+			<h3 class="Heading">Shopping Cart</h3>
+		</div>
+
+		<div class="Cart-Items">
+			<div class="image-box">
+				<img src="/img/bg-img/apple.png" style={{ height:"100px" }} />
+			</div>
+			<div class="about">
+				<h1 class="title">Apple Juice</h1>
+
+			</div>
+
+			<div class="prices">
+				<div class="amount">$2.99</div>
+
+			</div>
+		</div>
+		<hr />
+		<div class="Cart-Items pad">
+			<div class="image-box">
+				<img src="/img/bg-img/grapes.png" style={{ height:"100px" }} />
+			</div>
+			<div class="about">
+				<h2 class="title">Grapes Juice</h2>
+
+			</div>
+
+			<div class="prices">
+				<div class="amount">$3.19</div>
+
+			</div>
+		</div>
+		
+
+	</div> 
+    </div>
+                </div>
+
+                <div className="col-12 col-md-5 col-lg-4">
+                    
+                </div>
+            </div>
+                                                {/* اسعار المود الغذائية */}
+
+        </div>
+    </section>
+    {/* <!-- ##### price section End ##### --> */}
 
 
 {/* <!-- ##### Vizew Post Area Start ##### --> */}
