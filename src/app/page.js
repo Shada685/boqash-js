@@ -1,5 +1,8 @@
-import Head from 'next/head'
-import './style.css'
+import Head from "next/head";
+import Script from "next/script";
+import '../../public/style.css'
+import '../../public/css/style-grocery-price.css'
+import '../../public/css/style-currency.css'
 
 
 export default function Home() {
@@ -1555,8 +1558,17 @@ export default function Home() {
         </div>
     </footer>
     {/* <!-- ##### Footer Area End ##### --> */}
+
+      <Script src="/js/jquery/jquery-2.2.4.min.js" />
+      <Script src="/js/bootstrap/popper.min.js" />
+      <Script src="/js/bootstrap/bootstrap.min.js" />
+      <Script src="/js/plugins/plugins.js" />
+      <Script src="/js/active.js" />
+    
     </body>
     
+
+
     </>
   )
 }
