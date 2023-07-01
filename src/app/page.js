@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import Head from "next/head";
+=======
+import Head from 'next/head'
+>>>>>>> single
 import Script from "next/script";
 import '../../public/style.css'
 import '../../public/css/style-grocery-price.css'
@@ -9,6 +13,7 @@ export default function Home() {
   return (
     <>
     <Head>
+<<<<<<< HEAD
   <meta charset="UTF-8" />
     <meta name="description" content="" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -21,6 +26,16 @@ export default function Home() {
 
            {/* <!-- ##### Header Area Start ##### --> */}
      <header className="header-area">
+=======
+   
+  
+    </Head>
+    <body>
+       
+     
+     {/* <!-- ##### Header Area Start ##### --> */}
+    <header className="header-area">
+>>>>>>> single
         {/* <!-- Top Header Area --> */}
         <div className="top-header-area">
             <div className="container">
@@ -74,7 +89,11 @@ export default function Home() {
                     <nav className="classy-navbar justify-content-between" id="vizewNav">
 
                         {/* <!-- Nav brand --> */}
+<<<<<<< HEAD
                         <a href="index.html" className="nav-brand"><img src="img/core-img/logo2.png" alt=""/></a>
+=======
+                        <a href="index.html" className="nav-brand"><img src="/img/core-img/logo2.png" alt="" /></a>
+>>>>>>> single
 
                         {/* <!-- Navbar Toggler --> */}
                         <div className="classy-navbar-toggler">
@@ -91,11 +110,19 @@ export default function Home() {
                             {/* <!-- Nav Start --> */}
                             <div className="classynav">
                                 <ul>
+<<<<<<< HEAD
                                     <li className="active"><a href="index.html">Home</a></li>
                                     <li><a href="archive-list.html">Archives</a></li>
                                     <li><a href="#">Pages</a>
                                         <ul className="dropdown">
                                             <li><a href="index.html">- Home</a></li>
+=======
+                                    <li className="active"><a href="index.html">الرئيسية</a></li>
+                                    <li><a href="archive-list.html">Archives</a></li>
+                                    <li><a href="#">Pages</a>
+                                        <ul className="dropdown">
+                                            <li><a href="index.html">- الرئيسية</a></li>
+>>>>>>> single
                                             <li><a href="archive-list.html">- Archive List</a></li>
                                             <li><a href="archive-grid.html">- Archive Grid</a></li>
                                             <li><a href="single-post.html">- Single Post</a></li>
@@ -108,7 +135,11 @@ export default function Home() {
                                     <li><a href="#">Features</a>
                                         <div className="megamenu">
                                             <ul className="single-mega cn-col-4">
+<<<<<<< HEAD
                                                 <li><a href="index.html">- Home</a></li>
+=======
+                                                <li><a href="index.html">- الرئيسية</a></li>
+>>>>>>> single
                                                 <li><a href="archive-list.html">- Archive List</a></li>
                                                 <li><a href="archive-grid.html">- Archive Grid</a></li>
                                                 <li><a href="single-post.html">- Single Post</a></li>
@@ -118,7 +149,11 @@ export default function Home() {
                                                 <li><a href="login.html">- Login</a></li>
                                             </ul>
                                             <ul className="single-mega cn-col-4">
+<<<<<<< HEAD
                                                 <li><a href="index.html">- Home</a></li>
+=======
+                                                <li><a href="index.html">- الرئيسية</a></li>
+>>>>>>> single
                                                 <li><a href="archive-list.html">- Archive List</a></li>
                                                 <li><a href="archive-grid.html">- Archive Grid</a></li>
                                                 <li><a href="single-post.html">- Single Post</a></li>
@@ -128,7 +163,11 @@ export default function Home() {
                                                 <li><a href="login.html">- Login</a></li>
                                             </ul>
                                             <ul className="single-mega cn-col-4">
+<<<<<<< HEAD
                                                 <li><a href="index.html">- Home</a></li>
+=======
+                                                <li><a href="index.html">- الرئيسية</a></li>
+>>>>>>> single
                                                 <li><a href="archive-list.html">- Archive List</a></li>
                                                 <li><a href="archive-grid.html">- Archive Grid</a></li>
                                                 <li><a href="single-post.html">- Single Post</a></li>
@@ -138,7 +177,11 @@ export default function Home() {
                                                 <li><a href="login.html">- Login</a></li>
                                             </ul>
                                             <ul className="single-mega cn-col-4">
+<<<<<<< HEAD
                                                 <li><a href="index.html">- Home</a></li>
+=======
+                                                <li><a href="index.html">- الرئيسية</a></li>
+>>>>>>> single
                                                 <li><a href="archive-list.html">- Archive List</a></li>
                                                 <li><a href="archive-grid.html">- Archive Grid</a></li>
                                                 <li><a href="single-post.html">- Single Post</a></li>
@@ -547,6 +590,7 @@ export default function Home() {
 </div>
   </div>
 
+<<<<<<< HEAD
                 </div>
                 <div className="col-12 col-md-6 col-lg-6">
                     <div className="body-n">
@@ -590,6 +634,16 @@ export default function Home() {
   </div>
 </div>
   </div>
+=======
+            <div className="row">
+                {/* <!-- Single Blog Post --> */}
+                <div className="col-12 col-md-4 ">
+                    <div className="single-post-area mb-80 ">
+                        {/* <!-- Post Thumbnail --> */}
+                        <div className="post-thumbnail">
+                           
+                             <img src="/img/bg-img/11.jpg" alt="" />
+>>>>>>> single
 
                 </div>
                 {/* currency price end*/}
@@ -638,8 +692,58 @@ export default function Home() {
     </div>
                 </div>
 
+<<<<<<< HEAD
                 <div className="col-12 col-md-5 col-lg-4">
                     
+=======
+                {/* <!-- Single Blog Post --> */}
+                <div className="col-12 col-md-4">
+                    <div className="single-post-area mb-80 ">
+                        {/* <!-- Post Thumbnail --> */}
+                        <div className="post-thumbnail">
+                          
+ <img src="/img/bg-img/12.jpg" alt=""/>
+                            {/* <!-- Video Duration --> */}
+                            <span className="video-duration">05.03</span>
+                        </div>
+
+                        {/* <!-- Post Content --> */}
+                        <div className="post-content">
+                            <a href="#" className="post-cata cata-sm cata-danger">Game</a>
+                            <a href="single-post.html" className="post-title">انباء عن اصدار لعبة GTA6</a>
+                            <div className="post-meta d-flex">
+                                <a href="#"><i className="fa fa-comments-o" aria-hidden="true"></i> 28</a>
+                                <a href="#"><i className="fa fa-eye" aria-hidden="true"></i> 17</a>
+                                <a href="#"><i className="fa fa-thumbs-o-up" aria-hidden="true"></i> 22</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* <!-- Single Blog Post --> */}
+                <div className="col-12 col-md-4">
+                    <div className="single-post-area mb-80 ">
+                        {/* <!-- Post Thumbnail --> */}
+                        <div className="post-thumbnail">
+                           
+ <img src="/img/bg-img/13.jpg" alt=""/>
+                            {/* <!-- Video Duration --> */}
+                            <span className="video-duration">05.03</span>
+                        </div>
+
+                        {/* <!-- Post Content --> */}
+                        <div className="post-content">
+                            <a href="#" className="post-cata cata-sm cata-primary">Business</a>
+                            <a href="single-post.html" className="post-title">Love Island star's boyfriend found dead after
+                                her funeral</a>
+                            <div className="post-meta d-flex">
+                                <a href="#"><i className="fa fa-comments-o" aria-hidden="true"></i> 14</a>
+                                <a href="#"><i className="fa fa-eye" aria-hidden="true"></i> 38</a>
+                                <a href="#"><i className="fa fa-thumbs-o-up" aria-hidden="true"></i> 22</a>
+                            </div>
+                        </div>
+                    </div>
+>>>>>>> single
                 </div>
             </div>
                                                 {/* اسعار المود الغذائية */}
@@ -1592,11 +1696,19 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         </div>
     </footer>
     {/* <!-- ##### Footer Area End ##### --> */}
+<<<<<<< HEAD
      <Script src="/js/jquery/jquery-2.2.4.min.js" />
+=======
+    <Script src="/js/jquery/jquery-2.2.4.min.js" />
+>>>>>>> single
       <Script src="/js/bootstrap/popper.min.js" />
       <Script src="/js/bootstrap/bootstrap.min.js" />
       <Script src="/js/plugins/plugins.js" />
       <Script src="/js/active.js" />
+<<<<<<< HEAD
+=======
+   
+>>>>>>> single
     </body>
     
     </>
