@@ -18,6 +18,15 @@ export default function Home() {
       </Head>
       <body>
         {/* <!-- Preloader --> */}
+{/* <div className="preloader d-flex align-items-center justify-content-center">
+        <div className="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div> */}
+            {/* <!-- Preloader --> */}
 
         {/* <!-- ##### Header Area Start ##### --> */}
         <header className="header-area">
@@ -106,7 +115,7 @@ export default function Home() {
                   id="vizewNav"
                 >
                   {/* <!-- Nav brand --> */}
-                  <a href="index.html" className="nav-brand">
+                  <a href="/" className="nav-brand">
                     <img src="img/core-img/logo2.png" alt="" />
                   </a>
 
@@ -913,234 +922,7 @@ export default function Home() {
         {/* <!-- ##### Header Area End ##### --> */}
 
         {/* <!-- ##### price section Start ##### --> */}
-        <section className="hero--area section-padding-80">
-          <div className="container">
-            <div className="row">
-              <div className="col-12">
-                {/* <!-- Section Heading --> */}
-                <div className="section-heading">
-                  <h4>الاسعار</h4>
-                  <div className="line"></div>
-                </div>
-              </div>
-            </div>
-            <div className="row no-gutters">
-              {/* currency price */}
-              <div className="col-12 col-md-6 col-lg-6">
-                <div className="body-n">
-                  <div className="container-n">
-                    <div className="weather-side">
-                      <div className="weather-gradient"></div>
-                      <div className="date-container">
-                        <h2 className="date-dayname">Tuesday</h2>
-                        <span className="date-day">15 Jan 2019</span>
-                        <i className="location-icon" data-feather="map-pin"></i>
-                        <span className="location">Paris, FR</span>
-                      </div>
-                      <div className="weather-container">
-                        <i className="weather-icon" data-feather="sun"></i>
-                        <h1 className="weather-temp">29°C</h1>
-                        <h3 className="weather-desc">Sunny</h3>
-                      </div>
-                    </div>
-                    <div className="info-side">
-                      <div className="today-info-container">
-                        <div className="today-info">
-                          <div className="precipitation">
-                            {" "}
-                            <span className="title">PRECIPITATION</span>
-                            <span className="value">0 %</span>
-                            <div className="clear"></div>
-                          </div>
-                          <div className="humidity">
-                            {" "}
-                            <span className="title">HUMIDITY</span>
-                            <span className="value">34 %</span>
-                            <div className="clear"></div>
-                          </div>
-                          <div className="wind">
-                            {" "}
-                            <span className="title">WIND</span>
-                            <span className="value">0 km/h</span>
-                            <div className="clear"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="week-container">
-                        <ul className="week-list">
-                          <li className="active">
-                            <i className="day-icon" data-feather="sun"></i>
-                            <span className="day-name">Tue</span>
-                            <span className="day-temp">29°C</span>
-                          </li>
-                          <li>
-                            <i className="day-icon" data-feather="cloud"></i>
-                            <span className="day-name">Wed</span>
-                            <span className="day-temp">21°C</span>
-                          </li>
-                          <li>
-                            <i
-                              className="day-icon"
-                              data-feather="cloud-snow"
-                            ></i>
-                            <span className="day-name">Thu</span>
-                            <span className="day-temp">08°C</span>
-                          </li>
-                          <li>
-                            <i
-                              className="day-icon"
-                              data-feather="cloud-rain"
-                            ></i>
-                            <span className="day-name">Fry</span>
-                            <span className="day-temp">19°C</span>
-                          </li>
-                          <div className="clear"></div>
-                        </ul>
-                      </div>
-                      <div className="location-container">
-                        <button className="location-button">
-                          {" "}
-                          <i data-feather="map-pin"></i>
-                          <span>Change location</span>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-12 col-md-6 col-lg-6">
-                <div className="body-n">
-                  <div className="container-n">
-                    <div className="weather-side">
-                      <div className="weather-gradient"></div>
-                      <div className="date-container">
-                        <h2 className="date-dayname">Tuesday</h2>
-                        <span className="date-day">15 Jan 2019</span>
-                        <i className="location-icon" data-feather="map-pin"></i>
-                        <span className="location">Paris, FR</span>
-                      </div>
-                      <div className="weather-container">
-                        <i className="weather-icon" data-feather="sun"></i>
-                        <h1 className="weather-temp">29°C</h1>
-                        <h3 className="weather-desc">Sunny</h3>
-                      </div>
-                    </div>
-                    <div className="info-side">
-                      <div className="today-info-container">
-                        <div className="today-info">
-                          <div className="precipitation">
-                            {" "}
-                            <span className="title">PRECIPITATION</span>
-                            <span className="value">0 %</span>
-                            <div className="clear"></div>
-                          </div>
-                          <div className="humidity">
-                            {" "}
-                            <span className="title">HUMIDITY</span>
-                            <span className="value">34 %</span>
-                            <div className="clear"></div>
-                          </div>
-                          <div className="wind">
-                            {" "}
-                            <span className="title">WIND</span>
-                            <span className="value">0 km/h</span>
-                            <div className="clear"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="week-container">
-                        <ul className="week-list">
-                          <li className="active">
-                            <i className="day-icon" data-feather="sun"></i>
-                            <span className="day-name">Tue</span>
-                            <span className="day-temp">29°C</span>
-                          </li>
-                          <li>
-                            <i className="day-icon" data-feather="cloud"></i>
-                            <span className="day-name">Wed</span>
-                            <span className="day-temp">21°C</span>
-                          </li>
-                          <li>
-                            <i
-                              className="day-icon"
-                              data-feather="cloud-snow"
-                            ></i>
-                            <span className="day-name">Thu</span>
-                            <span className="day-temp">08°C</span>
-                          </li>
-                          <li>
-                            <i
-                              className="day-icon"
-                              data-feather="cloud-rain"
-                            ></i>
-                            <span className="day-name">Fry</span>
-                            <span className="day-temp">19°C</span>
-                          </li>
-                          <div className="clear"></div>
-                        </ul>
-                      </div>
-                      <div className="location-container">
-                        <button className="location-button">
-                          {" "}
-                          <i data-feather="map-pin"></i>
-                          <span>Change location</span>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* currency price end*/}
-
-              {/* اسعار المود الغذائية */}
-
-              <div className="col-12 col-md-7 col-lg-8">
-                <div className="body-m">
-                  <div className="CartContainer">
-                    <div className="Header">
-                      <h3 className="Heading">Shopping Cart</h3>
-                    </div>
-
-                    <div className="Cart-Items">
-                      <div className="image-box">
-                        <img
-                          src="/img/bg-img/apple.png"
-                          style={{ height: "100px" }}
-                        />
-                      </div>
-                      <div className="about">
-                        <h1 className="title">Apple Juice</h1>
-                      </div>
-
-                      <div className="prices">
-                        <div className="amount">$2.99</div>
-                      </div>
-                    </div>
-                    <hr />
-                    <div className="Cart-Items pad">
-                      <div className="image-box">
-                        <img
-                          src="/img/bg-img/grapes.png"
-                          style={{ height: "100px" }}
-                        />
-                      </div>
-                      <div className="about">
-                        <h2 className="title">Grapes Juice</h2>
-                      </div>
-
-                      <div className="prices">
-                        <div className="amount">$3.19</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-12 col-md-5 col-lg-4"></div>
-            </div>
-            {/* اسعار المود الغذائية */}
-          </div>
-        </section>
+        
         {/* <!-- ##### price section End ##### --> */}
 
         {/* <!-- ##### Vizew Post Area Start ##### --> */}

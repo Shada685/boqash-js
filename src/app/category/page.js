@@ -12,8 +12,8 @@ export default function Category() {
 
     </Head>
     <body>
-      {/* <div class="preloader d-flex align-items-center justify-content-center">
-        <div class="lds-ellipsis">
+      {/* <div className="preloader d-flex align-items-center justify-content-center">
+        <div className="lds-ellipsis">
             <div></div>
             <div></div>
             <div></div>
@@ -71,35 +71,35 @@ export default function Category() {
         </div>
 
         {/* <!-- Navbar Area --> */}
-        <div class="vizew-main-menu" id="sticker">
-            <div class="classy-nav-container breakpoint-off">
-                <div class="container">
+        <div className="vizew-main-menu" id="sticker">
+            <div className="classy-nav-container breakpoint-off">
+                <div className="container">
 
                     {/* <!-- Menu --> */}
-                    <nav class="classy-navbar justify-content-between" id="vizewNav">
+                    <nav className="classy-navbar justify-content-between" id="vizewNav">
 
                         {/* <!-- Nav brand --> */}
-                        <a href="index.html" class="nav-brand"><img src="/img/core-img/logo2.png" alt="" /></a>
+                        <a href="index.html" className="nav-brand"><img src="/img/core-img/logo2.png" alt="" /></a>
 
                         {/* <!-- Navbar Toggler --> */}
-                        <div class="classy-navbar-toggler">
-                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        <div className="classy-navbar-toggler">
+                            <span className="navbarToggler"><span></span><span></span><span></span></span>
                         </div>
 
-                        <div class="classy-menu">
+                        <div className="classy-menu">
 
                             {/* <!-- Close Button --> */}
-                            <div class="classycloseIcon">
-                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            <div className="classycloseIcon">
+                                <div className="cross-wrap"><span className="top"></span><span className="bottom"></span></div>
                             </div>
 
                             {/* <!-- Nav Start --> */}
-                            <div class="classynav">
+                            <div className="classynav">
                                 <ul>
-                                    <li class="active"><a href="index.html">الرئيسية</a></li>
+                                    <li className="active"><a href="index.html">الرئيسية</a></li>
                                     <li><a href="archive-list.html">Archives</a></li>
                                     <li><a href="#">Pages</a>
-                                        <ul class="dropdown">
+                                        <ul className="dropdown">
                                             <li><a href="index.html">- الرئيسية</a></li>
                                             <li><a href="archive-list.html">- Archive List</a></li>
                                             <li><a href="archive-grid.html">- Archive Grid</a></li>
@@ -111,8 +111,8 @@ export default function Category() {
                                         </ul>
                                     </li>
                                     <li><a href="#">Features</a>
-                                        <div class="megamenu">
-                                            <ul class="single-mega cn-col-4">
+                                        <div className="megamenu">
+                                            <ul className="single-mega cn-col-4">
                                                 <li><a href="index.html">- الرئيسية</a></li>
                                                 <li><a href="archive-list.html">- Archive List</a></li>
                                                 <li><a href="archive-grid.html">- Archive Grid</a></li>
@@ -122,7 +122,7 @@ export default function Category() {
                                                 <li><a href="typography.html">- Typography</a></li>
                                                 <li><a href="login.html">- Login</a></li>
                                             </ul>
-                                            <ul class="single-mega cn-col-4">
+                                            <ul className="single-mega cn-col-4">
                                                 <li><a href="index.html">- الرئيسية</a></li>
                                                 <li><a href="archive-list.html">- Archive List</a></li>
                                                 <li><a href="archive-grid.html">- Archive Grid</a></li>
@@ -132,7 +132,7 @@ export default function Category() {
                                                 <li><a href="typography.html">- Typography</a></li>
                                                 <li><a href="login.html">- Login</a></li>
                                             </ul>
-                                            <ul class="single-mega cn-col-4">
+                                            <ul className="single-mega cn-col-4">
                                                 <li><a href="index.html">- الرئيسية</a></li>
                                                 <li><a href="archive-list.html">- Archive List</a></li>
                                                 <li><a href="archive-grid.html">- Archive Grid</a></li>
@@ -142,7 +142,7 @@ export default function Category() {
                                                 <li><a href="typography.html">- Typography</a></li>
                                                 <li><a href="login.html">- Login</a></li>
                                             </ul>
-                                            <ul class="single-mega cn-col-4">
+                                            <ul className="single-mega cn-col-4">
                                                 <li><a href="index.html">- الرئيسية</a></li>
                                                 <li><a href="archive-list.html">- Archive List</a></li>
                                                 <li><a href="archive-grid.html">- Archive Grid</a></li>
@@ -167,16 +167,16 @@ export default function Category() {
     {/* <!-- ##### Header Area End ##### --> */}
 
     {/* <!-- ##### Breadcrumb Area Start ##### --> */}
-    <div class="vizew-breadcrumb">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
+    <div className="vizew-breadcrumb">
+        <div className="container">
+            <div className="row">
+                <div className="col-12">
                     <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#"><i class="fa fa-الرئيسية" aria-hidden="true"></i>
+                        <ol className="breadcrumb">
+                            <li className="breadcrumb-item"><a href="#"><i className="fa fa-الرئيسية" aria-hidden="true"></i>
                                     الرئيسية</a></li>
-                            <li class="breadcrumb-item"><a href="#">Feature</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Archive by Category SPORTS</li>
+                            <li className="breadcrumb-item"><a href="#">Feature</a></li>
+                            <li className="breadcrumb-item active" aria-current="page">Archive by Category SPORTS</li>
                         </ol>
                     </nav>
                 </div>
@@ -186,21 +186,21 @@ export default function Category() {
     {/* <!-- ##### Breadcrumb Area End ##### --> */}
 
     {/* <!-- ##### Archive Grid Posts Area Start ##### --> */}
-    <div class="vizew-grid-posts-area mb-80">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 col-lg-8">
+    <div className="vizew-grid-posts-area mb-80">
+        <div className="container">
+            <div className="row justify-content-center">
+                <div className="col-12 col-lg-8">
                     {/* <!-- Archive Catagory & View Options --> */}
-                    <div class="archive-catagory-view mb-50 d-flex align-items-center justify-content-between">
+                    <div className="archive-catagory-view mb-50 d-flex align-items-center justify-content-between">
                         {/* <!-- Catagory --> */}
-                        <div class="archive-catagory">
-                            <h4><i class="fa fa-trophy" aria-hidden="true"></i> Sports</h4>
+                        <div className="archive-catagory">
+                            <h4><i className="fa fa-trophy" aria-hidden="true"></i> Sports</h4>
                         </div>
                         {/* <!-- View Options --> */}
                         
                     </div>
 
-                    <div class="row">
+                    <div className="row">
 <div className="featured-post-slides owl-carousel mb-30">
                             {/* <!-- Single Feature Post --> */}
                             <div className="single-feature-post video-post bg-img"
@@ -230,332 +230,332 @@ export default function Category() {
                         </div>
 
                         {/* <!-- Single Blog Post --> */}
-                        <div class="col-12 col-md-6">
-                            <div class="single-post-area mb-50">
+                        <div className="col-12 col-md-6">
+                            <div className="single-post-area mb-50">
                                 {/* <!-- Post Thumbnail --> */}
-                                <div class="post-thumbnail">
+                                <div className="post-thumbnail">
                                     <img src="img/bg-img/12.jpg" alt="" />
 
                                     {/* <!-- Video Duration --> */}
-                                    <span class="video-duration">05.03</span>
+                                    <span className="video-duration">05.03</span>
                                 </div>
 
                                 {/* <!-- Post Content --> */}
-                                <div class="post-content">
-                                    <a href="#" class="post-cata cata-sm cata-success">Sports</a>
-                                    <a href="single-post.html" class="post-title">May fights on after Johnson savages
+                                <div className="post-content">
+                                    <a href="#" className="post-cata cata-sm cata-success">Sports</a>
+                                    <a href="single-post.html" className="post-title">May fights on after Johnson savages
                                         Brexit approach</a>
-                                    <div class="post-meta d-flex">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 22</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 16</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 15</a>
+                                    <div className="post-meta d-flex">
+                                        <a href="#"><i className="fa fa-comments-o" aria-hidden="true"></i> 22</a>
+                                        <a href="#"><i className="fa fa-eye" aria-hidden="true"></i> 16</a>
+                                        <a href="#"><i className="fa fa-thumbs-o-up" aria-hidden="true"></i> 15</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         {/* <!-- Single Blog Post --> */}
-                        <div class="col-12 col-md-6">
-                            <div class="single-post-area mb-50">
+                        <div className="col-12 col-md-6">
+                            <div className="single-post-area mb-50">
                                 {/* <!-- Post Thumbnail --> */}
-                                <div class="post-thumbnail">
+                                <div className="post-thumbnail">
                                     <img src="img/bg-img/39.jpg" alt="" />
 
                                     {/* <!-- Video Duration --> */}
-                                    <span class="video-duration">05.03</span>
+                                    <span className="video-duration">05.03</span>
                                 </div>
 
                                 {/* <!-- Post Content --> */}
-                                <div class="post-content">
-                                    <a href="#" class="post-cata cata-sm cata-success">Sports</a>
-                                    <a href="single-post.html" class="post-title">Thailand cave rescue: Boys 'doing
+                                <div className="post-content">
+                                    <a href="#" className="post-cata cata-sm cata-success">Sports</a>
+                                    <a href="single-post.html" className="post-title">Thailand cave rescue: Boys 'doing
                                         well' after spending night</a>
-                                    <div class="post-meta d-flex">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 28</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 17</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 22</a>
+                                    <div className="post-meta d-flex">
+                                        <a href="#"><i className="fa fa-comments-o" aria-hidden="true"></i> 28</a>
+                                        <a href="#"><i className="fa fa-eye" aria-hidden="true"></i> 17</a>
+                                        <a href="#"><i className="fa fa-thumbs-o-up" aria-hidden="true"></i> 22</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         {/* <!-- Single Blog Post --> */}
-                        <div class="col-12 col-md-6">
-                            <div class="single-post-area mb-50">
+                        <div className="col-12 col-md-6">
+                            <div className="single-post-area mb-50">
                                 {/* <!-- Post Thumbnail --> */}
-                                <div class="post-thumbnail">
+                                <div className="post-thumbnail">
                                     <img src="img/bg-img/40.jpg" alt="" />
 
                                     {/* <!-- Video Duration --> */}
-                                    <span class="video-duration">05.03</span>
+                                    <span className="video-duration">05.03</span>
                                 </div>
 
                                 {/* <!-- Post Content --> */}
-                                <div class="post-content">
-                                    <a href="#" class="post-cata cata-sm cata-success">Sports</a>
-                                    <a href="single-post.html" class="post-title">Theresa May battles Brexitee backlash
+                                <div className="post-content">
+                                    <a href="#" className="post-cata cata-sm cata-success">Sports</a>
+                                    <a href="single-post.html" className="post-title">Theresa May battles Brexitee backlash
                                         amid disquiet</a>
-                                    <div class="post-meta d-flex">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 38</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 22</a>
+                                    <div className="post-meta d-flex">
+                                        <a href="#"><i className="fa fa-comments-o" aria-hidden="true"></i> 14</a>
+                                        <a href="#"><i className="fa fa-eye" aria-hidden="true"></i> 38</a>
+                                        <a href="#"><i className="fa fa-thumbs-o-up" aria-hidden="true"></i> 22</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         {/* <!-- Single Blog Post --> */}
-                        <div class="col-12 col-md-6">
-                            <div class="single-post-area mb-50">
+                        <div className="col-12 col-md-6">
+                            <div className="single-post-area mb-50">
                                 {/* <!-- Post Thumbnail --> */}
-                                <div class="post-thumbnail">
+                                <div className="post-thumbnail">
                                     <img src="img/bg-img/41.jpg" alt="" />
 
                                     {/* <!-- Video Duration --> */}
-                                    <span class="video-duration">05.03</span>
+                                    <span className="video-duration">05.03</span>
                                 </div>
 
                                 {/* <!-- Post Content --> */}
-                                <div class="post-content">
-                                    <a href="#" class="post-cata cata-sm cata-success">Sports</a>
-                                    <a href="single-post.html" class="post-title">Theresa May battles Brexitee backlash
+                                <div className="post-content">
+                                    <a href="#" className="post-cata cata-sm cata-success">Sports</a>
+                                    <a href="single-post.html" className="post-title">Theresa May battles Brexitee backlash
                                         amid disquiet</a>
-                                    <div class="post-meta d-flex">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 22</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 16</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 15</a>
+                                    <div className="post-meta d-flex">
+                                        <a href="#"><i className="fa fa-comments-o" aria-hidden="true"></i> 22</a>
+                                        <a href="#"><i className="fa fa-eye" aria-hidden="true"></i> 16</a>
+                                        <a href="#"><i className="fa fa-thumbs-o-up" aria-hidden="true"></i> 15</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         {/* <!-- Single Blog Post --> */}
-                        <div class="col-12 col-md-6">
-                            <div class="single-post-area mb-50">
+                        <div className="col-12 col-md-6">
+                            <div className="single-post-area mb-50">
                                 {/* <!-- Post Thumbnail --> */}
-                                <div class="post-thumbnail">
+                                <div className="post-thumbnail">
                                     <img src="img/bg-img/42.jpg" alt="" />
 
                                     {/* <!-- Video Duration --> */}
-                                    <span class="video-duration">05.03</span>
+                                    <span className="video-duration">05.03</span>
                                 </div>
 
                                 {/* <!-- Post Content --> */}
-                                <div class="post-content">
-                                    <a href="#" class="post-cata cata-sm cata-success">Sports</a>
-                                    <a href="single-post.html" class="post-title">Searching for the 'angel' who held me
+                                <div className="post-content">
+                                    <a href="#" className="post-cata cata-sm cata-success">Sports</a>
+                                    <a href="single-post.html" className="post-title">Searching for the 'angel' who held me
                                         on Westminster Bridge</a>
-                                    <div class="post-meta d-flex">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 28</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 17</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 22</a>
+                                    <div className="post-meta d-flex">
+                                        <a href="#"><i className="fa fa-comments-o" aria-hidden="true"></i> 28</a>
+                                        <a href="#"><i className="fa fa-eye" aria-hidden="true"></i> 17</a>
+                                        <a href="#"><i className="fa fa-thumbs-o-up" aria-hidden="true"></i> 22</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         {/* <!-- Single Blog Post --> */}
-                        <div class="col-12 col-md-6">
-                            <div class="single-post-area mb-50">
+                        <div className="col-12 col-md-6">
+                            <div className="single-post-area mb-50">
                                 {/* <!-- Post Thumbnail --> */}
-                                <div class="post-thumbnail">
+                                <div className="post-thumbnail">
                                     <img src="img/bg-img/43.jpg" alt="" />
 
                                     {/* <!-- Video Duration --> */}
-                                    <span class="video-duration">05.03</span>
+                                    <span className="video-duration">05.03</span>
                                 </div>
 
                                 {/* <!-- Post Content --> */}
-                                <div class="post-content">
-                                    <a href="#" class="post-cata cata-sm cata-success">Sports</a>
-                                    <a href="single-post.html" class="post-title">Full article Prince Charles's 'urgent'
+                                <div className="post-content">
+                                    <a href="#" className="post-cata cata-sm cata-success">Sports</a>
+                                    <a href="single-post.html" className="post-title">Full article Prince Charles's 'urgent'
                                         global research</a>
-                                    <div class="post-meta d-flex">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 38</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 22</a>
+                                    <div className="post-meta d-flex">
+                                        <a href="#"><i className="fa fa-comments-o" aria-hidden="true"></i> 14</a>
+                                        <a href="#"><i className="fa fa-eye" aria-hidden="true"></i> 38</a>
+                                        <a href="#"><i className="fa fa-thumbs-o-up" aria-hidden="true"></i> 22</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         {/* <!-- Single Blog Post --> */}
-                        <div class="col-12 col-md-6">
-                            <div class="single-post-area mb-50">
+                        <div className="col-12 col-md-6">
+                            <div className="single-post-area mb-50">
                                 {/* <!-- Post Thumbnail --> */}
-                                <div class="post-thumbnail">
+                                <div className="post-thumbnail">
                                     <img src="img/bg-img/44.jpg" alt=""/>
 
                                     {/* <!-- Video Duration --> */}
-                                    <span class="video-duration">05.03</span>
+                                    <span className="video-duration">05.03</span>
                                 </div>
 
                                 {/* <!-- Post Content --> */}
-                                <div class="post-content">
-                                    <a href="#" class="post-cata cata-sm cata-success">Sports</a>
-                                    <a href="single-post.html" class="post-title">Paramedics 'drilled into boat death
+                                <div className="post-content">
+                                    <a href="#" className="post-cata cata-sm cata-success">Sports</a>
+                                    <a href="single-post.html" className="post-title">Paramedics 'drilled into boat death
                                         woman'</a>
-                                    <div class="post-meta d-flex">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 22</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 16</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 15</a>
+                                    <div className="post-meta d-flex">
+                                        <a href="#"><i className="fa fa-comments-o" aria-hidden="true"></i> 22</a>
+                                        <a href="#"><i className="fa fa-eye" aria-hidden="true"></i> 16</a>
+                                        <a href="#"><i className="fa fa-thumbs-o-up" aria-hidden="true"></i> 15</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         {/* <!-- Single Blog Post --> */}
-                        <div class="col-12 col-md-6">
-                            <div class="single-post-area mb-50">
+                        <div className="col-12 col-md-6">
+                            <div className="single-post-area mb-50">
                                 {/* <!-- Post Thumbnail --> */}
-                                <div class="post-thumbnail">
+                                <div className="post-thumbnail">
                                     <img src="img/bg-img/45.jpg" alt=""/>
 
                                     {/* <!-- Video Duration --> */}
-                                    <span class="video-duration">05.03</span>
+                                    <span className="video-duration">05.03</span>
                                 </div>
 
                                 {/* <!-- Post Content --> */}
-                                <div class="post-content">
-                                    <a href="#" class="post-cata cata-sm cata-success">Sports</a>
-                                    <a href="single-post.html" class="post-title">Do This One Simple Action for an
+                                <div className="post-content">
+                                    <a href="#" className="post-cata cata-sm cata-success">Sports</a>
+                                    <a href="single-post.html" className="post-title">Do This One Simple Action for an
                                         Absolutely</a>
-                                    <div class="post-meta d-flex">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 28</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 17</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 22</a>
+                                    <div className="post-meta d-flex">
+                                        <a href="#"><i className="fa fa-comments-o" aria-hidden="true"></i> 28</a>
+                                        <a href="#"><i className="fa fa-eye" aria-hidden="true"></i> 17</a>
+                                        <a href="#"><i className="fa fa-thumbs-o-up" aria-hidden="true"></i> 22</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         {/* <!-- Single Blog Post --> */}
-                        <div class="col-12 col-md-6">
-                            <div class="single-post-area mb-50">
+                        <div className="col-12 col-md-6">
+                            <div className="single-post-area mb-50">
                                 {/* <!-- Post Thumbnail --> */}
-                                <div class="post-thumbnail">
+                                <div className="post-thumbnail">
                                     <img src="img/bg-img/46.jpg" alt="" />
 
                                     {/* <!-- Video Duration --> */}
-                                    <span class="video-duration">05.03</span>
+                                    <span className="video-duration">05.03</span>
                                 </div>
 
                                 {/* <!-- Post Content --> */}
-                                <div class="post-content">
-                                    <a href="#" class="post-cata cata-sm cata-success">Sports</a>
-                                    <a href="single-post.html" class="post-title">Thailand cave rescue: Boys 'doing
+                                <div className="post-content">
+                                    <a href="#" className="post-cata cata-sm cata-success">Sports</a>
+                                    <a href="single-post.html" className="post-title">Thailand cave rescue: Boys 'doing
                                         well' after spending night</a>
-                                    <div class="post-meta d-flex">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 38</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 22</a>
+                                    <div className="post-meta d-flex">
+                                        <a href="#"><i className="fa fa-comments-o" aria-hidden="true"></i> 14</a>
+                                        <a href="#"><i className="fa fa-eye" aria-hidden="true"></i> 38</a>
+                                        <a href="#"><i className="fa fa-thumbs-o-up" aria-hidden="true"></i> 22</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         {/* <!-- Single Blog Post --> */}
-                        <div class="col-12 col-md-6">
-                            <div class="single-post-area mb-50">
+                        <div className="col-12 col-md-6">
+                            <div className="single-post-area mb-50">
                                 {/* <!-- Post Thumbnail --> */}
-                                <div class="post-thumbnail">
+                                <div className="post-thumbnail">
                                     <img src="img/bg-img/47.jpg" alt="" />
 
                                     {/* <!-- Video Duration --> */}
-                                    <span class="video-duration">05.03</span>
+                                    <span className="video-duration">05.03</span>
                                 </div>
 
                                 {/* <!-- Post Content --> */}
-                                <div class="post-content">
-                                    <a href="#" class="post-cata cata-sm cata-success">Sports</a>
-                                    <a href="single-post.html" class="post-title">Theresa May battles Brexiteer backlash
+                                <div className="post-content">
+                                    <a href="#" className="post-cata cata-sm cata-success">Sports</a>
+                                    <a href="single-post.html" className="post-title">Theresa May battles Brexiteer backlash
                                         amid disquiet</a>
-                                    <div class="post-meta d-flex">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 22</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 16</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 15</a>
+                                    <div className="post-meta d-flex">
+                                        <a href="#"><i className="fa fa-comments-o" aria-hidden="true"></i> 22</a>
+                                        <a href="#"><i className="fa fa-eye" aria-hidden="true"></i> 16</a>
+                                        <a href="#"><i className="fa fa-thumbs-o-up" aria-hidden="true"></i> 15</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         {/* <!-- Single Blog Post --> */}
-                        <div class="col-12 col-md-6">
-                            <div class="single-post-area mb-50">
+                        <div className="col-12 col-md-6">
+                            <div className="single-post-area mb-50">
                                 {/* <!-- Post Thumbnail --> */}
-                                <div class="post-thumbnail">
+                                <div className="post-thumbnail">
                                     <img src="img/bg-img/48.jpg" alt="" />
 
                                     {/* <!-- Video Duration --> */}
-                                    <span class="video-duration">05.03</span>
+                                    <span className="video-duration">05.03</span>
                                 </div>
 
                                 {/* <!-- Post Content --> */}
-                                <div class="post-content">
-                                    <a href="#" class="post-cata cata-sm cata-success">Sports</a>
-                                    <a href="single-post.html" class="post-title">Searching for the 'angel' who held me
+                                <div className="post-content">
+                                    <a href="#" className="post-cata cata-sm cata-success">Sports</a>
+                                    <a href="single-post.html" className="post-title">Searching for the 'angel' who held me
                                         on Westminste Bridge</a>
-                                    <div class="post-meta d-flex">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 28</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 17</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 22</a>
+                                    <div className="post-meta d-flex">
+                                        <a href="#"><i className="fa fa-comments-o" aria-hidden="true"></i> 28</a>
+                                        <a href="#"><i className="fa fa-eye" aria-hidden="true"></i> 17</a>
+                                        <a href="#"><i className="fa fa-thumbs-o-up" aria-hidden="true"></i> 22</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         {/* <!-- Single Blog Post --> */}
-                        <div class="col-12 col-md-6">
-                            <div class="single-post-area mb-50">
+                        <div className="col-12 col-md-6">
+                            <div className="single-post-area mb-50">
                                 {/* <!-- Post Thumbnail --> */}
-                                <div class="post-thumbnail">
+                                <div className="post-thumbnail">
                                     <img src="img/bg-img/49.jpg" alt="" />
 
                                     {/* <!-- Video Duration --> */}
-                                    <span class="video-duration">05.03</span>
+                                    <span className="video-duration">05.03</span>
                                 </div>
 
                                 {/* <!-- Post Content --> */}
-                                <div class="post-content">
-                                    <a href="#" class="post-cata cata-sm cata-success">Sports</a>
-                                    <a href="single-post.html" class="post-title">Love Island star's boyfriend found
+                                <div className="post-content">
+                                    <a href="#" className="post-cata cata-sm cata-success">Sports</a>
+                                    <a href="single-post.html" className="post-title">Love Island star's boyfriend found
                                         dead after her funeral</a>
-                                    <div class="post-meta d-flex">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 38</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 22</a>
+                                    <div className="post-meta d-flex">
+                                        <a href="#"><i className="fa fa-comments-o" aria-hidden="true"></i> 14</a>
+                                        <a href="#"><i className="fa fa-eye" aria-hidden="true"></i> 38</a>
+                                        <a href="#"><i className="fa fa-thumbs-o-up" aria-hidden="true"></i> 22</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 {/* post single list */}
  {/* <!-- Single Post Area --> */}
-                    <div class="single-post-area style-2">
-                        <div class="row align-items-center">
-                            <div class="col-12 col-md-6">
+                    <div className="single-post-area style-2">
+                        <div className="row align-items-center">
+                            <div className="col-12 col-md-6">
                                 {/* <!-- Post Thumbnail --> */}
-                                <div class="post-thumbnail">
+                                <div className="post-thumbnail">
                                     <img src="img/bg-img/22.jpg" alt="" />
 
                                     {/* <!-- Video Duration --> */}
-                                    <span class="video-duration">05.03</span>
+                                    <span className="video-duration">05.03</span>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6">
+                            <div className="col-12 col-md-6">
                                 {/* <!-- Post Content --> */}
-                                <div class="post-content mt-0">
-                                    <a href="#" class="post-cata cata-sm cata-danger">Game</a>
-                                    <a href="single-post.html" class="post-title mb-2">Thailand cave rescue: Boys 'doing
+                                <div className="post-content mt-0">
+                                    <a href="#" className="post-cata cata-sm cata-danger">Game</a>
+                                    <a href="single-post.html" className="post-title mb-2">Thailand cave rescue: Boys 'doing
                                         well' after spending night</a>
-                                    <div class="post-meta d-flex align-items-center mb-2">
-                                        <a href="#" class="post-author">By Jane</a>
-                                        <i class="fa fa-circle" aria-hidden="true"></i>
-                                        <a href="#" class="post-date">Sep 08, 2018</a>
+                                    <div className="post-meta d-flex align-items-center mb-2">
+                                        <a href="#" className="post-author">By Jane</a>
+                                        <i className="fa fa-circle" aria-hidden="true"></i>
+                                        <a href="#" className="post-date">Sep 08, 2018</a>
                                     </div>
-                                    <p class="mb-2">Quisque mollis tristique ante. Proin ligula eros, varius id
+                                    <p className="mb-2">Quisque mollis tristique ante. Proin ligula eros, varius id
                                         tristique sit amet, rutrum non ligula.</p>
-                                    <div class="post-meta d-flex">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 32</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 42</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 7</a>
+                                    <div className="post-meta d-flex">
+                                        <a href="#"><i className="fa fa-comments-o" aria-hidden="true"></i> 32</a>
+                                        <a href="#"><i className="fa fa-eye" aria-hidden="true"></i> 42</a>
+                                        <a href="#"><i className="fa fa-thumbs-o-up" aria-hidden="true"></i> 7</a>
                                     </div>
                                 </div>
                             </div>
@@ -563,34 +563,34 @@ export default function Category() {
                     </div>
 
                     {/* <!-- Single Post Area --> */}
-                    <div class="single-post-area style-2">
-                        <div class="row align-items-center">
-                            <div class="col-12 col-md-6">
+                    <div className="single-post-area style-2">
+                        <div className="row align-items-center">
+                            <div className="col-12 col-md-6">
                                 {/* <!-- Post Thumbnail --> */}
-                                <div class="post-thumbnail">
+                                <div className="post-thumbnail">
                                     <img src="img/bg-img/23.jpg" alt=""/>
 
                                     {/* <!-- Video Duration --> */}
-                                    <span class="video-duration">05.03</span>
+                                    <span className="video-duration">05.03</span>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6">
+                            <div className="col-12 col-md-6">
                                 {/* <!-- Post Content --> */}
-                                <div class="post-content mt-0">
-                                    <a href="#" class="post-cata cata-sm cata-primary">Business</a>
-                                    <a href="single-post.html" class="post-title mb-2">Theresa May battles Brexiteer
+                                <div className="post-content mt-0">
+                                    <a href="#" className="post-cata cata-sm cata-primary">Business</a>
+                                    <a href="single-post.html" className="post-title mb-2">Theresa May battles Brexiteer
                                         backlash amid disquiet</a>
-                                    <div class="post-meta d-flex align-items-center mb-2">
-                                        <a href="#" class="post-author">By Jane</a>
-                                        <i class="fa fa-circle" aria-hidden="true"></i>
-                                        <a href="#" class="post-date">Sep 08, 2018</a>
+                                    <div className="post-meta d-flex align-items-center mb-2">
+                                        <a href="#" className="post-author">By Jane</a>
+                                        <i className="fa fa-circle" aria-hidden="true"></i>
+                                        <a href="#" className="post-date">Sep 08, 2018</a>
                                     </div>
-                                    <p class="mb-2">Quisque mollis tristique ante. Proin ligula eros, varius id
+                                    <p className="mb-2">Quisque mollis tristique ante. Proin ligula eros, varius id
                                         tristique sit amet, rutrum non ligula.</p>
-                                    <div class="post-meta d-flex">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 32</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 42</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 7</a>
+                                    <div className="post-meta d-flex">
+                                        <a href="#"><i className="fa fa-comments-o" aria-hidden="true"></i> 32</a>
+                                        <a href="#"><i className="fa fa-eye" aria-hidden="true"></i> 42</a>
+                                        <a href="#"><i className="fa fa-thumbs-o-up" aria-hidden="true"></i> 7</a>
                                     </div>
                                 </div>
                             </div>
@@ -598,34 +598,34 @@ export default function Category() {
                     </div>
 
                     {/* <!-- Single Post Area --> */}
-                    <div class="single-post-area style-2">
-                        <div class="row align-items-center">
-                            <div class="col-12 col-md-6">
+                    <div className="single-post-area style-2">
+                        <div className="row align-items-center">
+                            <div className="col-12 col-md-6">
                                 {/* <!-- Post Thumbnail --> */}
-                                <div class="post-thumbnail">
+                                <div className="post-thumbnail">
                                     <img src="img/bg-img/24.jpg" alt=""/>
 
                                     {/* <!-- Video Duration --> */}
-                                    <span class="video-duration">05.03</span>
+                                    <span className="video-duration">05.03</span>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6">
+                            <div className="col-12 col-md-6">
                                 {/* <!-- Post Content --> */}
-                                <div class="post-content mt-0">
-                                    <a href="#" class="post-cata cata-sm cata-danger">Game</a>
-                                    <a href="single-post.html" class="post-title mb-2">Theresa May warned Brexit
+                                <div className="post-content mt-0">
+                                    <a href="#" className="post-cata cata-sm cata-danger">Game</a>
+                                    <a href="single-post.html" className="post-title mb-2">Theresa May warned Brexit
                                         strategy 'risks putting Jeremy Corbyn</a>
-                                    <div class="post-meta d-flex align-items-center mb-2">
-                                        <a href="#" class="post-author">By Jane</a>
-                                        <i class="fa fa-circle" aria-hidden="true"></i>
-                                        <a href="#" class="post-date">Sep 08, 2018</a>
+                                    <div className="post-meta d-flex align-items-center mb-2">
+                                        <a href="#" className="post-author">By Jane</a>
+                                        <i className="fa fa-circle" aria-hidden="true"></i>
+                                        <a href="#" className="post-date">Sep 08, 2018</a>
                                     </div>
-                                    <p class="mb-2">Quisque mollis tristique ante. Proin ligula eros, varius id
+                                    <p className="mb-2">Quisque mollis tristique ante. Proin ligula eros, varius id
                                         tristique sit amet, rutrum non ligula.</p>
-                                    <div class="post-meta d-flex">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 32</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 42</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 7</a>
+                                    <div className="post-meta d-flex">
+                                        <a href="#"><i className="fa fa-comments-o" aria-hidden="true"></i> 32</a>
+                                        <a href="#"><i className="fa fa-eye" aria-hidden="true"></i> 42</a>
+                                        <a href="#"><i className="fa fa-thumbs-o-up" aria-hidden="true"></i> 7</a>
                                     </div>
                                 </div>
                             </div>
@@ -633,34 +633,34 @@ export default function Category() {
                     </div>
 
                     {/* <!-- Single Post Area --> */}
-                    <div class="single-post-area style-2">
-                        <div class="row align-items-center">
-                            <div class="col-12 col-md-6">
+                    <div className="single-post-area style-2">
+                        <div className="row align-items-center">
+                            <div className="col-12 col-md-6">
                                 {/* <!-- Post Thumbnail --> */}
-                                <div class="post-thumbnail">
+                                <div className="post-thumbnail">
                                     <img src="img/bg-img/21.jpg" alt=""/>
 
                                     {/* <!-- Video Duration --> */}
-                                    <span class="video-duration">05.03</span>
+                                    <span className="video-duration">05.03</span>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6">
+                            <div className="col-12 col-md-6">
                                 {/* <!-- Post Content --> */}
-                                <div class="post-content mt-0">
-                                    <a href="#" class="post-cata cata-sm cata-success">Sports</a>
-                                    <a href="single-post.html" class="post-title mb-2">May fights on after Johnson
+                                <div className="post-content mt-0">
+                                    <a href="#" className="post-cata cata-sm cata-success">Sports</a>
+                                    <a href="single-post.html" className="post-title mb-2">May fights on after Johnson
                                         savages Brexit approach</a>
-                                    <div class="post-meta d-flex align-items-center mb-2">
-                                        <a href="#" class="post-author">By Jane</a>
-                                        <i class="fa fa-circle" aria-hidden="true"></i>
-                                        <a href="#" class="post-date">Sep 08, 2018</a>
+                                    <div className="post-meta d-flex align-items-center mb-2">
+                                        <a href="#" className="post-author">By Jane</a>
+                                        <i className="fa fa-circle" aria-hidden="true"></i>
+                                        <a href="#" className="post-date">Sep 08, 2018</a>
                                     </div>
-                                    <p class="mb-2">Quisque mollis tristique ante. Proin ligula eros, varius id
+                                    <p className="mb-2">Quisque mollis tristique ante. Proin ligula eros, varius id
                                         tristique sit amet, rutrum non ligula.</p>
-                                    <div class="post-meta d-flex">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 32</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 42</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 7</a>
+                                    <div className="post-meta d-flex">
+                                        <a href="#"><i className="fa fa-comments-o" aria-hidden="true"></i> 32</a>
+                                        <a href="#"><i className="fa fa-eye" aria-hidden="true"></i> 42</a>
+                                        <a href="#"><i className="fa fa-thumbs-o-up" aria-hidden="true"></i> 7</a>
                                     </div>
                                 </div>
                             </div>
@@ -668,34 +668,34 @@ export default function Category() {
                     </div>
 
                     {/* <!-- Single Post Area --> */}
-                    <div class="single-post-area style-2">
-                        <div class="row align-items-center">
-                            <div class="col-12 col-md-6">
+                    <div className="single-post-area style-2">
+                        <div className="row align-items-center">
+                            <div className="col-12 col-md-6">
                                 {/* <!-- Post Thumbnail --> */}
-                                <div class="post-thumbnail">
+                                <div className="post-thumbnail">
                                     <img src="img/bg-img/22.jpg" alt=""/>
 
                                     {/* <!-- Video Duration --> */}
-                                    <span class="video-duration">05.03</span>
+                                    <span className="video-duration">05.03</span>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6">
+                            <div className="col-12 col-md-6">
                                 {/* <!-- Post Content --> */}
-                                <div class="post-content mt-0">
-                                    <a href="#" class="post-cata cata-sm cata-danger">Game</a>
-                                    <a href="single-post.html" class="post-title mb-2">Thailand cave rescue: Boys 'doing
+                                <div className="post-content mt-0">
+                                    <a href="#" className="post-cata cata-sm cata-danger">Game</a>
+                                    <a href="single-post.html" className="post-title mb-2">Thailand cave rescue: Boys 'doing
                                         well' after spending night</a>
-                                    <div class="post-meta d-flex align-items-center mb-2">
-                                        <a href="#" class="post-author">By Jane</a>
-                                        <i class="fa fa-circle" aria-hidden="true"></i>
-                                        <a href="#" class="post-date">Sep 08, 2018</a>
+                                    <div className="post-meta d-flex align-items-center mb-2">
+                                        <a href="#" className="post-author">By Jane</a>
+                                        <i className="fa fa-circle" aria-hidden="true"></i>
+                                        <a href="#" className="post-date">Sep 08, 2018</a>
                                     </div>
-                                    <p class="mb-2">Quisque mollis tristique ante. Proin ligula eros, varius id
+                                    <p className="mb-2">Quisque mollis tristique ante. Proin ligula eros, varius id
                                         tristique sit amet, rutrum non ligula.</p>
-                                    <div class="post-meta d-flex">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 32</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 42</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 7</a>
+                                    <div className="post-meta d-flex">
+                                        <a href="#"><i className="fa fa-comments-o" aria-hidden="true"></i> 32</a>
+                                        <a href="#"><i className="fa fa-eye" aria-hidden="true"></i> 42</a>
+                                        <a href="#"><i className="fa fa-thumbs-o-up" aria-hidden="true"></i> 7</a>
                                     </div>
                                 </div>
                             </div>
@@ -703,34 +703,34 @@ export default function Category() {
                     </div>
 
                     {/* <!-- Single Post Area --> */}
-                    <div class="single-post-area style-2">
-                        <div class="row align-items-center">
-                            <div class="col-12 col-md-6">
+                    <div className="single-post-area style-2">
+                        <div className="row align-items-center">
+                            <div className="col-12 col-md-6">
                                 {/* <!-- Post Thumbnail --> */}
-                                <div class="post-thumbnail">
+                                <div className="post-thumbnail">
                                     <img src="img/bg-img/23.jpg" alt=""/>
 
                                     {/* <!-- Video Duration --> */}
-                                    <span class="video-duration">05.03</span>
+                                    <span className="video-duration">05.03</span>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6">
+                            <div className="col-12 col-md-6">
                                 {/* <!-- Post Content --> */}
-                                <div class="post-content mt-0">
-                                    <a href="#" class="post-cata cata-sm cata-primary">Business</a>
-                                    <a href="single-post.html" class="post-title mb-2">Theresa May battles Brexiteer
+                                <div className="post-content mt-0">
+                                    <a href="#" className="post-cata cata-sm cata-primary">Business</a>
+                                    <a href="single-post.html" className="post-title mb-2">Theresa May battles Brexiteer
                                         backlash amid disquiet</a>
-                                    <div class="post-meta d-flex align-items-center mb-2">
-                                        <a href="#" class="post-author">By Jane</a>
-                                        <i class="fa fa-circle" aria-hidden="true"></i>
-                                        <a href="#" class="post-date">Sep 08, 2018</a>
+                                    <div className="post-meta d-flex align-items-center mb-2">
+                                        <a href="#" className="post-author">By Jane</a>
+                                        <i className="fa fa-circle" aria-hidden="true"></i>
+                                        <a href="#" className="post-date">Sep 08, 2018</a>
                                     </div>
-                                    <p class="mb-2">Quisque mollis tristique ante. Proin ligula eros, varius id
+                                    <p className="mb-2">Quisque mollis tristique ante. Proin ligula eros, varius id
                                         tristique sit amet, rutrum non ligula.</p>
-                                    <div class="post-meta d-flex">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 32</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 42</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 7</a>
+                                    <div className="post-meta d-flex">
+                                        <a href="#"><i className="fa fa-comments-o" aria-hidden="true"></i> 32</a>
+                                        <a href="#"><i className="fa fa-eye" aria-hidden="true"></i> 42</a>
+                                        <a href="#"><i className="fa fa-thumbs-o-up" aria-hidden="true"></i> 7</a>
                                     </div>
                                 </div>
                             </div>
@@ -743,56 +743,56 @@ export default function Category() {
                     </div>
 
                     {/* <!-- Pagination --> */}
-                    <nav class="mt-50">
-                        <ul class="pagination justify-content-center">
-                            <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-left"></i></a>
+                    <nav className="mt-50">
+                        <ul className="pagination justify-content-center">
+                            <li className="page-item"><a className="page-link" href="#"><i className="fa fa-angle-left"></i></a>
                             </li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-right"></i></a>
+                            <li className="page-item"><a className="page-link" href="#">1</a></li>
+                            <li className="page-item"><a className="page-link" href="#">2</a></li>
+                            <li className="page-item"><a className="page-link" href="#">3</a></li>
+                            <li className="page-item"><a className="page-link" href="#"><i className="fa fa-angle-right"></i></a>
                             </li>
                         </ul>
                     </nav>
                 </div>
 
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="sidebar-area">
+                <div className="col-12 col-md-6 col-lg-4">
+                    <div className="sidebar-area">
 
                         {/* <!-- ***** Single Widget ***** --> */}
-                        <div class="single-widget followers-widget mb-50">
-                            <a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i><span
-                                    class="counter">198</span><span>Fan</span></a>
-                            <a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i><span
-                                    class="counter">220</span><span>Followers</span></a>
-                            <a href="#" class="google"><i class="fa fa-google" aria-hidden="true"></i><span
-                                    class="counter">140</span><span>Subscribe</span></a>
+                        <div className="single-widget followers-widget mb-50">
+                            <a href="#" className="facebook"><i className="fa fa-facebook" aria-hidden="true"></i><span
+                                    className="counter">198</span><span>Fan</span></a>
+                            <a href="#" className="twitter"><i className="fa fa-twitter" aria-hidden="true"></i><span
+                                    className="counter">220</span><span>Followers</span></a>
+                            <a href="#" className="google"><i className="fa fa-google" aria-hidden="true"></i><span
+                                    className="counter">140</span><span>Subscribe</span></a>
                         </div>
 
                     
 
                         {/* <!-- ***** Single Widget ***** --> */}
-                        <div class="single-widget add-widget mb-50">
+                        <div className="single-widget add-widget mb-50">
                             <a href="#"><img src="img/bg-img/add.png" alt=""/></a>
                         </div>
 
                      
 
                         {/* <!-- ***** Single Widget ***** --> */}
-                        <div class="single-widget newsletter-widget mb-50">
+                        <div className="single-widget newsletter-widget mb-50">
                             {/* <!-- Section Heading --> */}
-                            <div class="section-heading style-2 mb-30">
+                            <div className="section-heading style-2 mb-30">
                                 <h4>Newsletter</h4>
-                                <div class="line"></div>
+                                <div className="line"></div>
                             </div>
                             <p>Subscribe our newsletter gor get notification about new updates, information discount,
                                 etc.</p>
                             {/* <!-- Newsletter Form --> */}
-                            <div class="newsletter-form">
+                            <div className="newsletter-form">
                                 <form action="#" method="post">
-                                    <input type="email" name="nl-email" class="form-control mb-15" id="emailnl"
+                                    <input type="email" name="nl-email" className="form-control mb-15" id="emailnl"
                                         placeholder="Enter your email" />
-                                    <button type="submit" class="btn vizew-btn w-100">Subscribe</button>
+                                    <button type="submit" className="btn vizew-btn w-100">Subscribe</button>
                                 </form>
                             </div>
                         </div>
