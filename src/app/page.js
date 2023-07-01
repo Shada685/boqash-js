@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Head from "next/head";
 =======
 import Head from 'next/head'
 >>>>>>> single
+=======
+import Head from "next/head";
+>>>>>>> category
 import Script from "next/script";
 import '../../public/style.css'
 import '../../public/css/style-grocery-price.css'
@@ -13,6 +17,7 @@ export default function Home() {
   return (
     <>
     <Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
   <meta charset="UTF-8" />
     <meta name="description" content="" />
@@ -27,6 +32,8 @@ export default function Home() {
            {/* <!-- ##### Header Area Start ##### --> */}
      <header className="header-area">
 =======
+=======
+>>>>>>> category
    
   
     </Head>
@@ -638,7 +645,11 @@ export default function Home() {
             <div className="row">
                 {/* <!-- Single Blog Post --> */}
                 <div className="col-12 col-md-4 ">
+<<<<<<< HEAD
                     <div className="single-post-area mb-80 ">
+=======
+                    <div className="single-post-area mb-80">
+>>>>>>> category
                         {/* <!-- Post Thumbnail --> */}
                         <div className="post-thumbnail">
                            
@@ -698,7 +709,11 @@ export default function Home() {
 =======
                 {/* <!-- Single Blog Post --> */}
                 <div className="col-12 col-md-4">
+<<<<<<< HEAD
                     <div className="single-post-area mb-80 ">
+=======
+                    <div className="single-post-area mb-80">
+>>>>>>> category
                         {/* <!-- Post Thumbnail --> */}
                         <div className="post-thumbnail">
                           
@@ -722,7 +737,11 @@ export default function Home() {
 
                 {/* <!-- Single Blog Post --> */}
                 <div className="col-12 col-md-4">
+<<<<<<< HEAD
                     <div className="single-post-area mb-80 ">
+=======
+                    <div className="single-post-area mb-80">
+>>>>>>> category
                         {/* <!-- Post Thumbnail --> */}
                         <div className="post-thumbnail">
                            
@@ -793,7 +812,11 @@ export default function Home() {
                         <div className="row">
                             {/* <!-- Single Blog Post --> */}
                             <div className="col-12 col-md-6 col-lg-6">
+<<<<<<< HEAD
                                 <div className="single-post-area mb-80 ">
+=======
+                                <div className="single-post-area mb-80">
+>>>>>>> category
                                     {/* <!-- Post Thumbnail --> */}
                                     <div className="post-thumbnail">
                                         <img src="img/bg-img/12.jpg" alt="" />
@@ -818,7 +841,11 @@ export default function Home() {
                             {/* <!-- Single Blog Post --> */}
 
                             <div className="col-12 col-md-6 col-lg-6">
+<<<<<<< HEAD
                                 <div className="single-post-area mb-80 ">
+=======
+                                <div className="single-post-area mb-80">
+>>>>>>> category
                                     {/* <!-- Post Thumbnail --> */}
                                     <div className="post-thumbnail">
                                         <img src="img/bg-img/13.jpg" alt="" />
@@ -844,7 +871,11 @@ export default function Home() {
                         <div className="row">
                             {/* <!-- Single Blog Post --> */}
                             <div className="col-12 col-md-6 col-lg-4">
+<<<<<<< HEAD
                                 <div className="single-post-area mb-80 ">
+=======
+                                <div className="single-post-area mb-80">
+>>>>>>> category
                                     {/* <!-- Post Thumbnail --> */}
                                     <div className="post-thumbnail">
                                         <img src="img/bg-img/12.jpg" alt="" />
@@ -868,7 +899,11 @@ export default function Home() {
 
                             {/* <!-- Single Blog Post --> */}
                             <div className="col-12 col-md-6 col-lg-4">
+<<<<<<< HEAD
                                 <div className="single-post-area mb-80 ">
+=======
+                                <div className="single-post-area mb-80">
+>>>>>>> category
                                     {/* <!-- Post Thumbnail --> */}
                                     <div className="post-thumbnail">
                                         <img src="img/bg-img/13.jpg" alt="" />
@@ -890,7 +925,11 @@ export default function Home() {
                                 </div>
                             </div>
                             <div className="col-12 col-md-6 col-lg-4">
+<<<<<<< HEAD
                                 <div className="single-post-area mb-80 ">
+=======
+                                <div className="single-post-area mb-80">
+>>>>>>> category
                                     {/* <!-- Post Thumbnail --> */}
                                     <div className="post-thumbnail">
                                         <img src="img/bg-img/13.jpg" alt="" />
@@ -928,7 +967,11 @@ export default function Home() {
                                 
 
                                 {/* <!-- Sports Video Slides --> */}
+<<<<<<< HEAD
                                 <div className="sport-video-slides owl-carousel mb-50 ">
+=======
+                                <div className="sport-video-slides owl-carousel mb-50">
+>>>>>>> category
                                     {/* <!-- Single Blog Post --> */}
                                     <div className="single-post-area">
                                         {/* <!-- Post Thumbnail --> */}
@@ -979,7 +1022,11 @@ export default function Home() {
                                 
 
                                 {/* <!-- Business Video Slides --> */}
+<<<<<<< HEAD
                                 <div className="business-video-slides owl-carousel mb-50 ">
+=======
+                                <div className="business-video-slides owl-carousel mb-50">
+>>>>>>> category
                                     {/* <!-- Single Blog Post --> */}
                                     <div className="single-post-area">
                                         {/* <!-- Post Thumbnail --> */}
@@ -1030,7 +1077,11 @@ export default function Home() {
                         <div className="row mb-30">
                             {/* <!-- Single Blog Post --> */}
                             <div className="col-12 col-lg-6 ">
+<<<<<<< HEAD
                                 <div className="single-blog-post style-3 d-flex mb-50 ">
+=======
+                                <div className="single-blog-post style-3 d-flex mb-50">
+>>>>>>> category
                                     <div className="post-thumbnail">
                                         <img src="img/bg-img/16.jpg" alt="" />
                                     </div>
@@ -1048,7 +1099,11 @@ export default function Home() {
 
                             {/* <!-- Single Blog Post --> */}
                             <div className="col-12 col-lg-6">
+<<<<<<< HEAD
                                 <div className="single-blog-post style-3 d-flex mb-50 ">
+=======
+                                <div className="single-blog-post style-3 d-flex mb-50">
+>>>>>>> category
                                     <div className="post-thumbnail">
                                         <img src="img/bg-img/18.jpg" alt="" />
                                     </div>
@@ -1066,7 +1121,11 @@ export default function Home() {
 
                             {/* <!-- Single Blog Post --> */}
                             <div className="col-12 col-lg-6">
+<<<<<<< HEAD
                                 <div className="single-blog-post style-3 d-flex mb-50 ">
+=======
+                                <div className="single-blog-post style-3 d-flex mb-50">
+>>>>>>> category
                                     <div className="post-thumbnail">
                                         <img src="img/bg-img/19.jpg" alt="" />
                                     </div>
@@ -1084,7 +1143,11 @@ export default function Home() {
 
                             {/* <!-- Single Blog Post --> */}
                             <div className="col-12 col-lg-6">
+<<<<<<< HEAD
                                 <div className="single-blog-post style-3 d-flex mb-50 ">
+=======
+                                <div className="single-blog-post style-3 d-flex mb-50">
+>>>>>>> category
                                     <div className="post-thumbnail">
                                         <img src="img/bg-img/20.jpg" alt="" />
                                     </div>
@@ -1108,7 +1171,11 @@ export default function Home() {
                         </div>
 
                         {/* <!-- Featured Post Slides --> */}
+<<<<<<< HEAD
                         <div className="featured-post-slides owl-carousel mb-30 ">
+=======
+                        <div className="featured-post-slides owl-carousel mb-30">
+>>>>>>> category
                             {/* <!-- Single Feature Post --> */}
                             <div className="single-feature-post video-post bg-img"
                                style={{ backgroundImage: "url(/img/bg-img/14.jpg)" }}>
@@ -1134,7 +1201,11 @@ export default function Home() {
                         </div>
 
                         {/* <!-- Single Post Area --> */}
+<<<<<<< HEAD
                         <div className="single-post-area mb-30 ">
+=======
+                        <div className="single-post-area mb-30">
+>>>>>>> category
                             <div className="row align-items-center ">
                                 <div className="col-12 col-lg-6">
                                     {/* <!-- Post Thumbnail --> */}
@@ -1168,7 +1239,11 @@ export default function Home() {
                         </div>
 
                         {/* <!-- Single Post Area --> */}
+<<<<<<< HEAD
                         <div className="single-post-area mb-30 ">
+=======
+                        <div className="single-post-area mb-30">
+>>>>>>> category
                             <div className="row align-items-center">
                                 <div className="col-12 col-lg-6">
                                     {/* <!-- Post Thumbnail --> */}
@@ -1202,7 +1277,11 @@ export default function Home() {
                         </div>
 
                         {/* <!-- Single Post Area --> */}
+<<<<<<< HEAD
                         <div className="single-post-area mb-30 ">
+=======
+                        <div className="single-post-area mb-30">
+>>>>>>> category
                             <div className="row align-items-center">
                                 <div className="col-12 col-lg-6">
                                     {/* <!-- Post Thumbnail --> */}
@@ -1236,7 +1315,11 @@ export default function Home() {
                         </div>
 
                         {/* <!-- Single Post Area --> */}
+<<<<<<< HEAD
                         <div className="single-post-area mb-30 ">
+=======
+                        <div className="single-post-area mb-30">
+>>>>>>> category
                             <div className="row align-items-center">
                                 <div className="col-12 col-lg-6">
                                     {/* <!-- Post Thumbnail --> */}
@@ -1276,7 +1359,11 @@ export default function Home() {
                     <div className="sidebar-area">
 
                         {/* <!-- ***** Single Widget ***** --> */}
+<<<<<<< HEAD
                         <div className="single-widget followers-widget mb-50 ">
+=======
+                        <div className="single-widget followers-widget mb-50">
+>>>>>>> category
                             <a href="#" className="facebook"><i className="fa fa-facebook" aria-hidden="true"></i><span
                                     className="counter">198</span><span>Fan</span></a>
                             <a href="#" className="twitter"><i className="fa fa-twitter" aria-hidden="true"></i><span
@@ -1294,7 +1381,11 @@ export default function Home() {
                             </div>
 
                             {/* <!-- Single Blog Post --> */}
+<<<<<<< HEAD
                             <div className="single-post-area mb-30 ">
+=======
+                            <div className="single-post-area mb-30">
+>>>>>>> category
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/13.jpg" alt="" />
@@ -1697,20 +1788,31 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     </footer>
     {/* <!-- ##### Footer Area End ##### --> */}
 <<<<<<< HEAD
+<<<<<<< HEAD
      <Script src="/js/jquery/jquery-2.2.4.min.js" />
 =======
     <Script src="/js/jquery/jquery-2.2.4.min.js" />
 >>>>>>> single
+=======
+
+      <Script src="/js/jquery/jquery-2.2.4.min.js" />
+>>>>>>> category
       <Script src="/js/bootstrap/popper.min.js" />
       <Script src="/js/bootstrap/bootstrap.min.js" />
       <Script src="/js/plugins/plugins.js" />
       <Script src="/js/active.js" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
    
 >>>>>>> single
+=======
+    
+>>>>>>> category
     </body>
     
+
+
     </>
   )
 }
