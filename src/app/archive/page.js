@@ -79,7 +79,7 @@ export default function Category() {
                     <nav className="classy-navbar justify-content-between" id="vizewNav">
 
                         {/* <!-- Nav brand --> */}
-                        <a href="index.html" className="nav-brand"><img src="/img/core-img/logo2.png" alt="" /></a>
+                        <a href="index.html" className="nav-brand"><img src="/img/core-img/logo.png" alt="" /></a>
 
                         {/* <!-- Navbar Toggler --> */}
                         <div className="classy-navbar-toggler">

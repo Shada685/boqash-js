@@ -38,7 +38,7 @@ export default function Home() {
                   {/* <!-- Breaking News Widget --> */}
                   <div className="breaking-news-area d-flex align-items-center">
                     <div className="news-title">
-                      <p>Breaking News:</p>
+                      <p>اخر الاخبار:</p>
                     </div>
                     <div id="breakingNewsTicker" className="ticker">
                       <ul>
@@ -71,11 +71,9 @@ export default function Home() {
                       <a href="#">
                         <i className="fa fa-twitter"></i>
                       </a>
+                     
                       <a href="#">
-                        <i className="fa fa-pinterest"></i>
-                      </a>
-                      <a href="#">
-                        <i className="fa fa-linkedin"></i>
+                        <i className="fa fa-instagram"></i>
                       </a>
                       <a href="#">
                         <i className="fa fa-youtube-play"></i>
@@ -88,7 +86,7 @@ export default function Home() {
                           type="search"
                           name="top-search"
                           id="topSearch"
-                          placeholder="Search..."
+                          placeholder="يحث..."
                         />
                         <button type="submit" className="btn">
                           <i className="fa fa-search" aria-hidden="true"></i>
@@ -116,7 +114,7 @@ export default function Home() {
                 >
                   {/* <!-- Nav brand --> */}
                   <a href="/" className="nav-brand">
-                    <img src="img/core-img/logo2.png" alt="" />
+                    <img src="img/core-img/logo.png" alt="" />
                   </a>
 
                   {/* <!-- Navbar Toggler --> */}
@@ -141,159 +139,134 @@ export default function Home() {
                     <div className="classynav">
                       <ul>
                         <li className="active">
-                          <a href="index.html">Home</a>
+                          <a href="index.html">الرئيسية</a>
                         </li>
+                        {/* <li>
+                          <a href="archive-list.html">الاخبار المحلية</a>
+                        </li> */}
+                        
                         <li>
-                          <a href="archive-list.html">Archives</a>
-                        </li>
-                        <li>
-                          <a href="#">Pages</a>
+                          <a href="">الاخبار</a>
                           <ul className="dropdown">
                             <li>
-                              <a href="index.html">- Home</a>
+                              <a href="index.html">- الاخبار المحلية</a>
                             </li>
                             <li>
-                              <a href="archive-list.html">- Archive List</a>
+                              <a href="archive-list.html">- الاخبار العربية</a>
                             </li>
                             <li>
-                              <a href="archive-grid.html">- Archive Grid</a>
+                              <a href="archive-grid.html">- الاخبار العالمية</a>
                             </li>
                             <li>
-                              <a href="single-post.html">- Single Post</a>
+                              <a href="archive-grid.html">- الحرب الروسية</a>
                             </li>
-                            <li>
-                              <a href="video-post.html">- Single Video Post</a>
-                            </li>
-                            <li>
-                              <a href="contact.html">- Contact</a>
-                            </li>
-                            <li>
-                              <a href="typography.html">- Typography</a>
-                            </li>
-                            <li>
-                              <a href="login.html">- Login</a>
-                            </li>
+                           
+                           
                           </ul>
                         </li>
                         <li>
-                          <a href="#">Features</a>
+                          <a href="">الاسعار</a>
                           <div className="megamenu">
                             <ul className="single-mega cn-col-4">
                               <li>
-                                <a href="index.html">- Home</a>
+                                <a href="index.html">- العملة</a>
                               </li>
                               <li>
-                                <a href="archive-list.html">- Archive List</a>
+                                <a href="archive-list.html">- الدولار</a>
                               </li>
                               <li>
-                                <a href="archive-grid.html">- Archive Grid</a>
+                                <a href="archive-grid.html">- الريال السعودي</a>
                               </li>
                               <li>
-                                <a href="single-post.html">- Single Post</a>
+                                <a href="single-post.html">- اليورو</a>
                               </li>
                               <li>
                                 <a href="video-post.html">
-                                  - Single Video Post
+                                  - درهم اماراتي
                                 </a>
                               </li>
-                              <li>
-                                <a href="contact.html">- Contact</a>
-                              </li>
-                              <li>
-                                <a href="typography.html">- Typography</a>
-                              </li>
-                              <li>
-                                <a href="login.html">- Login</a>
-                              </li>
+                             
                             </ul>
                             <ul className="single-mega cn-col-4">
                               <li>
-                                <a href="index.html">- Home</a>
+                                <a href="index.html">- النفط</a>
                               </li>
                               <li>
-                                <a href="archive-list.html">- Archive List</a>
+                                <a href="archive-list.html">- البترول</a>
                               </li>
                               <li>
-                                <a href="archive-grid.html">- Archive Grid</a>
+                                <a href="archive-grid.html">- الديزل</a>
                               </li>
                               <li>
-                                <a href="single-post.html">- Single Post</a>
+                                <a href="single-post.html">- سولار</a>
                               </li>
-                              <li>
-                                <a href="video-post.html">
-                                  - Single Video Post
-                                </a>
-                              </li>
-                              <li>
-                                <a href="contact.html">- Contact</a>
-                              </li>
-                              <li>
-                                <a href="typography.html">- Typography</a>
-                              </li>
-                              <li>
-                                <a href="login.html">- Login</a>
-                              </li>
+                              
                             </ul>
                             <ul className="single-mega cn-col-4">
                               <li>
-                                <a href="index.html">- Home</a>
+                                <a href="index.html">- الذهب</a>
                               </li>
                               <li>
-                                <a href="archive-list.html">- Archive List</a>
+                                <a href="archive-list.html">- عيار 24</a>
                               </li>
                               <li>
-                                <a href="archive-grid.html">- Archive Grid</a>
+                                <a href="archive-grid.html">- عيار 21</a>
                               </li>
                               <li>
-                                <a href="single-post.html">- Single Post</a>
+                                <a href="single-post.html">- عيار 18</a>
                               </li>
                               <li>
                                 <a href="video-post.html">
-                                  - Single Video Post
+                                  - الجنية
                                 </a>
                               </li>
                               <li>
-                                <a href="contact.html">- Contact</a>
+                                <a href="contact.html">- قيراط</a>
                               </li>
                               <li>
-                                <a href="typography.html">- Typography</a>
+                                <a href="typography.html">- سبيكة</a>
                               </li>
-                              <li>
-                                <a href="login.html">- Login</a>
-                              </li>
+                              
                             </ul>
                             <ul className="single-mega cn-col-4">
                               <li>
-                                <a href="index.html">- Home</a>
+                                <a href="index.html">- المواد الغذائية</a>
                               </li>
                               <li>
-                                <a href="archive-list.html">- Archive List</a>
+                                <a href="archive-list.html">- الخضار</a>
                               </li>
                               <li>
-                                <a href="archive-grid.html">- Archive Grid</a>
+                                <a href="archive-grid.html">- الفواكة</a>
                               </li>
                               <li>
-                                <a href="single-post.html">- Single Post</a>
+                                <a href="single-post.html">- الدقيق</a>
                               </li>
                               <li>
                                 <a href="video-post.html">
-                                  - Single Video Post
+                                  - البر
                                 </a>
                               </li>
                               <li>
-                                <a href="contact.html">- Contact</a>
+                                <a href="contact.html">- السكر</a>
                               </li>
                               <li>
-                                <a href="typography.html">- Typography</a>
+                                <a href="typography.html">- الارز</a>
                               </li>
-                              <li>
-                                <a href="login.html">- Login</a>
-                              </li>
+                              
                             </ul>
                           </div>
                         </li>
                         <li>
-                          <a href="contact.html">Contact</a>
+                          <a href="contact.html">مقالات</a>
+                        </li>
+                        <li>
+                          <a href="contact.html">مقتطفات</a>
+                        </li>
+                        <li>
+                          <a href="contact.html">عن بقش</a>
+                        </li>
+                        <li>
+                          <a href="contact.html">للاعلان</a>
                         </li>
                       </ul>
                     </div>
@@ -2293,180 +2266,94 @@ export default function Home() {
                     <img src="img/core-img/logo2.png" alt="" />
                   </a>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                   بقش هو مرصد اقتصادي إلكتروني يوفر للمستخدمين تحليلات اقتصادية ومالية دقيقة وموثوقة عن الأسواق والاقتصاديات المحلية والعالمية.
                   </p>
                   {/* <!-- Footer Newsletter Area --> */}
-                  <div className="footer-nl-area">
-                    <form action="#" method="post">
-                      <input
-                        type="email"
-                        name="nl-email"
-                        className="form-control"
-                        id="nlEmail"
-                        placeholder="Your email"
-                      />
-                      <button type="submit">
-                        <i className="fa fa-paper-plane" aria-hidden="true"></i>
-                      </button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-
-              {/* <!-- Footer Widget Area --> */}
-              <div className="col-12 col-sm-6 col-xl-3">
-                <div className="footer-widget mb-70">
-                  <h6 className="widget-title">Latest Twister</h6>
-                  {/* <!-- Twitter Slides --> */}
-                  <div className="twitter-slides owl-carousel">
-                    {/* <!-- Single Twitter Slide --> */}
-                    <div className="single--twitter-slide">
-                      {/* <!-- Single Twit --> */}
-                      <div className="single-twit">
-                        <p>
-                          <i className="fa fa-twitter"></i>{" "}
-                          <span>@Leonard</span> I am so happy because I found
-                          this magazine, and it just made Vizeweasier. Thanks
-                          for sharing
-                        </p>
-                      </div>
-                      {/* <!-- Single Twit --> */}
-                      <div className="single-twit">
-                        <p>
-                          <i className="fa fa-twitter"></i>{" "}
-                          <span>@Leonard</span> I am so happy because I found
-                          this magazine, and it just made Vizeweasier. Thanks
-                          for sharing
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* <!-- Single Twitter Slide --> */}
-                    <div className="single--twitter-slide">
-                      {/* <!-- Single Twit --> */}
-                      <div className="single-twit">
-                        <p>
-                          <i className="fa fa-twitter"></i>{" "}
-                          <span>@DracoWare</span> I am so happy because I found
-                          this magazine, and it just made Vizeweasier. Thanks
-                          for sharing
-                        </p>
-                      </div>
-                      {/* <!-- Single Twit --> */}
-                      <div className="single-twit">
-                        <p>
-                          <i className="fa fa-twitter"></i>{" "}
-                          <span>@DracoWare</span> I am so happy because I found
-                          this magazine, and it just made Vizeweasier. Thanks
-                          for sharing
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* <!-- Footer Widget Area --> */}
-              <div className="col-12 col-sm-6 col-xl-3">
-                <div className="footer-widget mb-70">
-                  <h6 className="widget-title">Sport Videos</h6>
-
-                  {/* <!-- Single Blog Post --> */}
-                  <div className="single-blog-post d-flex">
-                    <div className="post-thumbnail">
-                      <img src="img/bg-img/1.jpg" alt="" />
-                    </div>
-                    <div className="post-content">
-                      <a href="single-post.html" className="post-title">
-                        DC Shoes: gymkhana the
-                      </a>
-                      <div className="post-meta d-flex justify-content-between">
-                        <a href="#">
-                          <i
-                            className="fa fa-comments-o"
-                            aria-hidden="true"
-                          ></i>{" "}
-                          14
-                        </a>
-                        <a href="#">
-                          <i className="fa fa-eye" aria-hidden="true"></i> 34
-                        </a>
-                        <a href="#">
-                          <i
-                            className="fa fa-thumbs-o-up"
-                            aria-hidden="true"
-                          ></i>{" "}
-                          84
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* <!-- Single Blog Post --> */}
-                  <div className="single-blog-post d-flex">
-                    <div className="post-thumbnail">
-                      <img src="img/bg-img/2.jpg" alt="" />
-                    </div>
-                    <div className="post-content">
-                      <a href="single-post.html" className="post-title">
-                        Sweet Yummy Chocolatea Tea
-                      </a>
-                      <div className="post-meta d-flex justify-content-between">
-                        <a href="#">
-                          <i
-                            className="fa fa-comments-o"
-                            aria-hidden="true"
-                          ></i>{" "}
-                          14
-                        </a>
-                        <a href="#">
-                          <i className="fa fa-eye" aria-hidden="true"></i> 34
-                        </a>
-                        <a href="#">
-                          <i
-                            className="fa fa-thumbs-o-up"
-                            aria-hidden="true"
-                          ></i>{" "}
-                          84
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* <!-- Footer Widget Area --> */}
-              <div className="col-12 col-sm-6 col-xl-3">
-                <div className="footer-widget mb-70">
-                  <h6 className="widget-title">Our Address</h6>
-                  {/* <!-- Contact Address --> */}
-                  <div className="contact-address">
-                    <p>
-                      101 E 129th St, East Chicago, <br />
-                      IN 46312, US
-                    </p>
-                    <p>Phone: 001-1234-88888</p>
-                    <p>Email: info.colorlib@gmail.com</p>
-                  </div>
-                  {/* <!-- Footer Social Area --> */}
                   <div className="footer-social-area">
                     <a href="#" className="facebook">
                       <i className="fa fa-facebook"></i>
                     </a>
-                    <a href="#" className="google-plus">
-                      <i className="fa fa-google-plus"></i>
-                    </a>
+                    
                     <a href="#" className="instagram">
                       <i className="fa fa-instagram"></i>
                     </a>
                     <a href="#" className="twitter">
                       <i className="fa fa-twitter"></i>
                     </a>
-                    <a href="#" className="linkedin">
-                      <i className="fa fa-linkedin"></i>
+                    <a href="#" className="youtube">
+                      <i className="fa fa-youtube-play"></i>
                     </a>
                   </div>
+                </div>
+              </div>
+
+              {/* <!-- Footer Widget Area --> */}
+              <div className="col-12 col-sm-6 col-xl-3">
+                <div className="footer-widget mb-70">
+                  <h6 className="widget-title">اخبار ومقالات</h6>
+                  <ul >
+                    <li className="mb-2">
+                      <a href="">الاخبار المحلية</a>
+                      </li>
+                    <li className="mb-2">
+                      <a href="">الاخبار العربية</a>
+                      </li>
+                    <li className="mb-2">
+                      <a href="">الاخبار العالمية</a>
+                      </li>
+                    <li className="mb-2"><a href="">الحرب الروسية</a></li>
+                    <li className="mb-2"><a href="">مقالات</a></li>
+                    <li> <a href="">مقتطفات</a></li>
+                    
+
+                  </ul>
+                </div>
+              </div>
+
+              {/* <!-- Footer Widget Area --> */}
+              <div className="col-12 col-sm-6 col-xl-3">
+                <div className="footer-widget mb-70">
+                  <h6 className="widget-title">عن بقش</h6>
+<ul >
+                    <li className="mb-2">
+                      <a href=""> من نحن</a>
+                      </li>
+                    <li className="mb-2">
+                      <a href=""> تواصل معنا</a>
+                      </li>
+                    <li className="mb-2">
+                      <a href="">للاعلان </a>
+                      </li>
+                    <li className="mb-2"><a href=""> سياسة الخصوصية</a></li>
+                    
+                  
+                    
+
+                  </ul>
+                  
+                </div>
+              </div>
+
+              {/* <!-- Footer Widget Area --> */}
+              <div className="col-12 col-sm-6 col-xl-3">
+                <div className="footer-widget mb-70">
+                  <h6 className="widget-title">الاسعار</h6>
+                  {/* <!-- Contact Address --> */}
+                  <ul >
+                    <li className="mb-2">
+                      <a href=""> اسعار العملات</a>
+                      </li>
+                    <li className="mb-2">
+                      <a href="">اسعار المواد الغذائية</a>
+                      </li>
+                    <li className="mb-2">
+                      <a href="">اسعار الذهب</a>
+                      </li>
+                    <li className="mb-2"><a href="">اسعار النفط</a></li>
+                    
+                    
+
+                  </ul>
                 </div>
               </div>
             </div>
@@ -2474,45 +2361,26 @@ export default function Home() {
 
           {/* <!-- Copywrite Area --> */}
           <div className="copywrite-area">
-            <div className="container">
+            <div className="container ">
               <div className="row align-items-center">
                 {/* <!-- Copywrite Text --> */}
-                <div className="col-12 col-sm-6">
-                  <p className="copywrite-text">
-                    {/* <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> */}
-                    Copyright &copy;
+                <div className="col-12 col-sm-12">
+                  
+                  <p className="copywrite-text text-center">
+                    
+                     &copy;
                     <script>
                       document.write(new Date().getFullYear());
                     </script>{" "}
-                    All rights reserved | This template is made with{" "}
-                    <i className="fa fa-heart-o" aria-hidden="true"></i> by{" "}
-                    <a href="https://colorlib.com" target="_blank">
-                      Colorlib
+                    كل الحقوق محفوضة | powered  
+                     by{" "}
+                    <a href="https://dracowareye.com" target="_blank">
+                      DracoWare
                     </a>
-                    {/* <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> */}
+                    
                   </p>
                 </div>
-                <div className="col-12 col-sm-6">
-                  <nav className="footer-nav">
-                    <ul>
-                      <li>
-                        <a href="#">Advertise</a>
-                      </li>
-                      <li>
-                        <a href="#">About</a>
-                      </li>
-                      <li>
-                        <a href="#">Contact</a>
-                      </li>
-                      <li>
-                        <a href="#">Disclaimer</a>
-                      </li>
-                      <li>
-                        <a href="#">Privacy</a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
+                
               </div>
             </div>
           </div>
