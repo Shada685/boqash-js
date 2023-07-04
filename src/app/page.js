@@ -3,8 +3,65 @@ import Script from "next/script";
 import "../../public/style.css";
 import "../../public/css/style-grocery-price.css";
 import "../../public/css/style-currency.css";
+import Image from "next/image";
+import { Suspense } from "react";
 
-export default function Home() {
+async function BreakingList({ promise }) {
+  const res = await promise;
+  const data = res.data.slice(0, 14);
+  return (
+    <ul>
+      {data.map((ob, i) => (
+        <li key={ob.id}>{ob.attributes.content}</li>
+      ))}
+    </ul>
+  );
+}
+
+async function FeaturedPinnedPostedList({ promise }) {
+  const data = await promise;
+  const bg =
+    BASE_URL +
+    data.data[0].attributes.featuredImage.data.attributes.formats.thumbnail.url;
+  return (
+    <div
+      className="single-feature-post video-post bg-img"
+      style={{ backgroundImage: `url(${bg})` }}
+    >
+      {/* <!-- Post Content --> */}
+      <div className="post-content">
+        <a href="#" className="post-cata">
+          {data.data[0].attributes.zone}
+        </a>
+
+        <a href="single-post.html" className="post-title">
+          {data.data[0].attributes.title}
+        </a>
+        <div className="post-meta d-flex">
+          <a href="#">
+            <i className="fa fa-comments-o" aria-hidden="true"></i> 25
+          </a>
+          <a href="#">
+            <i className="fa fa-eye" aria-hidden="true"></i> 25
+          </a>
+          <a href="#">
+            <i className="fa fa-thumbs-o-up" aria-hidden="true"></i> 25
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default async function Home() {
+  const breakingNewsData = getBreakingNews();
+  const pinnedNewsData = getPinnedNews();
+  const arabicNewsData = getArabicNews();
+  const localNewsData = getLocalNews();
+  const globalNewsData = getGlobalNews();
+  const russianNewsData = getRussianNews();
+  const articaleData = getِArticales();
+
   return (
     <>
       <Head>
@@ -29,26 +86,12 @@ export default function Home() {
                   {/* <!-- Breaking News Widget --> */}
                   <div className="breaking-news-area d-flex align-items-center">
                     <div className="news-title">
-                      <p>Breaking News:</p>
+                      <p>اخر الاخبار:</p>
                     </div>
                     <div id="breakingNewsTicker" className="ticker">
-                      <ul>
-                        <li>
-                          <a href="single-post.html">
-                            10 Things Amazon Echo Can Do
-                          </a>
-                        </li>
-                        <li>
-                          <a href="single-post.html">
-                            Welcome to DracoWare Family.
-                          </a>
-                        </li>
-                        <li>
-                          <a href="single-post.html">
-                            Boys 'doing well' after Thai
-                          </a>
-                        </li>
-                      </ul>
+                      <Suspense fallback={<div>......</div>}>
+                        <BreakingList promise={breakingNewsData} />
+                      </Suspense>
                     </div>
                   </div>
                 </div>
@@ -312,6 +355,7 @@ export default function Home() {
             <div className="row no-gutters">
               <div className="col-12 col-md-7 col-lg-8">
                 <div className="tab-content">
+                  
                   <div
                     className="tab-pane fade show active"
                     id="post-1"
@@ -319,40 +363,9 @@ export default function Home() {
                     aria-labelledby="post-1-tab"
                   >
                     {/* <!-- Single Feature Post --> */}
-                    <div
-                      className="single-feature-post video-post bg-img"
-                      style={{ backgroundImage: "url(/img/bg-img/7.jpg)" }}
-                    >
-                      {/* <!-- Post Content --> */}
-                      <div className="post-content">
-                        <a href="#" className="post-cata">
-                          Sports
-                        </a>
-                        <a href="single-post.html" className="post-title">
-                          Reunification of migrant toddlers, parents should be
-                          completed Thursday
-                        </a>
-                        <div className="post-meta d-flex">
-                          <a href="#">
-                            <i
-                              className="fa fa-comments-o"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            25
-                          </a>
-                          <a href="#">
-                            <i className="fa fa-eye" aria-hidden="true"></i> 25
-                          </a>
-                          <a href="#">
-                            <i
-                              className="fa fa-thumbs-o-up"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            25
-                          </a>
-                        </div>
-                      </div>
-                    </div>
+                    <Suspense fallback={<div>......</div>}>
+                      <FeaturedPinnedPosted promise={pinnedNewsData} />
+                    </Suspense>
                   </div>
                   <div
                     className="tab-pane fade"
@@ -614,7 +627,7 @@ export default function Home() {
                         </div>
                         <div className="post-content">
                           <h6 className="post-title">
-                            Boys 'doing well' after Thai cave rescue
+                            Boysafter Thai cave rescue
                           </h6>
                           <div className="post-meta d-flex justify-content-between">
                             <span>
@@ -746,7 +759,7 @@ export default function Home() {
                         </div>
                         <div className="post-content">
                           <h6 className="post-title">
-                            How the world reacted to PM's Brexit crisis
+                            How the world reacted to Brexit crisis
                           </h6>
                           <div className="post-meta d-flex justify-content-between">
                             <span>
@@ -834,7 +847,7 @@ export default function Home() {
                         </div>
                         <div className="post-content">
                           <h6 className="post-title">
-                            How the world reacted to PM's Brexit crisis
+                            How the world reacted tBrexit crisis
                           </h6>
                           <div className="post-meta d-flex justify-content-between">
                             <span>
@@ -1209,7 +1222,7 @@ export default function Home() {
                             Game
                           </a>
                           <a href="single-post.html" className="post-title">
-                            Searching for the 'angel' who held me on Westminste
+                            Searching for theangel who held me on Westminste
                             Bridge
                           </a>
                           <div className="post-meta d-flex">
@@ -1254,7 +1267,7 @@ export default function Home() {
                             Business
                           </a>
                           <a href="single-post.html" className="post-title">
-                            Love Island star's boyfriend found dead after her
+                            Love Island stars boyfriend found dead after her
                             funeral
                           </a>
                           <div className="post-meta d-flex">
@@ -1297,7 +1310,7 @@ export default function Home() {
                             Game
                           </a>
                           <a href="single-post.html" className="post-title">
-                            Searching for the 'angel' who held me on Westminste
+                            Searching for the angel who held me on Westminste
                             Bridge
                           </a>
                           <div className="post-meta d-flex">
@@ -1341,7 +1354,7 @@ export default function Home() {
                             Business
                           </a>
                           <a href="single-post.html" className="post-title">
-                            Love Island star's boyfriend found dead after her
+                            Love Island stars boyfriend found dead after her
                             funeral
                           </a>
                           <div className="post-meta d-flex">
@@ -1383,7 +1396,7 @@ export default function Home() {
                             Business
                           </a>
                           <a href="single-post.html" className="post-title">
-                            Love Island star's boyfriend found dead after her
+                            Love Island stars boyfriend found dead after her
                             funeral
                           </a>
                           <div className="post-meta d-flex">
@@ -1441,8 +1454,8 @@ export default function Home() {
                               Sports
                             </a>
                             <a href="single-post.html" className="post-title">
-                              Searching for the 'angel' who held me on
-                              Westminster Bridge
+                              Searching for the who held me on Westminster
+                              Bridge
                             </a>
                             <div className="post-meta d-flex">
                               <a href="#">
@@ -1483,8 +1496,8 @@ export default function Home() {
                               Sports
                             </a>
                             <a href="single-post.html" className="post-title">
-                              Searching for the 'angel' who held me on
-                              Westminster Bridge
+                              Searching for the who held me on Westminster
+                              Bridge
                             </a>
                             <div className="post-meta d-flex">
                               <a href="#">
@@ -1530,8 +1543,7 @@ export default function Home() {
                               Business
                             </a>
                             <a href="single-post.html" className="post-title">
-                              Full article Prince Charles's 'urgent' global
-                              research
+                              Full article Prince global research
                             </a>
                             <div className="post-meta d-flex">
                               <a href="#">
@@ -1572,8 +1584,7 @@ export default function Home() {
                               Business
                             </a>
                             <a href="single-post.html" className="post-title">
-                              Full article Prince Charles's 'urgent' global
-                              research
+                              Full article Prince global research
                             </a>
                             <div className="post-meta d-flex">
                               <a href="#">
@@ -1610,7 +1621,7 @@ export default function Home() {
                         </div>
                         <div className="post-content">
                           <a href="single-post.html" className="post-title">
-                            Epileptic boy's cannabis let through border
+                            Epileptic cannabis let through border
                           </a>
                           <div className="post-meta d-flex justify-content-between">
                             <a href="#">
@@ -1644,7 +1655,7 @@ export default function Home() {
                         </div>
                         <div className="post-content">
                           <a href="single-post.html" className="post-title">
-                            Paramedics 'drilled into boat death woman'
+                            Paramedics drilled into boat death
                           </a>
                           <div className="post-meta d-flex justify-content-between">
                             <a href="#">
@@ -1678,7 +1689,7 @@ export default function Home() {
                         </div>
                         <div className="post-content">
                           <a href="single-post.html" className="post-title">
-                            Tory vice-chairs quit over PM's Brexit plan
+                            Tory vice-chairs quit over Brexit plan
                           </a>
                           <div className="post-meta d-flex justify-content-between">
                             <a href="#">
@@ -1865,8 +1876,8 @@ export default function Home() {
                             href="single-post.html"
                             className="post-title mb-2"
                           >
-                            Thailand cave rescue: Boys 'doing well' after
-                            spending night
+                            Thailand cave rescue: Boys doing well after spending
+                            night
                           </a>
                           <div className="post-meta d-flex align-items-center mb-2">
                             <a href="#" className="post-author">
@@ -1987,7 +1998,7 @@ export default function Home() {
                             href="single-post.html"
                             className="post-title mb-2"
                           >
-                            Theresa May warned Brexit strategy 'risks putting
+                            Theresa May warned Brexit strategy risks putting
                             Jeremy Corbyn
                           </a>
                           <div className="post-meta d-flex align-items-center mb-2">
@@ -2072,7 +2083,7 @@ export default function Home() {
                           Sports
                         </a>
                         <a href="single-post.html" className="post-title">
-                          Full article Prince Charles's 'urgent' global research
+                          Full article Prince
                         </a>
                         <div className="post-meta d-flex">
                           <a href="#">
@@ -2697,7 +2708,7 @@ export default function Home() {
                 {/* <!-- Copywrite Text --> */}
                 <div className="col-12 col-sm-6">
                   <p className="copywrite-text">
-                    {/* <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> */}
+                    {/* <!-- Link back to Colorlib cant be removed. Template is licensed under CC BY 3.0. --> */}
                     Copyright &copy;
                     <script>
                       document.write(new Date().getFullYear());
@@ -2744,4 +2755,73 @@ export default function Home() {
       </body>
     </>
   );
+}
+const BASE_URL = "http://localhost:1337",
+  BEARER_TOKEN =
+    "5682b7252772bad46d0a3a19b3883c8f377a9a39eb5ef29b18cd441c23349118d6902a96232bf8a90f4c696bba3a5905caa704cee65d822bb6ec47fceb562456346657773017e6a64f1df0706d040148cc4c665fc961d2314ff13269ee742f829f43e9b43694d2dbb41cca3812cf3dd15c5c3006adcf6e1b14bde92ca624f9c6",
+  headers = {
+    Authorization: `Bearer ${BEARER_TOKEN}`,
+  },
+  newsRevalidate = 20;
+
+export async function getBreakingNews() {
+  const res = await fetch(
+    `${BASE_URL}/api/short-news?populate=*&pagination[limit]=28&sort[0]=createdAt%3Adesc`,
+    { headers, next: { revalidate: newsRevalidate } }
+  );
+
+  return res.json();
+}
+
+export async function getPinnedNews() {
+  const res = await fetch(
+    `${BASE_URL}/api/news?populate=*&pagination[limit]=10&filters[pin][$eq]=true&sort[0]=publishedAt%3Adesc`,
+    { headers, next: { revalidate: newsRevalidate } }
+  );
+
+  return res.json();
+}
+
+export async function getArabicNews() {
+  const res = await fetch(
+    `${BASE_URL}/api/news?populate=*&pagination[limit]=7&filters[pin][$ne]=true&sort[0]=publishedAt%3Adesc&filters[zone][$eq]=عربي`,
+    { headers, next: { revalidate: newsRevalidate } }
+  );
+
+  return res.json();
+}
+
+export async function getLocalNews() {
+  const res = await fetch(
+    `${BASE_URL}/api/news?populate=*&pagination[limit]=7&filters[pin][$ne]=true&sort[0]=publishedAt%3Adesc&filters[zone][$eq]=محلي`,
+    { headers, next: { revalidate: newsRevalidate } }
+  );
+
+  return res.json();
+}
+
+export async function getGlobalNews() {
+  const res = await fetch(
+    `${BASE_URL}/api/news?populate=*&pagination[limit]=7&filters[pin][$ne]=true&sort[0]=publishedAt%3Adesc&filters[zone][$eq]=عالمي`,
+    { headers, next: { revalidate: newsRevalidate } }
+  );
+
+  return res.json();
+}
+export async function getRussianNews() {
+  const res = await fetch(
+    `${BASE_URL}/api/news?populate=*&pagination[limit]=7&filters[pin][$ne]=true&sort[0]=publishedAt%3Adesc&filters[zone][$eq]=الحرب%20الروسية`,
+    { headers, next: { revalidate: newsRevalidate } }
+  );
+
+  return res.json();
+}
+
+export async function getِArticales() {
+  const res = await fetch(
+    `${BASE_URL}/api/articales?populate=*&pagination[limit]=7&sort[0]=publishedAt%3Adesc`,
+    { headers, next: { revalidate: newsRevalidate } }
+  );
+
+  return res.json();
 }
