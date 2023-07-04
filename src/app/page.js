@@ -20,34 +20,39 @@ async function BreakingList({ promise }) {
 
 async function FeaturedPinnedPostedList({ promise }) {
   const data = await promise;
-  const bg =
-    BASE_URL +
-    data.data[0].attributes.featuredImage.data.attributes.formats.thumbnail.url;
+  
+    
   return (
-    <div
-      className="single-feature-post video-post bg-img"
-      style={{ backgroundImage: `url(${bg})` }}
-    >
-      {/* <!-- Post Content --> */}
-      <div className="post-content">
-        <a href="#" className="post-cata">
-          {data.data[0].attributes.zone}
-        </a>
+    <div className="col-12 col-md-7 col-lg-8">
+      <div className="tab-content">
+        {data.data.map((ob,i) => (
+          <div
+            key={ob.id}
+            className="tab-pane fade"
+            id={"post-" + i}
+            role="tabpanel"
+            aria-labelledby={"post-"+i+"-tab"}
+          >
+            <div
+              className="single-feature-post video-post bg-img"
+              style={{
+                backgroundImage: `url(${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url})`,
+              }}
+            >
+              {/* <!-- Post Content --> */}
+              <div className="post-content">
+                <a href="#" className="post-cata">
+                  {ob.attributes.zone}
+                </a>
 
-        <a href="single-post.html" className="post-title">
-          {data.data[0].attributes.title}
-        </a>
-        <div className="post-meta d-flex">
-          <a href="#">
-            <i className="fa fa-comments-o" aria-hidden="true"></i> 25
-          </a>
-          <a href="#">
-            <i className="fa fa-eye" aria-hidden="true"></i> 25
-          </a>
-          <a href="#">
-            <i className="fa fa-thumbs-o-up" aria-hidden="true"></i> 25
-          </a>
-        </div>
+                <a href="single-post.html" className="post-title">
+                  {ob.attributes.title}
+                </a>
+                
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
@@ -353,260 +358,7 @@ export default async function Home() {
               </div>
             </div>
             <div className="row no-gutters">
-              <div className="col-12 col-md-7 col-lg-8">
-                <div className="tab-content">
-                  
-                  <div
-                    className="tab-pane fade show active"
-                    id="post-1"
-                    role="tabpanel"
-                    aria-labelledby="post-1-tab"
-                  >
-                    {/* <!-- Single Feature Post --> */}
-                    <Suspense fallback={<div>......</div>}>
-                      <FeaturedPinnedPosted promise={pinnedNewsData} />
-                    </Suspense>
-                  </div>
-                  <div
-                    className="tab-pane fade"
-                    id="post-2"
-                    role="tabpanel"
-                    aria-labelledby="post-2-tab"
-                  >
-                    {/* <!-- Single Feature Post --> */}
-                    <div className="single-feature-post video-post bg-img">
-                      {/* <!-- Post Content --> */}
-                      <div className="post-content">
-                        <a href="#" className="post-cata">
-                          Sports
-                        </a>
-                        <a href="single-post.html" className="post-title">
-                          Reunification of migrant toddlers, parents should be
-                          completed Thursday
-                        </a>
-                        <div className="post-meta d-flex">
-                          <a href="#">
-                            <i
-                              className="fa fa-comments-o"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            25
-                          </a>
-                          <a href="#">
-                            <i className="fa fa-eye" aria-hidden="true"></i> 25
-                          </a>
-                          <a href="#">
-                            <i
-                              className="fa fa-thumbs-o-up"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            25
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="tab-pane fade"
-                    id="post-3"
-                    role="tabpanel"
-                    aria-labelledby="post-3-tab"
-                  >
-                    {/* <!-- Single Feature Post --> */}
-                    <div className="single-feature-post video-post bg-img">
-                      {/* <!-- Post Content --> */}
-                      <div className="post-content">
-                        <a href="#" className="post-cata">
-                          Sports
-                        </a>
-                        <a href="single-post.html" className="post-title">
-                          Reunification of migrant toddlers, parents should be
-                          completed Thursday
-                        </a>
-                        <div className="post-meta d-flex">
-                          <a href="#">
-                            <i
-                              className="fa fa-comments-o"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            25
-                          </a>
-                          <a href="#">
-                            <i className="fa fa-eye" aria-hidden="true"></i> 25
-                          </a>
-                          <a href="#">
-                            <i
-                              className="fa fa-thumbs-o-up"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            25
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    className="tab-pane fade"
-                    id="post-4"
-                    role="tabpanel"
-                    aria-labelledby="post-4-tab"
-                  >
-                    {/* <!-- Single Feature Post --> */}
-                    <div className="single-feature-post video-post bg-img">
-                      {/* <!-- Post Content --> */}
-                      <div className="post-content">
-                        <a href="#" className="post-cata">
-                          Sports
-                        </a>
-                        <a href="single-post.html" className="post-title">
-                          Reunification of migrant toddlers, parents should be
-                          completed Thursday
-                        </a>
-                        <div className="post-meta d-flex">
-                          <a href="#">
-                            <i
-                              className="fa fa-comments-o"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            25
-                          </a>
-                          <a href="#">
-                            <i className="fa fa-eye" aria-hidden="true"></i> 25
-                          </a>
-                          <a href="#">
-                            <i
-                              className="fa fa-thumbs-o-up"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            25
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    className="tab-pane fade"
-                    id="post-5"
-                    role="tabpanel"
-                    aria-labelledby="post-5-tab"
-                  >
-                    {/* <!-- Single Feature Post --> */}
-                    <div className="single-feature-post video-post bg-img">
-                      {/* <!-- Post Content --> */}
-                      <div className="post-content">
-                        <a href="#" className="post-cata">
-                          Sports
-                        </a>
-                        <a href="single-post.html" className="post-title">
-                          Reunification of migrant toddlers, parents should be
-                          completed Thursday
-                        </a>
-                        <div className="post-meta d-flex">
-                          <a href="#">
-                            <i
-                              className="fa fa-comments-o"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            25
-                          </a>
-                          <a href="#">
-                            <i className="fa fa-eye" aria-hidden="true"></i> 25
-                          </a>
-                          <a href="#">
-                            <i
-                              className="fa fa-thumbs-o-up"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            25
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    className="tab-pane fade"
-                    id="post-6"
-                    role="tabpanel"
-                    aria-labelledby="post-6-tab"
-                  >
-                    {/* <!-- Single Feature Post --> */}
-                    <div className="single-feature-post video-post bg-img">
-                      {/* <!-- Post Content --> */}
-                      <div className="post-content">
-                        <a href="#" className="post-cata">
-                          Sports
-                        </a>
-                        <a href="single-post.html" className="post-title">
-                          Reunification of migrant toddlers, parents should be
-                          completed Thursday
-                        </a>
-                        <div className="post-meta d-flex">
-                          <a href="#">
-                            <i
-                              className="fa fa-comments-o"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            25
-                          </a>
-                          <a href="#">
-                            <i className="fa fa-eye" aria-hidden="true"></i> 25
-                          </a>
-                          <a href="#">
-                            <i
-                              className="fa fa-thumbs-o-up"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            25
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    className="tab-pane fade"
-                    id="post-7"
-                    role="tabpanel"
-                    aria-labelledby="post-7-tab"
-                  >
-                    {/* <!-- Single Feature Post --> */}
-                    <div className="single-feature-post video-post bg-img">
-                      {/* <!-- Post Content --> */}
-                      <div className="post-content">
-                        <a href="#" className="post-cata">
-                          Sports
-                        </a>
-                        <a href="single-post.html" className="post-title">
-                          Reunification of migrant toddlers, parents should be
-                          completed Thursday
-                        </a>
-                        <div className="post-meta d-flex">
-                          <a href="#">
-                            <i
-                              className="fa fa-comments-o"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            25
-                          </a>
-                          <a href="#">
-                            <i className="fa fa-eye" aria-hidden="true"></i> 25
-                          </a>
-                          <a href="#">
-                            <i
-                              className="fa fa-thumbs-o-up"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            25
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <FeaturedPinnedPostedList promise={pinnedNewsData} />
 
               <div className="col-12 col-md-5 col-lg-4">
                 <ul className="nav vizew-nav-tab" role="tablist">
