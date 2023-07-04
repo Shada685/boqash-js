@@ -8,10 +8,10 @@ import { Suspense } from "react";
 
 async function BreakingList({ promise }) {
   const res = await promise;
-  const data = res.data.slice(0, 14);
+  let data = [...res.data.slice(0, 14)];
   return (
     <ul>
-      {data.map((ob, i) => (
+      {data.map((ob) => (
         <li key={ob.id}>{ob.attributes.content}</li>
       ))}
     </ul>
@@ -663,7 +663,7 @@ export default async function Home() {
                   {/* <!-- Featured Post Slides --> */}
                   <div className="featured-post-slides owl-carousel mb-30 ">
                     {/* <!-- Single Feature Post --> */}
-                    {[...localNewsData.data.slice(0, 2)].map((ob, i) => (
+                    {[...localNewsData.data.slice(0, 2)].map((ob) => (
                       <div key={ob.id}
                       className="single-feature-post video-post bg-img"
                       style={{ backgroundImage: `url(${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url})` }}
@@ -688,7 +688,7 @@ export default async function Home() {
                   <div className="row">
                     {/* <!-- Single Blog Post --> */}
                   
-                    {[...localNewsData.data.slice(2, 4)].map((ob, i) => (  <div  key={ob.id} className="col-12 col-md-6 col-lg-6"> <div   className="single-post-area mb-80 ">
+                    {[...localNewsData.data.slice(2, 4)].map((ob) => (  <div  key={ob.id} className="col-12 col-md-6 col-lg-6"> <div   className="single-post-area mb-80 ">
                         {/* <!-- Post Thumbnail --> */}
                         <div className="post-thumbnail">
                           <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={600} height={381}   />
@@ -713,7 +713,7 @@ export default async function Home() {
 
                   <div className="row">
                     {/* <!-- Single Blog Post --> */}
-                    {[...localNewsData.data.slice(4, 7)].map((ob, i) => (   <div  key={ob.id} className="col-12 col-md-6 col-lg-4"> <div   className="single-post-area mb-80 ">
+                    {[...localNewsData.data.slice(4, 7)].map((ob) => (   <div  key={ob.id} className="col-12 col-md-6 col-lg-4"> <div   className="single-post-area mb-80 ">
                         {/* <!-- Post Thumbnail --> */}
                         <div className="post-thumbnail">
                           <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={600} height={381} />
@@ -747,7 +747,7 @@ export default async function Home() {
 
                       {/* <!-- Sports Video Slides --> */}
                       <div className="sport-video-slides owl-carousel mb-50 ">
-                      {[...arabicNewsData.data.slice(0, 2)].map((ob, i) => ( <div  key={ob.id} className="single-post-area">
+                      {[...arabicNewsData.data.slice(0, 2)].map((ob) => ( <div  key={ob.id} className="single-post-area">
                           {/* <!-- Post Thumbnail --> */}
                           <div className="post-thumbnail">
                           <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={600} height={381}     />
@@ -773,7 +773,7 @@ export default async function Home() {
                     <div className="col-12 col-lg-6">
                       {/* <!-- Business Video Slides --> */}
                       <div className="  mb-50 ">
-                      {[...arabicNewsData.data.slice(2, 3)].map((ob, i) => (  
+                      {[...arabicNewsData.data.slice(2, 3)].map((ob) => (  
                         <div  key={ob.id} className="single-post-area">
                           {/* <!-- Post Thumbnail --> */}
                           <div className="post-thumbnail">
@@ -798,7 +798,7 @@ export default async function Home() {
                   </div>
 
                   <div className="row mb-30">
-                  {[...arabicNewsData.data.slice(3, 7)].map((ob, i) => ( <div  key={ob.id} className="col-12 col-lg-6 ">
+                  {[...arabicNewsData.data.slice(3, 7)].map((ob) => ( <div  key={ob.id} className="col-12 col-lg-6 ">
                       <div className="single-blog-post style-3 d-flex mb-50 ">
                       <div className="post-thumbnail">
                           <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={600} height={381}     />
@@ -830,7 +830,7 @@ export default async function Home() {
 
                   {/* <!-- Featured Post Slides --> */}
                   <div className="featured-post-slides owl-carousel mb-30 ">
-                  {[...globalNewsData.data.slice(0, 3)].map((ob, i) => ( <div
+                  {[...globalNewsData.data.slice(0, 3)].map((ob) => ( <div
                      key={ob.id}  className="single-feature-post video-post bg-img"
                      style={{ backgroundImage: `url(${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url})` }}
                     >
@@ -848,7 +848,7 @@ export default async function Home() {
                     </div>  ))}
                   
                   </div>
-                  {[...globalNewsData.data.slice(3, 7)].map((ob, i) => ( <div  key={ob.id} className="single-post-area mb-30 ">
+                  {[...globalNewsData.data.slice(3, 7)].map((ob) => ( <div  key={ob.id} className="single-post-area mb-30 ">
                     <div className="row align-items-center ">
                       <div className="col-12 col-lg-6">
                         {/* <!-- Post Thumbnail --> */}
@@ -904,138 +904,21 @@ export default async function Home() {
                     {/* <!-- Section Heading --> */}
                     <div className="section-heading style-2 mb-30">
                       <h4>مقتطفات</h4>
+                      
                       <div className="line"></div>
                     </div>
-
-                    {/* <!-- Single Blog Post --> */}
-                    <div className="single-post-area mb-30 ">
-                      {/* <!-- Post Thumbnail --> */}
-                      <div className="post-thumbnail">
-                        <img src="img/bg-img/13.jpg" alt="" />
-                      </div>
-
-                      {/* <!-- Post Content --> */}
+                    {[...breakingNewsData.data.slice(14, 28)].map((ob) => (<div key={ob.id} className="single-blog-post d-flex">
+                       
                       <div className="post-content">
-                        <a href="#" className="post-cata cata-sm cata-success">
-                          Sports
-                        </a>
-                        <a href="single-post.html" className="post-title">
-                          Full article Prince
-                        </a>
-                        <div className="post-meta d-flex">
-                          <a href="#">
-                            <i
-                              className="fa fa-comments-o"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            14
-                          </a>
-                          <a href="#">
-                            <i className="fa fa-eye" aria-hidden="true"></i> 38
-                          </a>
-                          <a href="#">
-                            <i
-                              className="fa fa-thumbs-o-up"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            22
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* <!-- Single Blog Post --> */}
-                    <div className="single-blog-post d-flex">
-                      <div className="post-thumbnail">
-                        <img src="img/bg-img/1.jpg" alt="" />
-                      </div>
-                      <div className="post-content">
-                        <a href="single-post.html" className="post-title">
-                          DC Shoes: gymkhana five; the making of
-                        </a>
+                        <span  className="post-title">
+                         {ob.attributes.content}
+                        </span>
                         <div className="post-meta d-flex justify-content-between">
-                          <a href="#">
-                            <i
-                              className="fa fa-comments-o"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            29
-                          </a>
-                          <a href="#">
-                            <i className="fa fa-eye" aria-hidden="true"></i> 08
-                          </a>
-                          <a href="#">
-                            <i
-                              className="fa fa-thumbs-o-up"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            23
-                          </a>
+                        { new Date(ob.attributes.createdAt).toISOString().split("T")[0]}
                         </div>
                       </div>
-                    </div>
-
-                    {/* <!-- Single Blog Post --> */}
-                    <div className="single-blog-post d-flex">
-                      <div className="post-thumbnail">
-                        <img src="img/bg-img/2.jpg" alt="" />
-                      </div>
-                      <div className="post-content">
-                        <a href="single-post.html" className="post-title">
-                          Sweet Yummy Chocolatea Tea
-                        </a>
-                        <div className="post-meta d-flex justify-content-between">
-                          <a href="#">
-                            <i
-                              className="fa fa-comments-o"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            17
-                          </a>
-                          <a href="#">
-                            <i className="fa fa-eye" aria-hidden="true"></i> 33
-                          </a>
-                          <a href="#">
-                            <i
-                              className="fa fa-thumbs-o-up"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            26
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* <!-- Single Blog Post --> */}
-                    <div className="single-blog-post d-flex">
-                      <div className="post-thumbnail">
-                        <img src="img/bg-img/35.jpg" alt="" />
-                      </div>
-                      <div className="post-content">
-                        <a href="single-post.html" className="post-title">
-                          How To Make Orange Chicken Recipe?
-                        </a>
-                        <div className="post-meta d-flex justify-content-between">
-                          <a href="#">
-                            <i
-                              className="fa fa-comments-o"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            11
-                          </a>
-                          <a href="#">
-                            <i className="fa fa-eye" aria-hidden="true"></i> 42
-                          </a>
-                          <a href="#">
-                            <i
-                              className="fa fa-thumbs-o-up"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            21
-                          </a>
-                        </div>
-                      </div>
-                    </div>
+                    </div>))}
+                    
                   </div>
 
                   {/* <!-- ***** Single Widget ***** --> */}
@@ -1049,104 +932,27 @@ export default async function Home() {
                   <div className="single-widget youtube-channel-widget mb-50">
                     {/* <!-- Section Heading --> */}
                     <div className="section-heading style-2 mb-30">
-                      <h4>مقالات</h4>
+                   
+                      <a href="/المقالات"> <h4>مقالات</h4></a>
                       <div className="line"></div>
                     </div>
-
-                    {/* <!-- Single YouTube Channel --> */}
-                    <div className="single-youtube-channel d-flex align-items-center">
+                    {[...articaleData.data.slice(0, 7)].map((ob) => ( <div key={ob.id} className="single-youtube-channel d-flex align-items-center">
                       <div className="youtube-channel-thumbnail">
-                        <img src="img/bg-img/25.jpg" alt="" />
+                      <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={110} height={80}     />
                       </div>
                       <div className="youtube-channel-content">
-                        <a href="single-post.html" className="channel-title">
-                          Music Channel
+                        <a href={ob.attributes.slug+"/المقالات"} className="channel-title">
+                        {ob.attributes.title}
                         </a>
-                        <a href="#" className="btn subscribe-btn">
-                          <i
-                            className="fa fa-play-circle-o"
-                            aria-hidden="true"
-                          ></i>{" "}
-                          Subscribe
-                        </a>
+                        <div className="post-meta d-flex align-items-center mb-2">
+                          { new Date(ob.attributes.publishedAt).toISOString().split("T")[0]}
+                          </div>
+                        
                       </div>
-                    </div>
-
-                    {/* <!-- Single YouTube Channel --> */}
-                    <div className="single-youtube-channel d-flex align-items-center">
-                      <div className="youtube-channel-thumbnail">
-                        <img src="img/bg-img/26.jpg" alt="" />
-                      </div>
-                      <div className="youtube-channel-content">
-                        <a href="single-post.html" className="channel-title">
-                          Trending Channel
-                        </a>
-                        <a href="#" className="btn subscribe-btn">
-                          <i
-                            className="fa fa-play-circle-o"
-                            aria-hidden="true"
-                          ></i>{" "}
-                          Subscribe
-                        </a>
-                      </div>
-                    </div>
-
-                    {/* <!-- Single YouTube Channel --> */}
-                    <div className="single-youtube-channel d-flex align-items-center">
-                      <div className="youtube-channel-thumbnail">
-                        <img src="img/bg-img/27.jpg" alt="" />
-                      </div>
-                      <div className="youtube-channel-content">
-                        <a href="single-post.html" className="channel-title">
-                          Travel Channel
-                        </a>
-                        <a href="#" className="btn subscribe-btn">
-                          <i
-                            className="fa fa-play-circle-o"
-                            aria-hidden="true"
-                          ></i>{" "}
-                          Subscribe
-                        </a>
-                      </div>
-                    </div>
-
-                    {/* <!-- Single YouTube Channel --> */}
-                    <div className="single-youtube-channel d-flex align-items-center">
-                      <div className="youtube-channel-thumbnail">
-                        <img src="img/bg-img/28.jpg" alt="" />
-                      </div>
-                      <div className="youtube-channel-content">
-                        <a href="single-post.html" className="channel-title">
-                          Sport Channel
-                        </a>
-                        <a href="#" className="btn subscribe-btn">
-                          <i
-                            className="fa fa-play-circle-o"
-                            aria-hidden="true"
-                          ></i>{" "}
-                          Subscribe
-                        </a>
-                      </div>
-                    </div>
-
-                    {/* <!-- Single YouTube Channel --> */}
-                    <div className="single-youtube-channel d-flex align-items-center">
-                      <div className="youtube-channel-thumbnail">
-                        <img src="img/bg-img/29.jpg" alt="" />
-                      </div>
-                      <div className="youtube-channel-content">
-                        <a href="single-post.html" className="channel-title">
-                          TV Show Channel
-                        </a>
-                        <a href="#" className="btn subscribe-btn">
-                          <i
-                            className="fa fa-play-circle-o"
-                            aria-hidden="true"
-                          ></i>{" "}
-                          Subscribe
-                        </a>
-                      </div>
-                    </div>
+                    </div>))}
+                   
+                   
+ 
                   </div>
 
                   {/* <!-- ***** Single Widget ***** --> */}
@@ -1185,7 +991,7 @@ export default async function Home() {
                       <a href="/الحرب-الروسية"> <h4>الحرب الروسية</h4></a>
                       <div className="line"></div>
                     </div>
-                    {[...russianNewsData.data.slice(0, 7)].map((ob, i) => (  <div  key={ob.id} className="single-blog-post d-flex">
+                    {[...russianNewsData.data.slice(0, 7)].map((ob) => (  <div  key={ob.id} className="single-blog-post d-flex">
                     <div className="post-thumbnail">
                           <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={100} height={70}     />
                         </div>
