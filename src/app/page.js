@@ -23,15 +23,27 @@ async function FeaturedPinnedPostedList({ promise }) {
   
     
   return (
+    <section className="hero--area section-padding-80">
+    <div className="container">
+      <div className="row">
+        <div className="col-12">
+          {/* <!-- Section Heading --> */}
+          <div className="section-heading">
+            <h4>ابرز الاخبار</h4>
+            <div className="line"></div>
+          </div>
+        </div>
+      </div>
+      <div className="row no-gutters">
     <div className="col-12 col-md-7 col-lg-8">
       <div className="tab-content">
         {data.data.map((ob,i) => (
           <div
             key={ob.id}
-            className="tab-pane fade"
-            id={"post-" + i}
+            className={"tab-pane fade "+(i==0? "active show" :"")}
+            id={"post-" + ob.id}
             role="tabpanel"
-            aria-labelledby={"post-"+i+"-tab"}
+            aria-labelledby={"post-"+ob.id+"-tab"}
           >
             <div
               className="single-feature-post video-post bg-img"
@@ -54,19 +66,74 @@ async function FeaturedPinnedPostedList({ promise }) {
           </div>
         ))}
       </div>
+
     </div>
+     <div className="col-12 col-md-5 col-lg-4">
+                <ul className="nav vizew-nav-tab" role="tablist">
+    {data.data.map((ob,i) => (
+     
+                  <li key={ob.id} className="nav-item">
+                  
+                    <a
+                      className={"nav-link "+(i==0? "active show" :"")}
+                      id={"post-"+ ob.id+"-tab"}
+                      data-toggle="pill"
+                      href={"#post-" +  ob.id}
+                      role="tab"
+                      aria-controls={"post-" + ob.id}
+                      aria-selected={i==0? "true" : "false"}
+                    >
+                      {/* <!-- Single Blog Post --> */}
+                      <div className="single-blog-post style-2 d-flex align-items-center">
+                        <div className="post-thumbnail">
+                        <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} width={100}  height={100} alt={ob.attributes.title} />
+                        
+                        </div>
+                        <div className="post-content">
+                          <h6 className="post-title">
+                            {ob.attributes.title}
+                          </h6>
+                          <div className="post-meta d-flex justify-content-between">
+                            <span>
+                             {ob.attributes.zone}
+                            </span>
+                          
+                           
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+
+             
+        ))}
+      </ul>
+              </div>
+    </div>
+    </div>
+    </section>
   );
 }
 
 export default async function Home() {
-  const breakingNewsData = getBreakingNews();
-  const pinnedNewsData = getPinnedNews();
-  const arabicNewsData = getArabicNews();
-  const localNewsData = getLocalNews();
-  const globalNewsData = getGlobalNews();
-  const russianNewsData = getRussianNews();
-  const articaleData = getِArticales();
-
+  const breakingNews = getBreakingNews();
+  const pinnedNews = getPinnedNews();
+  const arabicNews = getArabicNews();
+  const localNews =  getLocalNews();
+  const globalNews= getGlobalNews();
+  const russianNews = getRussianNews();
+  const articale = getِArticales();
+  const [breakingNewsData,
+    pinnedNewsData,
+    arabicNewsData,
+    localNewsData,
+    globalNewsData,
+    russianNewsData,
+    articaleData] = await Promise.all([breakingNews, pinnedNews,arabicNews,
+      localNews,
+      globalNews,
+      russianNews,
+      articale])
   return (
     <>
       <Head>
@@ -346,334 +413,7 @@ export default async function Home() {
         {/* <!-- ##### Header Area End ##### --> */}
 
         {/* <!-- ##### Hero Area Start ##### --> */}
-        <section className="hero--area section-padding-80">
-          <div className="container">
-            <div className="row">
-              <div className="col-12">
-                {/* <!-- Section Heading --> */}
-                <div className="section-heading">
-                  <h4>ابرز الاخبار</h4>
-                  <div className="line"></div>
-                </div>
-              </div>
-            </div>
-            <div className="row no-gutters">
-            <FeaturedPinnedPostedList promise={pinnedNewsData} />
-
-              <div className="col-12 col-md-5 col-lg-4">
-                <ul className="nav vizew-nav-tab" role="tablist">
-                  <li className="nav-item">
-                    <a
-                      className="nav-link active"
-                      id="post-1-tab"
-                      data-toggle="pill"
-                      href="#post-1"
-                      role="tab"
-                      aria-controls="post-1"
-                      aria-selected="true"
-                    >
-                      {/* <!-- Single Blog Post --> */}
-                      <div className="single-blog-post style-2 d-flex align-items-center">
-                        <div className="post-thumbnail">
-                          <img src="/img/bg-img/3.jpg" alt="" />
-                        </div>
-                        <div className="post-content">
-                          <h6 className="post-title">
-                            Boysafter Thai cave rescue
-                          </h6>
-                          <div className="post-meta d-flex justify-content-between">
-                            <span>
-                              <i
-                                className="fa fa-comments-o"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              25
-                            </span>
-                            <span>
-                              <i className="fa fa-eye" aria-hidden="true"></i>{" "}
-                              11
-                            </span>
-                            <span>
-                              <i
-                                className="fa fa-thumbs-o-up"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              19
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      id="post-2-tab"
-                      data-toggle="pill"
-                      href="#post-2"
-                      role="tab"
-                      aria-controls="post-2"
-                      aria-selected="false"
-                    >
-                      {/* <!-- Single Blog Post --> */}
-                      <div className="single-blog-post style-2 d-flex align-items-center">
-                        <div className="post-thumbnail">
-                          <img src="/img/bg-img/4.jpg" alt="" />
-                        </div>
-                        <div className="post-content">
-                          <h6 className="post-title">
-                            Meet the 12 boys rescued from cave
-                          </h6>
-                          <div className="post-meta d-flex justify-content-between">
-                            <span>
-                              <i
-                                className="fa fa-comments-o"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              14
-                            </span>
-                            <span>
-                              <i className="fa fa-eye" aria-hidden="true"></i>{" "}
-                              34
-                            </span>
-                            <span>
-                              <i
-                                className="fa fa-thumbs-o-up"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              84
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      id="post-3-tab"
-                      data-toggle="pill"
-                      href="#post-3"
-                      role="tab"
-                      aria-controls="post-3"
-                      aria-selected="false"
-                    >
-                      {/* <!-- Single Blog Post --> */}
-                      <div className="single-blog-post style-2 d-flex align-items-center">
-                        <div className="post-thumbnail">
-                          <img src="/img/bg-img/5.jpg" alt="" />
-                        </div>
-                        <div className="post-content">
-                          <h6 className="post-title">
-                            Pogba dedicates France win to Thai cave boys
-                          </h6>
-                          <div className="post-meta d-flex justify-content-between">
-                            <span>
-                              <i
-                                className="fa fa-comments-o"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              14
-                            </span>
-                            <span>
-                              <i className="fa fa-eye" aria-hidden="true"></i>{" "}
-                              34
-                            </span>
-                            <span>
-                              <i
-                                className="fa fa-thumbs-o-up"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              84
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      id="post-4-tab"
-                      data-toggle="pill"
-                      href="#post-4"
-                      role="tab"
-                      aria-controls="post-4"
-                      aria-selected="false"
-                    >
-                      {/* <!-- Single Blog Post --> */}
-                      <div className="single-blog-post style-2 d-flex align-items-center">
-                        <div className="post-thumbnail">
-                          <img src="/img/bg-img/6.jpg" alt="" />
-                        </div>
-                        <div className="post-content">
-                          <h6 className="post-title">
-                            How the world reacted to Brexit crisis
-                          </h6>
-                          <div className="post-meta d-flex justify-content-between">
-                            <span>
-                              <i
-                                className="fa fa-comments-o"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              24
-                            </span>
-                            <span>
-                              <i className="fa fa-eye" aria-hidden="true"></i>{" "}
-                              98
-                            </span>
-                            <span>
-                              <i
-                                className="fa fa-thumbs-o-up"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              63
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      id="post-5-tab"
-                      data-toggle="pill"
-                      href="#post-5"
-                      role="tab"
-                      aria-controls="post-5"
-                      aria-selected="false"
-                    >
-                      {/* <!-- Single Blog Post --> */}
-                      <div className="single-blog-post style-2 d-flex align-items-center">
-                        <div className="post-thumbnail">
-                          <img src="/img/bg-img/4.jpg" alt="" />
-                        </div>
-                        <div className="post-content">
-                          <h6 className="post-title">
-                            Meet the 12 boys rescued from cave
-                          </h6>
-                          <div className="post-meta d-flex justify-content-between">
-                            <span>
-                              <i
-                                className="fa fa-comments-o"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              14
-                            </span>
-                            <span>
-                              <i className="fa fa-eye" aria-hidden="true"></i>{" "}
-                              34
-                            </span>
-                            <span>
-                              <i
-                                className="fa fa-thumbs-o-up"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              84
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      id="post-6-tab"
-                      data-toggle="pill"
-                      href="#post-6"
-                      role="tab"
-                      aria-controls="post-6"
-                      aria-selected="false"
-                    >
-                      {/* <!-- Single Blog Post --> */}
-                      <div className="single-blog-post style-2 d-flex align-items-center">
-                        <div className="post-thumbnail">
-                          <img src="/img/bg-img/6.jpg" alt="" />
-                        </div>
-                        <div className="post-content">
-                          <h6 className="post-title">
-                            How the world reacted tBrexit crisis
-                          </h6>
-                          <div className="post-meta d-flex justify-content-between">
-                            <span>
-                              <i
-                                className="fa fa-comments-o"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              24
-                            </span>
-                            <span>
-                              <i className="fa fa-eye" aria-hidden="true"></i>{" "}
-                              98
-                            </span>
-                            <span>
-                              <i
-                                className="fa fa-thumbs-o-up"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              63
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      id="post-7-tab"
-                      data-toggle="pill"
-                      href="#post-7"
-                      role="tab"
-                      aria-controls="post-7"
-                      aria-selected="false"
-                    >
-                      {/* <!-- Single Blog Post --> */}
-                      <div className="single-blog-post style-2 d-flex align-items-center">
-                        <div className="post-thumbnail">
-                          <img src="/img/bg-img/4.jpg" alt="" />
-                        </div>
-                        <div className="post-content">
-                          <h6 className="post-title">
-                            Meet the 12 boys rescued from cave
-                          </h6>
-                          <div className="post-meta d-flex justify-content-between">
-                            <span>
-                              <i
-                                className="fa fa-comments-o"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              14
-                            </span>
-                            <span>
-                              <i className="fa fa-eye" aria-hidden="true"></i>{" "}
-                              34
-                            </span>
-                            <span>
-                              <i
-                                className="fa fa-thumbs-o-up"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              84
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
+         <FeaturedPinnedPostedList promise={pinnedNewsData} />
         {/* <!-- ##### Hero Area End ##### --> */}
         {/* <!-- ##### Header Area End ##### --> */}
 
@@ -916,271 +656,88 @@ export default async function Home() {
                 <div className="all-posts-area">
                   {/* <!-- Section Heading --> */}
                   <div className="section-heading style-2">
-                    <h4>الاخبار المحلية</h4>
+                  <a href="/الاخبار-المحلية"> <h4>الاخبار المحلية</h4></a>
                     <div className="line"></div>
                   </div>
 
                   {/* <!-- Featured Post Slides --> */}
                   <div className="featured-post-slides owl-carousel mb-30 ">
                     {/* <!-- Single Feature Post --> */}
-                    <div
+                    {[...localNewsData.data.slice(0, 2)].map((ob, i) => (
+                      <div key={ob.id}
                       className="single-feature-post video-post bg-img"
-                      style={{ backgroundImage: "url(/img/bg-img/7.jpg)" }}
+                      style={{ backgroundImage: `url(${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url})` }}
                     >
                       {/* <!-- Post Content --> */}
                       <div className="post-content">
-                        <a href="#" className="post-cata">
-                          Sports
-                        </a>
-                        <a href="single-post.html" className="post-title">
-                          Reunification of migrant toddlers, parents should be
-                          completed Thursday
+                      
+                        <a href={ob.attributes.slug+"/الاخبار-المحلية"} className="post-title">
+                        {ob.attributes.title}
                         </a>
                         <div className="post-meta d-flex">
-                          <a href="#">
-                            <i
-                              className="fa fa-comments-o"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            25
-                          </a>
-                          <a href="#">
-                            <i className="fa fa-eye" aria-hidden="true"></i> 25
-                          </a>
-                          <a href="#">
-                            <i
-                              className="fa fa-thumbs-o-up"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            25
-                          </a>
+                          { new Date(ob.attributes.publishedAt).toISOString().split("T")[0]}
                         </div>
                       </div>
                     </div>
+      ))}
+                   
+                    
+                
                   </div>
 
                   <div className="row">
                     {/* <!-- Single Blog Post --> */}
-                    <div className="col-12 col-md-6 col-lg-6">
-                      <div className="single-post-area mb-80 ">
+                  
+                    {[...localNewsData.data.slice(2, 4)].map((ob, i) => (  <div  key={ob.id} className="col-12 col-md-6 col-lg-6"> <div   className="single-post-area mb-80 ">
                         {/* <!-- Post Thumbnail --> */}
                         <div className="post-thumbnail">
-                          <img src="img/bg-img/12.jpg" alt="" />
+                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={600} height={381}   />
                         </div>
 
                         {/* <!-- Post Content --> */}
                         <div className="post-content">
-                          <a href="#" className="post-cata cata-sm cata-danger">
-                            Game
-                          </a>
-                          <a href="single-post.html" className="post-title">
-                            Searching for theangel who held me on Westminste
-                            Bridge
+                          
+                          <a href={ob.attributes.slug+"/الاخبار-المحلية"} className="post-title">
+                           {ob.attributes.title}
                           </a>
                           <div className="post-meta d-flex">
-                            <a href="#">
-                              <i
-                                className="fa fa-comments-o"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              28
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-eye" aria-hidden="true"></i>{" "}
-                              17
-                            </a>
-                            <a href="#">
-                              <i
-                                className="fa fa-thumbs-o-up"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              22
-                            </a>
+                          { new Date(ob.attributes.publishedAt).toISOString().split("T")[0]}
                           </div>
                         </div>
-                      </div>
-                    </div>
+                      </div> </div>))}
+                     
+                   
 
-                    {/* <!-- Single Blog Post --> */}
-
-                    <div className="col-12 col-md-6 col-lg-6">
-                      <div className="single-post-area mb-80 ">
-                        {/* <!-- Post Thumbnail --> */}
-                        <div className="post-thumbnail">
-                          <img src="img/bg-img/13.jpg" alt="" />
-                        </div>
-
-                        {/* <!-- Post Content --> */}
-                        <div className="post-content">
-                          <a
-                            href="#"
-                            className="post-cata cata-sm cata-primary"
-                          >
-                            Business
-                          </a>
-                          <a href="single-post.html" className="post-title">
-                            Love Island stars boyfriend found dead after her
-                            funeral
-                          </a>
-                          <div className="post-meta d-flex">
-                            <a href="#">
-                              <i
-                                className="fa fa-comments-o"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              14
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-eye" aria-hidden="true"></i>{" "}
-                              38
-                            </a>
-                            <a href="#">
-                              <i
-                                className="fa fa-thumbs-o-up"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              22
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+            
                   </div>
 
                   <div className="row">
                     {/* <!-- Single Blog Post --> */}
-                    <div className="col-12 col-md-6 col-lg-4">
-                      <div className="single-post-area mb-80 ">
+                    {[...localNewsData.data.slice(4, 7)].map((ob, i) => (   <div  key={ob.id} className="col-12 col-md-6 col-lg-4"> <div   className="single-post-area mb-80 ">
                         {/* <!-- Post Thumbnail --> */}
                         <div className="post-thumbnail">
-                          <img src="img/bg-img/12.jpg" alt="" />
+                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={600} height={381} />
                         </div>
 
                         {/* <!-- Post Content --> */}
                         <div className="post-content">
-                          <a href="#" className="post-cata cata-sm cata-danger">
-                            Game
-                          </a>
-                          <a href="single-post.html" className="post-title">
-                            Searching for the angel who held me on Westminste
-                            Bridge
+                          
+                          <a href={ob.attributes.slug+"/الاخبار-المحلية"} className="post-title">
+                           {ob.attributes.title}
                           </a>
                           <div className="post-meta d-flex">
-                            <a href="#">
-                              <i
-                                className="fa fa-comments-o"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              28
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-eye" aria-hidden="true"></i>{" "}
-                              17
-                            </a>
-                            <a href="#">
-                              <i
-                                className="fa fa-thumbs-o-up"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              22
-                            </a>
+                          { new Date(ob.attributes.publishedAt).toISOString().split("T")[0]}
                           </div>
                         </div>
-                      </div>
-                    </div>
-
-                    {/* <!-- Single Blog Post --> */}
-                    <div className="col-12 col-md-6 col-lg-4">
-                      <div className="single-post-area mb-80 ">
-                        {/* <!-- Post Thumbnail --> */}
-                        <div className="post-thumbnail">
-                          <img src="img/bg-img/13.jpg" alt="" />
-                        </div>
-
-                        {/* <!-- Post Content --> */}
-                        <div className="post-content">
-                          <a
-                            href="#"
-                            className="post-cata cata-sm cata-primary"
-                          >
-                            Business
-                          </a>
-                          <a href="single-post.html" className="post-title">
-                            Love Island stars boyfriend found dead after her
-                            funeral
-                          </a>
-                          <div className="post-meta d-flex">
-                            <a href="#">
-                              <i
-                                className="fa fa-comments-o"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              14
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-eye" aria-hidden="true"></i>{" "}
-                              38
-                            </a>
-                            <a href="#">
-                              <i
-                                className="fa fa-thumbs-o-up"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              22
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-12 col-md-6 col-lg-4">
-                      <div className="single-post-area mb-80 ">
-                        {/* <!-- Post Thumbnail --> */}
-                        <div className="post-thumbnail">
-                          <img src="img/bg-img/13.jpg" alt="" />
-                        </div>
-
-                        {/* <!-- Post Content --> */}
-                        <div className="post-content">
-                          <a
-                            href="#"
-                            className="post-cata cata-sm cata-primary"
-                          >
-                            Business
-                          </a>
-                          <a href="single-post.html" className="post-title">
-                            Love Island stars boyfriend found dead after her
-                            funeral
-                          </a>
-                          <div className="post-meta d-flex">
-                            <a href="#">
-                              <i
-                                className="fa fa-comments-o"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              14
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-eye" aria-hidden="true"></i>{" "}
-                              38
-                            </a>
-                            <a href="#">
-                              <i
-                                className="fa fa-thumbs-o-up"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              22
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                      </div> </div>))}
+                 
                   </div>
 
                   <div className="row">
                     <div className="col-12">
                       {/* <!-- Section Heading --> */}
                       <div className="section-heading">
-                        <h4>الاخبار العربية</h4>
+                      <a href="/الاخبار-العربية"> <h4>الاخبار العربية</h4></a>
                         <div className="line"></div>
                       </div>
                     </div>
@@ -1190,606 +747,134 @@ export default async function Home() {
 
                       {/* <!-- Sports Video Slides --> */}
                       <div className="sport-video-slides owl-carousel mb-50 ">
-                        {/* <!-- Single Blog Post --> */}
-                        <div className="single-post-area">
+                      {[...arabicNewsData.data.slice(0, 2)].map((ob, i) => ( <div  key={ob.id} className="single-post-area">
                           {/* <!-- Post Thumbnail --> */}
                           <div className="post-thumbnail">
-                            <img src="img/bg-img/15.jpg" alt="" />
-                          </div>
-
-                          {/* <!-- Post Content --> */}
-                          <div className="post-content">
-                            <a
-                              href="#"
-                              className="post-cata cata-sm cata-success"
-                            >
-                              Sports
-                            </a>
-                            <a href="single-post.html" className="post-title">
-                              Searching for the who held me on Westminster
-                              Bridge
-                            </a>
-                            <div className="post-meta d-flex">
-                              <a href="#">
-                                <i
-                                  className="fa fa-comments-o"
-                                  aria-hidden="true"
-                                ></i>{" "}
-                                14
-                              </a>
-                              <a href="#">
-                                <i className="fa fa-eye" aria-hidden="true"></i>{" "}
-                                38
-                              </a>
-                              <a href="#">
-                                <i
-                                  className="fa fa-thumbs-o-up"
-                                  aria-hidden="true"
-                                ></i>{" "}
-                                22
-                              </a>
-                            </div>
-                          </div>
+                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={600} height={381}     />
                         </div>
 
+                        {/* <!-- Post Content --> */}
+                        <div className="post-content">
+                          
+                          <a href={ob.attributes.slug+"/الاخبار-العربية"} className="post-title">
+                           {ob.attributes.title}
+                          </a>
+                          <div className="post-meta d-flex">
+                          { new Date(ob.attributes.publishedAt).toISOString().split("T")[0]}
+                          </div>
+                        </div>
+                        </div>))}
                         {/* <!-- Single Blog Post --> */}
-                        <div className="single-post-area ">
-                          {/* <!-- Post Thumbnail --> */}
-                          <div className="post-thumbnail">
-                            <img src="img/bg-img/13.jpg" alt="" />
-                          </div>
-
-                          {/* <!-- Post Content --> */}
-                          <div className="post-content ">
-                            <a
-                              href="#"
-                              className="post-cata cata-sm cata-success"
-                            >
-                              Sports
-                            </a>
-                            <a href="single-post.html" className="post-title">
-                              Searching for the who held me on Westminster
-                              Bridge
-                            </a>
-                            <div className="post-meta d-flex">
-                              <a href="#">
-                                <i
-                                  className="fa fa-comments-o"
-                                  aria-hidden="true"
-                                ></i>{" "}
-                                14
-                              </a>
-                              <a href="#">
-                                <i className="fa fa-eye" aria-hidden="true"></i>{" "}
-                                38
-                              </a>
-                              <a href="#">
-                                <i
-                                  className="fa fa-thumbs-o-up"
-                                  aria-hidden="true"
-                                ></i>{" "}
-                                22
-                              </a>
-                            </div>
-                          </div>
-                        </div>
+                       
+                       
                       </div>
                     </div>
 
                     <div className="col-12 col-lg-6">
                       {/* <!-- Business Video Slides --> */}
-                      <div className="business-video-slides owl-carousel mb-50 ">
-                        {/* <!-- Single Blog Post --> */}
-                        <div className="single-post-area">
+                      <div className="  mb-50 ">
+                      {[...arabicNewsData.data.slice(2, 3)].map((ob, i) => (  
+                        <div  key={ob.id} className="single-post-area">
                           {/* <!-- Post Thumbnail --> */}
                           <div className="post-thumbnail">
-                            <img src="img/bg-img/17.jpg" alt="" />
-                          </div>
-
-                          {/* <!-- Post Content --> */}
-                          <div className="post-content">
-                            <a
-                              href="#"
-                              className="post-cata cata-sm cata-primary"
-                            >
-                              Business
-                            </a>
-                            <a href="single-post.html" className="post-title">
-                              Full article Prince global research
-                            </a>
-                            <div className="post-meta d-flex">
-                              <a href="#">
-                                <i
-                                  className="fa fa-comments-o"
-                                  aria-hidden="true"
-                                ></i>{" "}
-                                14
-                              </a>
-                              <a href="#">
-                                <i className="fa fa-eye" aria-hidden="true"></i>{" "}
-                                38
-                              </a>
-                              <a href="#">
-                                <i
-                                  className="fa fa-thumbs-o-up"
-                                  aria-hidden="true"
-                                ></i>{" "}
-                                22
-                              </a>
-                            </div>
-                          </div>
+                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={600} height={381}     />
                         </div>
 
-                        {/* <!-- Single Blog Post --> */}
-                        <div className="single-post-area">
-                          {/* <!-- Post Thumbnail --> */}
-                          <div className="post-thumbnail">
-                            <img src="img/bg-img/13.jpg" alt="" />
-                          </div>
-
-                          {/* <!-- Post Content --> */}
-                          <div className="post-content">
-                            <a
-                              href="#"
-                              className="post-cata cata-sm cata-primary"
-                            >
-                              Business
-                            </a>
-                            <a href="single-post.html" className="post-title">
-                              Full article Prince global research
-                            </a>
-                            <div className="post-meta d-flex">
-                              <a href="#">
-                                <i
-                                  className="fa fa-comments-o"
-                                  aria-hidden="true"
-                                ></i>{" "}
-                                14
-                              </a>
-                              <a href="#">
-                                <i className="fa fa-eye" aria-hidden="true"></i>{" "}
-                                38
-                              </a>
-                              <a href="#">
-                                <i
-                                  className="fa fa-thumbs-o-up"
-                                  aria-hidden="true"
-                                ></i>{" "}
-                                22
-                              </a>
-                            </div>
+                        {/* <!-- Post Content --> */}
+                        <div className="post-content">
+                          
+                          <a href={ob.attributes.slug+"/الاخبار-العربية"} className="post-title">
+                           {ob.attributes.title}
+                          </a>
+                          <div className="post-meta d-flex">
+                          { new Date(ob.attributes.publishedAt).toISOString().split("T")[0]}
                           </div>
                         </div>
+                        </div>
+))}
+                       
                       </div>
                     </div>
                   </div>
 
                   <div className="row mb-30">
-                    {/* <!-- Single Blog Post --> */}
-                    <div className="col-12 col-lg-6 ">
+                  {[...arabicNewsData.data.slice(3, 7)].map((ob, i) => ( <div  key={ob.id} className="col-12 col-lg-6 ">
                       <div className="single-blog-post style-3 d-flex mb-50 ">
-                        <div className="post-thumbnail">
-                          <img src="img/bg-img/16.jpg" alt="" />
+                      <div className="post-thumbnail">
+                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={600} height={381}     />
                         </div>
-                        <div className="post-content">
-                          <a href="single-post.html" className="post-title">
-                            Epileptic cannabis let through border
-                          </a>
-                          <div className="post-meta d-flex justify-content-between">
-                            <a href="#">
-                              <i
-                                className="fa fa-comments-o"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              16
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-eye" aria-hidden="true"></i>{" "}
-                              26
-                            </a>
-                            <a href="#">
-                              <i
-                                className="fa fa-thumbs-o-up"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              17
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
 
-                    {/* <!-- Single Blog Post --> */}
-                    <div className="col-12 col-lg-6">
-                      <div className="single-blog-post style-3 d-flex mb-50 ">
-                        <div className="post-thumbnail">
-                          <img src="img/bg-img/18.jpg" alt="" />
-                        </div>
+                        {/* <!-- Post Content --> */}
                         <div className="post-content">
-                          <a href="single-post.html" className="post-title">
-                            Paramedics drilled into boat death
+                          
+                          <a href={ob.attributes.slug+"/الاخبار-العربية"} className="post-title">
+                           {ob.attributes.title}
                           </a>
-                          <div className="post-meta d-flex justify-content-between">
-                            <a href="#">
-                              <i
-                                className="fa fa-comments-o"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              16
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-eye" aria-hidden="true"></i>{" "}
-                              26
-                            </a>
-                            <a href="#">
-                              <i
-                                className="fa fa-thumbs-o-up"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              17
-                            </a>
+                          <div className="post-meta d-flex">
+                          { new Date(ob.attributes.publishedAt).toISOString().split("T")[0]}
                           </div>
                         </div>
                       </div>
-                    </div>
-
-                    {/* <!-- Single Blog Post --> */}
-                    <div className="col-12 col-lg-6">
-                      <div className="single-blog-post style-3 d-flex mb-50 ">
-                        <div className="post-thumbnail">
-                          <img src="img/bg-img/19.jpg" alt="" />
-                        </div>
-                        <div className="post-content">
-                          <a href="single-post.html" className="post-title">
-                            Tory vice-chairs quit over Brexit plan
-                          </a>
-                          <div className="post-meta d-flex justify-content-between">
-                            <a href="#">
-                              <i
-                                className="fa fa-comments-o"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              16
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-eye" aria-hidden="true"></i>{" "}
-                              26
-                            </a>
-                            <a href="#">
-                              <i
-                                className="fa fa-thumbs-o-up"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              17
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* <!-- Single Blog Post --> */}
-                    <div className="col-12 col-lg-6">
-                      <div className="single-blog-post style-3 d-flex mb-50 ">
-                        <div className="post-thumbnail">
-                          <img src="img/bg-img/20.jpg" alt="" />
-                        </div>
-                        <div className="post-content">
-                          <a href="single-post.html" className="post-title">
-                            Do This One Simple Action for an Absolutely
-                          </a>
-                          <div className="post-meta d-flex justify-content-between">
-                            <a href="#">
-                              <i
-                                className="fa fa-comments-o"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              16
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-eye" aria-hidden="true"></i>{" "}
-                              26
-                            </a>
-                            <a href="#">
-                              <i
-                                className="fa fa-thumbs-o-up"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              17
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    </div>))}
+                 
+                   
+ 
                   </div>
 
                   {/* <!-- Section Heading --> */}
                   <div className="section-heading style-2">
-                    <h4>الاخبار العالمية</h4>
+                   
+                    <a href="/الاخبار-العالمية"> <h4>الاخبار العالمية</h4></a>
                     <div className="line"></div>
                   </div>
 
                   {/* <!-- Featured Post Slides --> */}
                   <div className="featured-post-slides owl-carousel mb-30 ">
-                    {/* <!-- Single Feature Post --> */}
-                    <div
-                      className="single-feature-post video-post bg-img"
-                      style={{ backgroundImage: "url(/img/bg-img/14.jpg)" }}
+                  {[...globalNewsData.data.slice(0, 3)].map((ob, i) => ( <div
+                     key={ob.id}  className="single-feature-post video-post bg-img"
+                     style={{ backgroundImage: `url(${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url})` }}
                     >
-                      {/* <!-- Post Content --> */}
-                      <div className="post-content">
-                        <a href="#" className="post-cata">
-                          Sports
-                        </a>
-                        <a href="single-post.html" className="post-title">
-                          Reunification of migrant toddlers, parents should be
-                          completed Thursday
-                        </a>
-                        <div className="post-meta d-flex">
-                          <a href="#">
-                            <i
-                              className="fa fa-comments-o"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            25
+                     
+                        {/* <!-- Post Content --> */}
+                        <div className="post-content">
+                          
+                          <a href={ob.attributes.slug+"/الاخبار-العربية"} className="post-title">
+                           {ob.attributes.title}
                           </a>
-                          <a href="#">
-                            <i className="fa fa-eye" aria-hidden="true"></i> 25
-                          </a>
-                          <a href="#">
-                            <i
-                              className="fa fa-thumbs-o-up"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            25
-                          </a>
+                          <div className="post-meta d-flex">
+                          { new Date(ob.attributes.publishedAt).toISOString().split("T")[0]}
+                          </div>
                         </div>
-                      </div>
-                    </div>
+                    </div>  ))}
+                  
                   </div>
-
-                  {/* <!-- Single Post Area --> */}
-                  <div className="single-post-area mb-30 ">
+                  {[...globalNewsData.data.slice(3, 7)].map((ob, i) => ( <div  key={ob.id} className="single-post-area mb-30 ">
                     <div className="row align-items-center ">
                       <div className="col-12 col-lg-6">
                         {/* <!-- Post Thumbnail --> */}
                         <div className="post-thumbnail">
-                          <img src="img/bg-img/21.jpg" alt="" />
+                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={600} height={381}     />
                         </div>
                       </div>
                       <div className="col-12 col-lg-6">
                         {/* <!-- Post Content --> */}
                         <div className="post-content mt-0 ">
-                          <a
-                            href="#"
-                            className="post-cata cata-sm cata-success"
-                          >
-                            Sports
-                          </a>
-                          <a
-                            href="single-post.html"
-                            className="post-title mb-2"
-                          >
-                            May fights on after Johnson savages Brexit approach
+                           
+                        <a href={ob.attributes.slug+"/الاخبار-العربية"} className="post-title">
+                           {ob.attributes.title}
                           </a>
                           <div className="post-meta d-flex align-items-center mb-2">
-                            <a href="#" className="post-author">
-                              By Jane
-                            </a>
-                            <i className="fa fa-circle" aria-hidden="true"></i>
-                            <a href="#" className="post-date">
-                              Sep 08, 2018
-                            </a>
+                          { new Date(ob.attributes.publishedAt).toISOString().split("T")[0]}
                           </div>
                           <p className="mb-2">
-                            Quisque mollis tristique ante. Proin ligula eros,
-                            varius id tristique sit amet, rutrum non ligula.
+                           {ob.attributes.shortContent}
                           </p>
-                          <div className="post-meta d-flex">
-                            <a href="#">
-                              <i
-                                className="fa fa-comments-o"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              32
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-eye" aria-hidden="true"></i>{" "}
-                              42
-                            </a>
-                            <a href="#">
-                              <i
-                                className="fa fa-thumbs-o-up"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              7
-                            </a>
-                          </div>
+                           
                         </div>
                       </div>
                     </div>
-                  </div>
-
-                  {/* <!-- Single Post Area --> */}
-                  <div className="single-post-area mb-30 ">
-                    <div className="row align-items-center">
-                      <div className="col-12 col-lg-6">
-                        {/* <!-- Post Thumbnail --> */}
-                        <div className="post-thumbnail">
-                          <img src="img/bg-img/22.jpg" alt="" />
-                        </div>
-                      </div>
-                      <div className="col-12 col-lg-6">
-                        {/* <!-- Post Content --> */}
-                        <div className="post-content mt-0">
-                          <a href="#" className="post-cata cata-sm cata-danger">
-                            Game
-                          </a>
-                          <a
-                            href="single-post.html"
-                            className="post-title mb-2"
-                          >
-                            Thailand cave rescue: Boys doing well after spending
-                            night
-                          </a>
-                          <div className="post-meta d-flex align-items-center mb-2">
-                            <a href="#" className="post-author">
-                              By Jane
-                            </a>
-                            <i className="fa fa-circle" aria-hidden="true"></i>
-                            <a href="#" className="post-date">
-                              Sep 08, 2018
-                            </a>
-                          </div>
-                          <p className="mb-2">
-                            Quisque mollis tristique ante. Proin ligula eros,
-                            varius id tristique sit amet, rutrum non ligula.
-                          </p>
-                          <div className="post-meta d-flex">
-                            <a href="#">
-                              <i
-                                className="fa fa-comments-o"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              32
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-eye" aria-hidden="true"></i>{" "}
-                              42
-                            </a>
-                            <a href="#">
-                              <i
-                                className="fa fa-thumbs-o-up"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              7
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* <!-- Single Post Area --> */}
-                  <div className="single-post-area mb-30 ">
-                    <div className="row align-items-center">
-                      <div className="col-12 col-lg-6">
-                        {/* <!-- Post Thumbnail --> */}
-                        <div className="post-thumbnail">
-                          <img src="img/bg-img/23.jpg" alt="" />
-                        </div>
-                      </div>
-                      <div className="col-12 col-lg-6">
-                        {/* <!-- Post Content --> */}
-                        <div className="post-content mt-0">
-                          <a
-                            href="#"
-                            className="post-cata cata-sm cata-primary"
-                          >
-                            Business
-                          </a>
-                          <a
-                            href="single-post.html"
-                            className="post-title mb-2"
-                          >
-                            Theresa May battles Brexiteer backlash amid disquiet
-                          </a>
-                          <div className="post-meta d-flex align-items-center mb-2">
-                            <a href="#" className="post-author">
-                              By Jane
-                            </a>
-                            <i className="fa fa-circle" aria-hidden="true"></i>
-                            <a href="#" className="post-date">
-                              Sep 08, 2018
-                            </a>
-                          </div>
-                          <p className="mb-2">
-                            Quisque mollis tristique ante. Proin ligula eros,
-                            varius id tristique sit amet, rutrum non ligula.
-                          </p>
-                          <div className="post-meta d-flex">
-                            <a href="#">
-                              <i
-                                className="fa fa-comments-o"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              32
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-eye" aria-hidden="true"></i>{" "}
-                              42
-                            </a>
-                            <a href="#">
-                              <i
-                                className="fa fa-thumbs-o-up"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              7
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* <!-- Single Post Area --> */}
-                  <div className="single-post-area mb-30 ">
-                    <div className="row align-items-center">
-                      <div className="col-12 col-lg-6">
-                        {/* <!-- Post Thumbnail --> */}
-                        <div className="post-thumbnail">
-                          <img src="img/bg-img/24.jpg" alt="" />
-                        </div>
-                      </div>
-                      <div className="col-12 col-lg-6">
-                        {/* <!-- Post Content --> */}
-                        <div className="post-content mt-0">
-                          <a href="#" className="post-cata cata-sm cata-danger">
-                            Game
-                          </a>
-                          <a
-                            href="single-post.html"
-                            className="post-title mb-2"
-                          >
-                            Theresa May warned Brexit strategy risks putting
-                            Jeremy Corbyn
-                          </a>
-                          <div className="post-meta d-flex align-items-center mb-2">
-                            <a href="#" className="post-author">
-                              By Jane
-                            </a>
-                            <i className="fa fa-circle" aria-hidden="true"></i>
-                            <a href="#" className="post-date">
-                              Sep 08, 2018
-                            </a>
-                          </div>
-                          <p className="mb-2">
-                            Quisque mollis tristique ante. Proin ligula eros,
-                            varius id tristique sit amet, rutrum non ligula.
-                          </p>
-                          <div className="post-meta d-flex">
-                            <a href="#">
-                              <i
-                                className="fa fa-comments-o"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              32
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-eye" aria-hidden="true"></i>{" "}
-                              42
-                            </a>
-                            <a href="#">
-                              <i
-                                className="fa fa-thumbs-o-up"
-                                aria-hidden="true"
-                              ></i>{" "}
-                              7
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  </div> ))}
+                
                 </div>
               </div>
 
@@ -2096,164 +1181,27 @@ export default async function Home() {
                   <div className="single-widget mb-50">
                     {/* <!-- Section Heading --> */}
                     <div className="section-heading style-2 mb-30">
-                      <h4>الحرب الروسية</h4>
+                      
+                      <a href="/الحرب-الروسية"> <h4>الحرب الروسية</h4></a>
                       <div className="line"></div>
                     </div>
+                    {[...russianNewsData.data.slice(0, 7)].map((ob, i) => (  <div  key={ob.id} className="single-blog-post d-flex">
+                    <div className="post-thumbnail">
+                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={100} height={70}     />
+                        </div>
 
-                    {/* <!-- Single Blog Post --> */}
-                    <div className="single-blog-post d-flex">
-                      <div className="post-thumbnail">
-                        <img src="img/bg-img/1.jpg" alt="" />
-                      </div>
                       <div className="post-content">
-                        <a href="single-post.html" className="post-title">
-                          DC Shoes: gymkhana five; the making of
-                        </a>
+                      <a href={ob.attributes.slug+"/الحرب-الروسية"} className="post-title">
+                           {ob.attributes.title}
+                          </a>
                         <div className="post-meta d-flex justify-content-between">
-                          <a href="#">
-                            <i
-                              className="fa fa-comments-o"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            14
-                          </a>
-                          <a href="#">
-                            <i className="fa fa-eye" aria-hidden="true"></i> 34
-                          </a>
-                          <a href="#">
-                            <i
-                              className="fa fa-thumbs-o-up"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            84
-                          </a>
+                        { new Date(ob.attributes.publishedAt).toISOString().split("T")[0]}
                         </div>
                       </div>
-                    </div>
+                    </div> ))}
+                   
+                   
 
-                    {/* <!-- Single Blog Post --> */}
-                    <div className="single-blog-post d-flex">
-                      <div className="post-thumbnail">
-                        <img src="img/bg-img/2.jpg" alt="" />
-                      </div>
-                      <div className="post-content">
-                        <a href="single-post.html" className="post-title">
-                          How To Make Orange Chicken Recipe?
-                        </a>
-                        <div className="post-meta d-flex justify-content-between">
-                          <a href="#">
-                            <i
-                              className="fa fa-comments-o"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            14
-                          </a>
-                          <a href="#">
-                            <i className="fa fa-eye" aria-hidden="true"></i> 34
-                          </a>
-                          <a href="#">
-                            <i
-                              className="fa fa-thumbs-o-up"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            84
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* <!-- Single Blog Post --> */}
-                    <div className="single-blog-post d-flex">
-                      <div className="post-thumbnail">
-                        <img src="img/bg-img/36.jpg" alt="" />
-                      </div>
-                      <div className="post-content">
-                        <a href="single-post.html" className="post-title">
-                          Sweet Yummy Chocolate in the
-                        </a>
-                        <div className="post-meta d-flex justify-content-between">
-                          <a href="#">
-                            <i
-                              className="fa fa-comments-o"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            14
-                          </a>
-                          <a href="#">
-                            <i className="fa fa-eye" aria-hidden="true"></i> 34
-                          </a>
-                          <a href="#">
-                            <i
-                              className="fa fa-thumbs-o-up"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            84
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* <!-- Single Blog Post --> */}
-                    <div className="single-blog-post d-flex">
-                      <div className="post-thumbnail">
-                        <img src="img/bg-img/37.jpg" alt="" />
-                      </div>
-                      <div className="post-content">
-                        <a href="single-post.html" className="post-title">
-                          DC Shoes: gymkhana five; the making of
-                        </a>
-                        <div className="post-meta d-flex justify-content-between">
-                          <a href="#">
-                            <i
-                              className="fa fa-comments-o"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            14
-                          </a>
-                          <a href="#">
-                            <i className="fa fa-eye" aria-hidden="true"></i> 34
-                          </a>
-                          <a href="#">
-                            <i
-                              className="fa fa-thumbs-o-up"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            84
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* <!-- Single Blog Post --> */}
-                    <div className="single-blog-post d-flex">
-                      <div className="post-thumbnail">
-                        <img src="img/bg-img/38.jpg" alt="" />
-                      </div>
-                      <div className="post-content">
-                        <a href="single-post.html" className="post-title">
-                          How To Make Orange Chicken Recipe?
-                        </a>
-                        <div className="post-meta d-flex justify-content-between">
-                          <a href="#">
-                            <i
-                              className="fa fa-comments-o"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            14
-                          </a>
-                          <a href="#">
-                            <i className="fa fa-eye" aria-hidden="true"></i> 34
-                          </a>
-                          <a href="#">
-                            <i
-                              className="fa fa-thumbs-o-up"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            84
-                          </a>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -2508,7 +1456,7 @@ export default async function Home() {
     </>
   );
 }
-const BASE_URL = "http://localhost:1337",
+const BASE_URL = "http://127.0.0.1:1337",
   BEARER_TOKEN =
     "5682b7252772bad46d0a3a19b3883c8f377a9a39eb5ef29b18cd441c23349118d6902a96232bf8a90f4c696bba3a5905caa704cee65d822bb6ec47fceb562456346657773017e6a64f1df0706d040148cc4c665fc961d2314ff13269ee742f829f43e9b43694d2dbb41cca3812cf3dd15c5c3006adcf6e1b14bde92ca624f9c6",
   headers = {
