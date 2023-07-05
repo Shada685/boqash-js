@@ -1380,7 +1380,7 @@ export default function Home() {
                       {/* <!-- Section Heading --> */}
                       <div className="section-heading">
                         <h4>الاخبار العربية</h4>
-                        <div className="line"></div>
+                        <div className="line text-right"></div>
                       </div>
                     </div>
 
