@@ -900,6 +900,10 @@ export default function Home() {
           <div className="container">
              <div className="row">
             <div className="col-12 col-md-8 col-lg-8 ">
+              <div className="section-heading style-2">
+                    <h4>الاسعار</h4>
+                    <div className="line"></div>
+                  </div>
               <div className="row">
               <div className="col-12 col-md-6 col-lg-6">
                       <div className="single-post-area mb-80 ">
