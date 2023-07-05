@@ -14,7 +14,7 @@ export default function About() {
 {/* <!-- ##### Header Area Start ##### --> */}
         <header className="header-area">
           {/* <!-- Top Header Area --> */}
-          <div className="top-header-area">
+          <div className="top-header-area pt-2">
             <div className="container">
               <div className="row align-items-center">
                 <div className="col-12 col-md-6">
@@ -62,24 +62,8 @@ export default function About() {
                         <i className="fa fa-youtube-play"></i>
                       </a>
                     </div>
-                    {/* <!-- Top Search Area --> */}
-                    <div className="top-search-area">
-                      <form action="/" method="post">
-                        <input
-                          type="search"
-                          name="top-search"
-                          id="topSearch"
-                          placeholder="يحث..."
-                        />
-                        <button type="submit" className="btn">
-                          <i className="fa fa-search" aria-hidden="true"></i>
-                        </button>
-                      </form>
-                    </div>
-                    {/* <!-- Login --> */}
-                    <a href="login.html" className="login-btn">
-                      <i className="fa fa-user" aria-hidden="true"></i>
-                    </a>
+                  
+                  
                   </div>
                 </div>
               </div>
@@ -269,7 +253,7 @@ export default function About() {
                 <div className="col-12">
                     <nav aria-label="breadcrumb">
                         <ol className="breadcrumb">
-                            <li className="breadcrumb-item"><a href="#"><i className="fa fa-الرئيسية" aria-hidden="true"></i>
+                            <li className="breadcrumb-item"><a href="#"><i className="fa fa-home" aria-hidden="true"></i>
                                     الرئيسية</a></li>
                             <li className="breadcrumb-item"><a href="#">Archives</a></li>
                             <li className="breadcrumb-item active" aria-current="page">Reunification of migrant toddlers
@@ -419,30 +403,13 @@ export default function About() {
                                 </ul>
                             </div>
 
-                            {/* <!-- Post Author --> */}
-                            <div className="vizew-post-author d-flex align-items-center py-5">
-                                <div className="post-author-thumb">
-                                    <img src="img/bg-img/30.jpg" alt="" />
-                                </div>
-                                <div className="post-author-desc pl-4">
-                                    <a href="#" className="author-name">Calantha Flower</a>
-                                    <p>Hello! My name is Nicolas Sarkozy. I’m a web designer and front-end web developer
-                                        with over fifteen years of professional.</p>
-                                    <div className="post-author-social-info">
-                                        <a href="#"><i className="fa fa-facebook"></i></a>
-                                        <a href="#"><i className="fa fa-twitter"></i></a>
-                                        <a href="#"><i className="fa fa-pinterest"></i></a>
-                                        <a href="#"><i className="fa fa-linkedin"></i></a>
-                                        <a href="#"><i className="fa fa-dribbble"></i></a>
-                                    </div>
-                                </div>
-                            </div>
+                            
 
                             {/* <!-- Related Post Area --> */}
                             <div className="related-post-area mt-5">
                                 {/* <!-- Section Title --> */}
                                 <div className="section-heading style-2">
-                                    <h4>Related Post</h4>
+                                    <h4> المزيد من المقالات</h4>
                                     <div className="line"></div>
                                 </div>
 
@@ -450,7 +417,7 @@ export default function About() {
 
                                     {/* <!-- Single Blog Post --> */}
                                     <div className="col-12 col-md-6">
-                                        <div className="single-post-area mb-50">
+                                        <div className="single-post-area mb-50 bg-white">
                                             {/* <!-- Post Thumbnail --> */}
                                             <div className="post-thumbnail">
                                                 <img src="img/bg-img/11.jpg" alt="" />
@@ -459,7 +426,7 @@ export default function About() {
                                             </div>
 
                                             {/* <!-- Post Content --> */}
-                                            <div className="post-content">
+                                            <div className="post-content p-3">
                                                 <a href="#" className="post-cata cata-sm cata-success">Sports</a>
                                                 <a href="single-post.html" className="post-title">Warner Bros. Developing
                                                     ‘The accountant’ Sequel</a>
@@ -476,7 +443,7 @@ export default function About() {
 
                                     {/* <!-- Single Blog Post --> */}
                                     <div className="col-12 col-md-6">
-                                        <div className="single-post-area mb-50">
+                                        <div className="single-post-area mb-50 bg-white">
                                             {/* <!-- Post Thumbnail --> */}
                                             <div className="post-thumbnail">
                                                 <img src="img/bg-img/12.jpg" alt="" />
@@ -485,10 +452,10 @@ export default function About() {
                                             </div>
 
                                             {/* <!-- Post Content --> */}
-                                            <div className="post-content">
+                                            <div className="post-content p-3">
                                                 <a href="#" className="post-cata cata-sm cata-danger">Game</a>
                                                 <a href="single-post.html" className="post-title">Searching for the 'angel'
-                                                    who held me on Westminste</a>
+                                                    who on Westminste</a>
                                                 <div className="post-meta d-flex">
                                                     <a href="#"><i className="fa fa-comments-o" aria-hidden="true"></i>
                                                         28</a>
@@ -502,119 +469,7 @@ export default function About() {
                                 </div>
                             </div>
 
-                            {/* <!-- Comment Area Start --> */}
-                            <div className="comment_area clearfix mb-50">
-
-                                {/* <!-- Section Title --> */}
-                                <div className="section-heading style-2">
-                                    <h4>Comment</h4>
-                                    <div className="line"></div>
-                                </div>
-
-                                <ul>
-                                    {/* <!-- Single Comment Area --> */}
-                                    <li className="single_comment_area">
-                                        {/* <!-- Comment Content --> */}
-                                        <div className="comment-content d-flex">
-                                            {/* <!-- Comment Author --> */}
-                                            <div className="comment-author">
-                                                <img src="img/bg-img/31.jpg" alt="author" />
-                                            </div>
-                                            {/* <!-- Comment Meta --> */}
-                                            <div className="comment-meta">
-                                                <a href="#" className="comment-date">27 Aug 2019</a>
-                                                <h6>Tomas Mandy</h6>
-                                                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                                                    consectetur, adipisci velit, sed quia non numquam eius</p>
-                                                <div className="d-flex align-items-center">
-                                                    <a href="#" className="like">like</a>
-                                                    <a href="#" className="reply">Reply</a>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <ol className="children">
-                                            <li className="single_comment_area">
-                                                {/* <!-- Comment Content --> */}
-                                                <div className="comment-content d-flex">
-                                                    {/* <!-- Comment Author --> */}
-                                                    <div className="comment-author">
-                                                        <img src="img/bg-img/32.jpg" alt="author" />
-                                                    </div>
-                                                    {/* <!-- Comment Meta --> */}
-                                                    <div className="comment-meta">
-                                                        <a href="#" className="comment-date">27 Aug 2019</a>
-                                                        <h6>Britney Millner</h6>
-                                                        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit
-                                                            amet, consectetur, adipisci velit, sed quia non numquam eius
-                                                        </p>
-                                                        <div className="d-flex align-items-center">
-                                                            <a href="#" className="like">like</a>
-                                                            <a href="#" className="reply">Reply</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ol>
-                                    </li>
-
-                                    {/* <!-- Single Comment Area --> */}
-                                    <li className="single_comment_area">
-                                        {/* <!-- Comment Content --> */}
-                                        <div className="comment-content d-flex">
-                                            {/* <!-- Comment Author --> */}
-                                            <div className="comment-author">
-                                                <img src="img/bg-img/33.jpg" alt="author" />
-                                            </div>
-                                            {/* <!-- Comment Meta --> */}
-                                            <div className="comment-meta">
-                                                <a href="#" className="comment-date">27 Aug 2019</a>
-                                                <h6>Simon Downey</h6>
-                                                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                                                    consectetur, adipisci velit, sed quia non numquam eius</p>
-                                                <div className="d-flex align-items-center">
-                                                    <a href="#" className="like">like</a>
-                                                    <a href="#" className="reply">Reply</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            {/* <!-- Post A Comment Area --> */}
-                            <div className="post-a-comment-area">
-
-                                {/* <!-- Section Title --> */}
-                                <div className="section-heading style-2">
-                                    <h4>Leave a reply</h4>
-                                    <div className="line"></div>
-                                </div>
-
-                                {/* <!-- Reply Form --> */}
-                                <div className="contact-form-area">
-                                    <form action="#" method="post">
-                                        <div className="row">
-                                            <div className="col-12 col-lg-6">
-                                                <input type="text" className="form-control" id="name"
-                                                    placeholder="Your Name*" />
-                                            </div>
-                                            <div className="col-12 col-lg-6">
-                                                <input type="email" className="form-control" id="email"
-                                                    placeholder="Your Email*" />
-                                            </div>
-                                            <div className="col-12">
-                                                <textarea name="message" className="form-control" id="message"
-                                                    placeholder="Message*"></textarea>
-                                            </div>
-                                            <div className="col-12">
-                                                <button className="btn vizew-btn mt-30" type="submit">Submit
-                                                    Comment</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
+                           
 
                         </div>
                     </div>
@@ -625,7 +480,7 @@ export default function About() {
                     <div className="sidebar-area">
 
                         {/* <!-- ***** Single Widget ***** --> */}
-                        <div className="single-widget share-post-widget mb-50">
+                        <div className="single-widget share-post-widget mb-50 bg-white">
                             <p>Share This Post</p>
                             <a href="#" className="facebook"><i className="fa fa-facebook" aria-hidden="true"></i> Facebook</a>
                             <a href="#" className="twitter"><i className="fa fa-twitter" aria-hidden="true"></i> Twitter</a>
@@ -633,7 +488,7 @@ export default function About() {
                         </div>
 
                         {/* <!-- ***** Single Widget ***** --> */}
-                        <div className="single-widget p-0 author-widget">
+                        <div className="single-widget p-0 author-widget bg-white">
                             <div className="p-4">
                                 <img className="author-avatar" src="img/bg-img/30.jpg" alt="" />
                                 <a href="#" className="author-name">Chris Hemsworth</a>
@@ -642,16 +497,12 @@ export default function About() {
                                     <a href="#"><i className="fa fa-twitter"></i></a>
                                     <a href="#"><i className="fa fa-pinterest"></i></a>
                                 </div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
                             </div>
 
-                            <div className="authors--meta-data d-flex">
-                                <p>Posted<span className="counter">80</span></p>
-                                <p>Comments<span className="counter">230</span></p>
-                            </div>
+                            
                         </div>
                                           {/* <!-- ***** ad Widget ***** --> */}
-<div className="single-widget add-widget mb-50">
+<div className="single-widget add-widget mb-50 bg-white">
                     <a href="#">
                       <img src="img/bg-img/add.png" alt="" />
                     </a>

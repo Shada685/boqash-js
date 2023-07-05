@@ -2,8 +2,7 @@ import Head from "next/head";
 import Script from "next/script";
 import Footer from "../components/footer";
 import '../../../public/style.css'
-import '../../../public/css/style-grocery-price.css'
-import '../../../public/css/style-currency.css'
+
 
 export default function Category() {
   return (
@@ -25,7 +24,7 @@ export default function Category() {
    {/* <!-- ##### Header Area Start ##### --> */}
         <header className="header-area">
           {/* <!-- Top Header Area --> */}
-          <div className="top-header-area">
+          <div className="top-header-area pt-2">
             <div className="container">
               <div className="row align-items-center">
                 <div className="col-12 col-md-6">
@@ -73,24 +72,8 @@ export default function Category() {
                         <i className="fa fa-youtube-play"></i>
                       </a>
                     </div>
-                    {/* <!-- Top Search Area --> */}
-                    <div className="top-search-area">
-                      <form action="/" method="post">
-                        <input
-                          type="search"
-                          name="top-search"
-                          id="topSearch"
-                          placeholder="يحث..."
-                        />
-                        <button type="submit" className="btn">
-                          <i className="fa fa-search" aria-hidden="true"></i>
-                        </button>
-                      </form>
-                    </div>
-                    {/* <!-- Login --> */}
-                    <a href="login.html" className="login-btn">
-                      <i className="fa fa-user" aria-hidden="true"></i>
-                    </a>
+                  
+                  
                   </div>
                 </div>
               </div>
@@ -334,7 +317,7 @@ export default function Category() {
 
                         {/* <!-- Single Blog Post --> */}
                         <div className="col-12 col-md-6">
-                            <div className="single-post-area mb-50">
+                            <div className="single-post-area mb-50 bg-white">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/12.jpg" alt="" />
@@ -342,7 +325,7 @@ export default function Category() {
                                         </div>
 
                                 {/* <!-- Post Content --> */}
-                                <div className="post-content">
+                                <div className="post-content p-3">
                                     <a href="#" className="post-cata cata-sm cata-success">Sports</a>
                                     <a href="single-post.html" className="post-title">May fights on after Johnson savages
                                         Brexit approach</a>
@@ -357,7 +340,7 @@ export default function Category() {
 
                         {/* <!-- Single Blog Post --> */}
                         <div className="col-12 col-md-6">
-                            <div className="single-post-area mb-50">
+                            <div className="single-post-area mb-50 bg-white">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/39.jpg" alt="" />
@@ -365,7 +348,7 @@ export default function Category() {
                                         </div>
 
                                 {/* <!-- Post Content --> */}
-                                <div className="post-content">
+                                <div className="post-content p-3">
                                     <a href="#" className="post-cata cata-sm cata-success">Sports</a>
                                     <a href="single-post.html" className="post-title">Thailand cave rescue: Boys 'doing
                                         well' after spending night</a>
@@ -380,7 +363,7 @@ export default function Category() {
 
                         {/* <!-- Single Blog Post --> */}
                         <div className="col-12 col-md-6">
-                            <div className="single-post-area mb-50">
+                            <div className="single-post-area mb-50 bg-white">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/40.jpg" alt="" />
@@ -388,7 +371,7 @@ export default function Category() {
                                         </div>
 
                                 {/* <!-- Post Content --> */}
-                                <div className="post-content">
+                                <div className="post-content p-3">
                                     <a href="#" className="post-cata cata-sm cata-success">Sports</a>
                                     <a href="single-post.html" className="post-title">Theresa May battles Brexitee backlash
                                         amid disquiet</a>
@@ -402,7 +385,7 @@ export default function Category() {
                         </div>
                         {/* <!-- Single Blog Post --> */}
                         <div className="col-12 col-md-6">
-                            <div className="single-post-area mb-50">
+                            <div className="single-post-area mb-50 bg-white">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/41.jpg" alt="" />
@@ -410,7 +393,7 @@ export default function Category() {
                                         </div>
 
                                 {/* <!-- Post Content --> */}
-                                <div className="post-content">
+                                <div className="post-content p-3">
                                     <a href="#" className="post-cata cata-sm cata-success">Sports</a>
                                     <a href="single-post.html" className="post-title">Theresa May battles Brexitee backlash
                                         amid disquiet</a>
@@ -425,7 +408,7 @@ export default function Category() {
 
                         {/* <!-- Single Blog Post --> */}
                         <div className="col-12 col-md-6">
-                            <div className="single-post-area mb-50">
+                            <div className="single-post-area mb-50 bg-white">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/42.jpg" alt="" />
@@ -433,7 +416,7 @@ export default function Category() {
                                         </div>
 
                                 {/* <!-- Post Content --> */}
-                                <div className="post-content">
+                                <div className="post-content p-3">
                                     <a href="#" className="post-cata cata-sm cata-success">Sports</a>
                                     <a href="single-post.html" className="post-title">Searching for the 'angel' who held me
                                         on Westminster Bridge</a>
@@ -448,7 +431,7 @@ export default function Category() {
 
                         {/* <!-- Single Blog Post --> */}
                         <div className="col-12 col-md-6">
-                            <div className="single-post-area mb-50">
+                            <div className="single-post-area mb-50 bg-white">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/43.jpg" alt="" />
@@ -456,7 +439,7 @@ export default function Category() {
                                         </div>
 
                                 {/* <!-- Post Content --> */}
-                                <div className="post-content">
+                                <div className="post-content p-3">
                                     <a href="#" className="post-cata cata-sm cata-success">Sports</a>
                                     <a href="single-post.html" className="post-title">Full article Prince Charles's 'urgent'
                                         global research</a>
@@ -470,7 +453,7 @@ export default function Category() {
                         </div>
                         {/* <!-- Single Blog Post --> */}
                         <div className="col-12 col-md-6">
-                            <div className="single-post-area mb-50">
+                            <div className="single-post-area mb-50 bg-white">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/44.jpg" alt=""/>
@@ -478,7 +461,7 @@ export default function Category() {
                                         </div>
 
                                 {/* <!-- Post Content --> */}
-                                <div className="post-content">
+                                <div className="post-content p-3">
                                     <a href="#" className="post-cata cata-sm cata-success">Sports</a>
                                     <a href="single-post.html" className="post-title">Paramedics 'drilled into boat death
                                         woman'</a>
@@ -493,7 +476,7 @@ export default function Category() {
 
                         {/* <!-- Single Blog Post --> */}
                         <div className="col-12 col-md-6">
-                            <div className="single-post-area mb-50">
+                            <div className="single-post-area mb-50 bg-white">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/45.jpg" alt=""/>
@@ -501,7 +484,7 @@ export default function Category() {
                                         </div>
 
                                 {/* <!-- Post Content --> */}
-                                <div className="post-content">
+                                <div className="post-content p-3">
                                     <a href="#" className="post-cata cata-sm cata-success">Sports</a>
                                     <a href="single-post.html" className="post-title">Do This One Simple Action for an
                                         Absolutely</a>
@@ -516,7 +499,7 @@ export default function Category() {
 
                         {/* <!-- Single Blog Post --> */}
                         <div className="col-12 col-md-6">
-                            <div className="single-post-area mb-50">
+                            <div className="single-post-area mb-50 bg-white">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/46.jpg" alt="" />
@@ -524,7 +507,7 @@ export default function Category() {
                                         </div>
 
                                 {/* <!-- Post Content --> */}
-                                <div className="post-content">
+                                <div className="post-content p-3">
                                     <a href="#" className="post-cata cata-sm cata-success">Sports</a>
                                     <a href="single-post.html" className="post-title">Thailand cave rescue: Boys 'doing
                                         well' after spending night</a>
@@ -539,7 +522,7 @@ export default function Category() {
 
                         {/* <!-- Single Blog Post --> */}
                         <div className="col-12 col-md-6">
-                            <div className="single-post-area mb-50">
+                            <div className="single-post-area mb-50 bg-white">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/47.jpg" alt="" />
@@ -547,7 +530,7 @@ export default function Category() {
                                         </div>
 
                                 {/* <!-- Post Content --> */}
-                                <div className="post-content">
+                                <div className="post-content p-3">
                                     <a href="#" className="post-cata cata-sm cata-success">Sports</a>
                                     <a href="single-post.html" className="post-title">Theresa May battles Brexiteer backlash
                                         amid disquiet</a>
@@ -562,7 +545,7 @@ export default function Category() {
 
                         {/* <!-- Single Blog Post --> */}
                         <div className="col-12 col-md-6">
-                            <div className="single-post-area mb-50">
+                            <div className="single-post-area mb-50 bg-white">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/48.jpg" alt="" />
@@ -570,7 +553,7 @@ export default function Category() {
                                         </div>
 
                                 {/* <!-- Post Content --> */}
-                                <div className="post-content">
+                                <div className="post-content p-3">
                                     <a href="#" className="post-cata cata-sm cata-success">Sports</a>
                                     <a href="single-post.html" className="post-title">Searching for the 'angel' who held me
                                         on Westminste Bridge</a>
@@ -585,7 +568,7 @@ export default function Category() {
 
                         {/* <!-- Single Blog Post --> */}
                         <div className="col-12 col-md-6">
-                            <div className="single-post-area mb-50">
+                            <div className="single-post-area mb-50 bg-white">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/49.jpg" alt="" />
@@ -593,7 +576,7 @@ export default function Category() {
                                         </div>
 
                                 {/* <!-- Post Content --> */}
-                                <div className="post-content">
+                                <div className="post-content p-3">
                                     <a href="#" className="post-cata cata-sm cata-success">Sports</a>
                                     <a href="single-post.html" className="post-title">Love Island star's boyfriend found
                                         dead after her funeral</a>
@@ -608,15 +591,15 @@ export default function Category() {
 {/* post single list */}
  {/* <!-- Single Post Area --> */}
                     <div className="single-post-area style-2">
-                        <div className="row align-items-center">
-                            <div className="col-12 col-md-6">
+                        <div className="row align-items-center bg-white">
+                            <div className="col-12 col-md-6 ">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/22.jpg" alt="" />
 
                                         </div>
                             </div>
-                            <div className="col-12 col-md-6">
+                            <div className="col-12 col-md-6 ">
                                 {/* <!-- Post Content --> */}
                                 <div className="post-content mt-0">
                                     <a href="#" className="post-cata cata-sm cata-danger">Game</a>
@@ -641,7 +624,7 @@ export default function Category() {
 
                     {/* <!-- Single Post Area --> */}
                     <div className="single-post-area style-2">
-                        <div className="row align-items-center">
+                        <div className="row align-items-center bg-white">
                             <div className="col-12 col-md-6">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
@@ -674,7 +657,7 @@ export default function Category() {
 
                     {/* <!-- Single Post Area --> */}
                     <div className="single-post-area style-2">
-                        <div className="row align-items-center">
+                        <div className="row align-items-center bg-white">
                             <div className="col-12 col-md-6">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
@@ -707,7 +690,7 @@ export default function Category() {
 
                     {/* <!-- Single Post Area --> */}
                     <div className="single-post-area style-2">
-                        <div className="row align-items-center">
+                        <div className="row align-items-center bg-white">
                             <div className="col-12 col-md-6">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
@@ -740,7 +723,7 @@ export default function Category() {
 
                     {/* <!-- Single Post Area --> */}
                     <div className="single-post-area style-2">
-                        <div className="row align-items-center">
+                        <div className="row align-items-center bg-white">
                             <div className="col-12 col-md-6">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
@@ -773,7 +756,7 @@ export default function Category() {
 
                     {/* <!-- Single Post Area --> */}
                     <div className="single-post-area style-2">
-                        <div className="row align-items-center">
+                        <div className="row align-items-center bg-white">
                             <div className="col-12 col-md-6">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
@@ -827,7 +810,7 @@ export default function Category() {
                     <div className="sidebar-area">
 
                         {/* <!-- ***** Single Widget ***** --> */}
-                        <div className="single-widget followers-widget mb-50">
+                        <div className="single-widget followers-widget mb-50 bg-white">
                             <a href="#" className="facebook"><i className="fa fa-facebook" aria-hidden="true"></i><span
                                     className="counter">198</span><span>Fan</span></a>
                             <a href="#" className="twitter"><i className="fa fa-twitter" aria-hidden="true"></i><span
@@ -839,27 +822,28 @@ export default function Category() {
                     
 
                         {/* <!-- ***** Single Widget ***** --> */}
-                        <div className="single-widget add-widget mb-50">
+                        <div className="single-widget add-widget mb-50 bg-white">
                             <a href="#"><img src="img/bg-img/add.png" alt=""/></a>
                         </div>
 
                      
 
                         {/* <!-- ***** Single Widget ***** --> */}
-                        <div className="single-widget newsletter-widget mb-50">
+                        <div className="single-widget newsletter-widget mb-50 bg-white">
                             {/* <!-- Section Heading --> */}
                             <div className="section-heading style-2 mb-30">
-                                <h4>Newsletter</h4>
+                                <h4>النشرة البريدية</h4>
                                 <div className="line"></div>
                             </div>
-                            <p>Subscribe our newsletter gor get notification about new updates, information discount,
-                                etc.</p>
+                            <p>اشترك معنا واحصل على المزيد من الاخبار اولا باول
+
+</p>
                             {/* <!-- Newsletter Form --> */}
-                            <div className="newsletter-form">
+                            <div className="newsletter-form bg-white">
                                 <form action="#" method="post">
                                     <input type="email" name="nl-email" className="form-control mb-15" id="emailnl"
                                         placeholder="Enter your email" />
-                                    <button type="submit" className="btn vizew-btn w-100">Subscribe</button>
+                                    <button type="submit" className="btn vizew-btn w-100">اشتراك</button>
                                 </form>
                             </div>
                         </div>

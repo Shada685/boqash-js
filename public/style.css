@@ -390,7 +390,7 @@ input:focus {
           font-weight: 400; }
           .top-header-area .breaking-news-area .ticker ul li a {
             display: block;
-            color: #a6a6a6; }
+            color: #000; }
             @media only screen and (min-width: 992px) and (max-width: 1199px) {
               .top-header-area .breaking-news-area .ticker ul li a {
                 font-size: 12px; } }
@@ -651,7 +651,7 @@ input:focus {
     background-color: transparent;
     border-radius: 0; }
     .vizew-breadcrumb .breadcrumb .breadcrumb-item {
-      color: #a6a6a6;
+      color: #000;
       font-size: 16px;
       
       font-weight: 400; }
@@ -665,7 +665,7 @@ input:focus {
         .vizew-breadcrumb .breadcrumb .breadcrumb-item {
           font-size: 12px; } }
       .vizew-breadcrumb .breadcrumb .breadcrumb-item a {
-        color: #fff;
+        color: #000;
         font-size: 16px;
         font-weight: 400; }
         @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -683,7 +683,7 @@ input:focus {
   .vizew-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
     content: "\f105";
     font-family: "FontAwesome";
-    color: #fff; }
+    color: #000; }
 
 .single-blog-post {
   position: relative;
@@ -1251,7 +1251,7 @@ input:focus {
     margin-top: 20px; }
     .post-details-content .post-content .post-title {
       display: block;
-      color: #ffffff;
+      color: #000;
       margin-bottom: 15px;
       font-size: 24px; }
       @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -1299,12 +1299,12 @@ input:focus {
     flex-wrap: wrap; }
     .post-tags ul li a {
       display: inline-block;
-      background-color: #393c3d;
+      background-color: #fff;
       padding: 5px 12px;
       border-radius: 2px;
       font-size: 12px;
       text-transform: uppercase;
-      color: #a6a6a6;
+      color: #000;
       font-weight: 400;
       letter-spacing: 1px;
       margin: 3px; }
@@ -1669,7 +1669,7 @@ input:focus {
   z-index: 1; }
   .share-post-widget p {
     display: block;
-    color: #ffffff;
+    color: #000;
     margin-bottom: 20px;
     letter-spacing: 2px; }
   .share-post-widget a {
@@ -1707,7 +1707,7 @@ input:focus {
     border-radius: 50%; }
   .author-widget .author-name {
     display: block;
-    color: #ffffff;
+    color: #000;
     font-size: 18px;
     margin-bottom: 15px; }
     .author-widget .author-name:hover, .author-widget .author-name:focus {
@@ -1944,4 +1944,5 @@ textarea.form-control {
 /*# sourceMappingURL=style.css.map */
 .black{
   color :#000;
+  
 }

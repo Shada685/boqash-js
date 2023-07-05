@@ -25,7 +25,7 @@ export default function Category() {
    {/* <!-- ##### Header Area Start ##### --> */}
         <header className="header-area">
           {/* <!-- Top Header Area --> */}
-          <div className="top-header-area">
+          <div className="top-header-area pt-2">
             <div className="container">
               <div className="row align-items-center">
                 <div className="col-12 col-md-6">
@@ -73,24 +73,8 @@ export default function Category() {
                         <i className="fa fa-youtube-play"></i>
                       </a>
                     </div>
-                    {/* <!-- Top Search Area --> */}
-                    <div className="top-search-area">
-                      <form action="/" method="post">
-                        <input
-                          type="search"
-                          name="top-search"
-                          id="topSearch"
-                          placeholder="يحث..."
-                        />
-                        <button type="submit" className="btn">
-                          <i className="fa fa-search" aria-hidden="true"></i>
-                        </button>
-                      </form>
-                    </div>
-                    {/* <!-- Login --> */}
-                    <a href="login.html" className="login-btn">
-                      <i className="fa fa-user" aria-hidden="true"></i>
-                    </a>
+                  
+                  
                   </div>
                 </div>
               </div>
