@@ -64,7 +64,7 @@ export default function About() {
                     </div>
                     {/* <!-- Top Search Area --> */}
                     <div className="top-search-area">
-                      <form action="index.html" method="post">
+                      <form action="/" method="post">
                         <input
                           type="search"
                           name="top-search"
@@ -122,7 +122,7 @@ export default function About() {
                     <div className="classynav">
                       <ul>
                         <li className="active">
-                          <a href="index.html">الرئيسية</a>
+                          <a href="/">الرئيسية</a>
                         </li>
                         {/* <li>
                           <a href="archive-list.html">الاخبار المحلية</a>
@@ -132,7 +132,7 @@ export default function About() {
                           <a href="">الاخبار</a>
                           <ul className="dropdown">
                             <li>
-                              <a href="index.html">- الاخبار المحلية</a>
+                              <a href="/">- الاخبار المحلية</a>
                             </li>
                             <li>
                               <a href="archive-list.html">- الاخبار العربية</a>
@@ -152,7 +152,7 @@ export default function About() {
                           <div className="megamenu">
                             <ul className="single-mega cn-col-4">
                               <li>
-                                <a href="index.html">- العملة</a>
+                                <a href="/">- العملة</a>
                               </li>
                               <li>
                                 <a href="archive-list.html">- الدولار</a>
@@ -172,7 +172,7 @@ export default function About() {
                             </ul>
                             <ul className="single-mega cn-col-4">
                               <li>
-                                <a href="index.html">- النفط</a>
+                                <a href="/">- النفط</a>
                               </li>
                               <li>
                                 <a href="archive-list.html">- البترول</a>
@@ -187,7 +187,7 @@ export default function About() {
                             </ul>
                             <ul className="single-mega cn-col-4">
                               <li>
-                                <a href="index.html">- الذهب</a>
+                                <a href="/">- الذهب</a>
                               </li>
                               <li>
                                 <a href="archive-list.html">- عيار 24</a>
@@ -213,7 +213,7 @@ export default function About() {
                             </ul>
                             <ul className="single-mega cn-col-4">
                               <li>
-                                <a href="index.html">- المواد الغذائية</a>
+                                <a href="/">- المواد الغذائية</a>
                               </li>
                               <li>
                                 <a href="archive-list.html">- الخضار</a>
@@ -650,6 +650,12 @@ export default function About() {
                                 <p>Comments<span className="counter">230</span></p>
                             </div>
                         </div>
+                                          {/* <!-- ***** ad Widget ***** --> */}
+<div className="single-widget add-widget mb-50">
+                    <a href="#">
+                      <img src="img/bg-img/add.png" alt="" />
+                    </a>
+                  </div>
 
                     </div>
                 </div>

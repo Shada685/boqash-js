@@ -75,7 +75,7 @@ export default function Category() {
                     </div>
                     {/* <!-- Top Search Area --> */}
                     <div className="top-search-area">
-                      <form action="index.html" method="post">
+                      <form action="/" method="post">
                         <input
                           type="search"
                           name="top-search"
@@ -133,7 +133,7 @@ export default function Category() {
                     <div className="classynav">
                       <ul>
                         <li className="active">
-                          <a href="index.html">الرئيسية</a>
+                          <a href="/">الرئيسية</a>
                         </li>
                         {/* <li>
                           <a href="archive-list.html">الاخبار المحلية</a>
@@ -143,7 +143,7 @@ export default function Category() {
                           <a href="">الاخبار</a>
                           <ul className="dropdown">
                             <li>
-                              <a href="index.html">- الاخبار المحلية</a>
+                              <a href="/">- الاخبار المحلية</a>
                             </li>
                             <li>
                               <a href="archive-list.html">- الاخبار العربية</a>
@@ -163,7 +163,7 @@ export default function Category() {
                           <div className="megamenu">
                             <ul className="single-mega cn-col-4">
                               <li>
-                                <a href="index.html">- العملة</a>
+                                <a href="/">- العملة</a>
                               </li>
                               <li>
                                 <a href="archive-list.html">- الدولار</a>
@@ -183,7 +183,7 @@ export default function Category() {
                             </ul>
                             <ul className="single-mega cn-col-4">
                               <li>
-                                <a href="index.html">- النفط</a>
+                                <a href="/">- النفط</a>
                               </li>
                               <li>
                                 <a href="archive-list.html">- البترول</a>
@@ -198,7 +198,7 @@ export default function Category() {
                             </ul>
                             <ul className="single-mega cn-col-4">
                               <li>
-                                <a href="index.html">- الذهب</a>
+                                <a href="/">- الذهب</a>
                               </li>
                               <li>
                                 <a href="archive-list.html">- عيار 24</a>
@@ -224,7 +224,7 @@ export default function Category() {
                             </ul>
                             <ul className="single-mega cn-col-4">
                               <li>
-                                <a href="index.html">- المواد الغذائية</a>
+                                <a href="/">- المواد الغذائية</a>
                               </li>
                               <li>
                                 <a href="archive-list.html">- الخضار</a>

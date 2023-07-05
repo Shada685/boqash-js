@@ -82,7 +82,7 @@ export default function Home() {
                     </div>
                     {/* <!-- Top Search Area --> */}
                     <div className="top-search-area">
-                      <form action="index.html" method="post">
+                      <form action="/" method="post">
                         <input
                           type="search"
                           name="top-search"
@@ -140,7 +140,7 @@ export default function Home() {
                     <div className="classynav">
                       <ul>
                         <li className="active">
-                          <a href="index.html">الرئيسية</a>
+                          <a href="/">الرئيسية</a>
                         </li>
                         {/* <li>
                           <a href="archive-list.html">الاخبار المحلية</a>
@@ -150,7 +150,7 @@ export default function Home() {
                           <a href="">الاخبار</a>
                           <ul className="dropdown">
                             <li>
-                              <a href="index.html">- الاخبار المحلية</a>
+                              <a href="/">- الاخبار المحلية</a>
                             </li>
                             <li>
                               <a href="archive-list.html">- الاخبار العربية</a>
@@ -170,7 +170,7 @@ export default function Home() {
                           <div className="megamenu">
                             <ul className="single-mega cn-col-4">
                               <li>
-                                <a href="index.html">- العملة</a>
+                                <a href="/">- العملة</a>
                               </li>
                               <li>
                                 <a href="archive-list.html">- الدولار</a>
@@ -190,7 +190,7 @@ export default function Home() {
                             </ul>
                             <ul className="single-mega cn-col-4">
                               <li>
-                                <a href="index.html">- النفط</a>
+                                <a href="/">- النفط</a>
                               </li>
                               <li>
                                 <a href="archive-list.html">- البترول</a>
@@ -205,7 +205,7 @@ export default function Home() {
                             </ul>
                             <ul className="single-mega cn-col-4">
                               <li>
-                                <a href="index.html">- الذهب</a>
+                                <a href="/">- الذهب</a>
                               </li>
                               <li>
                                 <a href="archive-list.html">- عيار 24</a>
@@ -231,7 +231,7 @@ export default function Home() {
                             </ul>
                             <ul className="single-mega cn-col-4">
                               <li>
-                                <a href="index.html">- المواد الغذائية</a>
+                                <a href="/">- المواد الغذائية</a>
                               </li>
                               <li>
                                 <a href="archive-list.html">- الخضار</a>
@@ -893,7 +893,16 @@ export default function Home() {
           </div>
         </section>
         {/* <!-- ##### Hero Area End ##### --> */}
-        {/* <!-- ##### Header Area End ##### --> */}
+
+{/* herzontal ad */}
+<div className="container mt-2 mb-5">
+  <a>
+    <img src="img/bg-img/h-ad.png" alt=""/>
+  </a>
+
+</div>
+{/* herzontal ad */}
+
 
         {/* <!-- ##### price section Start ##### --> */}
         <section className="vizew-post-area mb-50 ">
@@ -954,8 +963,8 @@ export default function Home() {
   </div>
 {/* ///////////////////////// */}
                       </div>
-</div>
-<div className="col-12 col-md-6 col-lg-6">
+              </div>
+             <div className="col-12 col-md-6 col-lg-6">
                       <div className="single-post-area mb-80 ">
 {/* //////////////////// */}
 <div className="body-n">                       
@@ -1005,16 +1014,77 @@ export default function Home() {
 
 {/* /////////////////////// */}
                       </div>
-</div>
-
+             </div>
               </div>
-            </div>
+             <div className="col-12 col-md-12 col-lg-12 mt-5">
+                      <div className="single-post-area mb-80 ">
+
+{/* //////////////////// */}
+
+<div className="body-m">
+<div class="CartContainer">
+		<div class="Header">
+			<h3 class="Heading">اسعار المواد الغذائية</h3>
+		</div>
+
+		<div class="Cart-Items">
+			<div class="image-box">
+				<img src="img/bg-img/apple.png" style={{ height:"100px" }} />
+			</div>
+			<div class="about">
+				<h1 class="title">Apple Juice</h1>
+
+			</div>
+
+			<div class="prices">
+				<div class="amount">$2.99</div>
+
+			</div>
+		</div>
+		<hr />
+		<div class="Cart-Items pad">
+			<div class="image-box">
+				<img src="img/bg-img/grapes.png" style={{ height:"100px" }} />
+			</div>
+			<div class="about">
+				<h2 class="title">Grapes Juice</h2>
+				
+
+			</div>
+
+			<div class="prices">
+				<div class="amount">$3.19</div>
+
+			</div>
+		</div>
+		<hr />
+
+	</div>
+</div>
+{/* ///////////////////// */}
+
+                      </div>
+             </div>
+              
+
             </div>
             <div className="col-12 col-md-5 col-lg-4">
                 <div className="sidebar-area">
                   
+{/* /////////////////// */}
+{/* <!-- ***** Single Widget ***** --> */}
+                  <div className="single-widget add-widget mb-50">
+                    <a href="#">
+                      <img src="img/bg-img/add.png" alt="" />
+                    </a>
+                  </div>
+{/* //////////////////// */}
+
+
                 </div>
                 </div>
+            </div>
+            
             </div>
           
         </section>
@@ -1287,6 +1357,23 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
+
+
+{/* ///////////////////// */}
+<div className="row">
+  <div className="col-12">
+    {/* herzontal ad */}
+<div className="container mt-2 mb-5">
+  <a>
+    <img src="img/bg-img/h-ad.png" alt=""/>
+  </a>
+</div>
+{/* herzontal ad */}
+  </div>
+</div>
+{/* ///////////////////// */}
+
+
 
                   <div className="row">
                     <div className="col-12">
@@ -1616,6 +1703,21 @@ export default function Home() {
                     </div>
                   </div>
 
+
+{/* ///////////////////// */}
+<div className="row">
+  <div className="col-12">
+    {/* herzontal ad */}
+<div className="container mt-2 mb-5">
+  <a>
+    <img src="img/bg-img/h-ad.png" alt=""/>
+  </a>
+</div>
+{/* herzontal ad */}
+  </div>
+</div>
+{/* ///////////////////// */}
+
                   {/* <!-- Section Heading --> */}
                   <div className="section-heading style-2">
                     <h4>الاخبار العالمية</h4>
@@ -1909,6 +2011,17 @@ export default function Home() {
 
               <div className="col-12 col-md-5 col-lg-4">
                 <div className="sidebar-area">
+
+                  {/* <!-- ***** ad Widget ***** --> */}
+
+               <div className="single-widget add-widget mb-50">
+                    <a href="#">
+                      <img src="img/bg-img/add.png" alt="" />
+                    </a>
+                  </div>
+
+
+
                   {/* <!-- ***** Single Widget ***** --> */}
                   <div className="single-widget followers-widget mb-50 ">
                     <a href="#" className="facebook">
@@ -2204,6 +2317,13 @@ export default function Home() {
                         </button>
                       </form>
                     </div>
+                  </div>
+                  
+                  {/* ad widget */}
+                  <div className="single-widget add-widget mb-50">
+                    <a href="#">
+                      <img src="img/bg-img/add.png" alt="" />
+                    </a>
                   </div>
 
                   {/* <!-- ***** Single Widget ***** --> */}
