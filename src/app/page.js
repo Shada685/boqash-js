@@ -3,6 +3,7 @@ import Script from "next/script";
 import "../../public/style.css";
 import "../../public/css/style-grocery-price.css";
 import "../../public/css/style-currency.css";
+import Footer from "./components/footer";
 
 export default function Home() {
   return (
@@ -895,7 +896,124 @@ export default function Home() {
         {/* <!-- ##### Header Area End ##### --> */}
 
         {/* <!-- ##### price section Start ##### --> */}
-        
+        <section className="vizew-post-area mb-50 ">
+          <div className="container">
+             <div className="row">
+            <div className="col-12 col-md-8 col-lg-8 ">
+              <div className="row">
+              <div className="col-12 col-md-6 col-lg-6">
+                      <div className="single-post-area mb-80 ">
+{/* //////////////////////// */}
+<div className="body-n">                       
+<div class="container-n">
+    <div class="weather-side">
+      <div class="weather-gradient"></div>
+      <div class="date-container">
+        <h2 class="date-dayname">Tuesday</h2><span class="date-day">15 Jan 2019</span><i class="location-icon"
+          data-feather="map-pin"></i><span class="location">Paris, FR</span>
+      </div>
+      <div class="weather-container"><i class="weather-icon" data-feather="sun"></i>
+        <h1 class="weather-temp">29°C</h1>
+        <h3 class="weather-desc">Sunny</h3>
+      </div>
+    </div>
+    <div class="info-side">
+      <div class="today-info-container">
+        <div class="today-info">
+          <div class="precipitation"> <span class="title">PRECIPITATION</span><span class="value">0 %</span>
+            <div class="clear"></div>
+          </div>
+          <div class="humidity"> <span class="title">HUMIDITY</span><span class="value">34 %</span>
+            <div class="clear"></div>
+          </div>
+          <div class="wind"> <span class="title">WIND</span><span class="value">0 km/h</span>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+      <div class="week-container">
+        <ul class="week-list">
+          <li class="active"><i class="day-icon" data-feather="sun"></i><span class="day-name">Tue</span><span
+              class="day-temp">29°C</span></li>
+          <li><i class="day-icon" data-feather="cloud"></i><span class="day-name">Wed</span><span
+              class="day-temp">21°C</span></li>
+          <li><i class="day-icon" data-feather="cloud-snow"></i><span class="day-name">Thu</span><span
+              class="day-temp">08°C</span></li>
+          <li><i class="day-icon" data-feather="cloud-rain"></i><span class="day-name">Fry</span><span
+              class="day-temp">19°C</span></li>
+          <div class="clear"></div>
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+  </div>
+{/* ///////////////////////// */}
+                      </div>
+</div>
+<div className="col-12 col-md-6 col-lg-6">
+                      <div className="single-post-area mb-80 ">
+{/* //////////////////// */}
+<div className="body-n">                       
+<div class="container-n">
+    <div class="weather-side">
+      <div class="weather-gradient"></div>
+      <div class="date-container">
+        <h2 class="date-dayname">Tuesday</h2><span class="date-day">15 Jan 2019</span><i class="location-icon"
+          data-feather="map-pin"></i><span class="location">Paris, FR</span>
+      </div>
+      <div class="weather-container"><i class="weather-icon" data-feather="sun"></i>
+        <h1 class="weather-temp">29°C</h1>
+        <h3 class="weather-desc">Sunny</h3>
+      </div>
+    </div>
+    <div class="info-side">
+      <div class="today-info-container">
+        <div class="today-info">
+          <div class="precipitation"> <span class="title">PRECIPITATION</span><span class="value">0 %</span>
+            <div class="clear"></div>
+          </div>
+          <div class="humidity"> <span class="title">HUMIDITY</span><span class="value">34 %</span>
+            <div class="clear"></div>
+          </div>
+          <div class="wind"> <span class="title">WIND</span><span class="value">0 km/h</span>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+      <div class="week-container">
+        <ul class="week-list">
+          <li class="active"><i class="day-icon" data-feather="sun"></i><span class="day-name">Tue</span><span
+              class="day-temp">29°C</span></li>
+          <li><i class="day-icon" data-feather="cloud"></i><span class="day-name">Wed</span><span
+              class="day-temp">21°C</span></li>
+          <li><i class="day-icon" data-feather="cloud-snow"></i><span class="day-name">Thu</span><span
+              class="day-temp">08°C</span></li>
+          <li><i class="day-icon" data-feather="cloud-rain"></i><span class="day-name">Fry</span><span
+              class="day-temp">19°C</span></li>
+          <div class="clear"></div>
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+  </div>
+
+{/* /////////////////////// */}
+                      </div>
+</div>
+
+              </div>
+            </div>
+            </div>
+            <div className="col-12 col-md-5 col-lg-4">
+                <div className="sidebar-area">
+                  
+                </div>
+                </div>
+            </div>
+          
+        </section>
         {/* <!-- ##### price section End ##### --> */}
 
         {/* <!-- ##### Vizew Post Area Start ##### --> */}
@@ -2254,138 +2372,11 @@ export default function Home() {
         </section>
         {/* <!-- ##### Vizew Psot Area End ##### --> */}
 
-        {/* <!-- ##### Footer Area Start ##### --> */}
-        <footer className="footer-area">
-          <div className="container">
-            <div className="row">
-              {/* <!-- Footer Widget Area --> */}
-              <div className="col-12 col-sm-6 col-xl-3">
-                <div className="footer-widget mb-70">
-                  {/* <!-- Logo --> */}
-                  <a href="index.html" className="foo-logo d-block mb-4">
-                    <img src="img/core-img/logo2.png" alt="" />
-                  </a>
-                  <p>
-                   بقش هو مرصد اقتصادي إلكتروني يوفر للمستخدمين تحليلات اقتصادية ومالية دقيقة وموثوقة عن الأسواق والاقتصاديات المحلية والعالمية.
-                  </p>
-                  {/* <!-- Footer Newsletter Area --> */}
-                  <div className="footer-social-area">
-                    <a href="#" className="facebook">
-                      <i className="fa fa-facebook"></i>
-                    </a>
-                    
-                    <a href="#" className="instagram">
-                      <i className="fa fa-instagram"></i>
-                    </a>
-                    <a href="#" className="twitter">
-                      <i className="fa fa-twitter"></i>
-                    </a>
-                    <a href="#" className="youtube">
-                      <i className="fa fa-youtube-play"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              {/* <!-- Footer Widget Area --> */}
-              <div className="col-12 col-sm-6 col-xl-3">
-                <div className="footer-widget mb-70">
-                  <h6 className="widget-title">اخبار ومقالات</h6>
-                  <ul >
-                    <li className="mb-2">
-                      <a href="">الاخبار المحلية</a>
-                      </li>
-                    <li className="mb-2">
-                      <a href="">الاخبار العربية</a>
-                      </li>
-                    <li className="mb-2">
-                      <a href="">الاخبار العالمية</a>
-                      </li>
-                    <li className="mb-2"><a href="">الحرب الروسية</a></li>
-                    <li className="mb-2"><a href="">مقالات</a></li>
-                    <li> <a href="">مقتطفات</a></li>
-                    
-
-                  </ul>
-                </div>
-              </div>
-
-              {/* <!-- Footer Widget Area --> */}
-              <div className="col-12 col-sm-6 col-xl-3">
-                <div className="footer-widget mb-70">
-                  <h6 className="widget-title">عن بقش</h6>
-<ul >
-                    <li className="mb-2">
-                      <a href=""> من نحن</a>
-                      </li>
-                    <li className="mb-2">
-                      <a href=""> تواصل معنا</a>
-                      </li>
-                    <li className="mb-2">
-                      <a href="">للاعلان </a>
-                      </li>
-                    <li className="mb-2"><a href=""> سياسة الخصوصية</a></li>
-                    
-                  
-                    
-
-                  </ul>
-                  
-                </div>
-              </div>
-
-              {/* <!-- Footer Widget Area --> */}
-              <div className="col-12 col-sm-6 col-xl-3">
-                <div className="footer-widget mb-70">
-                  <h6 className="widget-title">الاسعار</h6>
-                  {/* <!-- Contact Address --> */}
-                  <ul >
-                    <li className="mb-2">
-                      <a href=""> اسعار العملات</a>
-                      </li>
-                    <li className="mb-2">
-                      <a href="">اسعار المواد الغذائية</a>
-                      </li>
-                    <li className="mb-2">
-                      <a href="">اسعار الذهب</a>
-                      </li>
-                    <li className="mb-2"><a href="">اسعار النفط</a></li>
-                    
-                    
-
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* <!-- Copywrite Area --> */}
-          <div className="copywrite-area">
-            <div className="container ">
-              <div className="row align-items-center">
-                {/* <!-- Copywrite Text --> */}
-                <div className="col-12 col-sm-12">
-                  
-                  <p className="copywrite-text text-center">
-                    
-                     &copy;
-                    <script>
-                      document.write(new Date().getFullYear());
-                    </script>{" "}
-                    كل الحقوق محفوضة | powered  
-                     by{" "}
-                    <a href="https://dracowareye.com" target="_blank">
-                      DracoWare
-                    </a>
-                    
-                  </p>
-                </div>
-                
-              </div>
-            </div>
-          </div>
-        </footer>
-        {/* <!-- ##### Footer Area End ##### --> */}
+{/* <!-- ##### Footer Area Start ##### --> */}
+<Footer />
+{/* <!-- ##### Footer Area End ##### --> */}
+        
+        
         <Script src="/js/jquery/jquery-2.2.4.min.js" />
         <Script src="/js/bootstrap/popper.min.js" />
         <Script src="/js/bootstrap/bootstrap.min.js" />
