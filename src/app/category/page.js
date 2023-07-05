@@ -23,149 +23,255 @@ export default function Category() {
     </div> */}
 
    {/* <!-- ##### Header Area Start ##### --> */}
-    <header className="header-area">
-        {/* <!-- Top Header Area --> */}
-        <div className="top-header-area">
+        <header className="header-area">
+          {/* <!-- Top Header Area --> */}
+          <div className="top-header-area">
             <div className="container">
-                <div className="row align-items-center">
-                    <div className="col-12 col-md-6">
-                        {/* <!-- Breaking News Widget --> */}
-                        <div className="breaking-news-area d-flex align-items-center">
-                            <div className="news-title">
-                                <p>اخر الاخبار</p>
-                            </div>
-                            <div id="breakingNewsTicker" className="ticker">
-                                <ul>
-                                    <li><a href="single-post.html">بوتين يعلن مشروعاً لإنشاء منطقة صناعية روسية في
-                                            مصر</a></li>
-                                    <li><a href="single-post.html">تحديات سعر الصرف ومصلحة المواطن</a></li>
-                                    <li><a href="single-post.html">هل تورطت بريطانيا في تزوير أسعار الفائدة خلال الأزمة
-                                            المالية العالمية؟</a></li>
-                                </ul>
-                            </div>
-                        </div>
+              <div className="row align-items-center">
+                <div className="col-12 col-md-6">
+                  {/* <!-- Breaking News Widget --> */}
+                  <div className="breaking-news-area d-flex align-items-center">
+                    <div className="news-title">
+                      <p>اخر الاخبار:</p>
                     </div>
-                    <div className="col-12 col-md-6">
-                        <div className="top-meta-data d-flex align-items-center justify-content-end">
-                            {/* <!-- Top Social Info --> */}
-                            <div className="top-social-info">
-                                <a href="#"><i className="fa fa-facebook"></i></a>
-                                <a href="#"><i className="fa fa-twitter"></i></a>
-                                <a href="#"><i className="fa fa-pinterest"></i></a>
-                                <a href="#"><i className="fa fa-linkedin"></i></a>
-                                <a href="#"><i className="fa fa-youtube-play"></i></a>
-                            </div>
-                            {/* <!-- Top Search Area --> */}
-                            <div className="top-search-area">
-                                <form action="index.html" method="post">
-                                    <input type="search" name="top-search" id="topSearch" placeholder="بحث..." />
-                                    <button type="submit" className="btn"><i className="fa fa-search"
-                                            aria-hidden="true"></i></button>
-                                </form>
-                            </div>
-                            {/* <!-- Login --> */}
-                            <a href="login.html" className="login-btn"><i className="fa fa-user" aria-hidden="true"></i></a>
-                        </div>
+                    <div id="breakingNewsTicker" className="ticker">
+                      <ul>
+                        <li>
+                          <a href="single-post.html">
+                            10 Things Amazon Echo Can Do
+                          </a>
+                        </li>
+                        <li>
+                          <a href="single-post.html">
+                            Welcome to DracoWare Family.
+                          </a>
+                        </li>
+                        <li>
+                          <a href="single-post.html">
+                            Boys 'doing well' after Thai
+                          </a>
+                        </li>
+                      </ul>
                     </div>
+                  </div>
                 </div>
+                <div className="col-12 col-md-6">
+                  <div className="top-meta-data d-flex align-items-center justify-content-end">
+                    {/* <!-- Top Social Info --> */}
+                    <div className="top-social-info">
+                      <a href="#">
+                        <i className="fa fa-facebook"></i>
+                      </a>
+                      <a href="#">
+                        <i className="fa fa-twitter"></i>
+                      </a>
+                     
+                      <a href="#">
+                        <i className="fa fa-instagram"></i>
+                      </a>
+                      <a href="#">
+                        <i className="fa fa-youtube-play"></i>
+                      </a>
+                    </div>
+                    {/* <!-- Top Search Area --> */}
+                    <div className="top-search-area">
+                      <form action="index.html" method="post">
+                        <input
+                          type="search"
+                          name="top-search"
+                          id="topSearch"
+                          placeholder="يحث..."
+                        />
+                        <button type="submit" className="btn">
+                          <i className="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                      </form>
+                    </div>
+                    {/* <!-- Login --> */}
+                    <a href="login.html" className="login-btn">
+                      <i className="fa fa-user" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
+          </div>
 
-        {/* <!-- Navbar Area --> */}
-        <div className="vizew-main-menu" id="sticker">
+          {/* <!-- Navbar Area --> */}
+          <div className="vizew-main-menu" id="sticker">
             <div className="classy-nav-container breakpoint-off">
-                <div className="container">
+              <div className="container">
+                {/* <!-- Menu --> */}
+                <nav
+                  className="classy-navbar justify-content-between"
+                  id="vizewNav"
+                >
+                  {/* <!-- Nav brand --> */}
+                  <a href="/" className="nav-brand">
+                    <img src="img/core-img/logo.png" alt="" />
+                  </a>
 
-                    {/* <!-- Menu --> */}
-                    <nav className="classy-navbar justify-content-between" id="vizewNav">
+                  {/* <!-- Navbar Toggler --> */}
+                  <div className="classy-navbar-toggler">
+                    <span className="navbarToggler">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </span>
+                  </div>
 
-                        {/* <!-- Nav brand --> */}
-                        <a href="index.html" className="nav-brand"><img src="/img/core-img/logo2.png" alt="" /></a>
+                  <div className="classy-menu">
+                    {/* <!-- Close Button --> */}
+                    <div className="classycloseIcon">
+                      <div className="cross-wrap">
+                        <span className="top"></span>
+                        <span className="bottom"></span>
+                      </div>
+                    </div>
 
-                        {/* <!-- Navbar Toggler --> */}
-                        <div className="classy-navbar-toggler">
-                            <span className="navbarToggler"><span></span><span></span><span></span></span>
-                        </div>
-
-                        <div className="classy-menu">
-
-                            {/* <!-- Close Button --> */}
-                            <div className="classycloseIcon">
-                                <div className="cross-wrap"><span className="top"></span><span className="bottom"></span></div>
-                            </div>
-
-                            {/* <!-- Nav Start --> */}
-                            <div className="classynav">
-                                <ul>
-                                    <li className="active"><a href="index.html">الرئيسية</a></li>
-                                    <li><a href="archive-list.html">Archives</a></li>
-                                    <li><a href="#">Pages</a>
-                                        <ul className="dropdown">
-                                            <li><a href="index.html">- الرئيسية</a></li>
-                                            <li><a href="archive-list.html">- Archive List</a></li>
-                                            <li><a href="archive-grid.html">- Archive Grid</a></li>
-                                            <li><a href="single-post.html">- Single Post</a></li>
-                                            <li><a href="video-post.html">- Single Video Post</a></li>
-                                            <li><a href="contact.html">- Contact</a></li>
-                                            <li><a href="typography.html">- Typography</a></li>
-                                            <li><a href="login.html">- Login</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Features</a>
-                                        <div className="megamenu">
-                                            <ul className="single-mega cn-col-4">
-                                                <li><a href="index.html">- الرئيسية</a></li>
-                                                <li><a href="archive-list.html">- Archive List</a></li>
-                                                <li><a href="archive-grid.html">- Archive Grid</a></li>
-                                                <li><a href="single-post.html">- Single Post</a></li>
-                                                <li><a href="video-post.html">- Single Video Post</a></li>
-                                                <li><a href="contact.html">- Contact</a></li>
-                                                <li><a href="typography.html">- Typography</a></li>
-                                                <li><a href="login.html">- Login</a></li>
-                                            </ul>
-                                            <ul className="single-mega cn-col-4">
-                                                <li><a href="index.html">- الرئيسية</a></li>
-                                                <li><a href="archive-list.html">- Archive List</a></li>
-                                                <li><a href="archive-grid.html">- Archive Grid</a></li>
-                                                <li><a href="single-post.html">- Single Post</a></li>
-                                                <li><a href="video-post.html">- Single Video Post</a></li>
-                                                <li><a href="contact.html">- Contact</a></li>
-                                                <li><a href="typography.html">- Typography</a></li>
-                                                <li><a href="login.html">- Login</a></li>
-                                            </ul>
-                                            <ul className="single-mega cn-col-4">
-                                                <li><a href="index.html">- الرئيسية</a></li>
-                                                <li><a href="archive-list.html">- Archive List</a></li>
-                                                <li><a href="archive-grid.html">- Archive Grid</a></li>
-                                                <li><a href="single-post.html">- Single Post</a></li>
-                                                <li><a href="video-post.html">- Single Video Post</a></li>
-                                                <li><a href="contact.html">- Contact</a></li>
-                                                <li><a href="typography.html">- Typography</a></li>
-                                                <li><a href="login.html">- Login</a></li>
-                                            </ul>
-                                            <ul className="single-mega cn-col-4">
-                                                <li><a href="index.html">- الرئيسية</a></li>
-                                                <li><a href="archive-list.html">- Archive List</a></li>
-                                                <li><a href="archive-grid.html">- Archive Grid</a></li>
-                                                <li><a href="single-post.html">- Single Post</a></li>
-                                                <li><a href="video-post.html">- Single Video Post</a></li>
-                                                <li><a href="contact.html">- Contact</a></li>
-                                                <li><a href="typography.html">- Typography</a></li>
-                                                <li><a href="login.html">- Login</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                </ul>
-                            </div>
-                            {/* <!-- Nav End --> */}
-                        </div>
-                    </nav>
-                </div>
+                    {/* <!-- Nav Start --> */}
+                    <div className="classynav">
+                      <ul>
+                        <li className="active">
+                          <a href="index.html">الرئيسية</a>
+                        </li>
+                        {/* <li>
+                          <a href="archive-list.html">الاخبار المحلية</a>
+                        </li> */}
+                        
+                        <li>
+                          <a href="">الاخبار</a>
+                          <ul className="dropdown">
+                            <li>
+                              <a href="index.html">- الاخبار المحلية</a>
+                            </li>
+                            <li>
+                              <a href="archive-list.html">- الاخبار العربية</a>
+                            </li>
+                            <li>
+                              <a href="archive-grid.html">- الاخبار العالمية</a>
+                            </li>
+                            <li>
+                              <a href="archive-grid.html">- الحرب الروسية</a>
+                            </li>
+                           
+                           
+                          </ul>
+                        </li>
+                        <li>
+                          <a href="">الاسعار</a>
+                          <div className="megamenu">
+                            <ul className="single-mega cn-col-4">
+                              <li>
+                                <a href="index.html">- العملة</a>
+                              </li>
+                              <li>
+                                <a href="archive-list.html">- الدولار</a>
+                              </li>
+                              <li>
+                                <a href="archive-grid.html">- الريال السعودي</a>
+                              </li>
+                              <li>
+                                <a href="single-post.html">- اليورو</a>
+                              </li>
+                              <li>
+                                <a href="video-post.html">
+                                  - درهم اماراتي
+                                </a>
+                              </li>
+                             
+                            </ul>
+                            <ul className="single-mega cn-col-4">
+                              <li>
+                                <a href="index.html">- النفط</a>
+                              </li>
+                              <li>
+                                <a href="archive-list.html">- البترول</a>
+                              </li>
+                              <li>
+                                <a href="archive-grid.html">- الديزل</a>
+                              </li>
+                              <li>
+                                <a href="single-post.html">- سولار</a>
+                              </li>
+                              
+                            </ul>
+                            <ul className="single-mega cn-col-4">
+                              <li>
+                                <a href="index.html">- الذهب</a>
+                              </li>
+                              <li>
+                                <a href="archive-list.html">- عيار 24</a>
+                              </li>
+                              <li>
+                                <a href="archive-grid.html">- عيار 21</a>
+                              </li>
+                              <li>
+                                <a href="single-post.html">- عيار 18</a>
+                              </li>
+                              <li>
+                                <a href="video-post.html">
+                                  - الجنية
+                                </a>
+                              </li>
+                              <li>
+                                <a href="contact.html">- قيراط</a>
+                              </li>
+                              <li>
+                                <a href="typography.html">- سبيكة</a>
+                              </li>
+                              
+                            </ul>
+                            <ul className="single-mega cn-col-4">
+                              <li>
+                                <a href="index.html">- المواد الغذائية</a>
+                              </li>
+                              <li>
+                                <a href="archive-list.html">- الخضار</a>
+                              </li>
+                              <li>
+                                <a href="archive-grid.html">- الفواكة</a>
+                              </li>
+                              <li>
+                                <a href="single-post.html">- الدقيق</a>
+                              </li>
+                              <li>
+                                <a href="video-post.html">
+                                  - البر
+                                </a>
+                              </li>
+                              <li>
+                                <a href="contact.html">- السكر</a>
+                              </li>
+                              <li>
+                                <a href="typography.html">- الارز</a>
+                              </li>
+                              
+                            </ul>
+                          </div>
+                        </li>
+                        <li>
+                          <a href="contact.html">مقالات</a>
+                        </li>
+                        <li>
+                          <a href="contact.html">مقتطفات</a>
+                        </li>
+                        <li>
+                          <a href="contact.html">عن بقش</a>
+                        </li>
+                        <li>
+                          <a href="contact.html">للاعلان</a>
+                        </li>
+                      </ul>
+                    </div>
+                    {/* <!-- Nav End --> */}
+                  </div>
+                </nav>
+              </div>
             </div>
-        </div>
-    </header>
-    {/* <!-- ##### Header Area End ##### --> */}
+          </div>
+        </header>
+        {/* <!-- ##### Header Area End ##### --> */}
 
     {/* <!-- ##### Breadcrumb Area Start ##### --> */}
     <div className="vizew-breadcrumb">
@@ -206,9 +312,7 @@ export default function Category() {
                             {/* <!-- Single Feature Post --> */}
                             <div className="single-feature-post video-post bg-img"
                                style={{ backgroundImage: "url(/img/bg-img/14.jpg)" }}>
-                                {/* <!-- Play Button --> */}
-                                <a href="video-post.html" className="btn play-btn"><i className="fa fa-play"
-                                        aria-hidden="true"></i></a>
+                                
 
                                 {/* <!-- Post Content --> */}
                                 <div className="post-content">
@@ -222,8 +326,6 @@ export default function Category() {
                                     </div>
                                 </div>
 
-                                {/* <!-- Video Duration --> */}
-                                <span className="video-duration">05.03</span>
                             </div>
 
                             {/* <!-- Single Feature Post --> */}
@@ -237,9 +339,7 @@ export default function Category() {
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/12.jpg" alt="" />
 
-                                    {/* <!-- Video Duration --> */}
-                                    <span className="video-duration">05.03</span>
-                                </div>
+                                        </div>
 
                                 {/* <!-- Post Content --> */}
                                 <div className="post-content">
@@ -262,9 +362,7 @@ export default function Category() {
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/39.jpg" alt="" />
 
-                                    {/* <!-- Video Duration --> */}
-                                    <span className="video-duration">05.03</span>
-                                </div>
+                                        </div>
 
                                 {/* <!-- Post Content --> */}
                                 <div className="post-content">
@@ -287,9 +385,7 @@ export default function Category() {
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/40.jpg" alt="" />
 
-                                    {/* <!-- Video Duration --> */}
-                                    <span className="video-duration">05.03</span>
-                                </div>
+                                        </div>
 
                                 {/* <!-- Post Content --> */}
                                 <div className="post-content">
@@ -311,9 +407,7 @@ export default function Category() {
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/41.jpg" alt="" />
 
-                                    {/* <!-- Video Duration --> */}
-                                    <span className="video-duration">05.03</span>
-                                </div>
+                                        </div>
 
                                 {/* <!-- Post Content --> */}
                                 <div className="post-content">
@@ -336,9 +430,7 @@ export default function Category() {
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/42.jpg" alt="" />
 
-                                    {/* <!-- Video Duration --> */}
-                                    <span className="video-duration">05.03</span>
-                                </div>
+                                        </div>
 
                                 {/* <!-- Post Content --> */}
                                 <div className="post-content">
@@ -361,9 +453,7 @@ export default function Category() {
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/43.jpg" alt="" />
 
-                                    {/* <!-- Video Duration --> */}
-                                    <span className="video-duration">05.03</span>
-                                </div>
+                                        </div>
 
                                 {/* <!-- Post Content --> */}
                                 <div className="post-content">
@@ -385,9 +475,7 @@ export default function Category() {
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/44.jpg" alt=""/>
 
-                                    {/* <!-- Video Duration --> */}
-                                    <span className="video-duration">05.03</span>
-                                </div>
+                                        </div>
 
                                 {/* <!-- Post Content --> */}
                                 <div className="post-content">
@@ -410,9 +498,7 @@ export default function Category() {
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/45.jpg" alt=""/>
 
-                                    {/* <!-- Video Duration --> */}
-                                    <span className="video-duration">05.03</span>
-                                </div>
+                                        </div>
 
                                 {/* <!-- Post Content --> */}
                                 <div className="post-content">
@@ -435,9 +521,7 @@ export default function Category() {
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/46.jpg" alt="" />
 
-                                    {/* <!-- Video Duration --> */}
-                                    <span className="video-duration">05.03</span>
-                                </div>
+                                        </div>
 
                                 {/* <!-- Post Content --> */}
                                 <div className="post-content">
@@ -460,9 +544,7 @@ export default function Category() {
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/47.jpg" alt="" />
 
-                                    {/* <!-- Video Duration --> */}
-                                    <span className="video-duration">05.03</span>
-                                </div>
+                                        </div>
 
                                 {/* <!-- Post Content --> */}
                                 <div className="post-content">
@@ -485,9 +567,7 @@ export default function Category() {
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/48.jpg" alt="" />
 
-                                    {/* <!-- Video Duration --> */}
-                                    <span className="video-duration">05.03</span>
-                                </div>
+                                        </div>
 
                                 {/* <!-- Post Content --> */}
                                 <div className="post-content">
@@ -510,9 +590,7 @@ export default function Category() {
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/49.jpg" alt="" />
 
-                                    {/* <!-- Video Duration --> */}
-                                    <span className="video-duration">05.03</span>
-                                </div>
+                                        </div>
 
                                 {/* <!-- Post Content --> */}
                                 <div className="post-content">
@@ -536,9 +614,7 @@ export default function Category() {
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/22.jpg" alt="" />
 
-                                    {/* <!-- Video Duration --> */}
-                                    <span className="video-duration">05.03</span>
-                                </div>
+                                        </div>
                             </div>
                             <div className="col-12 col-md-6">
                                 {/* <!-- Post Content --> */}
@@ -571,9 +647,7 @@ export default function Category() {
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/23.jpg" alt=""/>
 
-                                    {/* <!-- Video Duration --> */}
-                                    <span className="video-duration">05.03</span>
-                                </div>
+                                        </div>
                             </div>
                             <div className="col-12 col-md-6">
                                 {/* <!-- Post Content --> */}
@@ -606,9 +680,7 @@ export default function Category() {
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/24.jpg" alt=""/>
 
-                                    {/* <!-- Video Duration --> */}
-                                    <span className="video-duration">05.03</span>
-                                </div>
+                                        </div>
                             </div>
                             <div className="col-12 col-md-6">
                                 {/* <!-- Post Content --> */}
@@ -641,9 +713,7 @@ export default function Category() {
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/21.jpg" alt=""/>
 
-                                    {/* <!-- Video Duration --> */}
-                                    <span className="video-duration">05.03</span>
-                                </div>
+                                        </div>
                             </div>
                             <div className="col-12 col-md-6">
                                 {/* <!-- Post Content --> */}
@@ -676,9 +746,7 @@ export default function Category() {
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/22.jpg" alt=""/>
 
-                                    {/* <!-- Video Duration --> */}
-                                    <span className="video-duration">05.03</span>
-                                </div>
+                                        </div>
                             </div>
                             <div className="col-12 col-md-6">
                                 {/* <!-- Post Content --> */}
@@ -711,9 +779,7 @@ export default function Category() {
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/23.jpg" alt=""/>
 
-                                    {/* <!-- Video Duration --> */}
-                                    <span className="video-duration">05.03</span>
-                                </div>
+                                        </div>
                             </div>
                             <div className="col-12 col-md-6">
                                 {/* <!-- Post Content --> */}
