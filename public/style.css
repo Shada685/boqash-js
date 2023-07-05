@@ -20,8 +20,8 @@ text-align: right;}
 body {
   font-family: "Cairo", sans-serif;
   font-size: 14px;
-  background-color: #222627;
-  color: #a6a6a6; }
+  background-color: #f0f0f0;
+  color: #000; }
 
 h1,
 h2,
@@ -30,13 +30,13 @@ h4,
 h5,
 h6 {
   font-family: "Cairo", sans-serif;
-  color: #ffffff;
+  color: #000;
   line-height: 1.3;
   font-weight: 500; }
 
 p {
   font-family: "Cairo", sans-serif;
-  color: #a6a6a6;
+  color: #000;
   font-size: 14px;
   line-height: 2;
   font-weight: 400; }
@@ -49,7 +49,7 @@ a:focus {
   transition-duration: 500ms;
   text-decoration: none;
   outline: 0 solid transparent;
-  color: #a6a6a6;
+  color: #000;
   font-weight: 500;
   font-size: 14px;
   font-family: "Cairo", sans-serif; }
@@ -176,6 +176,10 @@ input:focus {
   padding-left: 30px !important;
   padding-right: 30px !important; }
 
+.px-5 {
+      padding-left: 5px !important;
+      padding-right: 5px !important;
+    }
 .pt-30 {
   padding-top: 30px; }
 
@@ -614,7 +618,7 @@ input:focus {
 .vizew-nav-tab {
   position: relative;
   z-index: 1;
-  background-color: #393c3d;
+  background-color: #fff;
   width: 100%;
   height: 500px;
   overflow-x: hidden;
@@ -633,7 +637,7 @@ input:focus {
     padding: 15px 20px;
     border-left: 4px solid transparent; }
     .vizew-nav-tab .nav-link.active {
-      background-color: #4d5051;
+      background-color: #c0bebe;
       border-left-color: #8F4872; }
 
 .vizew-breadcrumb {
@@ -649,6 +653,7 @@ input:focus {
     .vizew-breadcrumb .breadcrumb .breadcrumb-item {
       color: #a6a6a6;
       font-size: 16px;
+      
       font-weight: 400; }
       @media only screen and (min-width: 992px) and (max-width: 1199px) {
         .vizew-breadcrumb .breadcrumb .breadcrumb-item {
@@ -722,7 +727,7 @@ input:focus {
     z-index: 1;
     padding-right: 20px; }
     .single-blog-post .post-content .post-title {
-      color: #ffffff;
+      color: #000;
       margin-bottom: 5px;
       display: block;
       font-size: 16px;
@@ -775,7 +780,7 @@ input:focus {
       z-index: 1;
       padding-right: 20px; }
       .single-blog-post.style-2 .post-content .post-title {
-        color: #ffffff;
+        color: #000;
         margin-bottom: 10px;
         display: block;
         font-weight: 700;
@@ -812,7 +817,7 @@ input:focus {
           max-width: 100px;
           width: 100px; } }
     .single-blog-post.style-3 .post-content .post-title {
-      color: #ffffff;
+      color: #000;
       margin-bottom: 15px;
       display: block;
       font-weight: 700;
@@ -890,7 +895,7 @@ input:focus {
     .single-feature-post.video-post .post-content .post-title {
       font-size: 24px;
       display: block;
-      color: #ffffff;
+      color: #000;
       margin-bottom: 10px; }
       @media only screen and (min-width: 768px) and (max-width: 991px) {
         .single-feature-post.video-post .post-content .post-title {
@@ -979,7 +984,7 @@ input:focus {
     margin-top: 20px; }
     .single-post-area .post-content .post-title {
       display: block;
-      color: #ffffff;
+      color: #000;
       margin-bottom: 15px;
       font-size: 20px; }
       @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -1637,7 +1642,7 @@ input:focus {
     .single-youtube-channel .youtube-channel-content .channel-title {
       text-transform: uppercase;
       font-size: 14px;
-      color: #ffffff;
+      color: #000;
       margin-bottom: 8px;
       display: block; }
       @media only screen and (max-width: 767px) {
@@ -1740,7 +1745,7 @@ input:focus {
 .footer-area {
   position: relative;
   z-index: 1;
-  background-color: #191c1d;
+  background-color: #fff;
   padding-top: 70px; }
   .footer-area .footer-widget {
     position: relative;
@@ -1830,12 +1835,12 @@ input:focus {
     position: relative;
     z-index: 1;
     padding: 10px 0;
-    background-color: #0a0a0a; }
+    background-color: #8F4872; }
     .footer-area .copywrite-area .copywrite-text {
       font-size: 14px;
       margin-bottom: 0;
       font-weight: 400;
-      color: #a6a6a6; }
+      color: #fff; }
       @media only screen and (min-width: 768px) and (max-width: 991px) {
         .footer-area .copywrite-area .copywrite-text {
           font-size: 12px; } }
@@ -1937,6 +1942,6 @@ textarea.form-control {
   height: 140px; }
 
 /*# sourceMappingURL=style.css.map */
-.padding-right-m{
-padding-left: 10px;
+.black{
+  color :#000;
 }

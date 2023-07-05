@@ -117,7 +117,7 @@ export default function Footer() {
                 {/* <!-- Copywrite Text --> */}
                 <div className="col-12 col-sm-12">
                   
-                  <p className="copywrite-text text-center">
+                  <p className="copywrite-text text-center ">
                     
                      &copy;
                     <script>

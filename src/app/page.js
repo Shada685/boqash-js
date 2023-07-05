@@ -32,7 +32,7 @@ export default function Home() {
         {/* <!-- ##### Header Area Start ##### --> */}
         <header className="header-area">
           {/* <!-- Top Header Area --> */}
-          <div className="top-header-area">
+          <div className="top-header-area pt-2">
             <div className="container">
               <div className="row align-items-center">
                 <div className="col-12 col-md-6">
@@ -80,24 +80,8 @@ export default function Home() {
                         <i className="fa fa-youtube-play"></i>
                       </a>
                     </div>
-                    {/* <!-- Top Search Area --> */}
-                    <div className="top-search-area">
-                      <form action="/" method="post">
-                        <input
-                          type="search"
-                          name="top-search"
-                          id="topSearch"
-                          placeholder="يحث..."
-                        />
-                        <button type="submit" className="btn">
-                          <i className="fa fa-search" aria-hidden="true"></i>
-                        </button>
-                      </form>
-                    </div>
-                    {/* <!-- Login --> */}
-                    <a href="login.html" className="login-btn">
-                      <i className="fa fa-user" aria-hidden="true"></i>
-                    </a>
+                  
+                  
                   </div>
                 </div>
               </div>
@@ -1144,14 +1128,14 @@ export default function Home() {
                   <div className="row">
                     {/* <!-- Single Blog Post --> */}
                     <div className="col-12 col-md-6 col-lg-6">
-                      <div className="single-post-area mb-80 ">
+                      <div className="single-post-area mb-80 bg-white">
                         {/* <!-- Post Thumbnail --> */}
                         <div className="post-thumbnail">
                           <img src="img/bg-img/12.jpg" alt="" />
                         </div>
 
                         {/* <!-- Post Content --> */}
-                        <div className="post-content">
+                        <div className="post-content p-3">
                           <a href="#" className="post-cata cata-sm cata-danger">
                             Game
                           </a>
@@ -1186,14 +1170,14 @@ export default function Home() {
                     {/* <!-- Single Blog Post --> */}
 
                     <div className="col-12 col-md-6 col-lg-6">
-                      <div className="single-post-area mb-80 ">
+                      <div className="single-post-area mb-80 bg-white">
                         {/* <!-- Post Thumbnail --> */}
                         <div className="post-thumbnail">
                           <img src="img/bg-img/13.jpg" alt="" />
                         </div>
 
                         {/* <!-- Post Content --> */}
-                        <div className="post-content">
+                        <div className="post-content p-3">
                           <a
                             href="#"
                             className="post-cata cata-sm cata-primary"
@@ -1232,14 +1216,14 @@ export default function Home() {
                   <div className="row">
                     {/* <!-- Single Blog Post --> */}
                     <div className="col-12 col-md-6 col-lg-4">
-                      <div className="single-post-area mb-80 ">
+                      <div className="single-post-area mb-80 bg-white">
                         {/* <!-- Post Thumbnail --> */}
                         <div className="post-thumbnail">
                           <img src="img/bg-img/12.jpg" alt="" />
                         </div>
 
                         {/* <!-- Post Content --> */}
-                        <div className="post-content">
+                        <div className="post-content p-3">
                           <a href="#" className="post-cata cata-sm cata-danger">
                             Game
                           </a>
@@ -1273,14 +1257,14 @@ export default function Home() {
 
                     {/* <!-- Single Blog Post --> */}
                     <div className="col-12 col-md-6 col-lg-4">
-                      <div className="single-post-area mb-80 ">
+                      <div className="single-post-area mb-80 bg-white">
                         {/* <!-- Post Thumbnail --> */}
                         <div className="post-thumbnail">
                           <img src="img/bg-img/13.jpg" alt="" />
                         </div>
 
                         {/* <!-- Post Content --> */}
-                        <div className="post-content">
+                        <div className="post-content p-3">
                           <a
                             href="#"
                             className="post-cata cata-sm cata-primary"
@@ -1315,14 +1299,14 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="col-12 col-md-6 col-lg-4">
-                      <div className="single-post-area mb-80 ">
+                      <div className="single-post-area mb-80 bg-white">
                         {/* <!-- Post Thumbnail --> */}
                         <div className="post-thumbnail">
                           <img src="img/bg-img/13.jpg" alt="" />
                         </div>
 
                         {/* <!-- Post Content --> */}
-                        <div className="post-content">
+                        <div className="post-content p-3">
                           <a
                             href="#"
                             className="post-cata cata-sm cata-primary"
@@ -1390,14 +1374,14 @@ export default function Home() {
                       {/* <!-- Sports Video Slides --> */}
                       <div className="sport-video-slides owl-carousel mb-50 ">
                         {/* <!-- Single Blog Post --> */}
-                        <div className="single-post-area">
+                        <div className="single-post-area bg-white">
                           {/* <!-- Post Thumbnail --> */}
                           <div className="post-thumbnail">
                             <img src="img/bg-img/15.jpg" alt="" />
                           </div>
 
                           {/* <!-- Post Content --> */}
-                          <div className="post-content">
+                          <div className="post-content p-3">
                             <a
                               href="#"
                               className="post-cata cata-sm cata-success"
@@ -1475,18 +1459,18 @@ export default function Home() {
                       </div>
                     </div>
 
-                    <div className="col-12 col-lg-6">
+                    <div className="col-12 col-lg-6 ">
                       {/* <!-- Business Video Slides --> */}
                       <div className="business-video-slides owl-carousel mb-50 ">
                         {/* <!-- Single Blog Post --> */}
-                        <div className="single-post-area">
+                        <div className="single-post-area bg-white">
                           {/* <!-- Post Thumbnail --> */}
                           <div className="post-thumbnail">
                             <img src="img/bg-img/17.jpg" alt="" />
                           </div>
 
                           {/* <!-- Post Content --> */}
-                          <div className="post-content">
+                          <div className="post-content p-3">
                             <a
                               href="#"
                               className="post-cata cata-sm cata-primary"
@@ -1568,7 +1552,7 @@ export default function Home() {
                   <div className="row mb-30">
                     {/* <!-- Single Blog Post --> */}
                     <div className="col-12 col-lg-6 ">
-                      <div className="single-blog-post style-3 d-flex mb-50 ">
+                      <div className="single-blog-post style-3 d-flex mb-50 bg-white">
                         <div className="post-thumbnail">
                           <img src="img/bg-img/16.jpg" alt="" />
                         </div>
@@ -1602,7 +1586,7 @@ export default function Home() {
 
                     {/* <!-- Single Blog Post --> */}
                     <div className="col-12 col-lg-6">
-                      <div className="single-blog-post style-3 d-flex mb-50 ">
+                      <div className="single-blog-post style-3 d-flex mb-50 bg-white">
                         <div className="post-thumbnail">
                           <img src="img/bg-img/18.jpg" alt="" />
                         </div>
@@ -1636,7 +1620,7 @@ export default function Home() {
 
                     {/* <!-- Single Blog Post --> */}
                     <div className="col-12 col-lg-6">
-                      <div className="single-blog-post style-3 d-flex mb-50 ">
+                      <div className="single-blog-post style-3 d-flex mb-50 bg-white">
                         <div className="post-thumbnail">
                           <img src="img/bg-img/19.jpg" alt="" />
                         </div>
@@ -1669,8 +1653,8 @@ export default function Home() {
                     </div>
 
                     {/* <!-- Single Blog Post --> */}
-                    <div className="col-12 col-lg-6">
-                      <div className="single-blog-post style-3 d-flex mb-50 ">
+                    <div className="col-12 col-lg-6 ">
+                      <div className="single-blog-post style-3 d-flex mb-50 bg-white">
                         <div className="post-thumbnail">
                           <img src="img/bg-img/20.jpg" alt="" />
                         </div>
@@ -1764,7 +1748,7 @@ export default function Home() {
                   </div>
 
                   {/* <!-- Single Post Area --> */}
-                  <div className="single-post-area mb-30 ">
+                  <div className="single-post-area mb-30 bg-white">
                     <div className="row align-items-center ">
                       <div className="col-12 col-lg-6">
                         {/* <!-- Post Thumbnail --> */}
@@ -1826,7 +1810,7 @@ export default function Home() {
                   </div>
 
                   {/* <!-- Single Post Area --> */}
-                  <div className="single-post-area mb-30 ">
+                  <div className="single-post-area mb-30 bg-white">
                     <div className="row align-items-center">
                       <div className="col-12 col-lg-6">
                         {/* <!-- Post Thumbnail --> */}
@@ -1886,7 +1870,7 @@ export default function Home() {
                   </div>
 
                   {/* <!-- Single Post Area --> */}
-                  <div className="single-post-area mb-30 ">
+                  <div className="single-post-area mb-30 bg-white">
                     <div className="row align-items-center">
                       <div className="col-12 col-lg-6">
                         {/* <!-- Post Thumbnail --> */}
@@ -1948,7 +1932,7 @@ export default function Home() {
                   </div>
 
                   {/* <!-- Single Post Area --> */}
-                  <div className="single-post-area mb-30 ">
+                  <div className="single-post-area mb-30 bg-white">
                     <div className="row align-items-center">
                       <div className="col-12 col-lg-6">
                         {/* <!-- Post Thumbnail --> */}
@@ -2014,7 +1998,7 @@ export default function Home() {
 
                   {/* <!-- ***** ad Widget ***** --> */}
 
-               <div className="single-widget add-widget mb-50">
+               <div className="single-widget add-widget mb-50 bg-white">
                     <a href="#">
                       <img src="img/bg-img/add.png" alt="" />
                     </a>
@@ -2023,7 +2007,7 @@ export default function Home() {
 
 
                   {/* <!-- ***** Single Widget ***** --> */}
-                  <div className="single-widget followers-widget mb-50 ">
+                  <div className="single-widget followers-widget mb-50 bg-white">
                     <a href="#" className="facebook">
                       <i className="fa fa-facebook" aria-hidden="true"></i>
                       <span className="counter">198</span>
@@ -2042,7 +2026,7 @@ export default function Home() {
                   </div>
 
                   {/* <!-- ***** Single Widget ***** --> */}
-                  <div className="single-widget latest-video-widget mb-50 ">
+                  <div className="single-widget latest-video-widget mb-50 bg-white">
                     {/* <!-- Section Heading --> */}
                     <div className="section-heading style-2 mb-30">
                       <h4>مقتطفات</h4>
@@ -2181,14 +2165,14 @@ export default function Home() {
                   </div>
 
                   {/* <!-- ***** Single Widget ***** --> */}
-                  <div className="single-widget add-widget mb-50">
+                  <div className="single-widget add-widget mb-50 bg-white">
                     <a href="#">
                       <img src="img/bg-img/add.png" alt="" />
                     </a>
                   </div>
 
                   {/* <!-- ***** Sidebar Widget ***** --> */}
-                  <div className="single-widget youtube-channel-widget mb-50">
+                  <div className="single-widget youtube-channel-widget mb-50 bg-white">
                     {/* <!-- Section Heading --> */}
                     <div className="section-heading style-2 mb-30">
                       <h4>مقالات</h4>
@@ -2292,15 +2276,14 @@ export default function Home() {
                   </div>
 
                   {/* <!-- ***** Single Widget ***** --> */}
-                  <div className="single-widget newsletter-widget mb-50">
+                  <div className="single-widget newsletter-widget mb-50 bg-white">
                     {/* <!-- Section Heading --> */}
                     <div className="section-heading style-2 mb-30">
                       <h4>النشرة البريدية</h4>
                       <div className="line"></div>
                     </div>
                     <p>
-                      Subscribe our newsletter gor get notification about new
-                      updates, information discount, etc.
+                      اشترك معنا واحصل على المزيد من الاخبار اولا باول
                     </p>
                     {/* <!-- Newsletter Form --> */}
                     <div className="newsletter-form">
@@ -2313,21 +2296,21 @@ export default function Home() {
                           placeholder="Enter your email"
                         />
                         <button type="submit" className="btn vizew-btn w-100">
-                          Subscribe
+                          اشترك
                         </button>
                       </form>
                     </div>
                   </div>
                   
                   {/* ad widget */}
-                  <div className="single-widget add-widget mb-50">
+                  <div className="single-widget add-widget mb-50 bg-white">
                     <a href="#">
                       <img src="img/bg-img/add.png" alt="" />
                     </a>
                   </div>
 
                   {/* <!-- ***** Single Widget ***** --> */}
-                  <div className="single-widget mb-50">
+                  <div className="single-widget mb-50 bg-white">
                     {/* <!-- Section Heading --> */}
                     <div className="section-heading style-2 mb-30">
                       <h4>الحرب الروسية</h4>
@@ -2335,7 +2318,7 @@ export default function Home() {
                     </div>
 
                     {/* <!-- Single Blog Post --> */}
-                    <div className="single-blog-post d-flex">
+                    <div className="single-blog-post d-flex bg-white">
                       <div className="post-thumbnail">
                         <img src="img/bg-img/1.jpg" alt="" />
                       </div>
@@ -2366,7 +2349,7 @@ export default function Home() {
                     </div>
 
                     {/* <!-- Single Blog Post --> */}
-                    <div className="single-blog-post d-flex">
+                    <div className="single-blog-post d-flex bg-white">
                       <div className="post-thumbnail">
                         <img src="img/bg-img/2.jpg" alt="" />
                       </div>
@@ -2397,7 +2380,7 @@ export default function Home() {
                     </div>
 
                     {/* <!-- Single Blog Post --> */}
-                    <div className="single-blog-post d-flex">
+                    <div className="single-blog-post d-flex bg-white">
                       <div className="post-thumbnail">
                         <img src="img/bg-img/36.jpg" alt="" />
                       </div>
@@ -2428,7 +2411,7 @@ export default function Home() {
                     </div>
 
                     {/* <!-- Single Blog Post --> */}
-                    <div className="single-blog-post d-flex">
+                    <div className="single-blog-post d-flex bg-white">
                       <div className="post-thumbnail">
                         <img src="img/bg-img/37.jpg" alt="" />
                       </div>
@@ -2459,7 +2442,7 @@ export default function Home() {
                     </div>
 
                     {/* <!-- Single Blog Post --> */}
-                    <div className="single-blog-post d-flex">
+                    <div className="single-blog-post d-flex bg-white">
                       <div className="post-thumbnail">
                         <img src="img/bg-img/38.jpg" alt="" />
                       </div>
