@@ -382,7 +382,7 @@ export default async function RootLayout({ children }) {
                     <script>
                       document.write(new Date().getFullYear());
                     </script>{" "}
-                    كل الحقوق محفوضة | powered  
+                    كل الحقوق محفوظة | powered  
                      by{" "}
                     <a href="https://dracowareye.com" target="_blank">
                       DracoWare

@@ -98,7 +98,7 @@ export default async function Page({params,searchParams}) {
                     {news? "":<p>لايوجد اخبار</p>}
                     
                         {  news?.data.map((ob) => ( <div key={ob.id} className="col-12 col-md-6">
-                            <div className="single-post-area mb-50">
+                            <div className="single-post-area mb-50 bg-white shadow">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
                                     <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} width={337} height={200} alt={ob.attributes.title} />
@@ -107,7 +107,7 @@ export default async function Page({params,searchParams}) {
                                 </div>
 
                                 {/* <!-- Post Content --> */}
-                        <div className="post-content"> 
+                        <div className="post-content p-3"> 
                           
                           <a  href={ob.attributes.mainCategory.data.attributes.path+"/"+ob.attributes.slug} className="post-title">
                            {ob.attributes.title}

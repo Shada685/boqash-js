@@ -304,7 +304,7 @@ export default async function Home() {
                 <div className="sidebar-area">
                   
 {/* /////////////////// */}
-{/* <!-- ***** Single Widget ***** --> */}
+{/* <!-- ***** ad Widget ***** --> */}
                   <div className="single-widget add-widget mb-50 bg-white shadow">
                     <a href="#">
                       <img src="img/bg-img/add.png" alt="" />
@@ -361,14 +361,14 @@ export default async function Home() {
                   <div className="row">
                     {/* <!-- Single Blog Post --> */}
                   
-                    {[...localNewsData.data.slice(2, 4)].map((ob) => (  <div  key={ob.id} className="col-12 col-md-6 col-lg-6"> <div   className="single-post-area mb-80 ">
+                    {[...localNewsData.data.slice(2, 4)].map((ob) => (  <div  key={ob.id} className="col-12 col-md-6 col-lg-6 "> <div   className="single-post-area mb-80 bg-white shadow">
                         {/* <!-- Post Thumbnail --> */}
                         <div className="post-thumbnail">
                           <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={337} height={200}   />
                         </div>
 
                         {/* <!-- Post Content --> */}
-                        <div className="post-content"> 
+                        <div className="post-content p-3"> 
                           
                           <a  href={ob.attributes.mainCategory.data.attributes.path+"/"+ob.attributes.slug} className="post-title">
                            {ob.attributes.title}
@@ -420,14 +420,14 @@ export default async function Home() {
 
                       {/* <!-- Sports Video Slides --> */}
                       <div className="sport-video-slides owl-carousel mb-50 ">
-                      {[...arabicNewsData.data.slice(0, 2)].map((ob) => ( <div  key={ob.id} className="single-post-area">
+                      {[...arabicNewsData.data.slice(0, 2)].map((ob) => ( <div  key={ob.id} className="single-post-area bg-white shadow">
                           {/* <!-- Post Thumbnail --> */}
                           <div className="post-thumbnail">
                           <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={337} height={200}     />
                         </div>
 
                         {/* <!-- Post Content --> */}
-                        <div className="post-content">
+                        <div className="post-content p-3">
                           
                           <a href={ob.attributes.mainCategory.data.attributes.path+"/"+ob.attributes.slug} className="post-title">
                            {ob.attributes.title}
@@ -447,14 +447,14 @@ export default async function Home() {
                       {/* <!-- Business Video Slides --> */}
                       <div className="  mb-50 ">
                       {[...arabicNewsData.data.slice(2, 3)].map((ob) => (  
-                        <div  key={ob.id} className="single-post-area">
+                        <div  key={ob.id} className="single-post-area bg-white shadow">
                           {/* <!-- Post Thumbnail --> */}
                           <div className="post-thumbnail">
                           <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={337} height={200}     />
                         </div>
 
                         {/* <!-- Post Content --> */}
-                        <div className="post-content">
+                        <div className="post-content p-3">
                           
                           <a href={ob.attributes.mainCategory.data.attributes.path+"/"+ob.attributes.slug} className="post-title">
                            {ob.attributes.title}
@@ -472,7 +472,7 @@ export default async function Home() {
 
                   <div className="row mb-30">
                   {[...arabicNewsData.data.slice(3, 7)].map((ob) => ( <div  key={ob.id} className="col-12 col-lg-6 ">
-                      <div className="single-blog-post style-3 d-flex mb-50 ">
+                      <div className="single-blog-post style-3 d-flex mb-50 bg-white shadow">
                       <div className="post-thumbnail">
                           <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={337} height={200}     />
                         </div>
@@ -521,15 +521,15 @@ export default async function Home() {
                     </div>  ))}
                   
                   </div>
-                  {[...globalNewsData.data.slice(3, 7)].map((ob) => ( <div  key={ob.id} className="single-post-area mb-30 ">
+                  {[...globalNewsData.data.slice(3, 7)].map((ob) => ( <div  key={ob.id} className="single-post-area mb-30 bg-white shadow">
                     <div className="row align-items-center ">
-                      <div className="col-12 col-lg-6">
+                      <div className="col-12 col-lg-6 ">
                         {/* <!-- Post Thumbnail --> */}
                         <div className="post-thumbnail">
                           <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={337} height={200}     />
                         </div>
                       </div>
-                      <div className="col-12 col-lg-6">
+                      <div className="col-12 col-lg-6 ">
                         {/* <!-- Post Content --> */}
                         <div className="post-content mt-0 ">
                            
@@ -553,27 +553,42 @@ export default async function Home() {
 
               <div className="col-12 col-md-5 col-lg-4">
                 <div className="sidebar-area">
-                  {/* <!-- ***** Single Widget ***** --> */}
-                  <div className="single-widget followers-widget mb-50 ">
+
+{/* /////////////////// */}
+{/* <!-- ***** ad Widget ***** --> */}
+                  <div className="single-widget add-widget mb-50 bg-white shadow">
+                    <a href="#">
+                      <img src="img/bg-img/add.png" alt="" />
+                    </a>
+                  </div>
+{/* //////////////////// */}
+
+                  {/* <!-- ***** follower Widget ***** --> */}
+                  <div className="single-widget followers-widget mb-50 bg-white shadow">
                     <a href="#" className="facebook">
                       <i className="fa fa-facebook" aria-hidden="true"></i>
                       <span className="counter">198</span>
-                      <span>Fan</span>
+                      <span>اعجاب</span>
                     </a>
                     <a href="#" className="twitter">
                       <i className="fa fa-twitter" aria-hidden="true"></i>
                       <span className="counter">220</span>
-                      <span>Followers</span>
+                      <span>متابع</span>
+                    </a>
+                    <a href="#" className="instagram">
+                      <i className="fa fa-instagram" aria-hidden="true"></i>
+                      <span className="counter text-center">140</span>
+                      <span>متابع</span>
                     </a>
                     <a href="#" className="google">
-                      <i className="fa fa-google" aria-hidden="true"></i>
-                      <span className="counter">140</span>
-                      <span>Subscribe</span>
+                      <i className="fa fa-youtube-play" aria-hidden="true"></i>
+                      <span className="counter text-center">140</span>
+                      <span>مشترك</span>
                     </a>
                   </div>
 
                   {/* <!-- ***** Single Widget ***** --> */}
-                  <div className="single-widget latest-video-widget mb-50 ">
+                  <div className="single-widget latest-video-widget mb-50 bg-white shadow">
                     {/* <!-- Section Heading --> */}
                     <div className="section-heading style-2 mb-30">
                       <h4>مقتطفات</h4>
@@ -594,7 +609,7 @@ export default async function Home() {
                     
                   </div>
 
-                  {/* <!-- ***** Single Widget ***** --> */}
+                  {/* <!-- ***** ad Widget ***** --> */}
                   <div className="single-widget add-widget mb-50 bg-white shadow">
                     <a href="#">
                       <img src="img/bg-img/add.png" alt="" />
@@ -602,7 +617,7 @@ export default async function Home() {
                   </div>
 
                   {/* <!-- ***** Sidebar Widget ***** --> */}
-                  <div className="single-widget youtube-channel-widget mb-50">
+                  <div className="single-widget youtube-channel-widget mb-50 bg-white shadow">
                     {/* <!-- Section Heading --> */}
                     <div className="section-heading style-2 mb-30">
                    
@@ -629,16 +644,15 @@ export default async function Home() {
  
                   </div>
 
-                  {/* <!-- ***** Single Widget ***** --> */}
-                  <div className="single-widget newsletter-widget mb-50">
+                  {/* <!-- ***** newslettter Widget ***** --> */}
+                  <div className="single-widget newsletter-widget mb-50 bg-white">
                     {/* <!-- Section Heading --> */}
                     <div className="section-heading style-2 mb-30">
                       <h4>النشرة البريدية</h4>
                       <div className="line"></div>
                     </div>
                     <p>
-                      Subscribe our newsletter gor get notification about new
-                      updates, information discount, etc.
+                      اشترك معنا واحصل على المزيد من الاخبار اولا باول
                     </p>
                     {/* <!-- Newsletter Form --> */}
                     <div className="newsletter-form">
@@ -651,14 +665,14 @@ export default async function Home() {
                           placeholder="Enter your email"
                         />
                         <button type="submit" className="btn vizew-btn w-100">
-                          Subscribe
+                          اشترك
                         </button>
                       </form>
                     </div>
                   </div>
 
                   {/* <!-- ***** Single Widget ***** --> */}
-                  <div className="single-widget mb-50">
+                  <div className="single-widget mb-50 bg-white shadow">
                     {/* <!-- Section Heading --> */}
                     <div className="section-heading style-2 mb-30">
                       
