@@ -474,6 +474,7 @@ input:focus {
         width: auto;
         height: 50px;
         background-color: transparent;
+        font-family: "Cairo";
         top: 50%;
         right: 20px;
         font-size: 16px;
@@ -1819,6 +1820,7 @@ input:focus {
           width: 40px;
           height: 40px;
           background-color: #8F4872;
+          font-family: "Cairo";
           color: #ffffff;
           z-index: 10;
           top: 0;
@@ -1942,7 +1944,6 @@ textarea.form-control {
   height: 140px; }
 
 /*# sourceMappingURL=style.css.map */
-.black{
-  color :#000;
-  
+.shadow{
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }

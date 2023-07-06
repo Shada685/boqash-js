@@ -481,10 +481,12 @@ export default function About() {
 
                         {/* <!-- ***** Single Widget ***** --> */}
                         <div className="single-widget share-post-widget mb-50 bg-white">
-                            <p>Share This Post</p>
+                            <p>شارك المقال</p>
                             <a href="#" className="facebook"><i className="fa fa-facebook" aria-hidden="true"></i> Facebook</a>
                             <a href="#" className="twitter"><i className="fa fa-twitter" aria-hidden="true"></i> Twitter</a>
-                            <a href="#" className="google"><i className="fa fa-google" aria-hidden="true"></i> Google+</a>
+                            <a href="#" className="instagram"><i className="fa fa-instagram" aria-hidden="true"></i> Instagram</a>
+                            <a href="#" className="google"><i className="fa fa-youtube-play" aria-hidden="true"></i> Youtube</a>
+
                         </div>
 
                         {/* <!-- ***** Single Widget ***** --> */}
@@ -502,7 +504,7 @@ export default function About() {
                             
                         </div>
                                           {/* <!-- ***** ad Widget ***** --> */}
-<div className="single-widget add-widget mb-50 bg-white">
+<div className="single-widget add-widget mb-50 bg-white shadow">
                     <a href="#">
                       <img src="img/bg-img/add.png" alt="" />
                     </a>

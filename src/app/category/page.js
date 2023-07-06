@@ -317,7 +317,7 @@ export default function Category() {
 
                         {/* <!-- Single Blog Post --> */}
                         <div className="col-12 col-md-6">
-                            <div className="single-post-area mb-50 bg-white">
+                            <div className="single-post-area mb-50 bg-white shadow">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/12.jpg" alt="" />
@@ -340,7 +340,7 @@ export default function Category() {
 
                         {/* <!-- Single Blog Post --> */}
                         <div className="col-12 col-md-6">
-                            <div className="single-post-area mb-50 bg-white">
+                            <div className="single-post-area mb-50 bg-white shadow">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/39.jpg" alt="" />
@@ -363,7 +363,7 @@ export default function Category() {
 
                         {/* <!-- Single Blog Post --> */}
                         <div className="col-12 col-md-6">
-                            <div className="single-post-area mb-50 bg-white">
+                            <div className="single-post-area mb-50 bg-white shadow">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/40.jpg" alt="" />
@@ -385,7 +385,7 @@ export default function Category() {
                         </div>
                         {/* <!-- Single Blog Post --> */}
                         <div className="col-12 col-md-6">
-                            <div className="single-post-area mb-50 bg-white">
+                            <div className="single-post-area mb-50 bg-white shadow">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/41.jpg" alt="" />
@@ -408,7 +408,7 @@ export default function Category() {
 
                         {/* <!-- Single Blog Post --> */}
                         <div className="col-12 col-md-6">
-                            <div className="single-post-area mb-50 bg-white">
+                            <div className="single-post-area mb-50 bg-white shadow">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/42.jpg" alt="" />
@@ -431,7 +431,7 @@ export default function Category() {
 
                         {/* <!-- Single Blog Post --> */}
                         <div className="col-12 col-md-6">
-                            <div className="single-post-area mb-50 bg-white">
+                            <div className="single-post-area mb-50 bg-white shadow">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/43.jpg" alt="" />
@@ -453,7 +453,7 @@ export default function Category() {
                         </div>
                         {/* <!-- Single Blog Post --> */}
                         <div className="col-12 col-md-6">
-                            <div className="single-post-area mb-50 bg-white">
+                            <div className="single-post-area mb-50 bg-white shadow">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/44.jpg" alt=""/>
@@ -476,7 +476,7 @@ export default function Category() {
 
                         {/* <!-- Single Blog Post --> */}
                         <div className="col-12 col-md-6">
-                            <div className="single-post-area mb-50 bg-white">
+                            <div className="single-post-area mb-50 bg-white shadow">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/45.jpg" alt=""/>
@@ -499,7 +499,7 @@ export default function Category() {
 
                         {/* <!-- Single Blog Post --> */}
                         <div className="col-12 col-md-6">
-                            <div className="single-post-area mb-50 bg-white">
+                            <div className="single-post-area mb-50 bg-white shadow">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/46.jpg" alt="" />
@@ -522,7 +522,7 @@ export default function Category() {
 
                         {/* <!-- Single Blog Post --> */}
                         <div className="col-12 col-md-6">
-                            <div className="single-post-area mb-50 bg-white">
+                            <div className="single-post-area mb-50 bg-white shadow">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/47.jpg" alt="" />
@@ -545,7 +545,7 @@ export default function Category() {
 
                         {/* <!-- Single Blog Post --> */}
                         <div className="col-12 col-md-6">
-                            <div className="single-post-area mb-50 bg-white">
+                            <div className="single-post-area mb-50 bg-white shadow">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/48.jpg" alt="" />
@@ -568,7 +568,7 @@ export default function Category() {
 
                         {/* <!-- Single Blog Post --> */}
                         <div className="col-12 col-md-6">
-                            <div className="single-post-area mb-50 bg-white">
+                            <div className="single-post-area mb-50 bg-white shadow">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
                                     <img src="img/bg-img/49.jpg" alt="" />
@@ -591,7 +591,7 @@ export default function Category() {
 {/* post single list */}
  {/* <!-- Single Post Area --> */}
                     <div className="single-post-area style-2">
-                        <div className="row align-items-center bg-white">
+                        <div className="row align-items-center bg-white shadow">
                             <div className="col-12 col-md-6 ">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
@@ -624,7 +624,7 @@ export default function Category() {
 
                     {/* <!-- Single Post Area --> */}
                     <div className="single-post-area style-2">
-                        <div className="row align-items-center bg-white">
+                        <div className="row align-items-center bg-white shadow">
                             <div className="col-12 col-md-6">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
@@ -657,7 +657,7 @@ export default function Category() {
 
                     {/* <!-- Single Post Area --> */}
                     <div className="single-post-area style-2">
-                        <div className="row align-items-center bg-white">
+                        <div className="row align-items-center bg-white shadow">
                             <div className="col-12 col-md-6">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
@@ -690,7 +690,7 @@ export default function Category() {
 
                     {/* <!-- Single Post Area --> */}
                     <div className="single-post-area style-2">
-                        <div className="row align-items-center bg-white">
+                        <div className="row align-items-center bg-white shadow">
                             <div className="col-12 col-md-6">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
@@ -723,7 +723,7 @@ export default function Category() {
 
                     {/* <!-- Single Post Area --> */}
                     <div className="single-post-area style-2">
-                        <div className="row align-items-center bg-white">
+                        <div className="row align-items-center bg-white shadow">
                             <div className="col-12 col-md-6">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
@@ -756,7 +756,7 @@ export default function Category() {
 
                     {/* <!-- Single Post Area --> */}
                     <div className="single-post-area style-2">
-                        <div className="row align-items-center bg-white">
+                        <div className="row align-items-center bg-white shadow">
                             <div className="col-12 col-md-6">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
@@ -810,26 +810,40 @@ export default function Category() {
                     <div className="sidebar-area">
 
                         {/* <!-- ***** Single Widget ***** --> */}
-                        <div className="single-widget followers-widget mb-50 bg-white">
-                            <a href="#" className="facebook"><i className="fa fa-facebook" aria-hidden="true"></i><span
-                                    className="counter">198</span><span>Fan</span></a>
-                            <a href="#" className="twitter"><i className="fa fa-twitter" aria-hidden="true"></i><span
-                                    className="counter">220</span><span>Followers</span></a>
-                            <a href="#" className="google"><i className="fa fa-google" aria-hidden="true"></i><span
-                                    className="counter">140</span><span>Subscribe</span></a>
-                        </div>
+                        <div className="single-widget followers-widget mb-50 bg-white shadow">
+                    <a href="#" className="facebook">
+                      <i className="fa fa-facebook" aria-hidden="true"></i>
+                      <span className="counter">198</span>
+                      <span>اعجاب</span>
+                    </a>
+                    <a href="#" className="twitter">
+                      <i className="fa fa-twitter" aria-hidden="true"></i>
+                      <span className="counter">220</span>
+                      <span>متابع</span>
+                    </a>
+                    <a href="#" className="instagram">
+                      <i className="fa fa-instagram" aria-hidden="true"></i>
+                      <span className="counter text-center">140</span>
+                      <span>متابع</span>
+                    </a>
+                    <a href="#" className="google">
+                      <i className="fa fa-youtube-play" aria-hidden="true"></i>
+                      <span className="counter text-center">140</span>
+                      <span>مشترك</span>
+                    </a>
+                  </div>
 
                     
 
                         {/* <!-- ***** Single Widget ***** --> */}
-                        <div className="single-widget add-widget mb-50 bg-white">
+                        <div className="single-widget add-widget mb-50 bg-white shadow">
                             <a href="#"><img src="img/bg-img/add.png" alt=""/></a>
                         </div>
 
                      
 
                         {/* <!-- ***** Single Widget ***** --> */}
-                        <div className="single-widget newsletter-widget mb-50 bg-white">
+                        <div className="single-widget newsletter-widget mb-50 bg-white  shadow">
                             {/* <!-- Section Heading --> */}
                             <div className="section-heading style-2 mb-30">
                                 <h4>النشرة البريدية</h4>
@@ -839,7 +853,7 @@ export default function Category() {
 
 </p>
                             {/* <!-- Newsletter Form --> */}
-                            <div className="newsletter-form bg-white">
+                            <div className="newsletter-form bg-white shadow ">
                                 <form action="#" method="post">
                                     <input type="email" name="nl-email" className="form-control mb-15" id="emailnl"
                                         placeholder="Enter your email" />
