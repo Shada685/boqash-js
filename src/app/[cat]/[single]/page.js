@@ -1,250 +1,10 @@
-import Head from 'next/head'
-import Script from "next/script";
-import Footer from '../components/footer';
-import '../../../public/style.css'
 
-
-export default function About() {
+import { BASE_URL ,CATREVALIDATE,headers} from "../../api/config";
+ 
+export default function Page() {
   return (
     <>
-    <Head>
 
-    </Head>
-    <body>
-{/* <!-- ##### Header Area Start ##### --> */}
-        <header className="header-area">
-          {/* <!-- Top Header Area --> */}
-          <div className="top-header-area pt-2">
-            <div className="container">
-              <div className="row align-items-center">
-                <div className="col-12 col-md-6">
-                  {/* <!-- Breaking News Widget --> */}
-                  <div className="breaking-news-area d-flex align-items-center">
-                    <div className="news-title">
-                      <p>اخر الاخبار:</p>
-                    </div>
-                    <div id="breakingNewsTicker" className="ticker">
-                      <ul>
-                        <li>
-                          <a href="single-post.html">
-                            10 Things Amazon Echo Can Do
-                          </a>
-                        </li>
-                        <li>
-                          <a href="single-post.html">
-                            Welcome to DracoWare Family.
-                          </a>
-                        </li>
-                        <li>
-                          <a href="single-post.html">
-                            Boys 'doing well' after Thai
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-12 col-md-6">
-                  <div className="top-meta-data d-flex align-items-center justify-content-end">
-                    {/* <!-- Top Social Info --> */}
-                    <div className="top-social-info">
-                      <a href="#">
-                        <i className="fa fa-facebook"></i>
-                      </a>
-                      <a href="#">
-                        <i className="fa fa-twitter"></i>
-                      </a>
-                     
-                      <a href="#">
-                        <i className="fa fa-instagram"></i>
-                      </a>
-                      <a href="#">
-                        <i className="fa fa-youtube-play"></i>
-                      </a>
-                    </div>
-                  
-                  
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* <!-- Navbar Area --> */}
-          <div className="vizew-main-menu" id="sticker">
-            <div className="classy-nav-container breakpoint-off">
-              <div className="container">
-                {/* <!-- Menu --> */}
-                <nav
-                  className="classy-navbar justify-content-between"
-                  id="vizewNav"
-                >
-                  {/* <!-- Nav brand --> */}
-                  <a href="/" className="nav-brand">
-                    <img src="img/core-img/logo.png" alt="" />
-                  </a>
-
-                  {/* <!-- Navbar Toggler --> */}
-                  <div className="classy-navbar-toggler">
-                    <span className="navbarToggler">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </span>
-                  </div>
-
-                  <div className="classy-menu">
-                    {/* <!-- Close Button --> */}
-                    <div className="classycloseIcon">
-                      <div className="cross-wrap">
-                        <span className="top"></span>
-                        <span className="bottom"></span>
-                      </div>
-                    </div>
-
-                    {/* <!-- Nav Start --> */}
-                    <div className="classynav">
-                      <ul>
-                        <li className="active">
-                          <a href="/">الرئيسية</a>
-                        </li>
-                        {/* <li>
-                          <a href="archive-list.html">الاخبار المحلية</a>
-                        </li> */}
-                        
-                        <li>
-                          <a href="">الاخبار</a>
-                          <ul className="dropdown">
-                            <li>
-                              <a href="/">- الاخبار المحلية</a>
-                            </li>
-                            <li>
-                              <a href="archive-list.html">- الاخبار العربية</a>
-                            </li>
-                            <li>
-                              <a href="archive-grid.html">- الاخبار العالمية</a>
-                            </li>
-                            <li>
-                              <a href="archive-grid.html">- الحرب الروسية</a>
-                            </li>
-                           
-                           
-                          </ul>
-                        </li>
-                        <li>
-                          <a href="">الاسعار</a>
-                          <div className="megamenu">
-                            <ul className="single-mega cn-col-4">
-                              <li>
-                                <a href="/">- العملة</a>
-                              </li>
-                              <li>
-                                <a href="archive-list.html">- الدولار</a>
-                              </li>
-                              <li>
-                                <a href="archive-grid.html">- الريال السعودي</a>
-                              </li>
-                              <li>
-                                <a href="single-post.html">- اليورو</a>
-                              </li>
-                              <li>
-                                <a href="video-post.html">
-                                  - درهم اماراتي
-                                </a>
-                              </li>
-                             
-                            </ul>
-                            <ul className="single-mega cn-col-4">
-                              <li>
-                                <a href="/">- النفط</a>
-                              </li>
-                              <li>
-                                <a href="archive-list.html">- البترول</a>
-                              </li>
-                              <li>
-                                <a href="archive-grid.html">- الديزل</a>
-                              </li>
-                              <li>
-                                <a href="single-post.html">- سولار</a>
-                              </li>
-                              
-                            </ul>
-                            <ul className="single-mega cn-col-4">
-                              <li>
-                                <a href="/">- الذهب</a>
-                              </li>
-                              <li>
-                                <a href="archive-list.html">- عيار 24</a>
-                              </li>
-                              <li>
-                                <a href="archive-grid.html">- عيار 21</a>
-                              </li>
-                              <li>
-                                <a href="single-post.html">- عيار 18</a>
-                              </li>
-                              <li>
-                                <a href="video-post.html">
-                                  - الجنية
-                                </a>
-                              </li>
-                              <li>
-                                <a href="contact.html">- قيراط</a>
-                              </li>
-                              <li>
-                                <a href="typography.html">- سبيكة</a>
-                              </li>
-                              
-                            </ul>
-                            <ul className="single-mega cn-col-4">
-                              <li>
-                                <a href="/">- المواد الغذائية</a>
-                              </li>
-                              <li>
-                                <a href="archive-list.html">- الخضار</a>
-                              </li>
-                              <li>
-                                <a href="archive-grid.html">- الفواكة</a>
-                              </li>
-                              <li>
-                                <a href="single-post.html">- الدقيق</a>
-                              </li>
-                              <li>
-                                <a href="video-post.html">
-                                  - البر
-                                </a>
-                              </li>
-                              <li>
-                                <a href="contact.html">- السكر</a>
-                              </li>
-                              <li>
-                                <a href="typography.html">- الارز</a>
-                              </li>
-                              
-                            </ul>
-                          </div>
-                        </li>
-                        <li>
-                          <a href="contact.html">مقالات</a>
-                        </li>
-                        <li>
-                          <a href="contact.html">مقتطفات</a>
-                        </li>
-                        <li>
-                          <a href="contact.html">عن بقش</a>
-                        </li>
-                        <li>
-                          <a href="contact.html">للاعلان</a>
-                        </li>
-                      </ul>
-                    </div>
-                    {/* <!-- Nav End --> */}
-                  </div>
-                </nav>
-              </div>
-            </div>
-          </div>
-        </header>
-        {/* <!-- ##### Header Area End ##### --> */}
 
 {/* <!-- ##### Breadcrumb Area Start ##### --> */}
     <div className="vizew-breadcrumb">
@@ -275,9 +35,12 @@ export default function About() {
             <div className="single-feature-post video-post bg-img pager-article"
                 style={{backgroundImage: "url(img/bg-img/15.jpg);"}}>
                 {/* <!-- Post Content --> */}
+
                 <div className="post-content">
                     <a href="#" className="post-cata cata-sm cata-success">Sports</a>
                     <a href="video-post.html" className="post-title">Searching for the 'angel' who held me on Westminster
+
+                
                         Bridge</a>
                     <div className="post-meta d-flex">
                         <a href="#"><i className="fa fa-comments-o" aria-hidden="true"></i> 18</a>
@@ -452,12 +215,14 @@ export default function About() {
                                             </div>
 
                                             {/* <!-- Post Content --> */}
+
                                             <div className="post-content p-3">
                                                 <a href="#" className="post-cata cata-sm cata-danger">Game</a>
                                                 <a href="single-post.html" className="post-title">Searching for the 'angel'
                                                     who on Westminste</a>
                                                 <div className="post-meta d-flex">
                                                     <a href="#"><i className="fa fa-comments-o" aria-hidden="true"></i>
+
                                                         28</a>
                                                     <a href="#"><i className="fa fa-eye" aria-hidden="true"></i> 17</a>
                                                     <a href="#"><i className="fa fa-thumbs-o-up" aria-hidden="true"></i>
@@ -517,22 +282,33 @@ export default function About() {
     </section>
     {/* <!-- ##### Post Details Area End ##### --> */}
 
-
-{/* <!-- ##### Footer Area Start ##### --> */}
-    <Footer />
-    {/* <!-- ##### Footer Area End ##### --> */}
+ 
+ 
 
 
-    {/* js import section start */}
 
-      <Script src="/js/jquery/jquery-2.2.4.min.js" />
-      <Script src="/js/bootstrap/popper.min.js" />
-      <Script src="/js/bootstrap/bootstrap.min.js" />
-      <Script src="/js/plugins/plugins.js" />
-      <Script src="/js/active.js" />
-
-    {/* js import section end */}
-    </body>
+  
     </>
   )
 }
+
+export async function generateStaticParams() {
+    
+//     const news = await fetch(`${BASE_URL}/api/news?populate=*&pagination[pageSize]=100`,{ headers}).then((res) => res.json())
+//     const data=[...news.data];
+//     for(let i=2; i<=news.meta.pagination.pageCount;i++)
+//     {
+//        let res= await fetch(`${BASE_URL}/api/news?populate=*&pagination[pageSize]=100??pagination[page]=${i}`,{ headers}).then((res) => res.json())
+// data=[...data,res.data]
+//     }
+   
+//     return data.map((n) => ({
+//         params: { cat: n.attributes.mainCategory.data.attributes.path,single:n.attributes.slug }
+        
+//     }))
+return [
+    { cat: 'arabic-news', single: '1' },
+   
+  ]
+
+  }
