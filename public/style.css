@@ -675,7 +675,7 @@ input:focus {
           font-weight: 400;
           color: #db4437; }
   .vizew-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
-    content: "\f105";
+    content: "\f104";
     font-family: "FontAwesome";
     color: #fff; }
 
