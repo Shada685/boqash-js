@@ -6,17 +6,9 @@ import "../../public/css/style-currency.css";
 
 export default function Home() {
   return (
-    <>
-      <Head>
-        <meta charset="UTF-8" />
-        <meta name="description" content="" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-      </Head>
-      <body>
+    
+      
+      <>
         {/* <!-- Preloader --> */}
 
         {/* <!-- ##### Header Area Start ##### --> */}
@@ -440,7 +432,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        ))}
+   
       </div>
 
                   <div
@@ -562,8 +554,7 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
+                
 
               <div className="col-12 col-md-5 col-lg-4">
                 <ul className="nav vizew-nav-tab" role="tablist">
@@ -691,12 +682,12 @@ export default function Home() {
                   </li>
 
              
-        ))}
+    
       </ul>
               </div>
-    </div>
-    </div>
+    
     </section>
+    </>
   );
 }
 
