@@ -101,7 +101,7 @@ export default async function Page({params,searchParams}) {
                             <div className="single-post-area mb-50 bg-white shadow">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
-                                    <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} width={337} height={200} alt={ob.attributes.title} />
+                                    <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} width={400} height={200} alt={ob.attributes.title} />
 
                                     
                                 </div>
@@ -147,7 +147,7 @@ export default async function Page({params,searchParams}) {
                     </nav> */}
                 <div className="col-12 col-md-6 col-lg-4">
                     <div className="sidebar-area">
-                    <div className="single-widget latest-video-widget mb-50 ">
+                    <div className="single-widget latest-video-widget mb-50 bg-image shadow">
                     {/* <!-- Section Heading --> */}
                     <div className="section-heading style-2 mb-30">
                       <h4>مقتطفات {cat.data[0]?.attributes.title}</h4>
@@ -167,43 +167,67 @@ export default async function Page({params,searchParams}) {
                     </div>))}
                     
                   </div>
-                        {/* <!-- ***** Single Widget ***** --> */}
-                        <div className="single-widget followers-widget mb-50">
-                            <a href="#" className="facebook"><i className="fa fa-facebook" aria-hidden="true"></i><span
-                                    className="counter">198</span><span>Fan</span></a>
-                            <a href="#" className="twitter"><i className="fa fa-twitter" aria-hidden="true"></i><span
-                                    className="counter">220</span><span>Followers</span></a>
-                            <a href="#" className="google"><i className="fa fa-google" aria-hidden="true"></i><span
-                                    className="counter">140</span><span>Subscribe</span></a>
-                        </div>
+                        {/* <!-- ***** follower Widget ***** --> */}
+                  <div className="single-widget followers-widget mb-50 bg-white shadow">
+                    <a href="#" className="facebook">
+                      <i className="fa fa-facebook" aria-hidden="true"></i>
+                      <span className="counter">198</span>
+                      <span>اعجاب</span>
+                    </a>
+                    <a href="#" className="twitter">
+                      <i className="fa fa-twitter" aria-hidden="true"></i>
+                      <span className="counter">220</span>
+                      <span>متابع</span>
+                    </a>
+                    <a href="#" className="instagram">
+                      <i className="fa fa-instagram" aria-hidden="true"></i>
+                      <span className="counter text-center">140</span>
+                      <span>متابع</span>
+                    </a>
+                    <a href="#" className="google">
+                      <i className="fa fa-youtube-play" aria-hidden="true"></i>
+                      <span className="counter text-center">140</span>
+                      <span>مشترك</span>
+                    </a>
+                  </div>
 
                     
+ {/* <!-- ***** ad Widget ***** --> */}
 
-                        {/* <!-- ***** Single Widget ***** --> */}
-                        <div className="single-widget add-widget mb-50">
-                            <a href="#"><img src="img/bg-img/add.png" alt=""/></a>
-                        </div>
+               <div className="single-widget add-widget mb-50 bg-white shadow">
+                    <a href="#">
+                      <img src="img/bg-img/add.png" alt="" />
+                    </a>
+                  </div>
 
                      
 
-                        {/* <!-- ***** Single Widget ***** --> */}
-                        <div className="single-widget newsletter-widget mb-50">
-                            {/* <!-- Section Heading --> */}
-                            <div className="section-heading style-2 mb-30">
-                                <h4>Newsletter</h4>
-                                <div className="line"></div>
-                            </div>
-                            <p>Subscribe our newsletter gor get notification about new updates, information discount,
-                                etc.</p>
-                            {/* <!-- Newsletter Form --> */}
-                            <div className="newsletter-form">
-                                <form action="#" method="post">
-                                    <input type="email" name="nl-email" className="form-control mb-15" id="emailnl"
-                                        placeholder="Enter your email" />
-                                    <button type="submit" className="btn vizew-btn w-100">Subscribe</button>
-                                </form>
-                            </div>
-                        </div>
+                        {/* <!-- ***** newsletter Widget ***** --> */}
+                  <div className="single-widget newsletter-widget mb-50 bg-white shadow">
+                    {/* <!-- Section Heading --> */}
+                    <div className="section-heading style-2 mb-30">
+                      <h4>النشرة البريدية</h4>
+                      <div className="line"></div>
+                    </div>
+                    <p>
+                      اشترك معنا واحصل على المزيد من الاخبار اولا باول
+                    </p>
+                    {/* <!-- Newsletter Form --> */}
+                    <div className="newsletter-form">
+                      <form action="#" method="post">
+                        <input
+                          type="email"
+                          name="nl-email"
+                          className="form-control mb-15"
+                          id="emailnl"
+                          placeholder="Enter your email"
+                        />
+                        <button type="submit" className="btn vizew-btn w-100">
+                          اشترك
+                        </button>
+                      </form>
+                    </div>
+                  </div>
 
                         
 

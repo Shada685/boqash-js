@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;800;900;1000&display=swap');
+.body-z {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: "Roboto";
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 90%;
+    background: #8F4872;
+    box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2),
+        0px 10px 14px 1px rgba(0, 0, 0, 0.14), 0px 4px 18px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    height: 88%;
+    width: 88%;
+    background-color: white;
+    border-radius: 8px;
+    font-family: 600;
+}
+
+.content>.top {
+    display: flex;
+    justify-content: flex-start;
+    font-family: "Cairo";
+    font-weight: 600;
+    padding-right: 10px;
+    align-items: center;
+    height: 20%;
+    background-color: white;
+
+    p {
+        font-weight: bold;
+        font-size: 18px;
+        padding-right: 10px;
+    }
+
+    .color {
+        height: 20px;
+        width: 20px;
+        margin-left: 5px;
+        margin-right: 10px;
+        border-radius: 50%;
+        background-color: #8F4872;
+    }
+}
+
+.content>.middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40%;
+    font-family: "Cairo";
+    /* background: linear-gradient(#db37db, #fde8c9 75%); */
+    padding-left: 15px;
+    padding-right: 15px;
+
+    img {
+        width: 60%;
+    }
+
+    div>p:first-child {
+        margin-bottom: 5px;
+        font-size: 12px;
+    }
+
+    div>p:last-child {
+        margin: 0;
+        font-weight: bold;
+    }
+}
+.content>.gold {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40%;
+    font-family: "Cairo";
+    background: linear-gradient(#BF953F, #FCF6BA 75%);
+    padding-left: 15px;
+    padding-right: 15px;
+
+    img {
+        width: 60%;
+    }
+
+    div>p:first-child {
+        margin-bottom: 5px;
+        font-size: 12px;
+    }
+
+    div>p:last-child {
+        margin: 0;
+        font-weight: bold;
+    }
+}
+
+.content>.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40%;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: "Cairo";
+    background: linear-gradient(#313330, #b8b8b8 75%);
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #ffffff;
+
+        p:first-child {
+            font-weight: bold;
+            color: #ffffff;
+        }
+    }
+}

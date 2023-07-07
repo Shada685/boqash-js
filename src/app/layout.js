@@ -5,8 +5,6 @@ import { Suspense } from 'react';
 import { NEWSREVALIDATE } from './api/config';
 import { headers,BASE_URL } from './api/config';
 import '../../public/style.css'
-import '../../public/css/style-grocery-price.css'
-import '../../public/css/style-currency.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -66,10 +64,10 @@ export default async function RootLayout({ children }) {
                   <div className="top-meta-data d-flex align-items-center justify-content-end">
                     {/* <!-- Top Social Info --> */}
                     <div className="top-social-info">
-                      <a href="#">
+                      <a href="https://www.facebook.com/BoqashEcon/">
                         <i className="fa fa-facebook"></i>
                       </a>
-                      <a href="#">
+                      <a href="http://twitter.com/BoqashO">
                         <i className="fa fa-twitter"></i>
                       </a>
                      
@@ -280,14 +278,14 @@ export default async function RootLayout({ children }) {
                   </p>
                   {/* <!-- Footer Newsletter Area --> */}
                   <div className="footer-social-area">
-                    <a href="#" className="facebook">
+                    <a href="https://www.facebook.com/BoqashEcon/" className="facebook">
                       <i className="fa fa-facebook"></i>
                     </a>
                     
                     <a href="#" className="instagram">
                       <i className="fa fa-instagram"></i>
                     </a>
-                    <a href="#" className="twitter">
+                    <a href="http://twitter.com/BoqashO" className="twitter">
                       <i className="fa fa-twitter"></i>
                     </a>
                     <a href="#" className="youtube">

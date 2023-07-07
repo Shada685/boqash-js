@@ -1,6 +1,7 @@
- 
 
-
+import '../../public/css/style-grocery-price.css'
+import '../../public/css/style-currency.css'
+import '../../public/css/style-price.css'
 import Image from "next/image";
  
 import { NEWSREVALIDATE,BASE_URL,headers} from "./api/config";
@@ -11,6 +12,7 @@ async function FeaturedPinnedPostedList({ promise }) {
   
     
   return (
+    <>
     <section className="hero--area section-padding-80">
     <div className="container">
       <div className="row">
@@ -102,7 +104,17 @@ async function FeaturedPinnedPostedList({ promise }) {
               </div>
     </div>
     </div>
-    </section>
+    </section> 
+
+    {/* herzontal ad */}
+<div className="container mt-2 mb-5">
+  <a>
+    <img src="img/bg-img/h-ad.png" alt=""/>
+  </a>
+
+</div>
+{/* herzontal ad */}
+</>
   );
 }
 
@@ -145,147 +157,199 @@ export default async function Home() {
                     <h4>الاسعار</h4>
                     <div className="line"></div>
                   </div>
-              <div className="row">
+              
+
+{/* ///////////////////////// */}
+<div className="row">
               <div className="col-12 col-md-6 col-lg-6">
                       <div className="single-post-area mb-80 ">
 {/* //////////////////////// */}
-<div className="body-n">                       
-<div class="container-n">
-    <div class="weather-side">
-      <div class="weather-gradient"></div>
-      <div class="date-container">
-        <h2 class="date-dayname">Tuesday</h2><span class="date-day">15 Jan 2019</span><i class="location-icon"
-          data-feather="map-pin"></i><span class="location">Paris, FR</span>
-      </div>
-      <div class="weather-container"><i class="weather-icon" data-feather="sun"></i>
-        <h1 class="weather-temp">29°C</h1>
-        <h3 class="weather-desc">Sunny</h3>
-      </div>
-    </div>
-    <div class="info-side">
-      <div class="today-info-container">
-        <div class="today-info">
-          <div class="precipitation"> <span class="title">PRECIPITATION</span><span class="value">0 %</span>
-            <div class="clear"></div>
-          </div>
-          <div class="humidity"> <span class="title">HUMIDITY</span><span class="value">34 %</span>
-            <div class="clear"></div>
-          </div>
-          <div class="wind"> <span class="title">WIND</span><span class="value">0 km/h</span>
-            <div class="clear"></div>
-          </div>
+<div className="body-z">
+    <div className="card">
+        <div className="content">
+            <div className="top">
+                <p>صنعاء</p>
+                <div className="color"></div>
+            </div>
+            <div className="middle" style={{ backgroundImage : "url(/img/bg-img/sanaa.jpg)" }}>
+                
+            </div>
+            <div className="middle " >
+              <div >
+                 عملات
+              </div>
+                <div>
+                    <p>دولار</p>
+                    <p>530</p>
+                </div>
+                <div>
+                    <p>ريال سعودي</p>
+                    <p>140</p>
+                </div>
+                <div>
+                    <p>يورو</p>
+                    <p>550</p>
+                </div>
+            </div>
+            <div className="gold " >
+              <heading>
+                 ذهب
+              </heading>
+                <div>
+                    <p>عيار 24</p>
+                    <p>36</p>
+                </div>
+                <div>
+                    <p>عيار 21</p>
+                    <p>93</p>
+                </div>
+                <div>
+                    <p>عيار 18</p>
+                    <p>68</p>
+                </div>
+            </div>
+            <div className="bottom">
+              <div >
+                 مشتقات <br/>نفطية
+              </div>
+                <div>
+                    <p>بترول</p>
+                    <p>530</p>
+                </div>
+                <div>
+                    <p>ديزل </p>
+                    <p>140</p>
+                </div>
+                <div>
+                    <p>غاز</p>
+                    <p>550</p>
+                </div>
+              
+            </div>
         </div>
-      </div>
-      <div class="week-container">
-        <ul class="week-list">
-          <li class="active"><i class="day-icon" data-feather="sun"></i><span class="day-name">Tue</span><span
-              class="day-temp">29°C</span></li>
-          <li><i class="day-icon" data-feather="cloud"></i><span class="day-name">Wed</span><span
-              class="day-temp">21°C</span></li>
-          <li><i class="day-icon" data-feather="cloud-snow"></i><span class="day-name">Thu</span><span
-              class="day-temp">08°C</span></li>
-          <li><i class="day-icon" data-feather="cloud-rain"></i><span class="day-name">Fry</span><span
-              class="day-temp">19°C</span></li>
-          <div class="clear"></div>
-        </ul>
-      </div>
-      
     </div>
-  </div>
-  </div>
+</div>
 {/* ///////////////////////// */}
                       </div>
               </div>
              <div className="col-12 col-md-6 col-lg-6">
                       <div className="single-post-area mb-80 ">
 {/* //////////////////// */}
-<div className="body-n">                       
-<div class="container-n">
-    <div class="weather-side">
-      <div class="weather-gradient"></div>
-      <div class="date-container">
-        <h2 class="date-dayname">Tuesday</h2><span class="date-day">15 Jan 2019</span><i class="location-icon"
-          data-feather="map-pin"></i><span class="location">Paris, FR</span>
-      </div>
-      <div class="weather-container"><i class="weather-icon" data-feather="sun"></i>
-        <h1 class="weather-temp">29°C</h1>
-        <h3 class="weather-desc">Sunny</h3>
-      </div>
-    </div>
-    <div class="info-side">
-      <div class="today-info-container">
-        <div class="today-info">
-          <div class="precipitation"> <span class="title">PRECIPITATION</span><span class="value">0 %</span>
-            <div class="clear"></div>
-          </div>
-          <div class="humidity"> <span class="title">HUMIDITY</span><span class="value">34 %</span>
-            <div class="clear"></div>
-          </div>
-          <div class="wind"> <span class="title">WIND</span><span class="value">0 km/h</span>
-            <div class="clear"></div>
-          </div>
-        </div>
-      </div>
-      <div class="week-container">
-        <ul class="week-list">
-          <li class="active"><i class="day-icon" data-feather="sun"></i><span class="day-name">Tue</span><span
-              class="day-temp">29°C</span></li>
-          <li><i class="day-icon" data-feather="cloud"></i><span class="day-name">Wed</span><span
-              class="day-temp">21°C</span></li>
-          <li><i class="day-icon" data-feather="cloud-snow"></i><span class="day-name">Thu</span><span
-              class="day-temp">08°C</span></li>
-          <li><i class="day-icon" data-feather="cloud-rain"></i><span class="day-name">Fry</span><span
-              class="day-temp">19°C</span></li>
-          <div class="clear"></div>
-        </ul>
-      </div>
-      
-    </div>
-  </div>
-  </div>
 
+<div className="body-z">
+    <div className="card">
+        <div className="content">
+            <div className="top">
+                <p>عدن</p>
+                <div className="color"></div>
+            </div>
+            <div className="middle" style={{ backgroundImage : "url(/img/bg-img/aden.jpg)" }}>
+                
+            </div>
+            <div className="middle " >
+              <div >
+                 عملات
+              </div>
+                <div>
+                    <p>دولار</p>
+                    <p>530</p>
+                </div>
+                <div>
+                    <p>ريال سعودي</p>
+                    <p>140</p>
+                </div>
+                <div>
+                    <p>يورو</p>
+                    <p>550</p>
+                </div>
+            </div>
+            <div className="gold " >
+              <heading>
+                 ذهب
+              </heading>
+                <div>
+                    <p>عيار 24</p>
+                    <p>36</p>
+                </div>
+                <div>
+                    <p>عيار 21</p>
+                    <p>93</p>
+                </div>
+                <div>
+                    <p>عيار 18</p>
+                    <p>68</p>
+                </div>
+            </div>
+            <div className="bottom">
+              <div >
+                 مشتقات <br/>نفطية
+              </div>
+                <div>
+                    <p>بترول</p>
+                    <p>530</p>
+                </div>
+                <div>
+                    <p>ديزل </p>
+                    <p>140</p>
+                </div>
+                <div>
+                    <p>غاز</p>
+                    <p>550</p>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+</div>
 {/* /////////////////////// */}
                       </div>
              </div>
               </div>
-             <div className="col-12 col-md-12 col-lg-12 mt-5">
-                      <div className="single-post-area mb-80 ">
 
-{/* //////////////////// */}
+{/* /////////////////////// */}
 
-<div className="body-m">
-<div class="CartContainer">
-		<div class="Header">
-			<h3 class="Heading">اسعار المواد الغذائية</h3>
+             
+              
+
+            </div>
+            <div className="col-12 col-md-5 col-lg-4">
+                <div className="sidebar-area">
+                  
+                  {/* //////////////////// */}
+
+<div className="body-m mb-50">
+<div className="CartContainer">
+		<div className="Header">
+			<h3 className="Heading">اسعار المواد الغذائية</h3>
 		</div>
 
-		<div class="Cart-Items">
-			<div class="image-box">
+		<div className="Cart-Items">
+			<div className="image-box">
 				<img src="img/bg-img/apple.png" style={{ height:"100px" }} />
 			</div>
-			<div class="about">
-				<h1 class="title">Apple Juice</h1>
+			<div className="about">
+				<h1 className="title">عصير</h1>
 
 			</div>
 
-			<div class="prices">
-				<div class="amount">$2.99</div>
+			<div className="prices">
+				<div className="amount">400</div>
 
 			</div>
 		</div>
 		<hr />
-		<div class="Cart-Items pad">
-			<div class="image-box">
+		<div className="Cart-Items pad">
+			<div className="image-box">
 				<img src="img/bg-img/grapes.png" style={{ height:"100px" }} />
 			</div>
-			<div class="about">
-				<h2 class="title">Grapes Juice</h2>
+			<div className="about">
+				<h2 className="title">ببسي</h2>
 				
 
 			</div>
 
-			<div class="prices">
-				<div class="amount">$3.19</div>
+			<div className="prices">
+				<div className="amount">300</div>
 
 			</div>
 		</div>
@@ -295,17 +359,10 @@ export default async function Home() {
 </div>
 {/* ///////////////////// */}
 
-                      </div>
-             </div>
-              
 
-            </div>
-            <div className="col-12 col-md-5 col-lg-4">
-                <div className="sidebar-area">
-                  
 {/* /////////////////// */}
 {/* <!-- ***** ad Widget ***** --> */}
-                  <div className="single-widget add-widget mb-50 bg-white shadow">
+                  <div className="single-widget add-widget mb-50 bg-white shadow ">
                     <a href="#">
                       <img src="img/bg-img/add.png" alt="" />
                     </a>
@@ -352,6 +409,7 @@ export default async function Home() {
                         </div>
                       </div>
                     </div>
+                    
       ))}
                    
                     
@@ -364,7 +422,7 @@ export default async function Home() {
                     {[...localNewsData.data.slice(2, 4)].map((ob) => (  <div  key={ob.id} className="col-12 col-md-6 col-lg-6 "> <div   className="single-post-area mb-80 bg-white shadow">
                         {/* <!-- Post Thumbnail --> */}
                         <div className="post-thumbnail">
-                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={337} height={200}   />
+                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={400} height={200}   />
                         </div>
 
                         {/* <!-- Post Content --> */}
@@ -389,7 +447,7 @@ export default async function Home() {
                     {[...localNewsData.data.slice(4, 7)].map((ob) => (   <div  key={ob.id} className="col-12 col-md-6 col-lg-4"> <div   className="single-post-area mb-80 ">
                         {/* <!-- Post Thumbnail --> */}
                         <div className="post-thumbnail">
-                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={337} height={200} />
+                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={400} height={200} />
                         </div>
 
                         {/* <!-- Post Content --> */}
@@ -423,7 +481,7 @@ export default async function Home() {
                       {[...arabicNewsData.data.slice(0, 2)].map((ob) => ( <div  key={ob.id} className="single-post-area bg-white shadow">
                           {/* <!-- Post Thumbnail --> */}
                           <div className="post-thumbnail">
-                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={337} height={200}     />
+                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={400} height={200}     />
                         </div>
 
                         {/* <!-- Post Content --> */}
@@ -450,7 +508,7 @@ export default async function Home() {
                         <div  key={ob.id} className="single-post-area bg-white shadow">
                           {/* <!-- Post Thumbnail --> */}
                           <div className="post-thumbnail">
-                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={337} height={200}     />
+                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={400} height={200}     />
                         </div>
 
                         {/* <!-- Post Content --> */}
@@ -474,7 +532,7 @@ export default async function Home() {
                   {[...arabicNewsData.data.slice(3, 7)].map((ob) => ( <div  key={ob.id} className="col-12 col-lg-6 ">
                       <div className="single-blog-post style-3 d-flex mb-50 bg-white shadow">
                       <div className="post-thumbnail">
-                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={337} height={200}     />
+                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={400} height={200}     />
                         </div>
 
                         {/* <!-- Post Content --> */}
@@ -490,7 +548,14 @@ export default async function Home() {
                       </div>
                     </div>))}
                  
-                   
+                   {/* herzontal ad */}
+<div className="container mt-2 mb-5">
+  <a>
+    <img src="img/bg-img/h-ad.png" alt=""/>
+  </a>
+
+</div>
+{/* herzontal ad */}
  
                   </div>
 
@@ -526,7 +591,7 @@ export default async function Home() {
                       <div className="col-12 col-lg-6 ">
                         {/* <!-- Post Thumbnail --> */}
                         <div className="post-thumbnail">
-                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={337} height={200}     />
+                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={400} height={200}     />
                         </div>
                       </div>
                       <div className="col-12 col-lg-6 ">
@@ -565,12 +630,12 @@ export default async function Home() {
 
                   {/* <!-- ***** follower Widget ***** --> */}
                   <div className="single-widget followers-widget mb-50 bg-white shadow">
-                    <a href="#" className="facebook">
+                    <a href="https://www.facebook.com/BoqashEcon/" className="facebook">
                       <i className="fa fa-facebook" aria-hidden="true"></i>
                       <span className="counter">198</span>
                       <span>اعجاب</span>
                     </a>
-                    <a href="#" className="twitter">
+                    <a href="http://twitter.com/BoqashO" className="twitter">
                       <i className="fa fa-twitter" aria-hidden="true"></i>
                       <span className="counter">220</span>
                       <span>متابع</span>
