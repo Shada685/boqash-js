@@ -26,7 +26,7 @@ export default function Page() {
                     <div className="archive-catagory-view mb-50 d-flex align-items-center justify-content-between">
                         {/* <!-- Catagory --> */}
                         <div className="archive-catagory">
-                            <h4><i className="fa fa-money" aria-hidden="true"></i> اسعار العملات</h4>
+                            <h4><i className="fa fa-money" aria-hidden="true"></i> اسعار الذهب</h4>
                         </div>
                         {/* <!-- View Options --> */}
                         
@@ -47,10 +47,10 @@ export default function Page() {
   <tbody >
     <tr >
       <th className="p-3 centered" rowspan="2">التاريخ</th>
-      <td className="p-3 " colspan="2">دولار امريكي</td>
-      <td className="p-3" colspan="2">ريال سعودي</td>
-      <td className="p-3" colspan="2">دولار امريكي</td>
-      <td className="p-3" colspan="2">ريال سعودي</td>
+      <td className="p-3 " colspan="2">عيار 21</td>
+      <td className="p-3" colspan="2"> جنية ذهب</td>
+      <td className="p-3 " colspan="2">عيار 21</td>
+      <td className="p-3" colspan="2"> جنية ذهب</td>
      
     </tr>
     <tr>
@@ -381,141 +381,7 @@ export default function Page() {
             </div>
 
 
-            {/* اسعار الذهب */}
-            <div className="row justify-content-center">
-                <div className="col-12 col-lg-8">
-                    {/* <!-- Archive Catagory & View Options --> */}
-                    <div className="archive-catagory-view mb-50 d-flex align-items-center justify-content-between">
-                        {/* <!-- Catagory --> */}
-                        <div className="archive-catagory">
-                            <h4> اسعار الذهب</h4>
-                        </div>
-                        {/* <!-- View Options --> */}
-                        
-                    </div>
-
-
-<div class="table-responsive">
-<table class="table table-hover text-nowrap">
-  <thead className="p-2">
-    <tr>
-      <th  rowspan="2" className="p-4"></th>
-      <th scope="col" colspan="3" className="text-center p-4">صنعاء</th>
-      <th scope="col" colspan="3" className="text-center p-4">عدن</th>
-      
-      
-    </tr>
-  </thead>
-  <tbody >
-    <tr >
-      <th className="p-3">التاريخ</th>
-      <td className="p-3">عيار 18</td>
-      <td className="p-3">عيار 21 </td>
-      <td className="p-3">عيار 24</td>
-      <td className="p-3">عيار 18</td>
-     <td className="p-3">عيار 21</td>
-      <td className="p-3">عيار 24</td>
-    </tr>
-    <tr>
-      <th scope="row" className="p-3">7/5/2023</th>
-      <td className="p-3">
-        <span class="text-danger" >
-          <span>530</span>
-        </span>
-      </td>
-      <td className="p-3">
-        <span class="text-success">
-          <span>140</span>
-        </span>
-      </td>
-      <td className="p-3">
-        <span class="text-success">
-          <span>1100</span>
-        </span>
-      </td>
-      <td className="p-3">
-        <span class="text-success">
-          <span>320</span>
-        </span>
-      </td>
-      <td className="p-3">
-        <span class="text-success">
-          <span>1100</span>
-        </span>
-      </td>
-      <td className="p-3">
-        <span class="text-success">
-          <span>320</span>
-        </span>
-      </td>
-      
-    </tr>
-    <tr>
-      <th scope="row" className="p-3">8/5/2023</th>
-      <td className="p-3">
-        <span class="text-danger" >
-          <span>530</span>
-        </span>
-      </td>
-      <td className="p-3">
-        <span class="text-success">
-          <span>140</span>
-        </span>
-      </td>
-      <td className="p-3">
-        <span class="text-success">
-          <span>1100</span>
-        </span>
-      </td>
-      <td className="p-3">
-        <span class="text-success">
-          <span>320</span>
-        </span>
-      </td>
-      <td className="p-3">
-        <span class="text-success">
-          <span>1100</span>
-        </span>
-      </td>
-      <td className="p-3">
-        <span class="text-success">
-          <span>320</span>
-        </span>
-      </td>
-    </tr>
-  </tbody>
-</table>
-</div>
-                      
-
-
-                        
-                   
-
-                    {/* <!-- Pagination --> */}
-                    
-                </div>
-
-                
-
-                <div className="col-12 col-md-6 col-lg-4">
-                    <div className="sidebar-area">
-
-                        
-
-                    
-
-                        
-
-                     
-
-                       
-
-                        
-
-                    </div>
-                </div>
-            </div>
+            
 
             
         </div>

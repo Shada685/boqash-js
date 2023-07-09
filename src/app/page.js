@@ -1,6 +1,6 @@
 
 import '../../public/css/style-grocery-price.css'
-import '../../public/css/style-currency.css'
+// import '../../public/css/style-currency.css'
 import '../../public/css/style-price.css'
 import Image from "next/image";
  
@@ -167,65 +167,100 @@ export default async function Home() {
 <div className="body-z">
     <div className="card">
         <div className="content">
-            <div className="top">
-                <p>صنعاء</p>
-                <div className="color"></div>
+        <div className="row">
+            <div className="col-12 ">
+                <p className='text-center bold-m'>صنعاء</p>                
             </div>
-            <div className="middle" style={{ backgroundImage : "url(/img/bg-img/sanaa.jpg)" }}>
+            </div>
+            <div className="text-center">
+                <p className='bold-m'>العملات</p>
                 
             </div>
-            <div className="middle " >
-              <div >
-                 عملات
-              </div>
-                <div>
-                    <p>دولار</p>
-                    <p>530</p>
+         
+              <div className="row">
+                <div className="col-6 text-center mb-2">ريال سعودي</div>
+                <div className="col-6 text-center">دولار</div>
+                <div className="col-6">
+                  <div className="row">
+                    <div className="col-6" > بيع </div>
+                    <div className="col-6">شراء</div>
+                  </div>
                 </div>
-                <div>
-                    <p>ريال سعودي</p>
-                    <p>140</p>
+                <div className="col-6">
+                  <div className="row">
+                    <div className="col-6" > بيع </div>
+                    <div className="col-6">شراء</div>
+                  </div>
+                  
                 </div>
-                <div>
-                    <p>يورو</p>
-                    <p>550</p>
+                <div className="col-6">
+                  <div className="row">
+                    <div className="col-6" > 530 </div>
+                    <div className="col-6">527</div>
+                  </div>
                 </div>
+                <div className="col-6">
+                  <div className="row">
+                    <div className="col-6" > 140 </div>
+                    <div className="col-6">142</div>
+                  </div>
+                  
+                </div>
+              
+              
             </div>
-            <div className="gold " >
-              <heading>
-                 ذهب
-              </heading>
-                <div>
-                    <p>عيار 24</p>
-                    <p>36</p>
-                </div>
-                <div>
-                    <p>عيار 21</p>
-                    <p>93</p>
-                </div>
-                <div>
-                    <p>عيار 18</p>
-                    <p>68</p>
-                </div>
+            <div className="m-2">
+                <p className='bold-m'>الذهب</p>
+                
             </div>
-            <div className="bottom">
-              <div >
-                 مشتقات <br/>نفطية
-              </div>
-                <div>
-                    <p>بترول</p>
-                    <p>530</p>
+              <div className="row">
+                <div className="col-6 text-center mb-2">عيار 21</div>
+                <div className="col-6 text-center">جنية ذهب</div>
+                <div className="col-6">
+                  <div className="row">
+                    <div className="col-6" > بيع </div>
+                    <div className="col-6">شراء</div>
+                  </div>
                 </div>
-                <div>
-                    <p>ديزل </p>
-                    <p>140</p>
+                <div className="col-6">
+                  <div className="row">
+                    <div className="col-6" > بيع </div>
+                    <div className="col-6">شراء</div>
+                  </div>
+                  
                 </div>
-                <div>
-                    <p>غاز</p>
-                    <p>550</p>
+                <div className="col-6">
+                  <div className="row">
+                    <div className="col-6" > 530 </div>
+                    <div className="col-6">527</div>
+                  </div>
+                </div>
+                <div className="col-6">
+                  <div className="row">
+                    <div className="col-6" > 140 </div>
+                    <div className="col-6">142</div>
+                  </div>
+                  
                 </div>
               
             </div>
+           
+            <div className="m-2">
+                <p className="bold-m">مشتقات نفطية</p>
+                
+            </div>
+           
+              <div className="row">
+                <div className="col-4 text-center">بترول</div>
+                <div className="col-4 text-center">ديزل</div>
+                <div className="col-4 text-center">غاز</div>
+                <div className="col-4 text-center">450</div>
+                <div className="col-4 text-center">400</div>
+                <div className="col-4 text-center">300</div>
+                
+              </div>
+              
+           
         </div>
     </div>
 </div>
@@ -239,65 +274,100 @@ export default async function Home() {
 <div className="body-z">
     <div className="card">
         <div className="content">
-            <div className="top">
-                <p>عدن</p>
-                <div className="color"></div>
+        <div className="row">
+            <div className="col-12 ">
+                <p className='text-center bold-m'>عدن</p>                
             </div>
-            <div className="middle" style={{ backgroundImage : "url(/img/bg-img/aden.jpg)" }}>
+            </div>
+            <div className="text-center">
+                <p className='bold-m'>العملات</p>
                 
             </div>
-            <div className="middle " >
-              <div >
-                 عملات
-              </div>
-                <div>
-                    <p>دولار</p>
-                    <p>530</p>
+         
+              <div className="row">
+                <div className="col-6 text-center mb-2">ريال سعودي</div>
+                <div className="col-6 text-center">دولار</div>
+                <div className="col-6">
+                  <div className="row">
+                    <div className="col-6" > بيع </div>
+                    <div className="col-6">شراء</div>
+                  </div>
                 </div>
-                <div>
-                    <p>ريال سعودي</p>
-                    <p>140</p>
+                <div className="col-6">
+                  <div className="row">
+                    <div className="col-6" > بيع </div>
+                    <div className="col-6">شراء</div>
+                  </div>
+                  
                 </div>
-                <div>
-                    <p>يورو</p>
-                    <p>550</p>
+                <div className="col-6">
+                  <div className="row">
+                    <div className="col-6" > 530 </div>
+                    <div className="col-6">527</div>
+                  </div>
                 </div>
+                <div className="col-6">
+                  <div className="row">
+                    <div className="col-6" > 140 </div>
+                    <div className="col-6">142</div>
+                  </div>
+                  
+                </div>
+              
+              
             </div>
-            <div className="gold " >
-              <heading>
-                 ذهب
-              </heading>
-                <div>
-                    <p>عيار 24</p>
-                    <p>36</p>
-                </div>
-                <div>
-                    <p>عيار 21</p>
-                    <p>93</p>
-                </div>
-                <div>
-                    <p>عيار 18</p>
-                    <p>68</p>
-                </div>
+            <div className="m-2">
+                <p className='bold-m'>الذهب</p>
+                
             </div>
-            <div className="bottom">
-              <div >
-                 مشتقات <br/>نفطية
-              </div>
-                <div>
-                    <p>بترول</p>
-                    <p>530</p>
+              <div className="row">
+                <div className="col-6 text-center mb-2">عيار 21</div>
+                <div className="col-6 text-center">جنية ذهب</div>
+                <div className="col-6">
+                  <div className="row">
+                    <div className="col-6" > بيع </div>
+                    <div className="col-6">شراء</div>
+                  </div>
                 </div>
-                <div>
-                    <p>ديزل </p>
-                    <p>140</p>
+                <div className="col-6">
+                  <div className="row">
+                    <div className="col-6" > بيع </div>
+                    <div className="col-6">شراء</div>
+                  </div>
+                  
                 </div>
-                <div>
-                    <p>غاز</p>
-                    <p>550</p>
+                <div className="col-6">
+                  <div className="row">
+                    <div className="col-6" > 530 </div>
+                    <div className="col-6">527</div>
+                  </div>
+                </div>
+                <div className="col-6">
+                  <div className="row">
+                    <div className="col-6" > 140 </div>
+                    <div className="col-6">142</div>
+                  </div>
+                  
                 </div>
               
             </div>
+           
+            <div className="m-2">
+                <p className="bold-m">مشتقات نفطية</p>
+                
+            </div>
+           
+              <div className="row">
+                <div className="col-4 text-center">بترول</div>
+                <div className="col-4 text-center">ديزل</div>
+                <div className="col-4 text-center">غاز</div>
+                <div className="col-4 text-center">450</div>
+                <div className="col-4 text-center">400</div>
+                <div className="col-4 text-center">300</div>
+                
+              </div>
+              
+           
         </div>
     </div>
 </div>

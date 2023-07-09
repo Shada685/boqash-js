@@ -132,17 +132,15 @@ export default async function RootLayout({ children }) {
                           <a href="">الاخبار</a>
                           <ul className="dropdown">
                             <li>
-                              <a href="/">- الاخبار المحلية</a>
+                              <a href="/yemeni-news">- الاخبار المحلية</a>
                             </li>
                             <li>
                               <a href="archive-list.html">- الاخبار العربية</a>
                             </li>
                             <li>
-                              <a href="archive-grid.html">- الاخبار العالمية</a>
+                              <a href="/inernational-news">- الاخبار العالمية</a>
                             </li>
-                            <li>
-                              <a href="archive-grid.html">- الحرب الروسية</a>
-                            </li>
+                            
                            
                            
                           </ul>
@@ -240,7 +238,7 @@ export default async function RootLayout({ children }) {
                           </div>
                         </li>
                         <li>
-                          <a href="contact.html">مقالات</a>
+                          <a href="/articles">مقالات</a>
                         </li>
                         <li>
                           <a href="contact.html">مقتطفات</a>
@@ -301,16 +299,16 @@ export default async function RootLayout({ children }) {
                   <h6 className="widget-title">اخبار ومقالات</h6>
                   <ul >
                     <li className="mb-2">
-                      <a href="">الاخبار المحلية</a>
+                      <a href="/yemeni-news">الاخبار المحلية</a>
                       </li>
                     <li className="mb-2">
-                      <a href="">الاخبار العربية</a>
+                      <a href="/arabic-news">الاخبار العربية</a>
                       </li>
                     <li className="mb-2">
-                      <a href="">الاخبار العالمية</a>
+                      <a href="/inernational-news">الاخبار العالمية</a>
                       </li>
                     <li className="mb-2"><a href="">الحرب الروسية</a></li>
-                    <li className="mb-2"><a href="">مقالات</a></li>
+                    <li className="mb-2"><a href="/articles">مقالات</a></li>
                     <li> <a href="">مقتطفات</a></li>
                     
 

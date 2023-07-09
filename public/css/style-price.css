@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;800;900;1000&display=swap');
 .body-z {
-    display: flex;
-    justify-content: center;
+    
     align-items: center;
     overflow: hidden;
-    font-family: "Roboto";
+    font-family: "Cairo";
+    font-weight: bold;
 }
 
 .card {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 500px;
-    width: 90%;
+    height: 470px;
+    width: 100%;
     background: #8F4872;
     box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2),
         0px 10px 14px 1px rgba(0, 0, 0, 0.14), 0px 4px 18px 3px rgba(0, 0, 0, 0.12);
@@ -27,17 +27,18 @@
     background-color: white;
     border-radius: 8px;
     font-family: 600;
+    text-align: center;
+        padding: 10px;
 }
 
 .content>.top {
-    display: flex;
-    justify-content: flex-start;
+    
     font-family: "Cairo";
     font-weight: 600;
     padding-right: 10px;
-    align-items: center;
     height: 20%;
     background-color: white;
+    text-align: center;
 
     p {
         font-weight: bold;
@@ -56,14 +57,15 @@
 }
 
 .content>.middle {
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
     height: 40%;
     font-family: "Cairo";
     /* background: linear-gradient(#db37db, #fde8c9 75%); */
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
 
     img {
         width: 60%;
@@ -80,12 +82,12 @@
     }
 }
 .content>.gold {
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
     height: 40%;
     font-family: "Cairo";
-    background: linear-gradient(#BF953F, #FCF6BA 75%);
+    /* background: linear-gradient(#BF953F, #FCF6BA 75%); */
     padding-left: 15px;
     padding-right: 15px;
 
@@ -112,7 +114,7 @@
     padding-left: 30px;
     padding-right: 30px;
     font-family: "Cairo";
-    background: linear-gradient(#313330, #b8b8b8 75%);
+    /* background: linear-gradient(#313330, #b8b8b8 75%); */
 
     div {
         display: flex;
@@ -125,4 +127,8 @@
             color: #ffffff;
         }
     }
+}
+
+.bold-m{
+font-weight: bold;
 }
