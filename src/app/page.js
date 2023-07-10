@@ -27,7 +27,7 @@ async function FeaturedPinnedPostedList({ promise }) {
       <div className="row no-gutters">
     <div className="col-12 col-md-7 col-lg-8">
       <div className="tab-content">
-        {data.data.map((ob,i) => (
+        {data.data&&data.data.map((ob,i) => (
           <div
             key={ob.id}
             className={"tab-pane fade "+(i==0? "active show" :"")}
@@ -60,7 +60,7 @@ async function FeaturedPinnedPostedList({ promise }) {
     </div>
      <div className="col-12 col-md-5 col-lg-4">
                 <ul className="nav vizew-nav-tab" role="tablist">
-    {data.data.map((ob,i) => (
+    {data.data&&data.data.map((ob,i) => (
      
                   <li key={ob.id} className="nav-item">
                   
@@ -456,14 +456,14 @@ export default async function Home() {
                 <div className="all-posts-area">
                   {/* <!-- Section Heading --> */}
                   <div className="section-heading style-2">
-                  <a href={localNewsData.data[0]?.attributes.mainCategory.data.attributes.path+"/"}> <h4>الاخبار المحلية</h4></a>
+                  <a href={localNewsData.data?localNewsData.data[0].attributes.mainCategory.data.attributes.path+"/":"#"}> <h4>الاخبار المحلية</h4></a>
                     <div className="line"></div>
                   </div>
 
                   {/* <!-- Featured Post Slides --> */}
                   <div className="featured-post-slides owl-carousel mb-30 ">
                     {/* <!-- Single Feature Post --> */}
-                    {[...localNewsData.data.slice(0, 2)].map((ob) => (
+                    {localNewsData.data&&[...localNewsData.data.slice(0, 2)].map((ob) => (
                       <div key={ob.id}
                       className="single-feature-post video-post bg-img"
                       style={{ backgroundImage: `url(${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url})` }}
@@ -489,7 +489,7 @@ export default async function Home() {
                   <div className="row">
                     {/* <!-- Single Blog Post --> */}
                   
-                    {[...localNewsData.data.slice(2, 4)].map((ob) => (  <div  key={ob.id} className="col-12 col-md-6 col-lg-6 "> <div   className="single-post-area mb-80 bg-white shadow">
+                    {localNewsData.data&&[...localNewsData.data.slice(2, 4)].map((ob) => (  <div  key={ob.id} className="col-12 col-md-6 col-lg-6 "> <div   className="single-post-area mb-80 bg-white shadow">
                         {/* <!-- Post Thumbnail --> */}
                         <div className="post-thumbnail">
                           <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={400} height={200}   />
@@ -514,7 +514,7 @@ export default async function Home() {
 
                   <div className="row">
                     {/* <!-- Single Blog Post --> */}
-                    {[...localNewsData.data.slice(4, 7)].map((ob) => (   <div  key={ob.id} className="col-12 col-md-6 col-lg-4"> <div   className="single-post-area mb-80 ">
+                    {localNewsData.data&&[...localNewsData.data.slice(4, 7)].map((ob) => (   <div  key={ob.id} className="col-12 col-md-6 col-lg-4"> <div   className="single-post-area mb-80 ">
                         {/* <!-- Post Thumbnail --> */}
                         <div className="post-thumbnail">
                           <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={400} height={200} />
@@ -538,7 +538,7 @@ export default async function Home() {
                     <div className="col-12">
                       {/* <!-- Section Heading --> */}
                       <div className="section-heading">
-                      <a href={arabicNewsData.data[0]?.attributes.mainCategory.data.attributes.path+"/"}> <h4>الاخبار العربية</h4></a>
+                      <a href={localNewsData.data?arabicNewsData.data[0]?.attributes.mainCategory.data.attributes.path+"/":"#"}> <h4>الاخبار العربية</h4></a>
                         <div className="line"></div>
                       </div>
                     </div>
@@ -548,7 +548,7 @@ export default async function Home() {
 
                       {/* <!-- Sports Video Slides --> */}
                       <div className="sport-video-slides owl-carousel mb-50 ">
-                      {[...arabicNewsData.data.slice(0, 2)].map((ob) => ( <div  key={ob.id} className="single-post-area bg-white shadow">
+                      {arabicNewsData.data&&[...arabicNewsData.data.slice(0, 2)].map((ob) => ( <div  key={ob.id} className="single-post-area bg-white shadow">
                           {/* <!-- Post Thumbnail --> */}
                           <div className="post-thumbnail">
                           <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={400} height={200}     />
@@ -574,7 +574,7 @@ export default async function Home() {
                     <div className="col-12 col-lg-6">
                       {/* <!-- Business Video Slides --> */}
                       <div className="  mb-50 ">
-                      {[...arabicNewsData.data.slice(2, 3)].map((ob) => (  
+                      {arabicNewsData.data&&[...arabicNewsData.data.slice(2, 3)].map((ob) => (  
                         <div  key={ob.id} className="single-post-area bg-white shadow">
                           {/* <!-- Post Thumbnail --> */}
                           <div className="post-thumbnail">
@@ -599,7 +599,7 @@ export default async function Home() {
                   </div>
 
                   <div className="row mb-30">
-                  {[...arabicNewsData.data.slice(3, 7)].map((ob) => ( <div  key={ob.id} className="col-12 col-lg-6 ">
+                  {arabicNewsData.data&&[...arabicNewsData.data.slice(3, 7)].map((ob) => ( <div  key={ob.id} className="col-12 col-lg-6 ">
                       <div className="single-blog-post style-3 d-flex mb-50 bg-white shadow">
                       <div className="post-thumbnail">
                           <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={400} height={200}     />
@@ -632,13 +632,13 @@ export default async function Home() {
                   {/* <!-- Section Heading --> */}
                   <div className="section-heading style-2">
                    
-                    <a href={globalNewsData.data[0]?.attributes.mainCategory.data.attributes.path+"/"}> <h4>الاخبار العالمية</h4></a>
+                    <a href={globalNewsData.data?globalNewsData.data[0]?.attributes.mainCategory.data.attributes.path+"/":"#"}> <h4>الاخبار العالمية</h4></a>
                     <div className="line"></div>
                   </div>
                  
                   {/* <!-- Featured Post Slides --> */}
                   <div className="featured-post-slides owl-carousel mb-30 ">
-                  {[...globalNewsData.data.slice(0, 3)].map((ob) => ( <div
+                  {globalNewsData.data&&[...globalNewsData.data.slice(0, 3)].map((ob) => ( <div
                      key={ob.id}  className="single-feature-post video-post bg-img"
                      style={{ backgroundImage: `url(${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url})` }}
                     >
@@ -656,7 +656,7 @@ export default async function Home() {
                     </div>  ))}
                   
                   </div>
-                  {[...globalNewsData.data.slice(3, 7)].map((ob) => ( <div  key={ob.id} className="single-post-area mb-30 bg-white shadow">
+                  {globalNewsData.data&&[...globalNewsData.data.slice(3, 7)].map((ob) => ( <div  key={ob.id} className="single-post-area mb-30 bg-white shadow">
                     <div className="row align-items-center ">
                       <div className="col-12 col-lg-6 ">
                         {/* <!-- Post Thumbnail --> */}
@@ -730,7 +730,7 @@ export default async function Home() {
                       
                       <div className="line"></div>
                     </div>
-                    {[...breakingNewsData.data.slice(14, 28)].map((ob) => (<div key={ob.id} className="single-blog-post d-flex">
+                    {breakingNewsData.data&&[...breakingNewsData.data.slice(14, 28)].map((ob) => (<div key={ob.id} className="single-blog-post d-flex">
                        
                       <div className="post-content">
                         <span  className="post-title">
@@ -760,7 +760,7 @@ export default async function Home() {
                       
                       <div className="line"></div>
                     </div>
-                    {[...articaleData.data.slice(0, 7)].map((ob) => ( <div key={ob.id} className="single-youtube-channel d-flex align-items-center">
+                    {articaleData.data&&[...articaleData.data.slice(0, 7)].map((ob) => ( <div key={ob.id} className="single-youtube-channel d-flex align-items-center">
                       <div className="youtube-channel-thumbnail">
                       <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={110} height={80}     />
                       </div>
@@ -811,11 +811,11 @@ export default async function Home() {
                     {/* <!-- Section Heading --> */}
                     <div className="section-heading style-2 mb-30">
                       
-                      <a href={russianNewsData.data[0]?.attributes.mainCategory.data.attributes.path+"/"}> <h4>الحرب الروسية</h4></a>
+                      <a href={russianNewsData.data?russianNewsData.data[0]?.attributes.mainCategory.data.attributes.path+"/":"#"}> <h4>الحرب الروسية</h4></a>
                      
                       <div className="line"></div>
                     </div>
-                    {[...russianNewsData.data.slice(0, 7)].map((ob) => (  <div  key={ob.id} className="single-blog-post d-flex">
+                    {russianNewsData.data&&[...russianNewsData.data.slice(0, 7)].map((ob) => (  <div  key={ob.id} className="single-blog-post d-flex">
                     <div className="post-thumbnail">
                           <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={100} height={70}     />
                         </div>

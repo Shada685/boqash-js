@@ -24,7 +24,8 @@ export async function getBreakingNews() {
 }
 async function BreakingList({ promise }) {
   const res = await promise;
-  let data = [...res.data.slice(0, 14)];
+  let d =res?.data?.slice(0, 14)||[]
+  let data = [...d];
   return (
 
     <ul>
