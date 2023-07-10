@@ -131,12 +131,27 @@ export default async function Home() {
     arabicNewsData,
     localNewsData,
     globalNewsData,
-    russianNewsData,
-    articaleData] = await Promise.all([breakingNews, pinnedNews,arabicNews,
+    russianNewsData,articaleData] = await Promise.all([breakingNews, pinnedNews,arabicNews,
       localNews,
       globalNews,
-      russianNews,
-      articale])
+      russianNews,articale])
+
+ const pSaudiSanaa =  await getSaudiSanaa()
+ const pSaudiAden =   await getSaudiAden()
+ const pDollarAden =  await getDollarAden()
+ const pDollarSanaa = await getDollarSanaa()
+ const pDieslSanaa =  await getDieslSanaa()
+ const pDieslAden =   await getDieslAden()
+ const pPatrolSanaa = await getPatrolSanaa()
+ const pPatrolAden =  await getPatrolAden()
+ const pGasSanaa =    await getGasSanaa()
+ const pGasAden =     await getGasAden()
+ const pCoinSanaa =   await getCoinSanaa()
+ const pCoinAden =    await getCoinAden()
+ const p24KSanaa =    await get24KSanaa()
+ const p24KAden =     await get24KAden()
+
+   
   return (
     <>
       
@@ -195,14 +210,14 @@ export default async function Home() {
                 </div>
                 <div className="col-6">
                   <div className="row">
-                    <div className="col-6" > 530 </div>
-                    <div className="col-6">527</div>
+                    <div className="col-6" > {pSaudiSanaa.data&&pSaudiSanaa.data[0].attributes.sell} </div>
+                    <div className="col-6">{pSaudiSanaa.data&&pSaudiSanaa.data[0].attributes.buy} </div>
                   </div>
                 </div>
                 <div className="col-6">
                   <div className="row">
-                    <div className="col-6" > 140 </div>
-                    <div className="col-6">142</div>
+                  <div className="col-6" > {pDollarSanaa.data&&pDollarSanaa.data[0].attributes.sell} </div>
+                    <div className="col-6">{pDollarSanaa.data&&pDollarSanaa.data[0].attributes.buy} </div>
                   </div>
                   
                 </div>
@@ -231,14 +246,14 @@ export default async function Home() {
                 </div>
                 <div className="col-6">
                   <div className="row">
-                    <div className="col-6" > 530 </div>
-                    <div className="col-6">527</div>
+                  <div className="col-6" > {p24KSanaa.data&&p24KSanaa.data[0].attributes.sell} </div>
+                    <div className="col-6">{p24KSanaa.data&&p24KSanaa.data[0].attributes.buy} </div>
                   </div>
                 </div>
                 <div className="col-6">
                   <div className="row">
-                    <div className="col-6" > 140 </div>
-                    <div className="col-6">142</div>
+                  <div className="col-6" > {pCoinSanaa.data&&pCoinSanaa.data[0].attributes.sell} </div>
+                    <div className="col-6">{pCoinSanaa.data&&pCoinSanaa.data[0].attributes.buy} </div>
                   </div>
                   
                 </div>
@@ -254,9 +269,10 @@ export default async function Home() {
                 <div className="col-4 text-center">بترول</div>
                 <div className="col-4 text-center">ديزل</div>
                 <div className="col-4 text-center">غاز</div>
-                <div className="col-4 text-center">450</div>
-                <div className="col-4 text-center">400</div>
-                <div className="col-4 text-center">300</div>
+                <div className="col-4 text-center">{pPatrolSanaa.data&&pPatrolSanaa.data[0].attributes.buy}</div>
+                <div className="col-4 text-center">{pDieslSanaa.data&&pDieslSanaa.data[0].attributes.buy}</div>
+                <div className="col-4 text-center">{pGasSanaa.data&&pGasSanaa.data[0].attributes.buy}</div>
+                 
                 
               </div>
               
@@ -302,14 +318,14 @@ export default async function Home() {
                 </div>
                 <div className="col-6">
                   <div className="row">
-                    <div className="col-6" > 530 </div>
-                    <div className="col-6">527</div>
+                    <div className="col-6" > {pSaudiAden.data&&pSaudiAden.data[0].attributes.sell} </div>
+                    <div className="col-6">{pSaudiAden.data&&pSaudiAden.data[0].attributes.buy} </div>
                   </div>
                 </div>
                 <div className="col-6">
                   <div className="row">
-                    <div className="col-6" > 140 </div>
-                    <div className="col-6">142</div>
+                  <div className="col-6" > {pDollarAden.data&&pDollarAden.data[0].attributes.sell} </div>
+                    <div className="col-6">{pDollarAden.data&&pDollarAden.data[0].attributes.buy} </div>
                   </div>
                   
                 </div>
@@ -338,14 +354,14 @@ export default async function Home() {
                 </div>
                 <div className="col-6">
                   <div className="row">
-                    <div className="col-6" > 530 </div>
-                    <div className="col-6">527</div>
+                  <div className="col-6" > {p24KAden.data&&p24KAden.data[0].attributes.sell} </div>
+                    <div className="col-6">{p24KAden.data&&p24KAden.data[0].attributes.buy} </div>
                   </div>
                 </div>
                 <div className="col-6">
                   <div className="row">
-                    <div className="col-6" > 140 </div>
-                    <div className="col-6">142</div>
+                  <div className="col-6" > {pCoinAden.data&&pCoinAden.data[0].attributes.sell} </div>
+                    <div className="col-6">{pCoinAden.data&&pCoinAden.data[0].attributes.buy} </div>
                   </div>
                   
                 </div>
@@ -361,12 +377,12 @@ export default async function Home() {
                 <div className="col-4 text-center">بترول</div>
                 <div className="col-4 text-center">ديزل</div>
                 <div className="col-4 text-center">غاز</div>
-                <div className="col-4 text-center">450</div>
-                <div className="col-4 text-center">400</div>
-                <div className="col-4 text-center">300</div>
+                <div className="col-4 text-center">{pPatrolAden.data&&pPatrolAden.data[0].attributes.buy}</div>
+                <div className="col-4 text-center">{pDieslAden.data&&pDieslAden.data[0].attributes.buy}</div>
+                <div className="col-4 text-center">{pGasAden.data&&pGasAden.data[0].attributes.buy}</div>
+                 
                 
               </div>
-              
            
         </div>
     </div>
@@ -751,7 +767,7 @@ export default async function Home() {
                     </a>
                   </div>
 
-                  {/* <!-- ***** Sidebar Widget ***** --> */}
+                
                   <div className="single-widget youtube-channel-widget mb-50 bg-white shadow">
                     {/* <!-- Section Heading --> */}
                     <div className="section-heading style-2 mb-30">
@@ -760,7 +776,8 @@ export default async function Home() {
                       
                       <div className="line"></div>
                     </div>
-                    {articaleData.data&&[...articaleData.data.slice(0, 7)].map((ob) => ( <div key={ob.id} className="single-youtube-channel d-flex align-items-center">
+                    {articaleData.data&&[...articaleData.data.slice(0, 7)].map((ob) => ( 
+                      <div key={ob.id} className="single-youtube-channel d-flex align-items-center">
                       <div className="youtube-channel-thumbnail">
                       <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={110} height={80}     />
                       </div>
@@ -856,7 +873,7 @@ export async function getBreakingNews() {
 
 export async function getPinnedNews() {
   const res = await fetch(
-    `${BASE_URL}/api/news?populate=*&pagination[limit]=10&filters[pin][$eq]=true&sort[0]=publishedAt%3Adesc`,
+    `${BASE_URL}/api/news?populate=*&pagination[limit]=10&filters[pin][$eq]=true&filters[mainCategory][path][$ne]=articles&sort[0]=publishedAt%3Adesc`,
     { headers, next: { revalidate: NEWSREVALIDATE } }
   );
 
@@ -900,9 +917,110 @@ export async function getRussianNews() {
 
 export async function getِArticales() {
   const res = await fetch(
-    `${BASE_URL}/api/articales?populate=*&pagination[limit]=7&sort[0]=publishedAt%3Adesc`,
+    `${BASE_URL}/api/news?populate=*&pagination[limit]=7&filters[pin][$ne]=true&sort[0]=publishedAt%3Adesc&filters[mainCategory][path][$eq]=articles`,
     { headers, next: { revalidate: NEWSREVALIDATE } }
-  );
 
+   
+  );
   return res.json();
 }
+
+  export async function getSaudiSanaa() {
+    const res = await fetch(
+      `${BASE_URL}/api/currency-prices?populate=*&pagination[limit]=1&sort[0]=date%3Adesc&filters[city][$eq]=صنعاء&filters[currencyName][$eq]=ريال%20سعودي`,
+      { headers, next: { revalidate: NEWSREVALIDATE } }
+    );
+  return res.json();
+};
+  export async function getSaudiAden() {
+    const res = await fetch(
+      `${BASE_URL}/api/currency-prices?populate=*&pagination[limit]=1&sort[0]=date%3Adesc&filters[city][$eq]=عدن&filters[currencyName][$eq]=ريال%20سعودي`,
+      { headers, next: { revalidate: NEWSREVALIDATE } }
+    );
+  return res.json();
+};
+  export async function getDollarAden() {
+    const res = await fetch(
+      `${BASE_URL}/api/currency-prices?populate=*&pagination[limit]=1&sort[0]=date%3Adesc&filters[city][$eq]=عدن&filters[currencyName][$eq]=دولار%20امريكي`,
+      { headers, next: { revalidate: NEWSREVALIDATE } }
+    );
+  return res.json();
+};
+  export async function getDollarSanaa() {
+    const res = await fetch(
+      `${BASE_URL}/api/currency-prices?populate=*&pagination[limit]=1&sort[0]=date%3Adesc&filters[city][$eq]=صنعاء&filters[currencyName][$eq]=دولار%20امريكي`,
+      { headers, next: { revalidate: NEWSREVALIDATE } }
+    );
+  return res.json();
+};
+export async function getDieslSanaa() {
+  const res = await fetch(
+    `${BASE_URL}/api/currency-prices?populate=*&pagination[limit]=1&sort[0]=date%3Adesc&filters[city][$eq]=صنعاء&filters[currencyName][$eq]=ديزل`,
+    { headers, next: { revalidate: NEWSREVALIDATE } }
+  );
+return res.json();
+};
+export async function getDieslAden() {
+  const res = await fetch(
+    `${BASE_URL}/api/currency-prices?populate=*&pagination[limit]=1&sort[0]=date%3Adesc&filters[city][$eq]=عدن&filters[currencyName][$eq]=ديزل`,
+    { headers, next: { revalidate: NEWSREVALIDATE } }
+  );
+return res.json();
+};
+
+export async function getPatrolSanaa() {
+  const res = await fetch(
+    `${BASE_URL}/api/currency-prices?populate=*&pagination[limit]=1&sort[0]=date%3Adesc&filters[city][$eq]=صنعاء&filters[currencyName][$eq]=بترول`,
+    { headers, next: { revalidate: NEWSREVALIDATE } }
+  );
+return res.json();
+};
+export async function getPatrolAden() {
+  const res = await fetch(
+    `${BASE_URL}/api/currency-prices?populate=*&pagination[limit]=1&sort[0]=date%3Adesc&filters[city][$eq]=عدن&filters[currencyName][$eq]=بترول`,
+    { headers, next: { revalidate: NEWSREVALIDATE } }
+  );
+return res.json();
+};
+export async function getGasSanaa() {
+  const res = await fetch(
+    `${BASE_URL}/api/currency-prices?populate=*&pagination[limit]=1&sort[0]=date%3Adesc&filters[city][$eq]=صنعاء&filters[currencyName][$eq]=غاز`,
+    { headers, next: { revalidate: NEWSREVALIDATE } }
+  );
+return res.json();
+};
+export async function getGasAden() {
+  const res = await fetch(
+    `${BASE_URL}/api/currency-prices?populate=*&pagination[limit]=1&sort[0]=date%3Adesc&filters[city][$eq]=عدن&filters[currencyName][$eq]=غاز`,
+    { headers, next: { revalidate: NEWSREVALIDATE } }
+  );
+return res.json();
+};
+export async function getCoinSanaa() {
+  const res = await fetch(
+    `${BASE_URL}/api/currency-prices?populate=*&pagination[limit]=1&sort[0]=date%3Adesc&filters[city][$eq]=صنعاء&filters[currencyName][$eq]=جنية`,
+    { headers, next: { revalidate: NEWSREVALIDATE } }
+  );
+return res.json();
+};
+export async function getCoinAden() {
+  const res = await fetch(
+    `${BASE_URL}/api/currency-prices?populate=*&pagination[limit]=1&sort[0]=date%3Adesc&filters[city][$eq]=عدن&filters[currencyName][$eq]=جنية`,
+    { headers, next: { revalidate: NEWSREVALIDATE } }
+  );
+return res.json();
+};
+export async function get24KSanaa() {
+  const res = await fetch(
+    `${BASE_URL}/api/currency-prices?populate=*&pagination[limit]=1&sort[0]=date%3Adesc&filters[city][$eq]=صنعاء&filters[currencyName][$eq]=عيار%2024`,
+    { headers, next: { revalidate: NEWSREVALIDATE } }
+  );
+return res.json();
+};
+export async function get24KAden() {
+  const res = await fetch(
+    `${BASE_URL}/api/currency-prices?populate=*&pagination[limit]=1&sort[0]=date%3Adesc&filters[city][$eq]=عدن&filters[currencyName][$eq]=عيار%2024`,
+    { headers, next: { revalidate: NEWSREVALIDATE } }
+  );
+return res.json();
+};
