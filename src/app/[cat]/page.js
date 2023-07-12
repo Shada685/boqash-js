@@ -109,7 +109,7 @@ export default async function Page({params,searchParams}) {
                                 {/* <!-- Post Content --> */}
                         <div className="post-content p-3"> 
                           
-                          <a  href={ob.attributes.mainCategory.data.attributes.path+"/"+ob.attributes.slug} className="post-title">
+                          <a  href={ob.attributes.mainCategory.data.attributes.path+"/"+encodeURIComponent(ob.attributes.slug)} className="post-title">
                            {ob.attributes.title}
                           </a>
                           <div className="post-meta d-flex">
@@ -267,11 +267,13 @@ async function getNews(params,pg) {
    
     return cat
   }
+
+  export const dynamicParams = false;
 export async function generateStaticParams() {
     const categories = await fetch(`${BASE_URL}/api/zones`,{ headers}).then((res) => res.json())
-   const cats=categories.data;
-    return cats.map((c) => ({
-        params: { cat:  String(c.attributes.path) }
-        
+   
+    return categories.data.map((post) => ({
+      cat: post.attributes.path,
     }))
+
   }

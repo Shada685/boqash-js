@@ -28,7 +28,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/app/api/config.js"  ],
+, "src/app/api/config.js", "src/app/[cat]/error.tsx", "src/app/[cat]/not-found.jsx"  ],
   "exclude": [
     "node_modules"
   ]
