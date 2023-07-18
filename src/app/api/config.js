@@ -1,6 +1,5 @@
-export const BASE_URL = "http://127.0.0.1:1337",
-  BEARER_TOKEN =
-    "5e34c0ce6eb32d138b7f81ec7aebb501fbbca1be8bbbcf1bce7580f2ec4a7de3f377050290b9bc479426e5e38955b71df62f596b063d93f72f3e5ab5a0838ea5e4327a6a985b42da6eb34c70f92ee8a1075eb6e8419bc3029a22b3a7b5cd12a48e6a4f4e09b2fc195e766eedd504575e2dec3ccfd1d0604552fe985f6e52698b",
+export const BASE_URL = process.env.API_URL,
+  BEARER_TOKEN =process.env.API_TOKEN,
     headers = {
     Authorization: `Bearer ${BEARER_TOKEN}`,
   },
