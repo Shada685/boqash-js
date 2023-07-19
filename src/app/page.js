@@ -403,7 +403,7 @@ export default async function Home() {
                   
                   {/* //////////////////// */}
 
-<div className="body-m mb-50">
+<div className="bodyss mb-50">
 <div className="CartContainer">
 		<div className="Header">
 			<h3 className="Heading">اسعار المواد الغذائية</h3>
