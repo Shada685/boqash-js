@@ -1,7 +1,6 @@
 /* Master Stylesheet */
 /* :: 1.0 Import Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;800;900;1000&display=swap');
-@import url("https://fonts.googleapis.com/css?family=Cairo:300,400,500,700,900");
+
 /* :: 2.0 Import All CSS Plugins */
 @import url(css/bootstrap.min.css);
 @import url(css/classy-nav.css);
