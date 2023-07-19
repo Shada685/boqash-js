@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Script from "next/script";
-import Footer from "../components/footer";
 import '../../../public/style.css'
 import '../../../public/css/style-grocery-price.css'
 import '../../../public/css/style-currency.css'
@@ -774,7 +773,7 @@ export default function Category() {
     {/* <!-- ##### Archive Grid Posts Area End ##### --> */}
 
   {/* <!-- ##### Footer Area Start ##### --> */}
-   <Footer />
+   
     {/* <!-- ##### Footer Area End ##### --> */}
 
 
