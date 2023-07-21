@@ -474,7 +474,7 @@ img {
 .breakpoint-on .classynav ul li.has-down > a::after {
   position: absolute;
   top: 0;
-  right: 20px;
+  right: 60px;
   z-index: 5; }
 .breakpoint-on .classynav ul li.has-down.active > a:after,
 .breakpoint-on .classynav ul li.megamenu-item.active > a:after {

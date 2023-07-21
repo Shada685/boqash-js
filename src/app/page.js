@@ -3,6 +3,8 @@ import '../../public/css/style-grocery-price.css'
 // import '../../public/css/style-currency.css'
 import '../../public/css/style-price.css'
 import Image from "next/image";
+import Link from 'next/link'
+
  
 import { NEWSREVALIDATE,BASE_URL,headers} from "./api/config";
  
@@ -38,7 +40,7 @@ async function FeaturedPinnedPostedList({ promise }) {
             <div
               className="single-feature-post video-post bg-img"
               style={{
-                backgroundImage: `url(${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url})`,
+                backgroundImage: `url(${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.large.url})`,
               }}
             >
               {/* <!-- Post Content --> */}
@@ -76,7 +78,7 @@ async function FeaturedPinnedPostedList({ promise }) {
                       {/* <!-- Single Blog Post --> */}
                       <div className="single-blog-post style-2 d-flex align-items-center">
                         <div className="post-thumbnail">
-                        <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} width={100}  height={200} alt={ob.attributes.title} />
+                        <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.large.url}`} width={400}  height={200} alt={ob.attributes.title} />
                         
                         </div>
                         <div className="post-content">
@@ -288,7 +290,7 @@ export default async function Home() {
 {/* //////////////////// */}
 
 <div className="body-z">
-    <div className="card">
+    <div className="cardAden">
         <div className="content">
         <div className="row">
             <div className="col-12 ">
@@ -482,7 +484,7 @@ export default async function Home() {
                     {localNewsData.data&&[...localNewsData.data.slice(0, 2)].map((ob) => (
                       <div key={ob.id}
                       className="single-feature-post video-post bg-img"
-                      style={{ backgroundImage: `url(${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url})` }}
+                      style={{ backgroundImage: `url(${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.medium.url})` }}
                     >
                       {/* <!-- Post Content --> */}
                       <div className="post-content">
@@ -508,7 +510,7 @@ export default async function Home() {
                     {localNewsData.data&&[...localNewsData.data.slice(2, 4)].map((ob) => (  <div  key={ob.id} className="col-12 col-md-6 col-lg-6 "> <div   className="single-post-area mb-80 bg-white shadow">
                         {/* <!-- Post Thumbnail --> */}
                         <div className="post-thumbnail">
-                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={400} height={200}   />
+                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.large.url}`} alt={ob.attributes.title} width={400} height={200}   />
                         </div>
 
                         {/* <!-- Post Content --> */}
@@ -533,7 +535,7 @@ export default async function Home() {
                     {localNewsData.data&&[...localNewsData.data.slice(4, 7)].map((ob) => (   <div  key={ob.id} className="col-12 col-md-6 col-lg-4"> <div   className="single-post-area mb-80 ">
                         {/* <!-- Post Thumbnail --> */}
                         <div className="post-thumbnail">
-                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={400} height={200} />
+                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.large.url}`} alt={ob.attributes.title} width={400} height={200} />
                         </div>
 
                         {/* <!-- Post Content --> */}
@@ -567,7 +569,7 @@ export default async function Home() {
                       {arabicNewsData.data&&[...arabicNewsData.data.slice(0, 2)].map((ob) => ( <div  key={ob.id} className="single-post-area bg-white shadow">
                           {/* <!-- Post Thumbnail --> */}
                           <div className="post-thumbnail">
-                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={400} height={200}     />
+                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.medium.url}`} alt={ob.attributes.title} width={400} height={200}     />
                         </div>
 
                         {/* <!-- Post Content --> */}
@@ -594,7 +596,7 @@ export default async function Home() {
                         <div  key={ob.id} className="single-post-area bg-white shadow">
                           {/* <!-- Post Thumbnail --> */}
                           <div className="post-thumbnail">
-                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={400} height={200}     />
+                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.medium.url}`} alt={ob.attributes.title} width={400} height={200}     />
                         </div>
 
                         {/* <!-- Post Content --> */}
@@ -618,7 +620,7 @@ export default async function Home() {
                   {arabicNewsData.data&&[...arabicNewsData.data.slice(3, 7)].map((ob) => ( <div  key={ob.id} className="col-12 col-lg-6 ">
                       <div className="single-blog-post style-3 d-flex mb-50 bg-white shadow">
                       <div className="post-thumbnail">
-                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={400} height={200}     />
+                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.medium.url}`} alt={ob.attributes.title} width={400} height={200}     />
                         </div>
 
                         {/* <!-- Post Content --> */}
@@ -656,7 +658,7 @@ export default async function Home() {
                   <div className="featured-post-slides owl-carousel mb-30 ">
                   {globalNewsData.data&&[...globalNewsData.data.slice(0, 3)].map((ob) => ( <div
                      key={ob.id}  className="single-feature-post video-post bg-img"
-                     style={{ backgroundImage: `url(${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url})` }}
+                     style={{ backgroundImage: `url(${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.medium.url})` }}
                     >
                      
                         {/* <!-- Post Content --> */}
@@ -677,7 +679,7 @@ export default async function Home() {
                       <div className="col-12 col-lg-6 ">
                         {/* <!-- Post Thumbnail --> */}
                         <div className="post-thumbnail">
-                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={400} height={200}     />
+                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.medium.url}`} alt={ob.attributes.title} width={400} height={200}     />
                         </div>
                       </div>
                       <div className="col-12 col-lg-6 ">
@@ -718,7 +720,7 @@ export default async function Home() {
                   <div className="single-widget followers-widget mb-50 bg-white shadow">
                     <a href="https://www.facebook.com/BoqashEcon/" className="facebook">
                       <i className="fa fa-facebook" aria-hidden="true"></i>
-                      <span className="counter">198</span>
+                      <span className="counter text-center">198</span>
                       <span>اعجاب</span>
                     </a>
                     <a href="http://twitter.com/BoqashO" className="twitter">
@@ -779,7 +781,7 @@ export default async function Home() {
                     {articaleData.data&&[...articaleData.data.slice(0, 7)].map((ob) => ( 
                       <div key={ob.id} className="single-youtube-channel d-flex align-items-center">
                       <div className="youtube-channel-thumbnail">
-                      <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={110} height={80}     />
+                      <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.medium.url}`} alt={ob.attributes.title} width={110} height={80}     />
                       </div>
                       <div className="youtube-channel-content">
                         <a href={"articles/"+ob.attributes.slug} className="channel-title">
@@ -816,9 +818,11 @@ export default async function Home() {
                           id="emailnl"
                           placeholder="Enter your email"
                         />
-                        <button type="submit" className="btn vizew-btn w-100">
-                          اشترك
-                        </button>
+                        <Link
+            className="flex items-center hover:underline bg-[#9b239b] hover:bg-[#e62ce6] text-white py-2 px-4 rounded  w-full mx-auto"
+            href="/"
+          >
+اشترك          </Link>
                       </form>
                     </div>
                   </div>
@@ -834,7 +838,7 @@ export default async function Home() {
                     </div>
                     {russianNewsData.data&&[...russianNewsData.data.slice(0, 7)].map((ob) => (  <div  key={ob.id} className="single-blog-post d-flex">
                     <div className="post-thumbnail">
-                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} alt={ob.attributes.title} width={100} height={70}     />
+                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.medium.url}`} alt={ob.attributes.title} width={100} height={70}     />
                         </div>
 
                       <div className="post-content">
