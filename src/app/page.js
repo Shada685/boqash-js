@@ -9,7 +9,7 @@ import Link from 'next/link'
 import { NEWSREVALIDATE,BASE_URL,headers} from "./api/config";
  
 
-async function FeaturedPinnedPostedList({ promise }) {
+async function FeaturedPinnedPostedList({ promise ,ad}) {
   const data = await promise;
   
     
@@ -111,7 +111,7 @@ async function FeaturedPinnedPostedList({ promise }) {
     {/* herzontal ad */}
 <div className="container mt-2 mb-5">
   <a>
-    <img src="img/bg-img/h-ad.png" alt=""/>
+  <Image  src={BASE_URL+ad.data.attributes.url} width={ad.data.attributes.width} height={ad.data.attributes.height} alt={ad.data.attributes.alt} />
   </a>
 
 </div>
@@ -153,6 +153,7 @@ export default async function Home() {
  const p24KSanaa =    await get24KSanaa()
  const p24KAden =     await get24KAden()
 
+ const ads=await getADS()
    
   return (
     <>
@@ -162,7 +163,7 @@ export default async function Home() {
         {/* <!-- ##### Header Area End ##### --> */}
 
         {/* <!-- ##### Hero Area Start ##### --> */}
-         <FeaturedPinnedPostedList promise={pinnedNewsData} />
+         <FeaturedPinnedPostedList promise={pinnedNewsData } ad={ads.data.attributes.first} />
         {/* <!-- ##### Hero Area End ##### --> */}
         {/* <!-- ##### Header Area End ##### --> */}
 
@@ -178,25 +179,25 @@ export default async function Home() {
 
 {/* ///////////////////////// */}
 <div className="row">
-              <div className="col-12 col-md-6 col-lg-6">
+              <div className="col-12 col-md-6 col-lg-6 text-white">
                       <div className="single-post-area mb-80 ">
 {/* //////////////////////// */}
 <div className="body-z">
-    <div className="card">
-        <div className="content">
+    <div className="card relative">
+        <div className="content z-10">
         <div className="row">
             <div className="col-12 ">
-                <p className='text-center bold-m'>صنعاء</p>                
+                <p className='text-center text-white text-2xl font-bold'>صنعاء</p>                
             </div>
             </div>
             <div className="text-center">
-                <p className='bold-m'>العملات</p>
+                <p className='text-pink-300 text-xl  '>العملات</p>
                 
             </div>
          
               <div className="row">
-                <div className="col-6 text-center mb-2">ريال سعودي</div>
-                <div className="col-6 text-center">دولار</div>
+                <div className="col-6 text-center mb-2 text-lg">ريال سعودي</div>
+                <div className="col-6 text-center text-lg">دولار</div>
                 <div className="col-6">
                   <div className="row">
                     <div className="col-6" > بيع </div>
@@ -226,17 +227,17 @@ export default async function Home() {
               
               
             </div>
-            <div className="m-2">
-                <p className='bold-m'>الذهب</p>
+            <div className="mt-2">
+                <p className='text-xl text-pink-300'>الذهب</p>
                 
             </div>
               <div className="row">
-                <div className="col-6 text-center mb-2">عيار 21</div>
-                <div className="col-6 text-center">جنية ذهب</div>
+                <div className="col-6 text-center mb-2 text-lg">عيار 21</div>
+                <div className="col-6 text-center text-lg">جنية ذهب</div>
                 <div className="col-6">
                   <div className="row">
-                    <div className="col-6" > بيع </div>
-                    <div className="col-6">شراء</div>
+                    <div className="col-6 " > بيع </div>
+                    <div className="col-6 ">شراء</div>
                   </div>
                 </div>
                 <div className="col-6">
@@ -248,7 +249,7 @@ export default async function Home() {
                 </div>
                 <div className="col-6">
                   <div className="row">
-                  <div className="col-6" > {p24KSanaa.data&&p24KSanaa.data[0].attributes.sell} </div>
+                  <div className="col-6 " > {p24KSanaa.data&&p24KSanaa.data[0].attributes.sell} </div>
                     <div className="col-6">{p24KSanaa.data&&p24KSanaa.data[0].attributes.buy} </div>
                   </div>
                 </div>
@@ -262,15 +263,15 @@ export default async function Home() {
               
             </div>
            
-            <div className="m-2">
-                <p className="bold-m">مشتقات نفطية</p>
+            <div className="mt-2">
+                <p className="text-xl text-pink-300">مشتقات نفطية</p>
                 
             </div>
            
               <div className="row">
-                <div className="col-4 text-center">بترول</div>
-                <div className="col-4 text-center">ديزل</div>
-                <div className="col-4 text-center">غاز</div>
+                <div className="col-4 text-center text-lg">بترول</div>
+                <div className="col-4 text-center text-lg">ديزل</div>
+                <div className="col-4 text-center text-lg">غاز</div>
                 <div className="col-4 text-center">{pPatrolSanaa.data&&pPatrolSanaa.data[0].attributes.buy}</div>
                 <div className="col-4 text-center">{pDieslSanaa.data&&pDieslSanaa.data[0].attributes.buy}</div>
                 <div className="col-4 text-center">{pGasSanaa.data&&pGasSanaa.data[0].attributes.buy}</div>
@@ -280,17 +281,20 @@ export default async function Home() {
               
            
         </div>
+        <div className='absolute w-full h-full top-0 right-0 bg-black/50 z-0'></div>
     </div>
 </div>
 {/* ///////////////////////// */}
+
                       </div>
+                  
               </div>
              <div className="col-12 col-md-6 col-lg-6">
                       <div className="single-post-area mb-80 ">
 {/* //////////////////// */}
 
 <div className="body-z">
-    <div className="cardAden">
+    <div className="cardAden relative">
         <div className="content">
         <div className="row">
             <div className="col-12 ">
@@ -387,6 +391,7 @@ export default async function Home() {
               </div>
            
         </div>
+        <div className='absolute w-full h-full top-0 right-0 bg-black/50 z-0'></div>
     </div>
 </div>
 {/* /////////////////////// */}
@@ -452,7 +457,7 @@ export default async function Home() {
 {/* <!-- ***** ad Widget ***** --> */}
                   <div className="single-widget add-widget mb-50 bg-white shadow ">
                     <a href="#">
-                      <img src="img/bg-img/add.png" alt="" />
+                      <Image  src={BASE_URL+ads.data.attributes.second.data.attributes.url} width={ads.data.attributes.second.data.attributes.width} height={ads.data.attributes.second.data.attributes.height} alt={ads.data.attributes.second.data.attributes.alt} />
                     </a>
                   </div>
 {/* //////////////////// */}
@@ -639,7 +644,7 @@ export default async function Home() {
                    {/* herzontal ad */}
 <div className="container mt-2 mb-5">
   <a>
-    <img src="img/bg-img/h-ad.png" alt=""/>
+  <Image  src={BASE_URL+ads.data.attributes.third.data.attributes.url} width={ads.data.attributes.third.data.attributes.width} height={ads.data.attributes.third.data.attributes.height} alt={ads.data.attributes.third.data.attributes.alt} />
   </a>
 
 </div>
@@ -711,7 +716,7 @@ export default async function Home() {
 {/* <!-- ***** ad Widget ***** --> */}
                   <div className="single-widget add-widget mb-50 bg-white shadow">
                     <a href="#">
-                      <img src="img/bg-img/add.png" alt="" />
+                    <Image  src={BASE_URL+ads.data.attributes.forth.data.attributes.url} width={ads.data.attributes.forth.data.attributes.width} height={ads.data.attributes.forth.data.attributes.height} alt={ads.data.attributes.forth.data.attributes.alt} />
                     </a>
                   </div>
 {/* //////////////////// */}
@@ -765,7 +770,7 @@ export default async function Home() {
                   {/* <!-- ***** ad Widget ***** --> */}
                   <div className="single-widget add-widget mb-50 bg-white shadow">
                     <a href="#">
-                      <img src="img/bg-img/add.png" alt="" />
+                    <Image  src={BASE_URL+ads.data.attributes.fifth.data.attributes.url} width={ads.data.attributes.fifth.data.attributes.width} height={ads.data.attributes.fifth.data.attributes.height} alt={ads.data.attributes.fifth.data.attributes.alt} />
                     </a>
                   </div>
 
@@ -1024,6 +1029,14 @@ return res.json();
 export async function get24KAden() {
   const res = await fetch(
     `${BASE_URL}/api/currency-prices?populate=*&pagination[limit]=1&sort[0]=date%3Adesc&filters[city][$eq]=عدن&filters[currencyName][$eq]=عيار%2024`,
+    { headers, next: { revalidate: NEWSREVALIDATE } }
+  );
+return res.json();
+};
+
+export async function getADS(){
+  const res = await fetch(
+    `${BASE_URL}/api/home-ad?populate=*`,
     { headers, next: { revalidate: NEWSREVALIDATE } }
   );
 return res.json();

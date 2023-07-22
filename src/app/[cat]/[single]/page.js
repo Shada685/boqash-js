@@ -119,7 +119,7 @@ export default async function Page({ params }) {
                   {/* <!-- Post Content --> */}
                   <div className="post-content mt-0">
                     <a
-                      href={
+                      href={"/"+
                         content.data[0]?.attributes.mainCategory.data.attributes
                           .path
                       }

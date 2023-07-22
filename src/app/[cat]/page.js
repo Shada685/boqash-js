@@ -1,6 +1,8 @@
  
 import { BASE_URL ,CATREVALIDATE,headers} from "../api/config";
 import Image from "next/image";
+import { getADS } from "../page";
+ 
  
 const Pagination=({news,path})=>{
 
@@ -53,7 +55,8 @@ export default async function Page({params,searchParams}) {
     const newsData =  getNews(params,pg);
     const breakingNewsData=await getBreakingNews(params);
     const [cat,news]=await Promise.all([catData,newsData])
-   
+    const ads=await getADS()
+
   
   return (
     <>
@@ -196,7 +199,7 @@ export default async function Page({params,searchParams}) {
 
                <div className="single-widget add-widget mb-50 bg-white shadow">
                     <a href="#">
-                      <img src="img/bg-img/add.png" alt="" />
+                    <Image  src={BASE_URL+ads.data.attributes.category.data.attributes.url} width={ads.data.attributes.category.data.attributes.width} height={ads.data.attributes.category.data.attributes.height} alt={ads.data.attributes.category.data.attributes.alt} />
                     </a>
                   </div>
 
@@ -277,3 +280,5 @@ export async function generateStaticParams() {
     }))
 
   }
+ 
+   
