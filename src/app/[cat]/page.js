@@ -101,7 +101,7 @@ export default async function Page({params,searchParams}) {
                             <div className="single-post-area mb-50 bg-white shadow">
                                 {/* <!-- Post Thumbnail --> */}
                                 <div className="post-thumbnail">
-                                    <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} width={400} height={200} alt={ob.attributes.title} />
+                                     <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.thumbnail.url}`} width={400} height={200} alt={ob.attributes.title} />
 
                                     
                                 </div>

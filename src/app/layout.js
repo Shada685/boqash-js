@@ -98,7 +98,7 @@ export default async function RootLayout({ children }) {
                 >
                   {/* <!-- Nav brand --> */}
                   <a href="/" className="nav-brand">
-                    <img src="img/core-img/logo.png" alt="" />
+                    <img src="/img/core-img/logo.png" alt="" />
                   </a>
 
                   {/* <!-- Navbar Toggler --> */}
