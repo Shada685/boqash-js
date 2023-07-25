@@ -138,14 +138,14 @@ export default async function Page({ params }) {
                       <div className="post-meta d-flex align-items-center">
                         {/* <a href="#" className="post-author">By Jane</a> */}
                         <i className="fa fa-circle" aria-hidden="true"></i>
-                        <a href="#" className="post-date">
+                        {/* <a href="#" className="post-date">
                           {" "}
                           {
                             new Date(content.data[0]?.attributes.publishedAt)
                               .toISOString()
                               .split("T")[0]
                           }
-                        </a>
+                        </a> */}
                       </div>
                       {/* <div className="post-meta d-flex">
                                         <a href="#"><i className="fa fa-comments-o" aria-hidden="true"></i> 32</a>
