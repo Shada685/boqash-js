@@ -1,5 +1,5 @@
  
-import { BASE_URL ,NEWSREVALIDATE,headers} from "../api/config";
+import { BASE_URL ,NEWSREVALIDATE,CATREVALIDATE ,headers} from "../api/config";
 import Image from "next/image";
  
  
