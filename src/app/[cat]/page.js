@@ -244,7 +244,7 @@ export default async function Page({params,searchParams}) {
     </>
   )
 }
-export async function getBreakingNews(params) {
+ async function getBreakingNews(params) {
     const res = await fetch(
       `${BASE_URL}/api/short-news?populate=*&pagination[limit]=20&sort[0]=createdAt%3Adesc&filters[zone][path][$eq]=${params.cat}`,
       { headers, next: { revalidate: CATREVALIDATE } }
