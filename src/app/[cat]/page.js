@@ -1,7 +1,7 @@
  
 import { BASE_URL ,CATREVALIDATE,headers} from "../api/config";
 import Image from "next/image";
-import { getADS } from "../page";
+ 
  
  
 const Pagination=({news,path})=>{
@@ -281,4 +281,10 @@ export async function generateStaticParams() {
 
   }
  
-   
+  async function getADS(){
+    const res = await fetch(
+      `${BASE_URL}/api/home-ad?populate=*`,
+      { headers, next: { revalidate: NEWSREVALIDATE } }
+    );
+  return res.json();
+  };
