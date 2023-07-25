@@ -242,10 +242,10 @@ async function Header() {
                           <a href="contact.html">مقتطفات</a>
                         </li>
                         <li>
-                          <a href="contact.html">عن بقش</a>
+                          <a href="/about-us">عن بقش</a>
                         </li>
                         <li>
-                          <a href="contact.html">للاعلان</a>
+                          <a href="/contact-us">للاعلان</a>
                         </li>
                       </ul>
                     </div>
@@ -324,13 +324,11 @@ function Footer(){
                   <h6 className="widget-title">عن بقش</h6>
 <ul >
                     <li className="mb-2">
-                      <a href=""> من نحن</a>
+                      <a href="/about-us"> من نحن</a>
                       </li>
+                    
                     <li className="mb-2">
-                      <a href=""> تواصل معنا</a>
-                      </li>
-                    <li className="mb-2">
-                      <a href="">للاعلان </a>
+                      <a href="/contact-us">للاعلان </a>
                       </li>
                     <li className="mb-2"><a href=""> سياسة الخصوصية</a></li>
                     
