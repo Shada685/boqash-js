@@ -330,7 +330,7 @@ function Footer(){
                     <li className="mb-2">
                       <a href="/contact-us">للاعلان </a>
                       </li>
-                    <li className="mb-2"><a href=""> سياسة الخصوصية</a></li>
+                    <li className="mb-2"><a href="/privacy-policy"> سياسة الخصوصية</a></li>
                     
                   
                     
