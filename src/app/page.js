@@ -40,7 +40,7 @@ async function FeaturedPinnedPostedList({ promise ,ad}) {
             <div
               className="single-feature-post video-post bg-img"
               style={{
-                backgroundImage: `url(${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.large.url})`,
+                backgroundImage: `url(${BASE_URL+ob.attributes.featuredImage.data.attributes.url})`,
               }}
             >
               {/* <!-- Post Content --> */}
@@ -78,7 +78,7 @@ async function FeaturedPinnedPostedList({ promise ,ad}) {
                       {/* <!-- Single Blog Post --> */}
                       <div className="single-blog-post style-2 d-flex align-items-center">
                         <div className="post-thumbnail">
-                        <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.large.url}`} width={400}  height={200} alt={ob.attributes.title} />
+                        <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.url}`} width={400}  height={200} alt={ob.attributes.title} />
                         
                         </div>
                         <div className="post-content">
@@ -294,44 +294,44 @@ export default async function Home() {
 {/* //////////////////// */}
 
 <div className="body-z">
-    <div className="cardAden relative">
-        <div className="content">
+    <div className="card relative">
+        <div className="content z-10">
         <div className="row">
             <div className="col-12 ">
-                <p className='text-center bold-m'>عدن</p>                
+                <p className='text-center text-white text-2xl font-bold'>عدن</p>                
             </div>
             </div>
             <div className="text-center">
-                <p className='bold-m'>العملات</p>
+                <p className='text-pink-300 text-xl'>العملات</p>
                 
             </div>
          
               <div className="row">
-                <div className="col-6 text-center mb-2">ريال سعودي</div>
-                <div className="col-6 text-center">دولار</div>
+                <div className="col-6 text-center mb-2 text-lg text-white">ريال سعودي</div>
+                <div className="col-6 text-center text-lg text-white">دولار</div>
                 <div className="col-6">
                   <div className="row">
-                    <div className="col-6" > بيع </div>
-                    <div className="col-6">شراء</div>
+                    <div className="col-6 text-white" > بيع </div>
+                    <div className="col-6 text-white">شراء</div>
                   </div>
                 </div>
                 <div className="col-6">
                   <div className="row">
-                    <div className="col-6" > بيع </div>
-                    <div className="col-6">شراء</div>
+                    <div className="col-6 text-white" > بيع </div>
+                    <div className="col-6 text-white">شراء</div>
                   </div>
                   
                 </div>
                 <div className="col-6">
                   <div className="row">
-                    <div className="col-6" > {pSaudiAden.data&&pSaudiAden.data[0].attributes.sell} </div>
-                    <div className="col-6">{pSaudiAden.data&&pSaudiAden.data[0].attributes.buy} </div>
+                    <div className="col-6 text-white" > {pSaudiAden.data&&pSaudiAden.data[0].attributes.sell} </div>
+                    <div className="col-6 text-white">{pSaudiAden.data&&pSaudiAden.data[0].attributes.buy} </div>
                   </div>
                 </div>
                 <div className="col-6">
                   <div className="row">
-                  <div className="col-6" > {pDollarAden.data&&pDollarAden.data[0].attributes.sell} </div>
-                    <div className="col-6">{pDollarAden.data&&pDollarAden.data[0].attributes.buy} </div>
+                  <div className="col-6 text-white" > {pDollarAden.data&&pDollarAden.data[0].attributes.sell} </div>
+                    <div className="col-6 text-white">{pDollarAden.data&&pDollarAden.data[0].attributes.buy} </div>
                   </div>
                   
                 </div>
@@ -339,53 +339,53 @@ export default async function Home() {
               
             </div>
             <div className="m-2">
-                <p className='bold-m'>الذهب</p>
+                <p className='text-pink-300 text-xl'>الذهب</p>
                 
             </div>
               <div className="row">
-                <div className="col-6 text-center mb-2">عيار 21</div>
-                <div className="col-6 text-center">جنية ذهب</div>
+                <div className="col-6 text-center text-lg text-white ">عيار 21</div>
+                <div className="col-6 text-center text-lg text-white">جنية ذهب</div>
                 <div className="col-6">
                   <div className="row">
-                    <div className="col-6" > بيع </div>
-                    <div className="col-6">شراء</div>
+                    <div className="col-6 text-white" > بيع </div>
+                    <div className="col-6 text-white">شراء</div>
                   </div>
                 </div>
                 <div className="col-6">
                   <div className="row">
-                    <div className="col-6" > بيع </div>
-                    <div className="col-6">شراء</div>
+                    <div className="col-6 text-white" > بيع </div>
+                    <div className="col-6 text-white">شراء</div>
                   </div>
                   
                 </div>
                 <div className="col-6">
                   <div className="row">
-                  <div className="col-6" > {p24KAden.data&&p24KAden.data[0].attributes.sell} </div>
-                    <div className="col-6">{p24KAden.data&&p24KAden.data[0].attributes.buy} </div>
+                  <div className="col-6 text-white" > {p24KAden.data&&p24KAden.data[0].attributes.sell} </div>
+                    <div className="col-6 text-white">{p24KAden.data&&p24KAden.data[0].attributes.buy} </div>
                   </div>
                 </div>
                 <div className="col-6">
                   <div className="row">
-                  <div className="col-6" > {pCoinAden.data&&pCoinAden.data[0].attributes.sell} </div>
-                    <div className="col-6">{pCoinAden.data&&pCoinAden.data[0].attributes.buy} </div>
+                  <div className="col-6 text-white" > {pCoinAden.data&&pCoinAden.data[0].attributes.sell} </div>
+                    <div className="col-6 text-white">{pCoinAden.data&&pCoinAden.data[0].attributes.buy} </div>
                   </div>
                   
                 </div>
               
             </div>
            
-            <div className="m-2">
-                <p className="bold-m">مشتقات نفطية</p>
+            <div className="mt-2">
+                <p className="text-pink-300 text-xl">مشتقات نفطية</p>
                 
             </div>
            
               <div className="row">
-                <div className="col-4 text-center">بترول</div>
-                <div className="col-4 text-center">ديزل</div>
-                <div className="col-4 text-center">غاز</div>
-                <div className="col-4 text-center">{pPatrolAden.data&&pPatrolAden.data[0].attributes.buy}</div>
-                <div className="col-4 text-center">{pDieslAden.data&&pDieslAden.data[0].attributes.buy}</div>
-                <div className="col-4 text-center">{pGasAden.data&&pGasAden.data[0].attributes.buy}</div>
+                <div className="col-4 text-center text-white text-lg">بترول</div>
+                <div className="col-4 text-center text-white text-lg">ديزل</div>
+                <div className="col-4 text-center text-white text-lg">غاز</div>
+                <div className="col-4 text-center text-white">{pPatrolAden.data&&pPatrolAden.data[0].attributes.buy}</div>
+                <div className="col-4 text- text-white">{pDieslAden.data&&pDieslAden.data[0].attributes.buy}</div>
+                <div className="col-4 text-center text-white">{pGasAden.data&&pGasAden.data[0].attributes.buy}</div>
                  
                 
               </div>
@@ -489,7 +489,7 @@ export default async function Home() {
                     {localNewsData.data&&[...localNewsData.data.slice(0, 2)].map((ob) => (
                       <div key={ob.id}
                       className="single-feature-post video-post bg-img"
-                      style={{ backgroundImage: `url(${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.medium.url})` }}
+                      style={{ backgroundImage: `url(${BASE_URL+ob.attributes.featuredImage.data.attributes.url})` }}
                     >
                       {/* <!-- Post Content --> */}
                       <div className="post-content">
@@ -515,7 +515,7 @@ export default async function Home() {
                     {localNewsData.data&&[...localNewsData.data.slice(2, 4)].map((ob) => (  <div  key={ob.id} className="col-12 col-md-6 col-lg-6 "> <div   className="single-post-area mb-80 bg-white shadow">
                         {/* <!-- Post Thumbnail --> */}
                         <div className="post-thumbnail">
-                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.large.url}`} alt={ob.attributes.title} width={400} height={200}   />
+                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.url}`} alt={ob.attributes.title} width={400} height={200}   />
                         </div>
 
                         {/* <!-- Post Content --> */}
@@ -540,7 +540,7 @@ export default async function Home() {
                     {localNewsData.data&&[...localNewsData.data.slice(4, 7)].map((ob) => (   <div  key={ob.id} className="col-12 col-md-6 col-lg-4"> <div   className="single-post-area mb-80 ">
                         {/* <!-- Post Thumbnail --> */}
                         <div className="post-thumbnail">
-                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.large.url}`} alt={ob.attributes.title} width={400} height={200} />
+                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.url}`} alt={ob.attributes.title} width={400} height={200} />
                         </div>
 
                         {/* <!-- Post Content --> */}
@@ -574,7 +574,7 @@ export default async function Home() {
                       {arabicNewsData.data&&[...arabicNewsData.data.slice(0, 2)].map((ob) => ( <div  key={ob.id} className="single-post-area bg-white shadow">
                           {/* <!-- Post Thumbnail --> */}
                           <div className="post-thumbnail">
-                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.medium.url}`} alt={ob.attributes.title} width={400} height={200}     />
+                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.url}`} alt={ob.attributes.title} width={400} height={200}     />
                         </div>
 
                         {/* <!-- Post Content --> */}
@@ -601,7 +601,7 @@ export default async function Home() {
                         <div  key={ob.id} className="single-post-area bg-white shadow">
                           {/* <!-- Post Thumbnail --> */}
                           <div className="post-thumbnail">
-                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.medium.url}`} alt={ob.attributes.title} width={400} height={200}     />
+                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.url}`} alt={ob.attributes.title} width={400} height={200}     />
                         </div>
 
                         {/* <!-- Post Content --> */}
@@ -625,7 +625,7 @@ export default async function Home() {
                   {arabicNewsData.data&&[...arabicNewsData.data.slice(3, 7)].map((ob) => ( <div  key={ob.id} className="col-12 col-lg-6 ">
                       <div className="single-blog-post style-3 d-flex mb-50 bg-white shadow">
                       <div className="post-thumbnail">
-                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.medium.url}`} alt={ob.attributes.title} width={400} height={200}     />
+                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.url}`} alt={ob.attributes.title} width={400} height={200}     />
                         </div>
 
                         {/* <!-- Post Content --> */}
@@ -663,7 +663,7 @@ export default async function Home() {
                   <div className="featured-post-slides owl-carousel mb-30 ">
                   {globalNewsData.data&&[...globalNewsData.data.slice(0, 3)].map((ob) => ( <div
                      key={ob.id}  className="single-feature-post video-post bg-img"
-                     style={{ backgroundImage: `url(${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.medium.url})` }}
+                     style={{ backgroundImage: `url(${BASE_URL+ob.attributes.featuredImage.data.attributes.url})` }}
                     >
                      
                         {/* <!-- Post Content --> */}
@@ -684,7 +684,7 @@ export default async function Home() {
                       <div className="col-12 col-lg-6 ">
                         {/* <!-- Post Thumbnail --> */}
                         <div className="post-thumbnail">
-                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.medium.url}`} alt={ob.attributes.title} width={400} height={200}     />
+                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.url}`} alt={ob.attributes.title} width={400} height={200}     />
                         </div>
                       </div>
                       <div className="col-12 col-lg-6 ">
@@ -786,7 +786,7 @@ export default async function Home() {
                     {articaleData.data&&[...articaleData.data.slice(0, 7)].map((ob) => ( 
                       <div key={ob.id} className="single-youtube-channel d-flex align-items-center">
                       <div className="youtube-channel-thumbnail">
-                      <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.medium.url}`} alt={ob.attributes.title} width={110} height={80}     />
+                      <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.url}`} alt={ob.attributes.title} width={110} height={80}     />
                       </div>
                       <div className="youtube-channel-content">
                         <a href={"articles/"+ob.attributes.slug} className="channel-title">
@@ -843,7 +843,7 @@ export default async function Home() {
                     </div>
                     {russianNewsData.data&&[...russianNewsData.data.slice(0, 7)].map((ob) => (  <div  key={ob.id} className="single-blog-post d-flex">
                     <div className="post-thumbnail">
-                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.formats.medium.url}`} alt={ob.attributes.title} width={100} height={70}     />
+                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.url}`} alt={ob.attributes.title} width={100} height={70}     />
                         </div>
 
                       <div className="post-content">

@@ -5,14 +5,12 @@ import { Suspense } from 'react';
 import { NEWSREVALIDATE } from './api/config';
 import { headers,BASE_URL } from './api/config';
 import '../../public/style.css'
+import { useMemo } from 'react';
+import Link from 'next/link';
+
+
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata = {
-  title: 'موقع بقش',
-  description: 'مرصد بقش الاقتصادي',
-  
-
-}
 
 export async function getBreakingNews() {
   const res = await fetch(
@@ -35,15 +33,14 @@ async function BreakingList({ promise }) {
     </ul>
   );
 }
-export default async function RootLayout({ children }) {
+
+
+
+async function Header() {
   const breakingNews = await getBreakingNews();
-  return (
-    <html lang="ar">
-   
-      <body className={inter.className}>
-        {/* <!-- ##### Header Area Start ##### --> */}
-        {/* <!-- ##### Header Area Start ##### --> */}
-        <header className="header-area">
+  return(
+
+    <header className="header-area">
           {/* <!-- Top Header Area --> */}
           <div className="top-header-area pt-2">
             <div className="container">
@@ -65,19 +62,19 @@ export default async function RootLayout({ children }) {
                   <div className="top-meta-data d-flex align-items-center justify-content-end">
                     {/* <!-- Top Social Info --> */}
                     <div className="top-social-info">
-                      <a href="https://www.facebook.com/BoqashEcon/">
+                      <Link href="https://www.facebook.com/BoqashEcon/">
                         <i className="fa fa-facebook"></i>
-                      </a>
-                      <a href="http://twitter.com/BoqashO">
+                      </Link>
+                      <Link href="http://twitter.com/BoqashO">
                         <i className="fa fa-twitter"></i>
-                      </a>
+                      </Link>
                      
-                      <a href="#">
+                      <Link href="#">
                         <i className="fa fa-instagram"></i>
-                      </a>
-                      <a href="#">
+                      </Link>
+                      <Link href="#">
                         <i className="fa fa-youtube-play"></i>
-                      </a>
+                      </Link>
                     </div>
                   
                   
@@ -97,9 +94,9 @@ export default async function RootLayout({ children }) {
                   id="vizewNav"
                 >
                   {/* <!-- Nav brand --> */}
-                  <a href="/" className="nav-brand">
+                  <Link href="/" className="nav-brand">
                     <img src="/img/core-img/logo.png" alt="" />
-                  </a>
+                  </Link>
 
                   {/* <!-- Navbar Toggler --> */}
                   <div className="classy-navbar-toggler">
@@ -123,20 +120,20 @@ export default async function RootLayout({ children }) {
                     <div className="classynav">
                       <ul>
                         <li className="active">
-                          <a href="/">الرئيسية</a>
+                          <Link href="/">الرئيسية</Link>
                         </li>
                         {/* <li>
-                          <a href="archive-list.html">الاخبار المحلية</a>
+                          <Link href="archive-list.html">الاخبار المحلية</Link>
                         </li> */}
                         
                         <li>
-                          <a href="">الاخبار</a>
+                          <Link href="">الاخبار</Link>
                           <ul className="dropdown">
                             <li>
                               <a href="/yemeni-news">- الاخبار المحلية</a>
                             </li>
                             <li>
-                              <a href="archive-list.html">- الاخبار العربية</a>
+                              <a href="/arabic-news">- الاخبار العربية</a>
                             </li>
                             <li>
                               <a href="/inernational-news">- الاخبار العالمية</a>
@@ -147,7 +144,7 @@ export default async function RootLayout({ children }) {
                           </ul>
                         </li>
                         <li>
-                          <a href="">الاسعار</a>
+                          <Link href="">الاسعار</Link>
                           <div className="megamenu">
                             <ul className="single-mega cn-col-4">
                               <li>
@@ -259,37 +256,41 @@ export default async function RootLayout({ children }) {
             </div>
           </div>
         </header>
-        {/* <!-- ##### Header Area End ##### --> */}
-      {children}
-      {/* <!-- ##### Footer Area Start ##### --> */}
-        <footer className="footer-area">
+
+        
+  )
+}
+
+function Footer(){
+  return(
+<footer className="footer-area">
           <div className="container">
             <div className="row">
               {/* <!-- Footer Widget Area --> */}
               <div className="col-12 col-sm-6 col-xl-3">
                 <div className="footer-widget mb-70">
                   {/* <!-- Logo --> */}
-                  <a href="/" className="foo-logo d-block mb-4">
+                  <Link href="/" className="foo-logo d-block mb-4">
                     <img src="img/core-img/logo2.png" alt="" />
-                  </a>
+                  </Link>
                   <p>
                    بقش هو مرصد اقتصادي إلكتروني يوفر للمستخدمين تحليلات اقتصادية ومالية دقيقة وموثوقة عن الأسواق والاقتصاديات المحلية والعالمية.
                   </p>
                   {/* <!-- Footer Newsletter Area --> */}
                   <div className="footer-social-area">
-                    <a href="https://www.facebook.com/BoqashEcon/" className="facebook">
+                    <Link href="https://www.facebook.com/BoqashEcon/" className="facebook">
                       <i className="fa fa-facebook"></i>
-                    </a>
+                    </Link>
                     
-                    <a href="#" className="instagram">
+                    <Link href="#" className="instagram">
                       <i className="fa fa-instagram"></i>
-                    </a>
-                    <a href="http://twitter.com/BoqashO" className="twitter">
+                    </Link>
+                    <Link href="http://twitter.com/BoqashO" className="twitter">
                       <i className="fa fa-twitter"></i>
-                    </a>
-                    <a href="#" className="youtube">
+                    </Link>
+                    <Link href="#" className="youtube">
                       <i className="fa fa-youtube-play"></i>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -308,7 +309,7 @@ export default async function RootLayout({ children }) {
                     <li className="mb-2">
                       <a href="/inernational-news">الاخبار العالمية</a>
                       </li>
-                    <li className="mb-2"><a href="">الحرب الروسية</a></li>
+                    <li className="mb-2"><a href="/russian-news">الحرب الروسية</a></li>
                     <li className="mb-2"><a href="/articles">مقالات</a></li>
                     <li> <a href="">مقتطفات</a></li>
                     
@@ -376,9 +377,9 @@ export default async function RootLayout({ children }) {
                   <p className="copywrite-text text-center ">
                     
                      &copy;
-                    <script>
+                    {/* <script>
                       document.write(new Date().getFullYear());
-                    </script>{" "}
+                    </script>{" "} */}
                     كل الحقوق محفوظة | powered  
                      by{" "}
                     <a href="https://dracowareye.com" target="_blank">
@@ -392,16 +393,41 @@ export default async function RootLayout({ children }) {
             </div>
           </div>
         </footer>
+  )
+}
+
+export const metadata = {
+  title: 'موقع بقش',
+  description: 'مرصد بقش الاقتصادي',
+  
+
+}
+
+
+export default async function RootLayout({ children }) {
+  // const breakingNews = await getBreakingNews();
+  return (
+    <html lang="ar">
+   
+      <body className={inter.className}>
+        {/* <!-- ##### Header Area Start ##### --> */}
+        {/* <!-- ##### Header Area Start ##### --> */}
+        <Script src="/js/jquery/jquery-2.2.4.min.js" />
+      <Script src="/js/bootstrap/popper.min.js" />
+      <Script src="/js/bootstrap/bootstrap.min.js" />
+      <Script src="/js/plugins/plugins.js" />
+      <Script src="/js/active.js" />
+        <Header />
+        {/* <!-- ##### Header Area End ##### --> */}
+      {children}
+      {/* <!-- ##### Footer Area Start ##### --> */}
+        <Footer />
         {/* <!-- ##### Footer Area End ##### --> */}
     {/* <!-- ##### Footer Area End ##### --> */}
 
 
 
-<Script src="/js/jquery/jquery-2.2.4.min.js" />
-      <Script src="/js/bootstrap/popper.min.js" />
-      <Script src="/js/bootstrap/bootstrap.min.js" />
-      <Script src="/js/plugins/plugins.js" />
-      <Script src="/js/active.js" />
+
 
 
       </body>
