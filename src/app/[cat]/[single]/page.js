@@ -220,7 +220,7 @@ export default async function Page({ params }) {
                           <div className="single-post-area mb-50 bg-white">
                             {/* <!-- Post Thumbnail --> */}
                             <div className="post-thumbnail">
-                              <Image width={e.attributes.featuredImage.data.attributes.formats.small.width} height={e.attributes.featuredImage.data.attributes.formats.small.height} src={BASE_URL+ e.attributes.featuredImage.data.attributes.formats.small.url} alt={e.attributes.title} />
+                              <Image width={e.attributes.featuredImage.data.attributes.width} height={e.attributes.featuredImage.data.attributes.height} src={BASE_URL+ e.attributes.featuredImage.data.attributes.url} alt={e.attributes.title} />
                             </div>
 
                             {/* <!-- Post Content --> */}
