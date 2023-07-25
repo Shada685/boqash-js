@@ -338,7 +338,7 @@ export async function generateStaticParams() {
 
   return data?.map((n) => ({
     cat: n.attributes.mainCategory.data.attributes.path,
-    single:encodeURIComponent(n.attributes.slug),
+    single:n.attributes.slug,
   }));
 }
 async function getContent(single) {
