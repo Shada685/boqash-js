@@ -371,7 +371,7 @@ function getRandomElements(arr) {
 
   return randomElements;
 }
-export async function getNews() {
+ async function getNews() {
   const res = await fetch(`${BASE_URL}/api/news?populate=*`, { headers }).then(
     (res) => res.json()
   );
