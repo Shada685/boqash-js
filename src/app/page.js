@@ -482,7 +482,7 @@ export default async function Home() {
                   <a href={localNewsData.data?localNewsData.data[0].attributes.mainCategory.data.attributes.path+"/":"#"}> <h4>الاخبار المحلية</h4></a>
                     <div className="line"></div>
                   </div>
-
+        
                   {/* <!-- Featured Post Slides --> */}
                   <div className="featured-post-slides owl-carousel mb-30 ">
                     {/* <!-- Single Feature Post --> */}

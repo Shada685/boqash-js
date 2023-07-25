@@ -2,7 +2,7 @@ import Image from "next/image";
 import { BASE_URL, CATREVALIDATE, headers } from "../../api/config";
 
 export default async function Page({ params }) {
-  const content = await getContent(params.single);
+  const content = await getContent(decodeURIComponent(params.single));
   const news = await getNews();
   if(content.data)  return (
     <>
@@ -238,7 +238,7 @@ export default async function Page({ params }) {
                                 }
                               </a>
                               <a
-                                href={`/${e.attributes.mainCategory.data.attributes.path}/${e.attributes.slug}`}
+                                href={`/${e.attributes.mainCategory.data.attributes.path}/${encodeURIComponent(e.attributes.slug)}`}
                                 className="post-title"
                               >
                                 {e.attributes.title}
