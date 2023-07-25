@@ -482,7 +482,7 @@ export default async function Home() {
                   <a href={localNewsData.data?localNewsData.data[0].attributes.mainCategory.data.attributes.path+"/":"#"}> <h4>الاخبار المحلية</h4></a>
                     <div className="line"></div>
                   </div>
-
+        
                   {/* <!-- Featured Post Slides --> */}
                   <div className="featured-post-slides owl-carousel mb-30 ">
                     {/* <!-- Single Feature Post --> */}
@@ -871,7 +871,7 @@ export default async function Home() {
 }
 
 
-export async function getBreakingNews() {
+ async function getBreakingNews() {
   const res = await fetch(
     `${BASE_URL}/api/short-news?populate=*&pagination[limit]=28&sort[0]=createdAt%3Adesc`,
     { headers, next: { revalidate: NEWSREVALIDATE } }
@@ -880,7 +880,7 @@ export async function getBreakingNews() {
   return res.json();
 }
 
-export async function getPinnedNews() {
+ async function getPinnedNews() {
   const res = await fetch(
     `${BASE_URL}/api/news?populate=*&pagination[limit]=10&filters[pin][$eq]=true&filters[mainCategory][path][$ne]=articles&sort[0]=publishedAt%3Adesc`,
     { headers, next: { revalidate: NEWSREVALIDATE } }
@@ -889,7 +889,7 @@ export async function getPinnedNews() {
   return res.json();
 }
 
-export async function getArabicNews() {
+ async function getArabicNews() {
   const res = await fetch(
     `${BASE_URL}/api/news?populate=*&pagination[limit]=7&filters[pin][$ne]=true&sort[0]=publishedAt%3Adesc&filters[mainCategory][path][$eq]=arabic-news`,
     { headers, next: { revalidate: NEWSREVALIDATE } }
@@ -898,7 +898,7 @@ export async function getArabicNews() {
   return res.json();
 }
 
-export async function getLocalNews() {
+ async function getLocalNews() {
   const res = await fetch(
     `${BASE_URL}/api/news?populate=*&pagination[limit]=7&filters[pin][$ne]=true&sort[0]=publishedAt%3Adesc&filters[mainCategory][path][$eq]=yemeni-news`,
     { headers, next: { revalidate: NEWSREVALIDATE } }
@@ -907,7 +907,7 @@ export async function getLocalNews() {
   return res.json();
 }
 
-export async function getGlobalNews() {
+ async function getGlobalNews() {
   const res = await fetch(
     `${BASE_URL}/api/news?populate=*&pagination[limit]=7&filters[pin][$ne]=true&sort[0]=publishedAt%3Adesc&filters[mainCategory][path][$eq]=inernational-news`,
     { headers, next: { revalidate: NEWSREVALIDATE } }
@@ -915,7 +915,7 @@ export async function getGlobalNews() {
 
   return res.json();
 }
-export async function getRussianNews() {
+ async function getRussianNews() {
   const res = await fetch(
     `${BASE_URL}/api/news?populate=*&pagination[limit]=7&filters[pin][$ne]=true&sort[0]=publishedAt%3Adesc&filters[mainCategory][path][$eq]=russian-news`,
     { headers, next: { revalidate: NEWSREVALIDATE } }
@@ -924,7 +924,7 @@ export async function getRussianNews() {
   return res.json();
 }
 
-export async function getِArticales() {
+ async function getِArticales() {
   const res = await fetch(
     `${BASE_URL}/api/news?populate=*&pagination[limit]=7&filters[pin][$ne]=true&sort[0]=publishedAt%3Adesc&filters[mainCategory][path][$eq]=articles`,
     { headers, next: { revalidate: NEWSREVALIDATE } }
@@ -934,42 +934,42 @@ export async function getِArticales() {
   return res.json();
 }
 
-  export async function getSaudiSanaa() {
+   async function getSaudiSanaa() {
     const res = await fetch(
       `${BASE_URL}/api/currency-prices?populate=*&pagination[limit]=1&sort[0]=date%3Adesc&filters[city][$eq]=صنعاء&filters[currencyName][$eq]=ريال%20سعودي`,
       { headers, next: { revalidate: NEWSREVALIDATE } }
     );
   return res.json();
 };
-  export async function getSaudiAden() {
+   async function getSaudiAden() {
     const res = await fetch(
       `${BASE_URL}/api/currency-prices?populate=*&pagination[limit]=1&sort[0]=date%3Adesc&filters[city][$eq]=عدن&filters[currencyName][$eq]=ريال%20سعودي`,
       { headers, next: { revalidate: NEWSREVALIDATE } }
     );
   return res.json();
 };
-  export async function getDollarAden() {
+   async function getDollarAden() {
     const res = await fetch(
       `${BASE_URL}/api/currency-prices?populate=*&pagination[limit]=1&sort[0]=date%3Adesc&filters[city][$eq]=عدن&filters[currencyName][$eq]=دولار%20امريكي`,
       { headers, next: { revalidate: NEWSREVALIDATE } }
     );
   return res.json();
 };
-  export async function getDollarSanaa() {
+   async function getDollarSanaa() {
     const res = await fetch(
       `${BASE_URL}/api/currency-prices?populate=*&pagination[limit]=1&sort[0]=date%3Adesc&filters[city][$eq]=صنعاء&filters[currencyName][$eq]=دولار%20امريكي`,
       { headers, next: { revalidate: NEWSREVALIDATE } }
     );
   return res.json();
 };
-export async function getDieslSanaa() {
+ async function getDieslSanaa() {
   const res = await fetch(
     `${BASE_URL}/api/currency-prices?populate=*&pagination[limit]=1&sort[0]=date%3Adesc&filters[city][$eq]=صنعاء&filters[currencyName][$eq]=ديزل`,
     { headers, next: { revalidate: NEWSREVALIDATE } }
   );
 return res.json();
 };
-export async function getDieslAden() {
+ async function getDieslAden() {
   const res = await fetch(
     `${BASE_URL}/api/currency-prices?populate=*&pagination[limit]=1&sort[0]=date%3Adesc&filters[city][$eq]=عدن&filters[currencyName][$eq]=ديزل`,
     { headers, next: { revalidate: NEWSREVALIDATE } }
@@ -977,56 +977,56 @@ export async function getDieslAden() {
 return res.json();
 };
 
-export async function getPatrolSanaa() {
+ async function getPatrolSanaa() {
   const res = await fetch(
     `${BASE_URL}/api/currency-prices?populate=*&pagination[limit]=1&sort[0]=date%3Adesc&filters[city][$eq]=صنعاء&filters[currencyName][$eq]=بترول`,
     { headers, next: { revalidate: NEWSREVALIDATE } }
   );
 return res.json();
 };
-export async function getPatrolAden() {
+ async function getPatrolAden() {
   const res = await fetch(
     `${BASE_URL}/api/currency-prices?populate=*&pagination[limit]=1&sort[0]=date%3Adesc&filters[city][$eq]=عدن&filters[currencyName][$eq]=بترول`,
     { headers, next: { revalidate: NEWSREVALIDATE } }
   );
 return res.json();
 };
-export async function getGasSanaa() {
+ async function getGasSanaa() {
   const res = await fetch(
     `${BASE_URL}/api/currency-prices?populate=*&pagination[limit]=1&sort[0]=date%3Adesc&filters[city][$eq]=صنعاء&filters[currencyName][$eq]=غاز`,
     { headers, next: { revalidate: NEWSREVALIDATE } }
   );
 return res.json();
 };
-export async function getGasAden() {
+ async function getGasAden() {
   const res = await fetch(
     `${BASE_URL}/api/currency-prices?populate=*&pagination[limit]=1&sort[0]=date%3Adesc&filters[city][$eq]=عدن&filters[currencyName][$eq]=غاز`,
     { headers, next: { revalidate: NEWSREVALIDATE } }
   );
 return res.json();
 };
-export async function getCoinSanaa() {
+ async function getCoinSanaa() {
   const res = await fetch(
     `${BASE_URL}/api/currency-prices?populate=*&pagination[limit]=1&sort[0]=date%3Adesc&filters[city][$eq]=صنعاء&filters[currencyName][$eq]=جنية`,
     { headers, next: { revalidate: NEWSREVALIDATE } }
   );
 return res.json();
 };
-export async function getCoinAden() {
+ async function getCoinAden() {
   const res = await fetch(
     `${BASE_URL}/api/currency-prices?populate=*&pagination[limit]=1&sort[0]=date%3Adesc&filters[city][$eq]=عدن&filters[currencyName][$eq]=جنية`,
     { headers, next: { revalidate: NEWSREVALIDATE } }
   );
 return res.json();
 };
-export async function get24KSanaa() {
+ async function get24KSanaa() {
   const res = await fetch(
     `${BASE_URL}/api/currency-prices?populate=*&pagination[limit]=1&sort[0]=date%3Adesc&filters[city][$eq]=صنعاء&filters[currencyName][$eq]=عيار%2024`,
     { headers, next: { revalidate: NEWSREVALIDATE } }
   );
 return res.json();
 };
-export async function get24KAden() {
+ async function get24KAden() {
   const res = await fetch(
     `${BASE_URL}/api/currency-prices?populate=*&pagination[limit]=1&sort[0]=date%3Adesc&filters[city][$eq]=عدن&filters[currencyName][$eq]=عيار%2024`,
     { headers, next: { revalidate: NEWSREVALIDATE } }
@@ -1034,7 +1034,7 @@ export async function get24KAden() {
 return res.json();
 };
 
-export async function getADS(){
+ async function getADS(){
   const res = await fetch(
     `${BASE_URL}/api/home-ad?populate=*`,
     { headers, next: { revalidate: NEWSREVALIDATE } }

@@ -12,7 +12,7 @@ import Link from 'next/link';
 const inter = Inter({ subsets: ['latin'] })
 
 
-export async function getBreakingNews() {
+ async function getBreakingNews() {
   const res = await fetch(
     `${BASE_URL}/api/short-news?populate=*&pagination[limit]=28&sort[0]=createdAt%3Adesc`,
     { headers, next: { revalidate: NEWSREVALIDATE } }

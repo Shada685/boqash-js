@@ -1,7 +1,7 @@
  
-import { BASE_URL ,CATREVALIDATE,headers} from "../api/config";
+import { BASE_URL ,NEWSREVALIDATE,CATREVALIDATE ,headers} from "../api/config";
 import Image from "next/image";
-import { getADS } from "../page";
+ 
  
  
 const Pagination=({news,path})=>{
@@ -244,7 +244,7 @@ export default async function Page({params,searchParams}) {
     </>
   )
 }
-export async function getBreakingNews(params) {
+ async function getBreakingNews(params) {
     const res = await fetch(
       `${BASE_URL}/api/short-news?populate=*&pagination[limit]=20&sort[0]=createdAt%3Adesc&filters[zone][path][$eq]=${params.cat}`,
       { headers, next: { revalidate: CATREVALIDATE } }
@@ -281,4 +281,10 @@ export async function generateStaticParams() {
 
   }
  
-   
+  async function getADS(){
+    const res = await fetch(
+      `${BASE_URL}/api/home-ad?populate=*`,
+      { headers, next: { revalidate: NEWSREVALIDATE } }
+    );
+  return res.json();
+  };

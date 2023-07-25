@@ -2,7 +2,7 @@ import Image from "next/image";
 import { BASE_URL, CATREVALIDATE, headers } from "../../api/config";
 
 export default async function Page({ params }) {
-  const content = await getContent(params.single);
+  const content = await getContent(decodeURIComponent(params.single));
   const news = await getNews();
   if(content.data)  return (
     <>
@@ -138,14 +138,14 @@ export default async function Page({ params }) {
                       <div className="post-meta d-flex align-items-center">
                         {/* <a href="#" className="post-author">By Jane</a> */}
                         <i className="fa fa-circle" aria-hidden="true"></i>
-                        <a href="#" className="post-date">
+                        {/* <a href="#" className="post-date">
                           {" "}
                           {
                             new Date(content.data[0]?.attributes.publishedAt)
                               .toISOString()
                               .split("T")[0]
                           }
-                        </a>
+                        </a> */}
                       </div>
                       {/* <div className="post-meta d-flex">
                                         <a href="#"><i className="fa fa-comments-o" aria-hidden="true"></i> 32</a>
@@ -220,7 +220,7 @@ export default async function Page({ params }) {
                           <div className="single-post-area mb-50 bg-white">
                             {/* <!-- Post Thumbnail --> */}
                             <div className="post-thumbnail">
-                              <Image width={e.attributes.featuredImage.data.attributes.formats.small.width} height={e.attributes.featuredImage.data.attributes.formats.small.height} src={BASE_URL+ e.attributes.featuredImage.data.attributes.formats.small.url} alt={e.attributes.title} />
+                              <Image width={e.attributes.featuredImage.data.attributes.width} height={e.attributes.featuredImage.data.attributes.height} src={BASE_URL+ e.attributes.featuredImage.data.attributes.url} alt={e.attributes.title} />
                             </div>
 
                             {/* <!-- Post Content --> */}
@@ -238,7 +238,7 @@ export default async function Page({ params }) {
                                 }
                               </a>
                               <a
-                                href={`/${e.attributes.mainCategory.data.attributes.path}/${e.attributes.slug}`}
+                                href={`/${e.attributes.mainCategory.data.attributes.path}/${encodeURIComponent(e.attributes.slug)}`}
                                 className="post-title"
                               >
                                 {e.attributes.title}
@@ -338,7 +338,7 @@ export async function generateStaticParams() {
 
   return data?.map((n) => ({
     cat: n.attributes.mainCategory.data.attributes.path,
-    single:encodeURIComponent(n.attributes.slug),
+    single:n.attributes.slug,
   }));
 }
 async function getContent(single) {
@@ -371,7 +371,7 @@ function getRandomElements(arr) {
 
   return randomElements;
 }
-export async function getNews() {
+ async function getNews() {
   const res = await fetch(`${BASE_URL}/api/news?populate=*`, { headers }).then(
     (res) => res.json()
   );
