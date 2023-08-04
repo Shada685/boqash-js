@@ -11,13 +11,14 @@
 @import url(css/magnific-popup.css);
 
 * {
-  margin: 0;
+   margin-top: 0;
   padding: 0; 
 direction: rtl;
 text-align: right;}
 
 body {
-  font-family: "Cairo", sans-serif;
+  margin: 10px;
+  font-family: "Expo", expo;
   font-size: 14px;
   background-color: #f0f0f0;
   color: #000; }
@@ -28,10 +29,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Cairo", sans-serif;
+  font-family: "Expo", sans-serif;
   color: #000;
   line-height: 1.3;
-  font-weight: 500; }
+  font-weight: 500; 
+     text-align: center;}
 
 p {
   font-family: "Cairo", sans-serif;
@@ -618,11 +620,18 @@ input:focus {
 .vizew-nav-tab {
   position: relative;
   z-index: 1;
-  background-color: #fff;
+  background-color: #8F4872;
   width: 100%;
-  height: 500px;
+  height: 100%;
+  margin-right: 20px;
+  border-radius: 15px;
   overflow-x: hidden;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .vizew-nav-tab {
       height: 400px; } }
@@ -634,12 +643,11 @@ input:focus {
       height: 300px; } }
   .vizew-nav-tab .nav-link {
     padding: 0;
-    padding: 15px 20px;
+    padding: 15px 15px;
     border-left: 4px solid transparent; }
     .vizew-nav-tab .nav-link.active {
-      background-color: #c0bebe;
+      background-color: #8F4872;
       border-left-color: #8F4872; }
-
 .vizew-breadcrumb {
   position: relative;
   z-index: 1;
@@ -759,6 +767,7 @@ input:focus {
       flex: 0 0 110px;
       max-width: 110px;
       width: 110px; }
+
       @media only screen and (min-width: 768px) and (max-width: 991px) {
         .single-blog-post.style-2 .post-thumbnail {
           -webkit-box-flex: 0;
@@ -778,10 +787,10 @@ input:focus {
     .single-blog-post.style-2 .post-content {
       position: relative;
       z-index: 1;
-      padding-right: 20px; }
+      padding-right: 2px; }
       .single-blog-post.style-2 .post-content .post-title {
-        color: #000;
-        margin-bottom: 10px;
+        color: #fff;
+        margin-bottom: 0px;
         display: block;
         font-weight: 700;
         font-size: 16px;
@@ -855,6 +864,7 @@ input:focus {
     z-index: 5;
     bottom: 0;
     left: 0;
+    border-radius: 15px;
     background: rgba(0, 0, 0, 0.5);
     background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.01) 90%, rgba(0, 0, 0, 0) 100%);
     background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.01) 90%, rgba(0, 0, 0, 0) 100%); }
@@ -1948,4 +1958,22 @@ textarea.form-control {
 }
 .centered {
   vertical-align: middle;
+}
+
+.tab:hover {
+  background: #f0f0f0;
+}
+.tab.selected {
+  border-color: #aaa;
+  border-width: 2px;
+  background: #fff;
+}
+
+      .rounded-block {
+        background-color: theme('colors.pink.500');
+      }
+      
+.table .th {
+color: white;
+
 }
