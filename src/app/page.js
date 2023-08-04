@@ -21,8 +21,8 @@ async function FeaturedPinnedPostedList({ promise ,ad}) {
         <div className="col-12">
           {/* <!-- Section Heading --> */}
           <div className="hero--area section-padding-80">
-            <h4>hhh</h4>
-           
+           <h4>ابرز الاخبار</h4>
+            <div className="line"></div>
           </div>
         </div>
       </div>
