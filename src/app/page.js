@@ -167,309 +167,216 @@ export default async function Home() {
         {/* <!-- ##### Hero Area End ##### --> */}
         {/* <!-- ##### Header Area End ##### --> */}
 
-        <section className="vizew-post-area mb-50 ">
+ <section className="vizew-post-area mb-50 ">
           <div className="container">
-             <div className="row">
-            <div className="col-12 col-md-8 col-lg-8 ">
-              <div className="section-heading style-2">
-                    <h4></h4>
-                    <div className="line"></div>
-                  </div>
-              
-
-{/* ///////////////////////// */}
-<div className="row">
-              <div className="col-12 col-md-6 col-lg-6 text-white">
-                      <div className="single-post-area mb-80 ">
-{/* //////////////////////// */}
-<div className="body-z">
-    <div className="card relative">
-        <div className="content z-10">
-        <div className="row">
-            <div className="col-12 ">
-                <p className='text-center text-white text-2xl font-bold'>صنعاء</p>                
-            </div>
-            </div>
-            <div className="text-center">
-                <p className='text-pink-300 text-xl  '>العملات</p>
-                
-            </div>
-         
-              <div className="row">
-                <div className="col-6 text-center mb-2 text-lg">ريال سعودي</div>
-                <div className="col-6 text-center text-lg">دولار</div>
-                <div className="col-6">
-                  <div className="row">
-                    <div className="col-6" > بيع </div>
-                    <div className="col-6">شراء</div>
-                  </div>
-                </div>
-                <div className="col-6">
-                  <div className="row">
-                    <div className="col-6" > بيع </div>
-                    <div className="col-6">شراء</div>
-                  </div>
-                  
-                </div>
-                <div className="col-6">
-                  <div className="row">
-                    <div className="col-6" > {pSaudiSanaa.data&&pSaudiSanaa.data[0].attributes.sell} </div>
-                    <div className="col-6">{pSaudiSanaa.data&&pSaudiSanaa.data[0].attributes.buy} </div>
-                  </div>
-                </div>
-                <div className="col-6">
-                  <div className="row">
-                  <div className="col-6" > {pDollarSanaa.data&&pDollarSanaa.data[0].attributes.sell} </div>
-                    <div className="col-6">{pDollarSanaa.data&&pDollarSanaa.data[0].attributes.buy} </div>
-                  </div>
-                  
-                </div>
-              
-              
-            </div>
-            <div className="mt-2">
-                <p className='text-xl text-pink-300'>الذهب</p>
-                
-            </div>
-              <div className="row">
-                <div className="col-6 text-center mb-2 text-lg">عيار 21</div>
-                <div className="col-6 text-center text-lg">جنية ذهب</div>
-                <div className="col-6">
-                  <div className="row">
-                    <div className="col-6 " > بيع </div>
-                    <div className="col-6 ">شراء</div>
-                  </div>
-                </div>
-                <div className="col-6">
-                  <div className="row">
-                    <div className="col-6" > بيع </div>
-                    <div className="col-6">شراء</div>
-                  </div>
-                  
-                </div>
-                <div className="col-6">
-                  <div className="row">
-                  <div className="col-6 " > {p24KSanaa.data&&p24KSanaa.data[0].attributes.sell} </div>
-                    <div className="col-6">{p24KSanaa.data&&p24KSanaa.data[0].attributes.buy} </div>
-                  </div>
-                </div>
-                <div className="col-6">
-                  <div className="row">
-                  <div className="col-6" > {pCoinSanaa.data&&pCoinSanaa.data[0].attributes.sell} </div>
-                    <div className="col-6">{pCoinSanaa.data&&pCoinSanaa.data[0].attributes.buy} </div>
-                  </div>
-                  
-                </div>
-              
-            </div>
-           
-            <div className="mt-2">
-                <p className="text-xl text-pink-300">مشتقات نفطية</p>
-                
-            </div>
-           
-              <div className="row">
-                <div className="col-4 text-center text-lg">بترول</div>
-                <div className="col-4 text-center text-lg">ديزل</div>
-                <div className="col-4 text-center text-lg">غاز</div>
-                <div className="col-4 text-center">{pPatrolSanaa.data&&pPatrolSanaa.data[0].attributes.buy}</div>
-                <div className="col-4 text-center">{pDieslSanaa.data&&pDieslSanaa.data[0].attributes.buy}</div>
-                <div className="col-4 text-center">{pGasSanaa.data&&pGasSanaa.data[0].attributes.buy}</div>
-                 
-                
-              </div>
-              
-           
-        </div>
-        <div className='absolute w-full h-full top-0 right-0 bg-black/50 z-0'></div>
-    </div>
-</div>
-{/* ///////////////////////// */}
-
-                      </div>
-                  
-              </div>
-             <div className="col-12 col-md-6 col-lg-6">
-                      <div className="single-post-area mb-80 ">
-{/* //////////////////// */}
-
-<div className="body-z">
-    <div className="card relative">
-        <div className="content z-10">
-        <div className="row">
-            <div className="col-12 ">
-                <p className='text-center text-white text-2xl font-bold'>عدن</p>                
-            </div>
-            </div>
-            <div className="text-center">
-                <p className='text-pink-300 text-xl'>العملات</p>
-                
-            </div>
-         
-              <div className="row">
-                <div className="col-6 text-center mb-2 text-lg text-white">ريال سعودي</div>
-                <div className="col-6 text-center text-lg text-white">دولار</div>
-                <div className="col-6">
-                  <div className="row">
-                    <div className="col-6 text-white" > بيع </div>
-                    <div className="col-6 text-white">شراء</div>
-                  </div>
-                </div>
-                <div className="col-6">
-                  <div className="row">
-                    <div className="col-6 text-white" > بيع </div>
-                    <div className="col-6 text-white">شراء</div>
-                  </div>
-                  
-                </div>
-                <div className="col-6">
-                  <div className="row">
-                    <div className="col-6 text-white" > {pSaudiAden.data&&pSaudiAden.data[0].attributes.sell} </div>
-                    <div className="col-6 text-white">{pSaudiAden.data&&pSaudiAden.data[0].attributes.buy} </div>
-                  </div>
-                </div>
-                <div className="col-6">
-                  <div className="row">
-                  <div className="col-6 text-white" > {pDollarAden.data&&pDollarAden.data[0].attributes.sell} </div>
-                    <div className="col-6 text-white">{pDollarAden.data&&pDollarAden.data[0].attributes.buy} </div>
-                  </div>
-                  
-                </div>
-              
-              
-            </div>
-            <div className="m-2">
-                <p className='text-pink-300 text-xl'>الذهب</p>
-                
-            </div>
-              <div className="row">
-                <div className="col-6 text-center text-lg text-white ">عيار 21</div>
-                <div className="col-6 text-center text-lg text-white">جنية ذهب</div>
-                <div className="col-6">
-                  <div className="row">
-                    <div className="col-6 text-white" > بيع </div>
-                    <div className="col-6 text-white">شراء</div>
-                  </div>
-                </div>
-                <div className="col-6">
-                  <div className="row">
-                    <div className="col-6 text-white" > بيع </div>
-                    <div className="col-6 text-white">شراء</div>
-                  </div>
-                  
-                </div>
-                <div className="col-6">
-                  <div className="row">
-                  <div className="col-6 text-white" > {p24KAden.data&&p24KAden.data[0].attributes.sell} </div>
-                    <div className="col-6 text-white">{p24KAden.data&&p24KAden.data[0].attributes.buy} </div>
-                  </div>
-                </div>
-                <div className="col-6">
-                  <div className="row">
-                  <div className="col-6 text-white" > {pCoinAden.data&&pCoinAden.data[0].attributes.sell} </div>
-                    <div className="col-6 text-white">{pCoinAden.data&&pCoinAden.data[0].attributes.buy} </div>
-                  </div>
-                  
-                </div>
-              
-            </div>
-           
-            <div className="mt-2">
-                <p className="text-pink-300 text-xl">مشتقات نفطية</p>
-                
-            </div>
-           
-              <div className="row">
-                <div className="col-4 text-center text-white text-lg">بترول</div>
-                <div className="col-4 text-center text-white text-lg">ديزل</div>
-                <div className="col-4 text-center text-white text-lg">غاز</div>
-                <div className="col-4 text-center text-white">{pPatrolAden.data&&pPatrolAden.data[0].attributes.buy}</div>
-                <div className="col-4 text- text-white">{pDieslAden.data&&pDieslAden.data[0].attributes.buy}</div>
-                <div className="col-4 text-center text-white">{pGasAden.data&&pGasAden.data[0].attributes.buy}</div>
-                 
-                
-              </div>
-           
-        </div>
-        <div className='absolute w-full h-full top-0 right-0 bg-black/50 z-0'></div>
-    </div>
-</div>
-{/* /////////////////////// */}
-                      </div>
-             </div>
-              </div>
-
-{/* /////////////////////// */}
-
-             
-              
-
-            </div>
-            <div className="col-12 col-md-5 col-lg-4">
-                <div className="sidebar-area">
-                  
-                  {/* //////////////////// */}
-
-<div className="bodyss mb-50">
-<div className="CartContainer">
-		<div className="Header">
-			<h3 className="Heading">اسعار المواد الغذائية</h3>
-		</div>
-
-		<div className="Cart-Items">
-			<div className="image-box">
-				<img src="img/bg-img/apple.png" style={{ height:"100px" }} />
-			</div>
-			<div className="about">
-				<h1 className="title">عصير</h1>
-
-			</div>
-
-			<div className="prices">
-				<div className="amount">400</div>
-
-			</div>
-		</div>
-		<hr />
-		<div className="Cart-Items pad">
-			<div className="image-box">
-				<img src="img/bg-img/grapes.png" style={{ height:"100px" }} />
-			</div>
-			<div className="about">
-				<h2 className="title">ببسي</h2>
-				
-
-			</div>
-
-			<div className="prices">
-				<div className="amount">300</div>
-
-			</div>
-		</div>
-		<hr />
-
-	</div>
-</div>
-{/* ///////////////////// */}
-
-
-{/* /////////////////// */}
-{/* <!-- ***** ad Widget ***** --> */}
-                  <div className="single-widget add-widget mb-50 bg-white shadow ">
-                    <a href="#">
-                      <Image  src={BASE_URL+ads.data.attributes.second.data.attributes.url} width={ads.data.attributes.second.data.attributes.width} height={ads.data.attributes.second.data.attributes.height} alt={ads.data.attributes.second.data.attributes.alt} />
-                    </a>
-                  </div>
-{/* //////////////////// */}
-
-
-                </div>
-                </div>
-            </div>
             
-            </div>
-          
-        </section>
+             <div className="row">
+             <div className="col-12 col-md-12 col-lg-12 ">
+             <div className="section-heading ">
+                    <h>الاسعار</h>
+                    <div className="line"></div>
+                  </div>  
+                  </div>
+                  </div>
+                  <div className="row">
+                  
+          <div className='col-12 col-md-4 col-lg-4'>
+                        <div className="row">
+             <div className="col-12 col-md-12 col-lg-12 ">
+             <div className="section-heading ">
+                    <h>الاسعار</h>
+                    <div className="line"></div>
+                  </div>  
+                  </div>
+                  </div>
+      
+                
+                        
+  <div class="table-responsive" style={{backgroundColor: "" ,border: '0.5px solid black',borderRadius:"10px 10px 10px 10px"}} >
+  <table class="table table-bordered mb-0"  style={{backgroundColor: "",border: '1px solid black',borderRadius:"10px 10px 10px 10px"}} >
+  
+  <thead class="" style={{backgroundColor: "#8F4872"}}>
+    <tr class="table-active">
+    <th scope="col"> </th>
+      <th scope="col" style={{color:"white"}}> نوع العمله</th>
+      <th scope="col" style={{color:"white"}}>بيع </th>
+      <th scope="col" style={{color:"white"}}>شراء</th>
+      
+    </tr>
+  </thead>
+  <tbody >
+   
+    <tr>
+    <th scope="row" className="p-3"> </th>
+      <th scope="row" className="p-3">دولار امريكي </th>
+      <td className="p-3">
+        <span class="text" style={{color:"black"}} >
+          <span>{pDollarSanaa.data&&pDollarSanaa.data[0].attributes.sell}</span>
+        </span>
+      </td>
+      <td className="p-3">
+        <span class="text" style={{color:"black"}}>
+          <span>{pDollarSanaa.data&&pDollarSanaa.data[0].attributes.buy}</span>
+        </span>
+      </td>
+      
+    </tr>
+    
+    <tr>
+    <th scope="row" className="p-3"> </th>
+      <th scope="row" className="p-3">ريال سعودي</th>
+      <td className="p-3">
+        <span class="text" style={{color:"black"}} >
+          <span>{pSaudiSanaa.data&&pSaudiSanaa.data[0].attributes.sell}</span>
+        </span>
+      </td>
+      <td className="p-3">
+        <span class="text" style={{color:"black"}}>
+          <span>{pSaudiSanaa.data&&pSaudiSanaa.data[0].attributes.buy}</span>
+        </span>
+      </td>
+    </tr>
+   
+  </tbody>
+</table>
+</div>
+</div>
+<div className='col-12 col-md-4 col-lg-4'>
+                          
+
+                    <div className="row">
+             <div className="col-12 col-md-12 col-lg-12 ">
+             <div className="section-heading ">
+                    <h>الاسعار</h>
+                    <div className="line"></div>
+                  </div>  
+                  </div>
+                  </div>
+      
+                          
+                        
+                          <div class="table-responsive" style={{backgroundColor: "" ,border: '0.5px solid black',borderRadius:"10px 10px 10px 10px"}} >
+                          <table class="table table-bordered mb-0"  style={{backgroundColor: "",border: '1px solid black',borderRadius:"10px 10px 10px 10px"}} >
+                          
+                          <thead class="" style={{backgroundColor: "#8F4872"}}>
+                            <tr class="table-active">
+                            <th scope="col"> </th>
+                              <th scope="col" style={{color:"white"}}> نوع العمله</th>
+                              <th scope="col" style={{color:"white"}}>بيع </th>
+                              <th scope="col" style={{color:"white"}}>شراء</th>
+                              
+                            </tr>
+                          </thead>
+                          <tbody >
+                           
+                            <tr>
+                            <th scope="row" className="p-3"> </th>
+                              <th scope="row" className="p-3">دولار امريكي </th>
+                              <td className="p-3">
+                                <span class="text" style={{color:"black"} }>
+                                  <span>{pDollarAden.data&&pDollarAden.data[0].attributes.sell}</span>
+                                </span>
+                              </td>
+                              <td className="p-3">
+                                <span class="text" style={{color:"black"}}>
+                                  <span>{pDollarAden.data&&pDollarAden.data[0].attributes.buy}</span>
+                                </span>
+                              </td>
+                              
+                            </tr>
+                            
+                            <tr>
+                            <th scope="row" className="p-3"> </th>
+                              <th scope="row" className="p-3">ريال سعودي</th>
+                              <td className="p-3">
+                                <span class="text" style={{color:"black"}}>
+                                  <span>{pSaudiAden.data&&pSaudiAden.data[0].attributes.sell}</span>
+                                </span>
+                              </td>
+                              <td className="p-3">
+                                <span class="text" style={{color:"black"}}>
+                                  <span>{pSaudiAden.data&&pSaudiAden.data[0].attributes.buy}</span>
+                                </span>
+                              </td>
+                            </tr>
+                           
+                          </tbody>
+                        </table>
+                        </div>
+                        </div>  
+
+
+
+
+
+                        <div className='col-12 col-md-4 col-lg-4'>
+                          
+                        <div className="row">
+             <div className="col-12 col-md-12 col-lg-12 ">
+             <div className="section-heading ">
+                    <h>الاسعار</h>
+                    <div className="line"></div>
+                  </div>  
+                  </div>
+                  </div>
+                         
+      
+                          
+                        
+                          <div class="table-responsive" style={{backgroundColor: "" ,border: '0.5px solid black',borderRadius:"10px 10px 10px 10px"}} >
+                          <table class="table table-bordered mb-0"  style={{backgroundColor: "",border: '1px solid black',borderRadius:"10px 10px 10px 10px"}} >
+                          
+                          <thead class="" style={{backgroundColor: "#8F4872"}}>
+                            <tr class="table-active">
+                            <th scope="col"> </th>
+                              <th scope="col" style={{color:"white"}}> نوع العمله</th>
+                              <th scope="col" style={{color:"white"}}>بيع </th>
+                              <th scope="col" style={{color:"white"}}>شراء</th>
+                              
+                            </tr>
+                          </thead>
+                          <tbody >
+                           
+                            <tr>
+                            <th scope="row" className="p-3"> </th>
+                              <th scope="row" className="p-3">دولار امريكي </th>
+                              <td className="p-3">
+                                <span class="text" style={{color:"black"} }>
+                                  <span>{pDollarAden.data&&pDollarAden.data[0].attributes.sell}</span>
+                                </span>
+                              </td>
+                              <td className="p-3">
+                                <span class="text" style={{color:"black"}}>
+                                  <span>{pDollarAden.data&&pDollarAden.data[0].attributes.buy}</span>
+                                </span>
+                              </td>
+                              
+                            </tr>
+                            
+                            <tr>
+                            <th scope="row" className="p-3"> </th>
+                              <th scope="row" className="p-3">ريال سعودي</th>
+                              <td className="p-3">
+                                <span class="text" style={{color:"black"}}>
+                                  <span>{pSaudiAden.data&&pSaudiAden.data[0].attributes.sell}</span>
+                                </span>
+                              </td>
+                              <td className="p-3">
+                                <span class="text" style={{color:"black"}}>
+                                  <span>{pSaudiAden.data&&pSaudiAden.data[0].attributes.buy}</span>
+                                </span>
+                              </td>
+                            </tr>
+                           
+                          </tbody>
+                        </table>
+                        </div>
+                        </div>       
+              
+              </div>
+            </div>  
+          </section>
+
 
         {/* <!-- ##### Vizew Post Area Start ##### --> */}
         <section className="vizew-post-area mb-50 ">
