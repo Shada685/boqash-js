@@ -20,7 +20,7 @@ async function FeaturedPinnedPostedList({ promise ,ad}) {
       <div className="row">
         <div className="col-12">
           {/* <!-- Section Heading --> */}
-          <div className="section-heading">
+          <div className="">
             <h4>hhh</h4>
            
           </div>
