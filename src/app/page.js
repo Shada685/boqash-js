@@ -377,6 +377,69 @@ export default async function Home() {
             </div>  
           </section>
 
+<section className="vizew-post-area mb-50 ">
+          <div className="container">
+            
+             <div className="row">
+             <div className="col-12 col-md-12 col-lg-12 ">
+             <div className="section-heading ">
+                    <h>الاسعار</h>
+                    <div className="line"></div>
+                  </div>  
+                  </div>
+                  </div>
+                  <div className="row">
+                  
+          <div className='col-12 col-md-4 col-lg-4'>
+                        <div className="row">
+             <div className="col-12 col-md-12 col-lg-12 ">
+             <div className="section-heading ">
+                    <h>اسعار الذهب</h>
+                    <div className="line"></div>
+                  </div>  
+                  </div>
+                  </div>     
+                  <div className="single-widget add-widget mb-50  shadow " style={{backgroundColor:"#8F4872"}}>
+                    <a href="#">
+                      <Image  src={BASE_URL+ads.data.attributes.second.data.attributes.url} width={ads.data.attributes.second.data.attributes.width} height={ads.data.attributes.second.data.attributes.height} alt={ads.data.attributes.second.data.attributes.alt} />
+                    </a>  
+                </div>
+           </div>
+           <div className='col-12 col-md-4 col-lg-4'>
+                        <div className="row">
+             <div className="col-12 col-md-12 col-lg-12 ">
+             <div className="section-heading ">
+                    <h>اسعار النفط</h>
+                    <div className="line"></div>
+                  </div>  
+                  </div>
+                  </div>     
+                  <div className="single-widget add-widget mb-50  shadow "  style={{backgroundColor:"#8F4872"}}>
+                    <a href="#">
+                      <Image  src={BASE_URL+ads.data.attributes.second.data.attributes.url} width={ads.data.attributes.second.data.attributes.width} height={ads.data.attributes.second.data.attributes.height} alt={ads.data.attributes.second.data.attributes.alt} />
+                    </a>  
+                </div>
+           </div>
+           <div className='col-12 col-md-4 col-lg-4'>
+                        <div className="row">
+             <div className="col-12 col-md-12 col-lg-12 ">
+             <div className="section-heading ">
+                    <h>اسعار مواد البناء</h>
+                    <div className="line"></div>
+                  </div>  
+                  </div>
+                  </div>     
+                  <div className="single-widget add-widget mb-50  shadow "  style={{backgroundColor:"#8F4872"}}>
+                    <a href="#">
+                      <Image  src={BASE_URL+ads.data.attributes.second.data.attributes.url} width={ads.data.attributes.second.data.attributes.width} height={ads.data.attributes.second.data.attributes.height} alt={ads.data.attributes.second.data.attributes.alt} />
+                    </a>  
+                </div>
+           </div>      
+              
+              </div>
+            </div>  
+          </section>
+
 
         {/* <!-- ##### Vizew Post Area Start ##### --> */}
         <section className="vizew-post-area mb-50 ">
