@@ -109,12 +109,7 @@ async function FeaturedPinnedPostedList({ promise ,ad}) {
     </section> 
 
     {/* herzontal ad */}
-<div className="container mt-2 mb-5">
-  <a>
-  <Image  src={BASE_URL+ad.data.attributes.url} width={ad.data.attributes.width} height={ad.data.attributes.height} alt={ad.data.attributes.alt} />
-  </a>
 
-</div>
 {/* herzontal ad */}
 </>
   );
