@@ -172,7 +172,7 @@ export default async function Home() {
              <div className="row">
             <div className="col-12 col-md-8 col-lg-8 ">
               <div className="section-heading style-2">
-                    <h4>الاسعار</h4>
+                    <h4></h4>
                     <div className="line"></div>
                   </div>
               
