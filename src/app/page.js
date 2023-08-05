@@ -20,11 +20,10 @@ async function FeaturedPinnedPostedList({ promise ,ad}) {
       <div className="row">
         <div className="col-12">
           {/* <!-- Section Heading --> */}
-          <div className="hero--area section-padding-80">
-           <h4>ابرز الاخبار</h4>
+           <div className="section-heading" style={{fontFamily: 'Inter-Black', fontSize: 30 }}>
+            <h4 style={{fontStyle:"bold"}}>ابرز الاخبار</h4>
             <div className="line"></div>
           </div>
-        </div>
       </div>
       <div className="row no-gutters">
     <div className="col-12 col-md-7 col-lg-8">
@@ -61,6 +60,7 @@ async function FeaturedPinnedPostedList({ promise ,ad}) {
 
     </div>
      <div className="col-12 col-md-5 col-lg-4">
+         
                 <ul className="nav vizew-nav-tab" role="tablist">
     {data.data&&data.data.map((ob,i) => (
      
@@ -77,8 +77,8 @@ async function FeaturedPinnedPostedList({ promise ,ad}) {
                     >
                       {/* <!-- Single Blog Post --> */}
                       <div className="single-blog-post style-2 d-flex align-items-center">
-                       {/*!--<div className="post-thumbnail">
-                        <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.url}`} width={400}  height={200} alt={ob.attributes.title} />
+                       <div className="post-thumbnail">
+                        {/*!--<Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.url}`} width={400}  height={200} alt={ob.attributes.title} />
                         
                         </div>-->*/}
                         <div className="post-content">
