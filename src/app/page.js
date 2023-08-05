@@ -77,10 +77,10 @@ async function FeaturedPinnedPostedList({ promise ,ad}) {
                     >
                       {/* <!-- Single Blog Post --> */}
                       <div className="single-blog-post style-2 d-flex align-items-center">
-                        <div className="post-thumbnail">
+                       {/*!--<div className="post-thumbnail">
                         <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.url}`} width={400}  height={200} alt={ob.attributes.title} />
                         
-                        </div>
+                        </div>-->*/}
                         <div className="post-content">
                           <h6 className="post-title">
                             {ob.attributes.title}
@@ -184,7 +184,7 @@ export default async function Home() {
                         <div className="row">
              <div className="col-12 col-md-12 col-lg-12 ">
              <div className="section-heading ">
-                    <h>الاسعار</h>
+                    <h> اسعار الصرف صنعاء </h>
                     <div className="line"></div>
                   </div>  
                   </div>
@@ -247,7 +247,7 @@ export default async function Home() {
                     <div className="row">
              <div className="col-12 col-md-12 col-lg-12 ">
              <div className="section-heading ">
-                    <h>الاسعار</h>
+                    <h>اسعار الصرف عدن</h>
                     <div className="line"></div>
                   </div>  
                   </div>
