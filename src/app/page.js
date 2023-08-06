@@ -1,13 +1,13 @@
-
 import '../../public/css/style-grocery-price.css'
 // import '../../public/css/style-currency.css'
 import '../../public/css/style-price.css'
 import Image from "next/image";
 import Link from 'next/link'
-
- 
 import { NEWSREVALIDATE,BASE_URL,headers} from "./api/config";
- 
+
+
+
+
 
 async function FeaturedPinnedPostedList({ promise ,ad}) {
   const data = await promise;
@@ -15,18 +15,21 @@ async function FeaturedPinnedPostedList({ promise ,ad}) {
     
   return (
     <>
-    <section className="hero--area section-padding-80">
+   
+    <section className="hero--area section-padding-80" >
     <div className="container">
       <div className="row">
         <div className="col-12">
           {/* <!-- Section Heading --> */}
-           <div className="section-heading" style={{fontFamily: 'Inter-Black', fontSize: 30 }}>
-            <h4 style={{fontStyle:"bold"}}>ابرز الاخبار</h4>
+          <div className="section-heading " style={{fontFamily: 'Inter-Black', fontSize: 30 }}>
+            <h4 style={{fontStyle:"bold"}}>ابرز الاخبار </h4>
             <div className="line"></div>
-          </div>
+          </div> 
+        </div>
       </div>
-      <div className="row no-gutters">
+      <div className="row ">
     <div className="col-12 col-md-7 col-lg-8">
+    
       <div className="tab-content">
         {data.data&&data.data.map((ob,i) => (
           <div
@@ -47,12 +50,12 @@ async function FeaturedPinnedPostedList({ promise ,ad}) {
                 <a href={ob.attributes.mainCategory.data.attributes.path+"/"} className="post-cata">
                   {ob.attributes.mainCategory.data.attributes.title}
                 </a>
-
                 <a href={ob.attributes.mainCategory.data.attributes.path+"/"+ob.attributes.slug} className="post-title">
                   {ob.attributes.title}
                 </a>
                 <p>{ob.attributes.shortContent} </p>
               </div>
+              
             </div>
           </div>
         ))}
@@ -60,12 +63,13 @@ async function FeaturedPinnedPostedList({ promise ,ad}) {
 
     </div>
      <div className="col-12 col-md-5 col-lg-4">
-         
-                <ul className="nav vizew-nav-tab" role="tablist">
+    <ul className="nav vizew-nav-tab" role="tablist">
+    
+    
     {data.data&&data.data.map((ob,i) => (
-     
-                  <li key={ob.id} className="nav-item">
-                  
+
+                <li key={ob.id}  className="nav-item">
+                 
                     <a
                       className={"nav-link "+(i==0? "active show" :"")}
                       id={"post-"+ ob.id+"-tab"}
@@ -76,25 +80,27 @@ async function FeaturedPinnedPostedList({ promise ,ad}) {
                       aria-selected={i==0? "true" : "false"}
                     >
                       {/* <!-- Single Blog Post --> */}
-                      <div className="single-blog-post style-2 d-flex align-items-center">
-                       <div className="post-thumbnail">
-                        {/*!--<Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.url}`} width={400}  height={200} alt={ob.attributes.title} />
-                        
-                        </div>-->*/}
+                      <div className="single-blog-post style-2 d-flex align-items-center ">
+                        <div className="post-thumbnail">
+                        <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.url}`} width={400}  height={200} alt={ob.attributes.title} />
+
+                        </div>
                         <div className="post-content">
                           <h6 className="post-title">
-                            {ob.attributes.title}
+                          {ob.attributes.title}
                           </h6>
                           <div className="post-meta d-flex justify-content-between">
                             <span>
                             {ob.attributes.mainCategory.data.attributes.title}
                             </span>
-                          
-                           
                           </div>
                           <div className="post-meta d-flex">
                           { new Date(ob.attributes.publishedAt).toISOString().split("T")[0]}
                         </div>
+                        <div className="post-meta d-flex">
+                        <hr width="100px" color='White'/>
+                        </div>
+                       
                         </div>
                       </div>
                     </a>
@@ -109,7 +115,7 @@ async function FeaturedPinnedPostedList({ promise ,ad}) {
     </section> 
 
     {/* herzontal ad */}
-<div className="container mt-2 mb-5">
+    <div className="container mt-2 mb-5">
   <a>
   <Image  src={BASE_URL+ad.data.attributes.url} width={ad.data.attributes.width} height={ad.data.attributes.height} alt={ad.data.attributes.alt} />
   </a>
@@ -120,7 +126,10 @@ async function FeaturedPinnedPostedList({ promise ,ad}) {
   );
 }
 
+
 export default async function Home() {
+
+  
   const breakingNews = getBreakingNews();
   const pinnedNews = getPinnedNews();
   const arabicNews = getArabicNews();
@@ -152,11 +161,18 @@ export default async function Home() {
  const pCoinAden =    await getCoinAden()
  const p24KSanaa =    await get24KSanaa()
  const p24KAden =     await get24KAden()
-
+ 
+  
+ 
  const ads=await getADS()
+
+
+ 
+
    
   return (
-    <>
+    
+ <>
       
 
       
@@ -166,16 +182,16 @@ export default async function Home() {
          <FeaturedPinnedPostedList promise={pinnedNewsData } ad={ads.data.attributes.first} />
         {/* <!-- ##### Hero Area End ##### --> */}
         {/* <!-- ##### Header Area End ##### --> */}
-
- <section className="vizew-post-area mb-50 ">
+        
+        <section className="vizew-post-area mb-50 ">
           <div className="container">
             
              <div className="row">
              <div className="col-12 col-md-12 col-lg-12 ">
-             <div className="section-heading ">
-                    <h>الاسعار</h>
-                    <div className="line"></div>
-                  </div>  
+             <div className="section-heading " style={{fontFamily: 'Inter-Black', fontSize: 30 }}>
+            <h4 style={{fontStyle:"bold"}}>الاسعار </h4>
+            <div className="line"></div>
+          </div> 
                   </div>
                   </div>
                   <div className="row">
@@ -183,15 +199,15 @@ export default async function Home() {
           <div className='col-12 col-md-4 col-lg-4'>
                         <div className="row">
              <div className="col-12 col-md-12 col-lg-12 ">
-             <div className="section-heading ">
-                    <h> اسعار الصرف صنعاء </h>
+            
+                    <h4>اسعار الصرف صنعاء</h4>
                     <div className="line"></div>
-                  </div>  
+                 
                   </div>
                   </div>
       
-                
-                        
+             
+                     
   <div class="table-responsive" style={{backgroundColor: "" ,border: '0.5px solid black',borderRadius:"10px 10px 10px 10px"}} >
   <table class="table table-bordered mb-0"  style={{backgroundColor: "",border: '1px solid black',borderRadius:"10px 10px 10px 10px"}} >
   
@@ -246,10 +262,10 @@ export default async function Home() {
 
                     <div className="row">
              <div className="col-12 col-md-12 col-lg-12 ">
-             <div className="section-heading ">
-                    <h>اسعار الصرف عدن</h>
+             
+                    <h4>اسعار الصرف عدن</h4>
                     <div className="line"></div>
-                  </div>  
+                  
                   </div>
                   </div>
       
@@ -313,10 +329,10 @@ export default async function Home() {
                           
                         <div className="row">
              <div className="col-12 col-md-12 col-lg-12 ">
-             <div className="section-heading ">
-                    <h>الاسعار</h>
+      
+                    <h4>اسعار المواد الغذائية</h4>
                     <div className="line"></div>
-                  </div>  
+                 
                   </div>
                   </div>
                          
@@ -377,15 +393,15 @@ export default async function Home() {
             </div>  
           </section>
 
-<section className="vizew-post-area mb-50 ">
+
+
+
+          <section className="vizew-post-area mb-50 ">
           <div className="container">
             
              <div className="row">
              <div className="col-12 col-md-12 col-lg-12 ">
-             <div className="section-heading ">
-                    <h>الاسعار</h>
-                    <div className="line"></div>
-                  </div>  
+             
                   </div>
                   </div>
                   <div className="row">
@@ -393,10 +409,10 @@ export default async function Home() {
           <div className='col-12 col-md-4 col-lg-4'>
                         <div className="row">
              <div className="col-12 col-md-12 col-lg-12 ">
-             <div className="section-heading ">
-                    <h>اسعار الذهب</h>
+             
+                    <h4>اسعار الذهب</h4>
                     <div className="line"></div>
-                  </div>  
+               
                   </div>
                   </div>     
                   <div className="single-widget add-widget mb-50  shadow " style={{backgroundColor:"#8F4872"}}>
@@ -408,10 +424,10 @@ export default async function Home() {
            <div className='col-12 col-md-4 col-lg-4'>
                         <div className="row">
              <div className="col-12 col-md-12 col-lg-12 ">
-             <div className="section-heading ">
-                    <h>اسعار النفط</h>
+            
+                    <h4>اسعار النفط</h4>
                     <div className="line"></div>
-                  </div>  
+                 
                   </div>
                   </div>     
                   <div className="single-widget add-widget mb-50  shadow "  style={{backgroundColor:"#8F4872"}}>
@@ -423,10 +439,10 @@ export default async function Home() {
            <div className='col-12 col-md-4 col-lg-4'>
                         <div className="row">
              <div className="col-12 col-md-12 col-lg-12 ">
-             <div className="section-heading ">
-                    <h>اسعار مواد البناء</h>
+             
+                    <h4>اسعار مواد البناء</h4>
                     <div className="line"></div>
-                  </div>  
+                
                   </div>
                   </div>     
                   <div className="single-widget add-widget mb-50  shadow "  style={{backgroundColor:"#8F4872"}}>
@@ -441,6 +457,9 @@ export default async function Home() {
           </section>
 
 
+
+                            
+
         {/* <!-- ##### Vizew Post Area Start ##### --> */}
         <section className="vizew-post-area mb-50 ">
           <div className="container">
@@ -452,13 +471,12 @@ export default async function Home() {
                   <a href={localNewsData.data?localNewsData.data[0].attributes.mainCategory.data.attributes.path+"/":"#"}> <h4>الاخبار المحلية</h4></a>
                     <div className="line"></div>
                   </div>
-        
+
                   {/* <!-- Featured Post Slides --> */}
                   <div className="featured-post-slides owl-carousel mb-30 ">
                     {/* <!-- Single Feature Post --> */}
-                    {localNewsData.data&&[...localNewsData.data.slice(0, 2)].map((ob) => (
-                      <div key={ob.id}
-                      className="single-feature-post video-post bg-img"
+                    {localNewsData.data&&[...localNewsData.data.slice(0, 3)].map((ob) => (
+                      <div key={ob.id} className="single-feature-post video-post bg-img"
                       style={{ backgroundImage: `url(${BASE_URL+ob.attributes.featuredImage.data.attributes.url})` }}
                     >
                       {/* <!-- Post Content --> */}
@@ -473,16 +491,15 @@ export default async function Home() {
                       </div>
                     </div>
                     
-      ))}
+                        ))}
                    
-                    
-                
                   </div>
 
                   <div className="row">
+                    
                     {/* <!-- Single Blog Post --> */}
                   
-                    {localNewsData.data&&[...localNewsData.data.slice(2, 4)].map((ob) => (  <div  key={ob.id} className="col-12 col-md-6 col-lg-6 "> <div   className="single-post-area mb-80 bg-white shadow">
+                    {localNewsData.data&&[...localNewsData.data.slice(3, 7)].map((ob) => (  <div  key={ob.id} className="col-12 col-md-6 col-lg-6"> <div   className="single-post-area mb-80 bg-white shadow">
                         {/* <!-- Post Thumbnail --> */}
                         <div className="post-thumbnail">
                           <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.url}`} alt={ob.attributes.title} width={400} height={200}   />
@@ -507,7 +524,7 @@ export default async function Home() {
 
                   <div className="row">
                     {/* <!-- Single Blog Post --> */}
-                    {localNewsData.data&&[...localNewsData.data.slice(4, 7)].map((ob) => (   <div  key={ob.id} className="col-12 col-md-6 col-lg-4"> <div   className="single-post-area mb-80 ">
+                    {localNewsData.data&&[...localNewsData.data.slice(5, 8)].map((ob) => (   <div  key={ob.id} className="col-12 col-md-6 col-lg-4"> <div   className="single-post-area mb-80 ">
                         {/* <!-- Post Thumbnail --> */}
                         <div className="post-thumbnail">
                           <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.url}`} alt={ob.attributes.title} width={400} height={200} />
@@ -530,69 +547,68 @@ export default async function Home() {
                   <div className="row">
                     <div className="col-12">
                       {/* <!-- Section Heading --> */}
-                      <div className="section-heading">
+                      <div className="section-heading style-2">
                       <a href={localNewsData.data?arabicNewsData.data[0]?.attributes.mainCategory.data.attributes.path+"/":"#"}> <h4>الاخبار العربية</h4></a>
                         <div className="line"></div>
                       </div>
                     </div>
 
-                    <div className="col-12 col-lg-6">
+                    <div className="col-12">
                       {/* <!-- Section Heading --> */}
 
                       {/* <!-- Sports Video Slides --> */}
-                      <div className="sport-video-slides owl-carousel mb-50 ">
-                      {arabicNewsData.data&&[...arabicNewsData.data.slice(0, 2)].map((ob) => ( <div  key={ob.id} className="single-post-area bg-white shadow">
-                          {/* <!-- Post Thumbnail --> */}
-                          <div className="post-thumbnail">
-                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.url}`} alt={ob.attributes.title} width={400} height={200}     />
-                        </div>
-
+                      <div className="featured-post-slides owl-carousel mb-30 ">
+                  {arabicNewsData.data&&[...arabicNewsData.data.slice(0, 3)].map((ob) => ( <div
+                     key={ob.id}  className="single-feature-post video-post bg-img"
+                     style={{ backgroundImage: `url(${BASE_URL+ob.attributes.featuredImage.data.attributes.url})` }}
+                    >
+                     
                         {/* <!-- Post Content --> */}
-                        <div className="post-content p-3">
+                        <div className="post-content">
                           
-                          <a href={ob.attributes.mainCategory.data.attributes.path+"/"+ob.attributes.slug} className="post-title">
+                          <a  href={ob.attributes.mainCategory.data.attributes.path+"/"+ob.attributes.slug} className="post-title">
                            {ob.attributes.title}
                           </a>
                           <div className="post-meta d-flex">
                           { new Date(ob.attributes.publishedAt).toISOString().split("T")[0]}
                           </div>
                         </div>
-                        </div>))}
-                        {/* <!-- Single Blog Post --> */}
-                       
-                       
-                      </div>
-                    </div>
-
-                    <div className="col-12 col-lg-6">
-                      {/* <!-- Business Video Slides --> */}
-                      <div className="  mb-50 ">
-                      {arabicNewsData.data&&[...arabicNewsData.data.slice(2, 3)].map((ob) => (  
-                        <div  key={ob.id} className="single-post-area bg-white shadow">
-                          {/* <!-- Post Thumbnail --> */}
-                          <div className="post-thumbnail">
-                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.url}`} alt={ob.attributes.title} width={400} height={200}     />
-                        </div>
-
-                        {/* <!-- Post Content --> */}
-                        <div className="post-content p-3">
-                          
-                          <a href={ob.attributes.mainCategory.data.attributes.path+"/"+ob.attributes.slug} className="post-title">
-                           {ob.attributes.title}
-                          </a>
-                          <div className="post-meta d-flex">
-                          { new Date(ob.attributes.publishedAt).toISOString().split("T")[0]}
-                          </div>
-                        </div>
-                        </div>
-))}
-                       
-                      </div>
-                    </div>
+                    </div>  ))}
+                  
                   </div>
+                    </div>
+                
+                   
+                      {/* <!-- Business Video Slides --> */}
+                     
+                      {arabicNewsData.data&&[...arabicNewsData.data.slice(2, 4)].map((ob) => (  
+                        <div  key={ob.id}  className="col-12 col-md-6 col-lg-6"> <div className="single-post-area bg-white shadow">
+                          {/* <!-- Post Thumbnail --> */}
+                          <div className="post-thumbnail">
+                          <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.url}`} alt={ob.attributes.title} width={400} height={200}     />
+                        </div>
 
-                  <div className="row mb-30">
-                  {arabicNewsData.data&&[...arabicNewsData.data.slice(3, 7)].map((ob) => ( <div  key={ob.id} className="col-12 col-lg-6 ">
+                        {/* <!-- Post Content --> */}
+                        <div className="post-content p-3">
+                          
+                          <a href={ob.attributes.mainCategory.data.attributes.path+"/"+ob.attributes.slug} className="post-title">
+                           {ob.attributes.title}
+                          </a>
+                          <div className="post-meta d-flex">
+                          { new Date(ob.attributes.publishedAt).toISOString().split("T")[0]}
+                          </div>
+                        </div>
+                        </div>
+                          </div>     ))}
+                       
+                     
+                    
+                   
+                </div>
+                <div className='row'>
+                
+                       
+                  {arabicNewsData.data&&[...arabicNewsData.data.slice(4, 7)].map((ob) => ( <div  key={ob.id} className=" ">
                       <div className="single-blog-post style-3 d-flex mb-50 bg-white shadow">
                       <div className="post-thumbnail">
                           <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.url}`} alt={ob.attributes.title} width={400} height={200}     />
@@ -610,17 +626,18 @@ export default async function Home() {
                         </div>
                       </div>
                     </div>))}
-                 
+                    </div>
                    {/* herzontal ad */}
-<div className="container mt-2 mb-5">
-  <a>
-  <Image  src={BASE_URL+ads.data.attributes.third.data.attributes.url} width={ads.data.attributes.third.data.attributes.width} height={ads.data.attributes.third.data.attributes.height} alt={ads.data.attributes.third.data.attributes.alt} />
-  </a>
+                   <div className="container mt-2 mb-5">
+                     <a>
+                   <Image  src={BASE_URL+ads.data.attributes.third.data.attributes.url} width={ads.data.attributes.third.data.attributes.width} height={ads.data.attributes.third.data.attributes.height} alt={ads.data.attributes.third.data.attributes.alt} />
+                     </a>
 
-</div>
-{/* herzontal ad */}
+                   </div>
+                    {/* herzontal ad */}
+
  
-                  </div>
+                 
 
                   {/* <!-- Section Heading --> */}
                   <div className="section-heading style-2">
@@ -797,7 +814,7 @@ export default async function Home() {
             className="flex items-center hover:underline bg-[#9b239b] hover:bg-[#e62ce6] text-white py-2 px-4 rounded  w-full mx-auto"
             href="/"
           >
-اشترك          </Link>
+   اشترك          </Link>
                       </form>
                     </div>
                   </div>
@@ -829,6 +846,14 @@ export default async function Home() {
                    
 
                   </div>
+                  {/* herzontal ad */}
+                  <div className="container mt-2 mb-5">
+                     <a>
+                   <Image  src={BASE_URL+ads.data.attributes.third.data.attributes.url} width={ads.data.attributes.third.data.attributes.width} height={ads.data.attributes.third.data.attributes.height} alt={ads.data.attributes.third.data.attributes.alt} />
+                     </a>
+
+                   </div>
+                    {/* herzontal ad */}
                 </div>
               </div>
             </div>
@@ -841,7 +866,10 @@ export default async function Home() {
 }
 
 
- async function getBreakingNews() {
+
+
+
+async function getBreakingNews() {
   const res = await fetch(
     `${BASE_URL}/api/short-news?populate=*&pagination[limit]=28&sort[0]=createdAt%3Adesc`,
     { headers, next: { revalidate: NEWSREVALIDATE } }
@@ -1011,4 +1039,3 @@ return res.json();
   );
 return res.json();
 };
-
