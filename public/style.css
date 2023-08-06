@@ -33,7 +33,7 @@ h6 {
   color: #000;
   line-height: 1.3;
   font-weight: 500; 
-     text-align: center;}
+  text-align: center;}
 
 p {
   font-family: "Cairo", sans-serif;
@@ -623,7 +623,8 @@ input:focus {
   background-color: #8F4872;
   width: 100%;
   height: 100%;
-  margin-right: 20px;
+  margin-right: 0px;
+  border: '1px solid black';
   border-radius: 15px;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -631,6 +632,7 @@ input:focus {
   -moz-border-radius: 15px;
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
+  
 }
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .vizew-nav-tab {
@@ -643,7 +645,8 @@ input:focus {
       height: 300px; } }
   .vizew-nav-tab .nav-link {
     padding: 0;
-    padding: 15px 15px;
+    
+    border: '1px solid black';
     border-left: 4px solid transparent; }
     .vizew-nav-tab .nav-link.active {
       background-color: #8F4872;
@@ -696,7 +699,9 @@ input:focus {
 .single-blog-post {
   position: relative;
   z-index: 1;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  
+}
   .single-blog-post:last-child {
     margin-bottom: 0; }
   .single-blog-post .post-thumbnail {
@@ -966,7 +971,13 @@ input:focus {
 
 .single-post-area {
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+  border-radius:20px ;
+  -webkit-border-radius:20px ;
+  -moz-border-radius:20px ;
+  -ms-border-radius:20px ;
+  -o-border-radius:20px ;
+}
   .single-post-area .post-thumbnail {
     position: relative;
     z-index: 1; }
@@ -1540,8 +1551,13 @@ input:focus {
   position: relative;
   z-index: 1;
   border: 1px solid #393c3d;
-  border-radius: 3px;
-  padding: 40px 30px; }
+  border-radius: 20px;
+  padding: 40px 30px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .single-widget {
       padding: 30px 20px; } }
@@ -1976,4 +1992,13 @@ textarea.form-control {
 .table .th {
 color: white;
 
+}
+@font-face {
+  font-family: "Expo";
+  src: local("Expo");
+  font-weight: bold;
+ }
+
+ .font-face-expo {
+  font-family: "Expo";
 }
