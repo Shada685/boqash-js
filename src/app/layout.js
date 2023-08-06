@@ -44,14 +44,14 @@ async function Header() {
           {/* <!-- Top Header Area --> */}
           <div className="top-header-area pt-2">
             <div className="container">
-              <div className="row align-items-center">
+              <div className="row align-items-center" style={{backgroundColor:"lightgray",height:"40px", borderRadius:"20PX"}}>
                 <div className="col-12 col-md-6">
                   {/* <!-- Breaking News Widget --> */}
-                  <div className="breaking-news-area d-flex align-items-center">
+                  <div className="breaking-news-area d-flex justify-content-between">
                     <div className="news-title">
                       <p>اخر الاخبار:</p>
                     </div>
-                    <div id="breakingNewsTicker" className="ticker">
+                    <div id="breakingNewsTicker" className="ticker" style={{backgroundColor:"",height:"40px"}}>
                       <Suspense fallback={<div>......</div>}>
                         <BreakingList promise={breakingNews} />
                       </Suspense>
@@ -95,7 +95,7 @@ async function Header() {
                 >
                   {/* <!-- Nav brand --> */}
                   <Link href="/" className="nav-brand">
-                    <img src="/img/core-img/logo.png" alt="" />
+                    <img src="/img/core-img/logo2.png" alt="" />
                   </Link>
 
                   {/* <!-- Navbar Toggler --> */}
@@ -117,7 +117,7 @@ async function Header() {
                     </div>
 
                     {/* <!-- Nav Start --> */}
-                    <div className="classynav">
+                    <div className="classynav" style={{backgroundColor:"#8F4872", borderRadius:"20PX" }} >
                       <ul>
                         <li className="active">
                           <Link href="/">الرئيسية</Link>
@@ -271,9 +271,9 @@ function Footer(){
                 <div className="footer-widget mb-70">
                   {/* <!-- Logo --> */}
                   <Link href="/" className="foo-logo d-block mb-4">
-                    <img src="img/core-img/logo2.png" alt="" />
+                    <img src="img/core-img/logo.png" alt="" />
                   </Link>
-                  <p>
+                  <p style={{color:"white"}}> 
                    بقش هو مرصد اقتصادي إلكتروني يوفر للمستخدمين تحليلات اقتصادية ومالية دقيقة وموثوقة عن الأسواق والاقتصاديات المحلية والعالمية.
                   </p>
                   {/* <!-- Footer Newsletter Area --> */}
@@ -300,17 +300,17 @@ function Footer(){
                 <div className="footer-widget mb-70">
                   <h6 className="widget-title">اخبار ومقالات</h6>
                   <ul >
-                    <li className="mb-2">
+                    <li className=" ">
                       <a href="/yemeni-news">الاخبار المحلية</a>
                       </li>
-                    <li className="mb-2">
+                    <li className="">
                       <a href="/arabic-news">الاخبار العربية</a>
                       </li>
-                    <li className="mb-2">
+                    <li className="">
                       <a href="/inernational-news">الاخبار العالمية</a>
                       </li>
-                    <li className="mb-2"><a href="/russian-news">الحرب الروسية</a></li>
-                    <li className="mb-2"><a href="/articles">مقالات</a></li>
+                    <li className=""><a href="/russian-news">الحرب الروسية</a></li>
+                    <li className=""><a href="/articles">مقالات</a></li>
                     <li> <a href="">مقتطفات</a></li>
                     
 
@@ -323,14 +323,14 @@ function Footer(){
                 <div className="footer-widget mb-70">
                   <h6 className="widget-title">عن بقش</h6>
 <ul >
-                    <li className="mb-2">
+                    <li className="">
                       <a href="/about-us"> من نحن</a>
                       </li>
                     
-                    <li className="mb-2">
+                    <li className="">
                       <a href="/contact-us">للاعلان </a>
                       </li>
-                    <li className="mb-2"><a href="/privacy-policy"> سياسة الخصوصية</a></li>
+                    <li className=""><a href="/privacy-policy"> سياسة الخصوصية</a></li>
                     
                   
                     
@@ -346,16 +346,16 @@ function Footer(){
                   <h6 className="widget-title">الاسعار</h6>
                   {/* <!-- Contact Address --> */}
                   <ul >
-                    <li className="mb-2">
+                    <li className="">
                       <a href=""> اسعار العملات</a>
                       </li>
-                    <li className="mb-2">
+                    <li className="">
                       <a href="">اسعار المواد الغذائية</a>
                       </li>
-                    <li className="mb-2">
+                    <li className="">
                       <a href="">اسعار الذهب</a>
                       </li>
-                    <li className="mb-2"><a href="">اسعار النفط</a></li>
+                    <li className=""><a href="">اسعار النفط</a></li>
                     
                     
 
