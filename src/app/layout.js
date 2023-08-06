@@ -42,16 +42,16 @@ async function Header() {
 
     <header className="header-area">
           {/* <!-- Top Header Area --> */}
-          <div className="top-header-area pt-2">
+          <div className="top-header-area">
             <div className="container">
-              <div className="row align-items-center" style={{backgroundColor:"lightgray",height:"20px", borderRadius:"20PX"}}>
+              <div className="row align-items-center" style={{backgroundColor:"lightgray",height:"70px", borderRadius:"20PX"}}>
                 <div className="col-12 col-md-6">
                   {/* <!-- Breaking News Widget --> */}
-                  <div className="breaking-news-area d-flex justify-content-between">
+                  <div className="breaking-news-area d-flex justify-content-center">
                     <div className="news-title">
                       <p>اخر الاخبار:</p>
                     </div>
-                    <div id="breakingNewsTicker" className="ticker" style={{backgroundColor:"",height:"40px"}}>
+                    <div id="breakingNewsTicker" className="ticker">
                       <Suspense fallback={<div>......</div>}>
                         <BreakingList promise={breakingNews} />
                       </Suspense>
@@ -83,8 +83,10 @@ async function Header() {
               </div>
             </div>
           </div>
-
+          
+         
           {/* <!-- Navbar Area --> */}
+          <section className='section-padding-40'>
           <div className="vizew-main-menu" id="sticker">
             <div className="classy-nav-container breakpoint-off">
               <div className="container">
@@ -117,7 +119,7 @@ async function Header() {
                     </div>
 
                     {/* <!-- Nav Start --> */}
-                    <div className="classynav" style={{backgroundColor:"#8F4872", borderRadius:"20PX" }} >
+                    <div className="classynav" style={{backgroundColor:"#8F4872",  borderRadius:"20px" }} >
                       <ul>
                         <li className="active">
                           <Link href="/">الرئيسية</Link>
@@ -255,6 +257,7 @@ async function Header() {
               </div>
             </div>
           </div>
+          </section>
         </header>
 
         
