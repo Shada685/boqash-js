@@ -44,7 +44,7 @@ async function Header() {
           {/* <!-- Top Header Area --> */}
           <div className="top-header-area pt-2">
             <div className="container">
-              <div className="row align-items-center" style={{backgroundColor:"lightgray",height:"40px", borderRadius:"20PX"}}>
+              <div className="row align-items-center" style={{backgroundColor:"lightgray",height:"20px", borderRadius:"20PX"}}>
                 <div className="col-12 col-md-6">
                   {/* <!-- Breaking News Widget --> */}
                   <div className="breaking-news-area d-flex justify-content-between">
