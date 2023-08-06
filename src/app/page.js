@@ -63,7 +63,7 @@ async function FeaturedPinnedPostedList({ promise ,ad}) {
 
     </div>
      <div className="col-12 col-md-5 col-lg-4">
-    <ul className="nav vizew-nav-tab" role="tablist">
+    <ul className="nav vizew-nav-tab" role="tablist" style={{padding:"15px"}}>
     
     
     {data.data&&data.data.map((ob,i) => (
@@ -83,10 +83,9 @@ async function FeaturedPinnedPostedList({ promise ,ad}) {
                       <div className="single-blog-post style-2 d-flex align-items-center ">
                         <div className="post-thumbnail">
                         <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.url}`} width={400}  height={200} alt={ob.attributes.title} />
-
                         </div>
                         <div className="post-content">
-                          <h6 className="post-title">
+                          <h6 className="post-title" style={{fontSize:"12px"}}>
                           {ob.attributes.title}
                           </h6>
                           <div className="post-meta d-flex justify-content-between">
