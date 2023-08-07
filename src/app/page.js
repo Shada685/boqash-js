@@ -212,7 +212,7 @@ export default async function Home() {
              
                   </div>  
         
-    <Script src="/js/jquery/tabbed-table.js"/>
+   
     <table class="tabbedTable" style={{border:"1px solid black" ,borderRadius:"10px 10px 10px 10px" , borderCollapse:"separate" ,tableLayout:"table-striped"}}>
   <thead style={{backgroundColor:"#8F4872",border:"1px solid black",borderRadius:"10px 10px 10px 10px",borderCollapse:"separate" ,height:"40PX"}}>
   <tr style={{borderBottom: "5px solid black"}}>
@@ -255,7 +255,7 @@ export default async function Home() {
 <div className="row">
              
                   </div>   
-            <Script src="/js/jquery/tabbed-table.js"/>
+           
                         <table class="tabbedTable" style={{border:"1px solid black" ,borderRadius:"10px 10px 10px 10px" , borderCollapse:"separate" ,tableLayout:"table-striped"}}>
   <thead style={{backgroundColor:"#8F4872",border:"1px solid black",borderRadius:"10px 10px 10px 10px",borderCollapse:"separate" ,height:"40PX"}}>
   <tr style={{borderBottom: "5px solid black"}}>
@@ -294,7 +294,7 @@ export default async function Home() {
 <div className="row">
              
                   </div>   
-            <Script src="/js/jquery/tabbed-table.js"/>
+            
                         <table class="tabbedTable" style={{border:"1px solid black" ,borderRadius:"10px 10px 10px 10px" , borderCollapse:"separate" ,tableLayout:"table-striped"}}>
   <thead style={{backgroundColor:"#8F4872",border:"1px solid black",borderRadius:"10px 10px 10px 10px",borderCollapse:"separate" ,height:"40PX"}}>
   <tr style={{borderBottom: "5px solid black"}}>
