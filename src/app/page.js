@@ -3,8 +3,8 @@ import '../../public/css/style-grocery-price.css'
 import '../../public/css/style-price.css'
 import Image from "next/image";
 import Link from 'next/link'
+import Script from 'next/script';
 import { NEWSREVALIDATE,BASE_URL,headers} from "./api/config";
-
 
 
 
@@ -23,7 +23,7 @@ async function FeaturedPinnedPostedList({ promise ,ad}) {
           {/* <!-- Section Heading --> */}
           <div className="section-heading " style={{fontFamily: 'Inter-Black', fontSize: 30 }}>
             <h4 style={{fontStyle:"bold"}}>ابرز الاخبار </h4>
-            <div className="line"></div>
+            
           </div> 
         </div>
       </div>
@@ -186,207 +186,150 @@ export default async function Home() {
           <div className="container">
             
              <div className="row">
-             <div className="col-12 col-md-12 col-lg-12 ">
-             <div className="section-heading " style={{fontFamily: 'Inter-Black', fontSize: 30 }}>
-            <h4 style={{fontStyle:"bold"}}>الاسعار </h4>
-            <div className="line"></div>
+             <div className="col-12 col-md-12 col-lg-4 ">
+             <div className="section-heading " style={{fontFamily: 'Inter-Black' }}>
+            <h4 style={{fontStyle:"bold"}}>اسعار الصرف المحلية </h4>
+           
+          </div> 
+                  </div>
+                  <div className="col-12 col-md-12 col-lg-4 ">
+             <div className="section-heading " style={{fontFamily: 'Inter-Black' }}>
+            <h4 style={{fontStyle:"bold"}}>اسعار الصرف الدوليه </h4>
+            
+          </div> 
+                  </div>
+                  <div className="col-12 col-md-12 col-lg-4 ">
+             <div className="section-heading " style={{fontFamily: 'Inter-Black' }}>
+            <h4 style={{fontStyle:"bold"}}>اسعار المواد الغذائية </h4>
+            
           </div> 
                   </div>
                   </div>
                   <div className="row">
                   
           <div className='col-12 col-md-4 col-lg-4'>
-                        <div className="row">
-             <div className="col-12 col-md-12 col-lg-12 ">
-            
-                    <h4>اسعار الصرف صنعاء</h4>
-                    <div className="line"></div>
-                 
-                  </div>
-                  </div>
-      
+     <div className="row">
              
-                     
-  <div class="table-responsive" style={{backgroundColor: "" ,border: '0.5px solid black',borderRadius:"10px 10px 10px 10px"}} >
-  <table class="table table-bordered mb-0"  style={{backgroundColor: "",border: '1px solid black',borderRadius:"10px 10px 10px 10px"}} >
-  
-  <thead class="" style={{backgroundColor: "#8F4872"}}>
-    <tr class="table-active">
-    <th scope="col"> </th>
-      <th scope="col" style={{color:"white"}}> نوع العمله</th>
-      <th scope="col" style={{color:"white"}}>بيع </th>
-      <th scope="col" style={{color:"white"}}>شراء</th>
-      
-    </tr>
+                  </div>  
+        
+    <Script src="/js/jquery/tabbed-table.js"/>
+    <table class="tabbedTable" style={{border:"1px solid black" ,borderRadius:"10px 10px 10px 10px" , borderCollapse:"separate" ,tableLayout:"table-striped"}}>
+  <thead style={{backgroundColor:"#8F4872",border:"1px solid black",borderRadius:"10px 10px 10px 10px",borderCollapse:"separate" ,height:"40PX"}}>
+  <tr style={{borderBottom: "5px solid black"}}>
+    <th width="50">Date</th>
+    <th width="100">Coin</th>
+    <th data-tabbedTable="Sanaa">Sell</th>
+    <th data-tabbedTable="Sanaa">Buy</th>
+    <th data-tabbedTable="Aden">Sell</th>
+    <th data-tabbedTable="Aden">Buy</th>
+  </tr>
   </thead>
-  <tbody >
-   
-    <tr>
-    <th scope="row" className="p-3"> </th>
-      <th scope="row" className="p-3">دولار امريكي </th>
-      <td className="p-3">
-        <span class="text" style={{color:"black"}} >
-          <span>{pDollarSanaa.data&&pDollarSanaa.data[0].attributes.sell}</span>
-        </span>
-      </td>
-      <td className="p-3">
-        <span class="text" style={{color:"black"}}>
-          <span>{pDollarSanaa.data&&pDollarSanaa.data[0].attributes.buy}</span>
-        </span>
-      </td>
-      
-    </tr>
-    
-    <tr>
-    <th scope="row" className="p-3"> </th>
-      <th scope="row" className="p-3">ريال سعودي</th>
-      <td className="p-3">
-        <span class="text" style={{color:"black"}} >
-          <span>{pSaudiSanaa.data&&pSaudiSanaa.data[0].attributes.sell}</span>
-        </span>
-      </td>
-      <td className="p-3">
-        <span class="text" style={{color:"black"}}>
-          <span>{pSaudiSanaa.data&&pSaudiSanaa.data[0].attributes.buy}</span>
-        </span>
-      </td>
-    </tr>
-   
-  </tbody>
+  <tbody>
+  <tr style={{border:"1px solid black"}}><td><span>{new Date(pDollarSanaa.data&&pDollarSanaa.data[0].attributes.createdAt).toLocaleDateString()}</span>
+</td><td>Dollar</td><td><span>{pDollarSanaa.data&&pDollarSanaa.data[0].attributes.sell}</span>
+</td><td> <span>{pDollarSanaa.data&&pDollarSanaa.data[0].attributes.buy}</span>
+</td><td><span>{pDollarAden.data&&pDollarAden.data[0].attributes.sell}</span></td><td><span>{pDollarAden.data&&pDollarAden.data[0].attributes.buy}</span></td></tr>
+
+<tr><td><span>{new Date(pDollarSanaa.data&&pDollarSanaa.data[0].attributes.createdAt).toLocaleDateString()}</span>
+</td><td>Saudi</td><td><span>{pSaudiSanaa.data&&pSaudiSanaa.data[0].attributes.sell}</span>
+</td><td><span>{pSaudiSanaa.data&&pSaudiSanaa.data[0].attributes.buy}</span></td><td><span>{pSaudiAden.data&&pSaudiAden.data[0].attributes.sell}</span></td><td><span>{pSaudiAden.data&&pSaudiAden.data[0].attributes.buy}</span></td></tr>
+</tbody>
 </table>
+
+
+
+
+            
+                                         
+                    
+                     
+ 
 </div>
+
+
+
+
+
+
+<div className='col-12 col-md-4 col-lg-4'>
+<div className="row">
+             
+                  </div>   
+            <Script src="/js/jquery/tabbed-table.js"/>
+                        <table class="tabbedTable" style={{border:"1px solid black" ,borderRadius:"10px 10px 10px 10px" , borderCollapse:"separate" ,tableLayout:"table-striped"}}>
+  <thead style={{backgroundColor:"#8F4872",border:"1px solid black",borderRadius:"10px 10px 10px 10px",borderCollapse:"separate" ,height:"40PX"}}>
+  <tr style={{borderBottom: "5px solid black"}}>
+    <th width="50">Date</th>
+    <th width="100">Coin</th>
+    <th data-tabbedTable="Sanaa">Sell</th>
+    <th data-tabbedTable="Sanaa">Buy</th>
+    <th data-tabbedTable="Aden">Sell</th>
+    <th data-tabbedTable="Aden">Buy</th>
+   
+    
+  </tr>
+  </thead>
+  <tbody>
+  <tr style={{border:"1px solid black"}}><td><span>{new Date(pDollarSanaa.data&&pDollarSanaa.data[0].attributes.createdAt).toLocaleDateString()}</span>
+</td><td>Dollar</td><td><span>{pDollarSanaa.data&&pDollarSanaa.data[0].attributes.sell}</span>
+</td><td> <span>{pDollarSanaa.data&&pDollarSanaa.data[0].attributes.buy}</span>
+</td><td><span>{pDollarAden.data&&pDollarAden.data[0].attributes.sell}</span></td><td><span>{pDollarAden.data&&pDollarAden.data[0].attributes.buy}</span></td></tr>
+
+<tr><td><span>{new Date(pDollarSanaa.data&&pDollarSanaa.data[0].attributes.createdAt).toLocaleDateString()}</span>
+</td><td>Saudi</td><td><span>{pSaudiSanaa.data&&pSaudiSanaa.data[0].attributes.sell}</span>
+</td><td><span>{pSaudiSanaa.data&&pSaudiSanaa.data[0].attributes.buy}</span></td><td><span>{pSaudiAden.data&&pSaudiAden.data[0].attributes.sell}</span></td><td><span>{pSaudiAden.data&&pSaudiAden.data[0].attributes.buy}</span></td></tr>
+</tbody>
+</table>
+
+
+
+
+            
+                                         
+                    
+                     
+ 
 </div>
 <div className='col-12 col-md-4 col-lg-4'>
-                          
-
-                    <div className="row">
-             <div className="col-12 col-md-12 col-lg-12 ">
+<div className="row">
              
-                    <h4>اسعار الصرف عدن</h4>
-                    <div className="line"></div>
-                  
-                  </div>
-                  </div>
+                  </div>   
+            <Script src="/js/jquery/tabbed-table.js"/>
+                        <table class="tabbedTable" style={{border:"1px solid black" ,borderRadius:"10px 10px 10px 10px" , borderCollapse:"separate" ,tableLayout:"table-striped"}}>
+  <thead style={{backgroundColor:"#8F4872",border:"1px solid black",borderRadius:"10px 10px 10px 10px",borderCollapse:"separate" ,height:"40PX"}}>
+  <tr style={{borderBottom: "5px solid black"}}>
+    <th width="50">Date</th>
+    <th width="100">Coin</th>
+    <th data-tabbedTable="Sanaa">Sell</th>
+    <th data-tabbedTable="Sanaa">Buy</th>
+    <th data-tabbedTable="Aden">Sell</th>
+    <th data-tabbedTable="Aden">Buy</th>
+   
+    
+  </tr>
+  </thead>
+  <tbody>
+  <tr style={{border:"1px solid black"}}><td><span>{new Date(pDollarSanaa.data&&pDollarSanaa.data[0].attributes.createdAt).toLocaleDateString()}</span>
+</td><td>Dollar</td><td><span>{pDollarSanaa.data&&pDollarSanaa.data[0].attributes.sell}</span>
+</td><td> <span>{pDollarSanaa.data&&pDollarSanaa.data[0].attributes.buy}</span>
+</td><td><span>{pDollarAden.data&&pDollarAden.data[0].attributes.sell}</span></td><td><span>{pDollarAden.data&&pDollarAden.data[0].attributes.buy}</span></td></tr>
+
+<tr><td><span>{new Date(pDollarSanaa.data&&pDollarSanaa.data[0].attributes.createdAt).toLocaleDateString()}</span>
+</td><td>Saudi</td><td><span>{pSaudiSanaa.data&&pSaudiSanaa.data[0].attributes.sell}</span>
+</td><td><span>{pSaudiSanaa.data&&pSaudiSanaa.data[0].attributes.buy}</span></td><td><span>{pSaudiAden.data&&pSaudiAden.data[0].attributes.sell}</span></td><td><span>{pSaudiAden.data&&pSaudiAden.data[0].attributes.buy}</span></td></tr>
+</tbody>
+</table>
+
+
+
+
+            
+                                         
+                    
+                     
+ 
+</div>
       
-                          
-                        
-                          <div class="table-responsive" style={{backgroundColor: "" ,border: '0.5px solid black',borderRadius:"10px 10px 10px 10px"}} >
-                          <table class="table table-bordered mb-0"  style={{backgroundColor: "",border: '1px solid black',borderRadius:"10px 10px 10px 10px"}} >
-                          
-                          <thead class="" style={{backgroundColor: "#8F4872"}}>
-                            <tr class="table-active">
-                            <th scope="col"> </th>
-                              <th scope="col" style={{color:"white"}}> نوع العمله</th>
-                              <th scope="col" style={{color:"white"}}>بيع </th>
-                              <th scope="col" style={{color:"white"}}>شراء</th>
-                              
-                            </tr>
-                          </thead>
-                          <tbody >
-                           
-                            <tr>
-                            <th scope="row" className="p-3"> </th>
-                              <th scope="row" className="p-3">دولار امريكي </th>
-                              <td className="p-3">
-                                <span class="text" style={{color:"black"} }>
-                                  <span>{pDollarAden.data&&pDollarAden.data[0].attributes.sell}</span>
-                                </span>
-                              </td>
-                              <td className="p-3">
-                                <span class="text" style={{color:"black"}}>
-                                  <span>{pDollarAden.data&&pDollarAden.data[0].attributes.buy}</span>
-                                </span>
-                              </td>
-                              
-                            </tr>
-                            
-                            <tr>
-                            <th scope="row" className="p-3"> </th>
-                              <th scope="row" className="p-3">ريال سعودي</th>
-                              <td className="p-3">
-                                <span class="text" style={{color:"black"}}>
-                                  <span>{pSaudiAden.data&&pSaudiAden.data[0].attributes.sell}</span>
-                                </span>
-                              </td>
-                              <td className="p-3">
-                                <span class="text" style={{color:"black"}}>
-                                  <span>{pSaudiAden.data&&pSaudiAden.data[0].attributes.buy}</span>
-                                </span>
-                              </td>
-                            </tr>
-                           
-                          </tbody>
-                        </table>
-                        </div>
-                        </div>  
-
-
-
-
-
-                        <div className='col-12 col-md-4 col-lg-4'>
-                          
-                        <div className="row">
-             <div className="col-12 col-md-12 col-lg-12 ">
-      
-                    <h4>اسعار المواد الغذائية</h4>
-                    <div className="line"></div>
-                 
-                  </div>
-                  </div>
-                         
-      
-                          
-                        
-                          <div class="table-responsive" style={{backgroundColor: "" ,border: '0.5px solid black',borderRadius:"10px 10px 10px 10px"}} >
-                          <table class="table table-bordered mb-0"  style={{backgroundColor: "",border: '1px solid black',borderRadius:"10px 10px 10px 10px"}} >
-                          
-                          <thead class="" style={{backgroundColor: "#8F4872"}}>
-                            <tr class="table-active">
-                            <th scope="col"> </th>
-                              <th scope="col" style={{color:"white"}}> نوع العمله</th>
-                              <th scope="col" style={{color:"white"}}>بيع </th>
-                              <th scope="col" style={{color:"white"}}>شراء</th>
-                              
-                            </tr>
-                          </thead>
-                          <tbody >
-                           
-                            <tr>
-                            <th scope="row" className="p-3"> </th>
-                              <th scope="row" className="p-3">دولار امريكي </th>
-                              <td className="p-3">
-                                <span class="text" style={{color:"black"} }>
-                                  <span>{pDollarAden.data&&pDollarAden.data[0].attributes.sell}</span>
-                                </span>
-                              </td>
-                              <td className="p-3">
-                                <span class="text" style={{color:"black"}}>
-                                  <span>{pDollarAden.data&&pDollarAden.data[0].attributes.buy}</span>
-                                </span>
-                              </td>
-                              
-                            </tr>
-                            
-                            <tr>
-                            <th scope="row" className="p-3"> </th>
-                              <th scope="row" className="p-3">ريال سعودي</th>
-                              <td className="p-3">
-                                <span class="text" style={{color:"black"}}>
-                                  <span>{pSaudiAden.data&&pSaudiAden.data[0].attributes.sell}</span>
-                                </span>
-                              </td>
-                              <td className="p-3">
-                                <span class="text" style={{color:"black"}}>
-                                  <span>{pSaudiAden.data&&pSaudiAden.data[0].attributes.buy}</span>
-                                </span>
-                              </td>
-                            </tr>
-                           
-                          </tbody>
-                        </table>
-                        </div>
-                        </div>       
               
               </div>
             </div>  
