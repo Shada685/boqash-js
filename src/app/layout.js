@@ -418,6 +418,7 @@ export default async function RootLayout({ children }) {
       <Script src="/js/bootstrap/bootstrap.min.js" />
       <Script src="/js/plugins/plugins.js" />
       <Script src="/js/active.js" />
+          <Script src="/js/jquery/tabbed-table.js"/>
         <Header />
         {/* <!-- ##### Header Area End ##### --> */}
       {children}
