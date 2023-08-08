@@ -417,7 +417,7 @@ export default async function Home() {
                   {/* <!-- Featured Post Slides --> */}
                   <div className="featured-post-slides owl-carousel mb-30 ">
                     {/* <!-- Single Feature Post --> */}
-                    {localNewsData.data&&[...localNewsData.data.slice(0, 3)].map((ob) => (
+                    {localNewsData.data&&[...localNewsData.data.slice(0, 2)].map((ob) => (
                       <div key={ob.id} className="single-feature-post video-post bg-img"
                       style={{ backgroundImage: `url(${BASE_URL+ob.attributes.featuredImage.data.attributes.url})` }}
                     >
@@ -441,7 +441,7 @@ export default async function Home() {
                     
                     {/* <!-- Single Blog Post --> */}
                   
-                    {localNewsData.data&&[...localNewsData.data.slice(3, 7)].map((ob) => (  <div  key={ob.id} className="col-12 col-md-6 col-lg-6"> <div   className="single-post-area mb-80 bg-white shadow">
+                    {localNewsData.data&&[...localNewsData.data.slice(2, 4)].map((ob) => (  <div  key={ob.id} className="col-12 col-md-6 col-lg-6"> <div   className="single-post-area mb-80 bg-white shadow">
                         {/* <!-- Post Thumbnail --> */}
                         <div className="post-thumbnail">
                           <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.url}`} alt={ob.attributes.title} width={400} height={200}   />
@@ -466,7 +466,7 @@ export default async function Home() {
 
                   <div className="row">
                     {/* <!-- Single Blog Post --> */}
-                    {localNewsData.data&&[...localNewsData.data.slice(5, 8)].map((ob) => (   <div  key={ob.id} className="col-12 col-md-6 col-lg-4"> <div   className="single-post-area mb-80 ">
+                    {localNewsData.data&&[...localNewsData.data.slice(4, 7)].map((ob) => (   <div  key={ob.id} className="col-12 col-md-6 col-lg-4"> <div   className="single-post-area mb-80 ">
                         {/* <!-- Post Thumbnail --> */}
                         <div className="post-thumbnail">
                           <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.url}`} alt={ob.attributes.title} width={400} height={200} />
