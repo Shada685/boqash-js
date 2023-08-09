@@ -3,13 +3,24 @@ import '../../public/css/style-grocery-price.css'
 import '../../public/css/style-price.css'
 import Image from "next/image";
 import Link from 'next/link'
-import Script from 'next/script';
 import { NEWSREVALIDATE,BASE_URL,headers} from "./api/config";
 
 
 
 
+
 async function FeaturedPinnedPostedList({ promise ,ad}) {
+  const pSaudiSanaa =  await getSaudiSanaa()
+ const pSaudiAden =   await getSaudiAden()
+ const pDollarAden =  await getDollarAden()
+ const pDollarSanaa = await getDollarSanaa()
+
+
+
+ 
+
+ const ads=await getADS()
+
   const data = await promise;
   
     
@@ -27,67 +38,72 @@ async function FeaturedPinnedPostedList({ promise ,ad}) {
           </div> 
         </div>
       </div>
-      <div className="row ">
-    <div className="col-12 col-md-7 col-lg-8">
+      <div className="row">
+    <div className="col-12 col-md-8 col-lg-8">
+    <div className='row'>
+    <div className="col-12 col-md-12 col-lg-12">
     
-      <div className="tab-content">
-        {data.data&&data.data.map((ob,i) => (
+    <div className="tab-content">
+      {data.data&&data.data.map((ob,i) => (
+        <div
+          key={ob.id}
+          className={"tab-pane fade "+(i==0? "active show" :"")}
+          id={"post-" + ob.id}
+          role="tabpanel"
+          aria-labelledby={"post-"+ob.id+"-tab"}
+        >
           <div
-            key={ob.id}
-            className={"tab-pane fade "+(i==0? "active show" :"")}
-            id={"post-" + ob.id}
-            role="tabpanel"
-            aria-labelledby={"post-"+ob.id+"-tab"}
+            className="single-feature-post video-post bg-img"
+            style={{
+              backgroundImage: `url(${BASE_URL+ob.attributes.featuredImage.data.attributes.url})`,
+            }}
           >
-            <div
-              className="single-feature-post video-post bg-img"
-              style={{
-                backgroundImage: `url(${BASE_URL+ob.attributes.featuredImage.data.attributes.url})`,
-              }}
-            >
-              {/* <!-- Post Content --> */}
-              <div className="post-content">
-                <a href={ob.attributes.mainCategory.data.attributes.path+"/"} className="post-cata">
-                  {ob.attributes.mainCategory.data.attributes.title}
-                </a>
-                <a href={ob.attributes.mainCategory.data.attributes.path+"/"+ob.attributes.slug} className="post-title">
-                  {ob.attributes.title}
-                </a>
-                <p>{ob.attributes.shortContent} </p>
-              </div>
-              
+            {/* <!-- Post Content --> */}
+            <div className="post-content">
+              <a href={ob.attributes.mainCategory.data.attributes.path+"/"} className="post-cata">
+                {ob.attributes.mainCategory.data.attributes.title}
+              </a>
+              <a href={ob.attributes.mainCategory.data.attributes.path+"/"+ob.attributes.slug} className="post-title">
+                {ob.attributes.title}
+              </a>
+              <p>{ob.attributes.shortContent} </p>
             </div>
+            
           </div>
-        ))}
-      </div>
-
+        </div>
+      ))}
     </div>
-     <div className="col-12 col-md-5 col-lg-4">
-    <ul className="nav vizew-nav-tab" role="tablist" style={{padding:"15px"}}>
+  </div>
+    </div>
+    <div className='row'>
+    <div className="col-12 col-md-7 col-lg-10">
+     <h4 style={{fontStyle:"bold"}}>تصفح ابرز الاخبار   </h4> 
+    <ul className="nav vizew-nav-tab" role="" >
     
     
-    {data.data&&data.data.map((ob,i) => (
+       {data.data&&data.data.map((ob,i) => (
 
                 <li key={ob.id}  className="nav-item">
                  
                     <a
-                      className={"nav-link "+(i==0? "active show" :"")}
-                      id={"post-"+ ob.id+"-tab"}
-                      data-toggle="pill"
-                      href={"#post-" +  ob.id}
-                      role="tab"
-                      aria-controls={"post-" + ob.id}
-                      aria-selected={i==0? "true" : "false"}
+                     className={"nav-link "+(i==0? "active show" :"")}
+                     id={"post-"+ ob.id+"-tab"}
+                     data-toggle="pill"
+                     href={"#post-" +  ob.id}
+                     role="tab"
+                     aria-controls={"post-" + ob.id}
+                     aria-selected={i==0? "true" : "false"}
+                  
                     >
                       {/* <!-- Single Blog Post --> */}
                       <div className="single-blog-post style-2 d-flex align-items-center ">
                         <div className="post-thumbnail">
                         <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.url}`} width={400}  height={200} alt={ob.attributes.title} />
                         </div>
-                        <div className="post-content">
-                          <h6 className="post-title" style={{fontSize:"12px"}}>
-                          {ob.attributes.title}
-                          </h6>
+                        <div className="post-content"> 
+                      <h6 className="post-title" style={{fontSize:"12px"}}>
+                      {ob.attributes.title}
+                      </h6>
                           <div className="post-meta d-flex justify-content-between">
                             <span>
                             {ob.attributes.mainCategory.data.attributes.title}
@@ -108,22 +124,183 @@ async function FeaturedPinnedPostedList({ promise ,ad}) {
              
         ))}
       </ul>
-              </div>
-    </div>
-    </div>
-    </section> 
+     </div>
 
-    {/* herzontal ad */}
-    <div className="container mt-2 mb-5">
+    </div>
+      
+    </div>
+
+    
+
+    <div className='col-12 col-md-4 col-lg-4'>
+     <div className="row">
+     <div className='col-12 col-md-12 col-lg-12'> 
+    <h4 style={{fontStyle:"bold"}}>اسعار الصرف المحلية </h4>  
+    <table class="tabbedTable" style={{border:"1px solid black" ,borderRadius:"10px 10px 10px 10px" , borderCollapse:"separate" ,tableLayout:"table-striped"}}>
+  <thead style={{backgroundColor:"#8F4872",border:"1px solid black",borderRadius:"10px 10px 10px 10px",borderCollapse:"separate" ,height:"40PX"}}>
+  <tr style={{borderBottom: "5px solid black"}}>
+    <th width="50">Date</th>
+    <th width="100">Coin</th>
+    <th data-tabbedTable="Sanaa">Sell</th>
+    <th data-tabbedTable="Sanaa">Buy</th>
+    <th data-tabbedTable="Aden">Sell</th>
+    <th data-tabbedTable="Aden">Buy</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr style={{border:"1px solid black"}}>
+  <td><span>{new Date(pDollarSanaa.data&&pDollarSanaa.data[0].attributes.createdAt).toLocaleDateString()}</span></td>
+  <td>Dollar</td>
+  <td><span>{pDollarSanaa.data&&pDollarSanaa.data[0].attributes.sell}</span></td>
+  <td> <span>{pDollarSanaa.data&&pDollarSanaa.data[0].attributes.buy}</span></td>
+  <td><span>{pDollarAden.data&&pDollarAden.data[0].attributes.sell}</span></td>
+  <td><span>{pDollarAden.data&&pDollarAden.data[0].attributes.buy}</span></td>
+  </tr>
+  <tr style={{border:"1px solid black"}}>
+  <td><span>{new Date(pDollarSanaa.data&&pDollarSanaa.data[0].attributes.createdAt).toLocaleDateString()}</span></td>
+  <td>Dollar</td>
+  <td><span>{pDollarSanaa.data&&pDollarSanaa.data[0].attributes.sell}</span></td>
+  <td> <span>{pDollarSanaa.data&&pDollarSanaa.data[0].attributes.buy}</span></td>
+  <td><span>{pDollarAden.data&&pDollarAden.data[0].attributes.sell}</span></td>
+  <td><span>{pDollarAden.data&&pDollarAden.data[0].attributes.buy}</span></td>
+  </tr>
+  
+<tr>
+<td><span>{new Date(pDollarSanaa.data&&pDollarSanaa.data[0].attributes.createdAt).toLocaleDateString()}</span></td>
+<td>Saudi</td>
+<td><span>{pSaudiSanaa.data&&pSaudiSanaa.data[0].attributes.sell}</span></td>
+<td><span>{pSaudiSanaa.data&&pSaudiSanaa.data[0].attributes.buy}</span></td>
+
+<td><span>{pSaudiAden.data&&pSaudiAden.data[0].attributes.sell}</span></td>
+<td><span>{pSaudiAden.data&&pSaudiAden.data[0].attributes.buy}</span></td>
+
+</tr>
+<tr>
+<td><span>{new Date(pDollarSanaa.data&&pDollarSanaa.data[0].attributes.createdAt).toLocaleDateString()}</span></td>
+<td>Saudi</td>
+<td><span>{pSaudiSanaa.data&&pSaudiSanaa.data[0].attributes.sell}</span></td>
+<td><span>{pSaudiSanaa.data&&pSaudiSanaa.data[0].attributes.buy}</span></td>
+
+<td><span>{pSaudiAden.data&&pSaudiAden.data[0].attributes.sell}</span></td>
+<td><span>{pSaudiAden.data&&pSaudiAden.data[0].attributes.buy}</span></td>
+
+</tr>
+</tbody>
+</table>
+</div> 
+</div>  
+        
+<div className="row">
+     <div className='col-12 col-md-12 col-lg-12'>
+    
+   <h4 style={{fontStyle:"bold"}}>اسعار  الذهب </h4> 
+      
+    <table class="tabbedTable" style={{border:"1px solid black" ,borderRadius:"10px 10px 10px 10px" , borderCollapse:"separate" ,tableLayout:"table-striped"}}>
+  <thead style={{backgroundColor:"#8F4872",border:"1px solid black",borderRadius:"10px 10px 10px 10px",borderCollapse:"separate" ,height:"40PX"}}>
+  <tr style={{borderBottom: "5px solid black"}}>
+    <th width="50">Date</th>
+    <th width="100">Coin</th>
+    <th data-tabbedTable="Sanaa">Sell</th>
+    <th data-tabbedTable="Sanaa">Buy</th>
+    <th data-tabbedTable="Aden">Sell</th>
+    <th data-tabbedTable="Aden">Buy</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr style={{border:"1px solid black"}}>
+  <td><span>{new Date(pDollarSanaa.data&&pDollarSanaa.data[0].attributes.createdAt).toLocaleDateString()}</span></td>
+  <td>Dollar</td>
+  <td><span>{pDollarSanaa.data&&pDollarSanaa.data[0].attributes.sell}</span></td>
+  <td> <span>{pDollarSanaa.data&&pDollarSanaa.data[0].attributes.buy}</span></td>
+  <td><span>{pDollarAden.data&&pDollarAden.data[0].attributes.sell}</span></td>
+  <td><span>{pDollarAden.data&&pDollarAden.data[0].attributes.buy}</span></td>
+  </tr>
+  <tr style={{border:"1px solid black"}}>
+  <td><span>{new Date(pDollarSanaa.data&&pDollarSanaa.data[0].attributes.createdAt).toLocaleDateString()}</span></td>
+  <td>Dollar</td>
+  <td><span>{pDollarSanaa.data&&pDollarSanaa.data[0].attributes.sell}</span></td>
+  <td> <span>{pDollarSanaa.data&&pDollarSanaa.data[0].attributes.buy}</span></td>
+  <td><span>{pDollarAden.data&&pDollarAden.data[0].attributes.sell}</span></td>
+  <td><span>{pDollarAden.data&&pDollarAden.data[0].attributes.buy}</span></td>
+  </tr>
+  
+<tr>
+<td><span>{new Date(pDollarSanaa.data&&pDollarSanaa.data[0].attributes.createdAt).toLocaleDateString()}</span></td>
+<td>Saudi</td>
+<td><span>{pSaudiSanaa.data&&pSaudiSanaa.data[0].attributes.sell}</span></td>
+<td><span>{pSaudiSanaa.data&&pSaudiSanaa.data[0].attributes.buy}</span></td>
+
+<td><span>{pSaudiAden.data&&pSaudiAden.data[0].attributes.sell}</span></td>
+<td><span>{pSaudiAden.data&&pSaudiAden.data[0].attributes.buy}</span></td>
+
+</tr>
+<tr>
+<td><span>{new Date(pDollarSanaa.data&&pDollarSanaa.data[0].attributes.createdAt).toLocaleDateString()}</span></td>
+<td>Saudi</td>
+<td><span>{pSaudiSanaa.data&&pSaudiSanaa.data[0].attributes.sell}</span></td>
+<td><span>{pSaudiSanaa.data&&pSaudiSanaa.data[0].attributes.buy}</span></td>
+
+<td><span>{pSaudiAden.data&&pSaudiAden.data[0].attributes.sell}</span></td>
+<td><span>{pSaudiAden.data&&pSaudiAden.data[0].attributes.buy}</span></td>
+
+</tr>
+</tbody>
+</table>
+</div> 
+
+<div className="container mt-2 mb-5">
   <a>
-  <Image  src={BASE_URL+ad.data.attributes.url} width={ad.data.attributes.width} height={ad.data.attributes.height} alt={ad.data.attributes.alt} />
+  <Image  src={BASE_URL+ad.data.attributes.url} width={ad.data.attributes.width} height={ad.data.attributes.height} alt={ad.data.attributes.alt}   />
+  </a>
+</div>
+ {/* <!-- ***** newslettter Widget ***** --> */}
+ <div className='col-12 col-md-12 col-lg-12'>
+                    {/* <!-- Section Heading --> */}
+                    <div className="section-heading style-2 mb-30">
+                      <h4>النشرة البريدية</h4>
+                      <div className="line"></div>
+                    </div>
+                    <p>
+                      اشترك معنا واحصل على المزيد من الاخبار اولا باول
+                    </p>
+                    {/* <!-- Newsletter Form --> */}
+                    <div className="newsletter-form">
+                      <form action="#" method="post">
+                        <input
+                          type="email"
+                          name="nl-email"
+                          className="form-control mb-15"
+                          id="emailnl"
+                          placeholder="Enter your email"
+                        />
+                        <Link
+            className="flex items-center hover:underline bg-[#9b239b] hover:bg-[#e62ce6] text-white py-2 px-4 rounded  w-full mx-auto"
+            href="/"
+          >
+   اشترك          </Link>
+                      </form>
+                    </div>
+                  </div>
+
+
+</div> 
+</div>
+</div>
+</div>
+</section>
+  {/* herzontal ad */}
+  <div className="container mt-2 mb-5">
+  <a>
+  <Image  src={BASE_URL+ad.data.attributes.url} width={ad.data.attributes.width} height={ad.data.attributes.height} alt={ad.data.attributes.alt}   />
   </a>
 
 </div>
+
 {/* herzontal ad */}
 </>
   );
 }
+
 
 
 export default async function Home() {
@@ -145,6 +322,7 @@ export default async function Home() {
       localNews,
       globalNews,
       russianNews,articale])
+     
 
  const pSaudiSanaa =  await getSaudiSanaa()
  const pSaudiAden =   await getSaudiAden()
@@ -160,12 +338,13 @@ export default async function Home() {
  const pCoinAden =    await getCoinAden()
  const p24KSanaa =    await get24KSanaa()
  const p24KAden =     await get24KAden()
+ const BreakingNews = await getBreakingNews();
  
   
  
  const ads=await getADS()
 
-
+ 
  
 
    
@@ -181,18 +360,13 @@ export default async function Home() {
          <FeaturedPinnedPostedList promise={pinnedNewsData } ad={ads.data.attributes.first} />
         {/* <!-- ##### Hero Area End ##### --> */}
         {/* <!-- ##### Header Area End ##### --> */}
+
         
         <section className="vizew-post-area mb-50 ">
           <div className="container">
             
              <div className="row">
-             <div className="col-12 col-md-12 col-lg-4 ">
-             <div className="section-heading " style={{fontFamily: 'Inter-Black' }}>
-            <h4 style={{fontStyle:"bold"}}>اسعار الصرف المحلية </h4>
-           
-          </div> 
-                  </div>
-                  <div className="col-12 col-md-12 col-lg-4 ">
+                  <div className="col-12 col-md-12 col-lg-8 ">
              <div className="section-heading " style={{fontFamily: 'Inter-Black' }}>
             <h4 style={{fontStyle:"bold"}}>اسعار الصرف الدوليه </h4>
             
@@ -206,56 +380,11 @@ export default async function Home() {
                   </div>
                   </div>
                   <div className="row">
-                  
-          <div className='col-12 col-md-4 col-lg-4'>
-     <div className="row">
-             
-                  </div>  
-        
-   
-    <table class="tabbedTable" style={{border:"1px solid black" ,borderRadius:"10px 10px 10px 10px" , borderCollapse:"separate" ,tableLayout:"table-striped"}}>
-  <thead style={{backgroundColor:"#8F4872",border:"1px solid black",borderRadius:"10px 10px 10px 10px",borderCollapse:"separate" ,height:"40PX"}}>
-  <tr style={{borderBottom: "5px solid black"}}>
-    <th width="50">Date</th>
-    <th width="100">Coin</th>
-    <th data-tabbedTable="Sanaa">Sell</th>
-    <th data-tabbedTable="Sanaa">Buy</th>
-    <th data-tabbedTable="Aden">Sell</th>
-    <th data-tabbedTable="Aden">Buy</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr style={{border:"1px solid black"}}><td><span>{new Date(pDollarSanaa.data&&pDollarSanaa.data[0].attributes.createdAt).toLocaleDateString()}</span>
-</td><td>Dollar</td><td><span>{pDollarSanaa.data&&pDollarSanaa.data[0].attributes.sell}</span>
-</td><td> <span>{pDollarSanaa.data&&pDollarSanaa.data[0].attributes.buy}</span>
-</td><td><span>{pDollarAden.data&&pDollarAden.data[0].attributes.sell}</span></td><td><span>{pDollarAden.data&&pDollarAden.data[0].attributes.buy}</span></td></tr>
 
-<tr><td><span>{new Date(pDollarSanaa.data&&pDollarSanaa.data[0].attributes.createdAt).toLocaleDateString()}</span>
-</td><td>Saudi</td><td><span>{pSaudiSanaa.data&&pSaudiSanaa.data[0].attributes.sell}</span>
-</td><td><span>{pSaudiSanaa.data&&pSaudiSanaa.data[0].attributes.buy}</span></td><td><span>{pSaudiAden.data&&pSaudiAden.data[0].attributes.sell}</span></td><td><span>{pSaudiAden.data&&pSaudiAden.data[0].attributes.buy}</span></td></tr>
-</tbody>
-</table>
-
-
-
-
-            
-                                         
-                    
-                     
- 
-</div>
-
-
-
-
-
-
-<div className='col-12 col-md-4 col-lg-4'>
+<div className='col-12 col-md-8 col-lg-8'>
 <div className="row">
              
                   </div>   
-           
                         <table class="tabbedTable" style={{border:"1px solid black" ,borderRadius:"10px 10px 10px 10px" , borderCollapse:"separate" ,tableLayout:"table-striped"}}>
   <thead style={{backgroundColor:"#8F4872",border:"1px solid black",borderRadius:"10px 10px 10px 10px",borderCollapse:"separate" ,height:"40PX"}}>
   <tr style={{borderBottom: "5px solid black"}}>
@@ -294,7 +423,6 @@ export default async function Home() {
 <div className="row">
              
                   </div>   
-            
                         <table class="tabbedTable" style={{border:"1px solid black" ,borderRadius:"10px 10px 10px 10px" , borderCollapse:"separate" ,tableLayout:"table-striped"}}>
   <thead style={{backgroundColor:"#8F4872",border:"1px solid black",borderRadius:"10px 10px 10px 10px",borderCollapse:"separate" ,height:"40PX"}}>
   <tr style={{borderBottom: "5px solid black"}}>
@@ -341,35 +469,15 @@ export default async function Home() {
           <section className="vizew-post-area mb-50 ">
           <div className="container">
             
-             <div className="row">
-             <div className="col-12 col-md-12 col-lg-12 ">
-             
-                  </div>
-                  </div>
+      
                   <div className="row">
-                  
-          <div className='col-12 col-md-4 col-lg-4'>
-                        <div className="row">
-             <div className="col-12 col-md-12 col-lg-12 ">
-             
-                    <h4>اسعار الذهب</h4>
-                    <div className="line"></div>
-               
-                  </div>
-                  </div>     
-                  <div className="single-widget add-widget mb-50  shadow " style={{backgroundColor:"#8F4872"}}>
-                    <a href="#">
-                      <Image  src={BASE_URL+ads.data.attributes.second.data.attributes.url} width={ads.data.attributes.second.data.attributes.width} height={ads.data.attributes.second.data.attributes.height} alt={ads.data.attributes.second.data.attributes.alt} />
-                    </a>  
-                </div>
-           </div>
-           <div className='col-12 col-md-4 col-lg-4'>
+          
+           <div className='col-12 col-md-12 col-lg-4'>
                         <div className="row">
              <div className="col-12 col-md-12 col-lg-12 ">
             
                     <h4>اسعار النفط</h4>
                     <div className="line"></div>
-                 
                   </div>
                   </div>     
                   <div className="single-widget add-widget mb-50  shadow "  style={{backgroundColor:"#8F4872"}}>
@@ -378,13 +486,12 @@ export default async function Home() {
                     </a>  
                 </div>
            </div>
-           <div className='col-12 col-md-4 col-lg-4'>
+           <div className='col-12 col-md-12 col-lg-8'>
                         <div className="row">
              <div className="col-12 col-md-12 col-lg-12 ">
-             
-                    <h4>اسعار مواد البناء</h4>
+            
+                 <h4>اسعار مواد البناء </h4>
                     <div className="line"></div>
-                
                   </div>
                   </div>     
                   <div className="single-widget add-widget mb-50  shadow "  style={{backgroundColor:"#8F4872"}}>
@@ -392,7 +499,7 @@ export default async function Home() {
                       <Image  src={BASE_URL+ads.data.attributes.second.data.attributes.url} width={ads.data.attributes.second.data.attributes.width} height={ads.data.attributes.second.data.attributes.height} alt={ads.data.attributes.second.data.attributes.alt} />
                     </a>  
                 </div>
-           </div>      
+           </div>    
               
               </div>
             </div>  
@@ -417,7 +524,7 @@ export default async function Home() {
                   {/* <!-- Featured Post Slides --> */}
                   <div className="featured-post-slides owl-carousel mb-30 ">
                     {/* <!-- Single Feature Post --> */}
-                    {localNewsData.data&&[...localNewsData.data.slice(0, 2)].map((ob) => (
+                    {localNewsData.data&&[...localNewsData.data.slice(0, 3)].map((ob) => (
                       <div key={ob.id} className="single-feature-post video-post bg-img"
                       style={{ backgroundImage: `url(${BASE_URL+ob.attributes.featuredImage.data.attributes.url})` }}
                     >
@@ -441,7 +548,7 @@ export default async function Home() {
                     
                     {/* <!-- Single Blog Post --> */}
                   
-                    {localNewsData.data&&[...localNewsData.data.slice(2, 4)].map((ob) => (  <div  key={ob.id} className="col-12 col-md-6 col-lg-6"> <div   className="single-post-area mb-80 bg-white shadow">
+                    {localNewsData.data&&[...localNewsData.data.slice(3, 7)].map((ob) => (  <div  key={ob.id} className="col-12 col-md-6 col-lg-6"> <div   className="single-post-area mb-80 bg-white shadow">
                         {/* <!-- Post Thumbnail --> */}
                         <div className="post-thumbnail">
                           <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.url}`} alt={ob.attributes.title} width={400} height={200}   />
@@ -466,7 +573,7 @@ export default async function Home() {
 
                   <div className="row">
                     {/* <!-- Single Blog Post --> */}
-                    {localNewsData.data&&[...localNewsData.data.slice(4, 7)].map((ob) => (   <div  key={ob.id} className="col-12 col-md-6 col-lg-4"> <div   className="single-post-area mb-80 ">
+                    {localNewsData.data&&[...localNewsData.data.slice(5, 8)].map((ob) => (   <div  key={ob.id} className="col-12 col-md-6 col-lg-4"> <div   className="single-post-area mb-80 ">
                         {/* <!-- Post Thumbnail --> */}
                         <div className="post-thumbnail">
                           <Image src={`${BASE_URL+ob.attributes.featuredImage.data.attributes.url}`} alt={ob.attributes.title} width={400} height={200} />
@@ -981,3 +1088,4 @@ return res.json();
   );
 return res.json();
 };
+
